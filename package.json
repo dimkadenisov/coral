@@ -6,7 +6,9 @@
   "repository": "https://github.com/dimkadenisov/coral",
   "author": "Дмитрий Денисов <2denisov@bk.ru>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.0",

@@ -34,8 +34,13 @@ lazyRequireTask('pug', './tasks/pug', {
 });
 
 lazyRequireTask('styles', './tasks/styles', {
-  src: 'frontend/styles/*.scss',
+  src: 'frontend/styles/sсss/main.scss',
   dest: 'public/styles',
+});
+
+lazyRequireTask('styles:libs', './tasks/styles:libs', {
+  src: 'frontend/styles/libraries/*.scss',
+  dest: 'public/styles/libraries',
 });
 
 lazyRequireTask('scripts', './tasks/scripts', {
@@ -124,13 +129,14 @@ gulp.task('assets',
 );
 
 
-gulp.task('build', gulp.series(gulp.parallel('scripts', 'pug', 'styles', 'assets'))
+gulp.task('build', gulp.series(gulp.parallel('scripts', 'pug', 'styles','styles:libs', 'assets'))
 );
 
 
 gulp.task('watch', function () {
   gulp.watch('frontend/scripts/**/*.js', gulp.series('scripts'));
-  gulp.watch('frontend/styles/**/*.scss', gulp.series('styles'));
+  gulp.watch('frontend/styles/sсss/**/*.scss', gulp.series('styles'));
+  gulp.watch('frontend/styles/libraries/**/*.scss', gulp.series('styles:libs'));
   gulp.watch('frontend/pug/**/*.pug', gulp.series('pug'));
   gulp.watch('frontend/assets/**/*.*', gulp.series('assets', 'pug'));
 });

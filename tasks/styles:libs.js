@@ -9,14 +9,17 @@ module.exports = (options) => {
   return () => {
     return combiner(
       gulp.src(options.src),
-      $.sourcemaps.init(),
-      $.sass(),
+      // $.sourcemaps.init(),
+      $.sass({
+        outputStyle: 'expanded',
+        includePaths: ['node_modules/bootstrap/scss']
+      }),
       $.autoprefixer({
         grid: true
       }),
       $.csso(),
-      resolveUrl(),
-      $.sourcemaps.write('../maps'),
+      // resolveUrl(),
+      // $.sourcemaps.write('../maps'),
       gulp.dest(options.dest)
     ).on('error', $.notify.onError(function(err) {
       return {
