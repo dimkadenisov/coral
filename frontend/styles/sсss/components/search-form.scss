@@ -1,0 +1,41 @@
+.search-form {
+  position: relative;
+  max-width: 345px;
+  width: 100%;
+  height: 40px;
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    padding: 0 68px 0 20px;
+    border: 2px solid $gray-400;
+    border-radius: 20px;
+    font-size: 13px;
+
+    &:focus,
+    &:hover {
+      border-color: $gray-500;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 48px;
+    height: 36px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-width: 0;
+    border-color: transparent;
+    background: $gray-300 url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1Ni45NjYgNTYuOTY2Ij4KICAgIDxwYXRoIGZpbGw9IiM5OTk5OTkiIGQ9Ik01NS4xNDYgNTEuODg3TDQxLjU4OCAzNy43ODZBMjIuOTI2IDIyLjkyNiAwIDAgMCA0Ni45ODQgMjNjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMyAxMC4zMTgtMjMgMjMgMTAuMzE4IDIzIDIzIDIzYzQuNzYxIDAgOS4yOTgtMS40MzYgMTMuMTc3LTQuMTYybDEzLjY2MSAxNC4yMDhjLjU3MS41OTMgMS4zMzkuOTIgMi4xNjIuOTIuNzc5IDAgMS41MTgtLjI5NyAyLjA3OS0uODM3YTMuMDA0IDMuMDA0IDAgMCAwIC4wODMtNC4yNDJ6TTIzLjk4NCA2YzkuMzc0IDAgMTcgNy42MjYgMTcgMTdzLTcuNjI2IDE3LTE3IDE3LTE3LTcuNjI2LTE3LTE3IDcuNjI2LTE3IDE3LTE3eiIvPgo8L3N2Zz4K) no-repeat;
+    background-size: 16px 16px;
+    background-position: center center;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $gray-350;
+    }
+  }
+}

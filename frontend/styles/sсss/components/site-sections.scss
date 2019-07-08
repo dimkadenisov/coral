@@ -1,0 +1,40 @@
+.site-sections {
+  background-color: $gray-200;
+
+  &__nav {
+    height: 56px;
+    line-height: 56px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+
+  &__list-item {
+    flex-basis: 20%;
+    border-left: 1px solid rgba($black, 0.06);
+
+    &:last-of-type {
+      border-right: 1px solid rgba($black, 0.06);
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 0 10px;
+    color: $gray-700;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background: rgba($black, 0.04);
+      color: $red;
+    }
+  }
+}

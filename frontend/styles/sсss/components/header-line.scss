@@ -1,0 +1,15 @@
+.header-line {
+  position: sticky;
+  background-color: $white;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+  }
+
+  &__logo {
+    height: 68px;
+  }
+}
