@@ -1,5 +1,11 @@
-@import "components/header.scss";
+@import "utilities/reset.scss";
+@import "utilities/variables.scss";
 
-h1 {
-  color: teal;
-}
+
+@import "components/top-line.scss";
+@import "components/site-sections.scss";
+@import "components/header.scss";
+@import "components/header-line.scss";
+@import "components/search-form.scss";
+@import "components/phone-block.scss";
+@import "components/basket.scss";
