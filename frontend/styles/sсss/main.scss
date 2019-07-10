@@ -1,5 +1,7 @@
 @import "utilities/reset.scss";
 @import "utilities/variables.scss";
+@import "utilities/utilities.scss";
+@import "utilities/fonts.scss";
 
 
 @import "components/top-line.scss";
@@ -9,3 +11,6 @@
 @import "components/search-form.scss";
 @import "components/phone-block.scss";
 @import "components/basket.scss";
+@import "components/burger-menu.scss";
+@import "components/contacts-burger.scss";
+@import "components/overlay.scss";

@@ -49,6 +49,11 @@ lazyRequireTask('scripts', './tasks/scripts', {
   dest: 'public/scripts',
 });
 
+lazyRequireTask('scripts:libs', './tasks/copy', {
+  src: 'frontend/scripts/libraries/*.js',
+  dest: 'public/scripts/libraries',
+});
+
 lazyRequireTask('svg:min', './tasks/svg:min', {
   src: 'frontend/assets/img/icons/*.svg',
   dest: 'frontend/assets/img/icons-minificated',
@@ -110,6 +115,11 @@ lazyRequireTask('images', './tasks/images', {
   dest: 'public/assets/img',
 });
 
+lazyRequireTask('fonts', './tasks/copy', {
+  src: 'frontend/assets/fonts/*.*',
+  dest: 'public/assets/fonts',
+});
+
 lazyRequireTask('clean', './tasks/clean', {
   src: ['public', 'frontend/assets/img/icons-minificated'],
 });
@@ -124,18 +134,15 @@ lazyRequireTask('server', './tasks/server', {
 //--------------
 //--------------
 
-gulp.task('assets',
-  gulp.series('svg:min', 'svg:sprite'),
-  gulp.parallel('images')
-);
+gulp.task('assets', gulp.series('svg:min', 'svg:sprite', gulp.parallel('images', 'fonts')));
 
 
-gulp.task('build', gulp.series(gulp.parallel('scripts', 'pug', 'styles','styles:libs', 'assets'))
-);
+gulp.task('build', gulp.series(gulp.parallel('scripts:libs', 'scripts', 'pug', 'styles','styles:libs', 'assets')));
 
 
 gulp.task('watch', function () {
-  gulp.watch('frontend/scripts/**/*.js', gulp.series('scripts'));
+  gulp.watch('frontend/scripts/components/*.js', gulp.series('scripts'));
+  gulp.watch('frontend/scripts/libraries/*.js', gulp.series('scripts:libs'));
   gulp.watch('frontend/styles/sсss/**/*.scss', gulp.series('styles'));
   gulp.watch('frontend/styles/libraries/**/*.scss', gulp.series('styles:libs'));
   gulp.watch('frontend/pug/**/*.pug', gulp.series('pug'));

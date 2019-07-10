@@ -12,58 +12,102 @@
 
 <body>
     <div class="header">
-        <div class="top-line">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <nav class="top-line__nav">
-                            <ul class="top-line__list top-line_list_left">
-                                <li class="top-line__list-item"><a class="top-line__link" href="#">О компании</a></li>
-                                <li class="top-line__list-item"><a class="top-line__link" href="#">Покупателю</a></li>
-                                <li class="top-line__list-item"><a class="top-line__link" href="#">Новости</a></li>
-                                <li class="top-line__list-item"><a class="top-line__link" href="#">Вопрос-ответ</a></li>
-                                <li class="top-line__list-item"><a class="top-line__link" href="#">Статьи</a></li>
-                                <li class="top-line__list-item"><a class="top-line__link" href="#">Скачать</a></li>
-                            </ul>
-                            <ul class="top-line__list top-line__list_right">
-                                <li class="top-line__list-item"><a class="top-line__link" href="#">Регистрация</a></li>
-                                <li class="top-line__list-item"><a class="top-line__link" href="#">Личный кабинет</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header-line">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="header-line__content"><img class="header-line__logo" src="../assets/img/logo.jpg" alt="Логотип" />
-                            <form class="search-form" action=""><input class="search-form__input" type="search" placeholder="Поиск по сайту..." /><button class="search-form__button" type="button"></button></form>
-                            <div class="phone-block"><a class="phone-block__link" href="tel:88002508373"><span class="phone-block__icon" role="icon"></span><span class="phone-block__text">
-                                        <span class="phone-block__phone-number">8 (800)
-                                            <span class="phone-block__phone-number phone-block__phone-number_red">250-83-73</span></span><span class="phone-block__description">Звонок по России бесплатный</span></span></a></div>
-                            <div class="basket"><a class="basket__link" href="#"><span class="basket__icon" role="icon"><span class="basket__items-counter">150</span></span><span class="basket__text">
-                                        <span class="basket__amount">12 800 500 ₽.</span><span class="basket__description">Минимальный заказ: 30 000 р.</span></span></a></div>
+        <div class="header__content">
+            <div class="header__scroll-container">
+                <div class="header-line">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="header-line__content"><img class="header-line__logo" src="../assets/img/logo.jpg" alt="Логотип" />
+                                    <form class="search-form" action=""><input class="visually-hidden search-form__checkbox" type="checkbox" id="search-form__checkbox" /><label class="search-form__label" for="search-form__checkbox"></label><input class="search-form__input" type="search" placeholder="Поиск по сайту..." /><button class="search-form__button" type="button"></button></form>
+                                    <div class="phone-block"><a class="phone-block__link" href="tel:88002508373"><span class="phone-block__icon" role="icon"></span><span class="phone-block__text">
+                                                <span class="phone-block__phone-number">8 (800)
+                                                    <span class="phone-block__phone-number phone-block__phone-number_red">250-83-73</span></span><span class="phone-block__description">Звонок по России бесплатный</span></span></a></div>
+                                    <div class="basket"><a class="basket__link" href="#"><span class="basket__icon" role="icon"></span><span class="basket__items-counter">15</span><span class="basket__text">
+                                                <span class="basket__amount">12 800 500 ₽.</span><span class="basket__description">Минимальный заказ: 30 000 р.</span></span></a></div>
+                                    <div class="burger-menu"><label class="burger-menu__label"><input class="visually-hidden burger-menu__checkbox" type="checkbox" /><span class="burger-menu__icon"></span></label></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="site-sections">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <nav class="site-sections__nav">
-                            <ul class="site-sections__list">
-                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Каталог</a></li>
-                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Новинки</a></li>
-                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Распродажа</a></li>
-                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Серии</a></li>
-                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">авторские дизайны</a></li>
-                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Контакты</a></li>
-                            </ul>
-                        </nav>
+                <div class="site-sections">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <nav class="site-sections__nav">
+                                    <ul class="site-sections__list">
+                                        <li class="site-sections__list-item"><a class="site-sections__link" href="#">Каталог<span class="site-sections__link-back">Назад</span></a>
+                                            <ul class="site-sections__list"><span class="site-sections__list-name">Коллекции посуды</span>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Лицензионные коллекции</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Кружки</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда для чая и кофе</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда столовая</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда для детей</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда из доломита</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда керамическая</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда из стеклокерамики</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда стеклянная</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда для приготовления</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Кухонные принадлежности</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="site-sections__list-item"><a class="site-sections__link" href="#">Новинки</a></li>
+                                        <li class="site-sections__list-item"><a class="site-sections__link" href="#">Распродажа</a></li>
+                                        <li class="site-sections__list-item"><a class="site-sections__link" href="#">Серии</a></li>
+                                        <li class="site-sections__list-item"><a class="site-sections__link" href="#">Авторские дизайны<span class="site-sections__link-back">Назад</span></a>
+                                            <ul class="site-sections__list"><span class="site-sections__list-name">Коллекции посуды</span>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Лицензионные коллекции</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Кружки</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда для чая и кофе</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда столовая</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда для детей</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда из доломита</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда керамическая</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда из стеклокерамики</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда стеклянная</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда для приготовления</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Кухонные принадлежности</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="site-sections__list-item"><a class="site-sections__link" href="#">Контакты</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overlay overlay_white"></div>
+                </div>
+                <div class="top-line">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <nav class="top-line__nav">
+                                    <ul class="top-line__list top-line__list_left">
+                                        <li class="top-line__list-item"><a class="top-line__link" href="#">О компании</a></li>
+                                        <li class="top-line__list-item"><a class="top-line__link" href="#">Покупателю</a></li>
+                                        <li class="top-line__list-item"><a class="top-line__link" href="#">Новости</a></li>
+                                        <li class="top-line__list-item"><a class="top-line__link" href="#">Вопрос-ответ</a></li>
+                                        <li class="top-line__list-item"><a class="top-line__link" href="#">Статьи</a></li>
+                                        <li class="top-line__list-item"><a class="top-line__link" href="#">Скачать</a></li>
+                                    </ul>
+                                    <ul class="top-line__list top-line__list_right">
+                                        <li class="top-line__list-item"><a class="top-line__link" href="#">Регистрация</a></li>
+                                        <li class="top-line__list-item"><a class="top-line__link" href="#">Личный кабинет</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overlay overlay_white"></div>
+                </div>
+                <div class="contacts-burger">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="contacts-burger__content"><a class="phone-block__phone-number contacts-burger__phone" href="tel:88002508373">8 (800) 250-83-73</a><a class="contacts-burger__email" href="mailto:info@korall.ru">info@korall.ru</a></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,6 +120,8 @@
             </div>
         </div>
     </div>
+    <script src="scripts/libraries/jquery.min.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>

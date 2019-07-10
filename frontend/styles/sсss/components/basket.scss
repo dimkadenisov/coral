@@ -2,19 +2,12 @@
   &__link {
     display: flex;
     justify-content: space-between;
+    position: relative;
     align-items: center;
     text-decoration: none;
-
-    &:hover,
-    &:focus {
-      .basket__items-counter {
-        box-shadow: 0.5px 2px 5px 0 rgba($red, 0.5);
-      }
-    }
   }
 
   &__icon {
-    position: relative;
     width: 48px;
     height: 48px;
     border: 2px solid $gray-400;
@@ -28,7 +21,7 @@
   &__items-counter {
     position: absolute;
     bottom: 2px;
-    left: 38px;
+    left: 35px;
     display: block;
     min-width: 20px;
     height: 20px;
@@ -60,5 +53,34 @@
     margin-top: 5px;
     color: $gray-600;
     font-size: 13px;
+    font-variant-numeric: oldstyle-nums;
+    font-feature-settings: 'onum';
+  }
+
+  &__link:hover,
+  &__link:focus {
+    .basket__items-counter {
+      box-shadow: 0.5px 2px 5px 0 rgba($red, 0.5);
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .basket {
+    margin-right: 6px;
+    &__icon {
+      border-color: transparent;
+    }
+
+    &__text {
+      display: none;
+    }
+
+    &__link:hover,
+    &__link:focus {
+      .basket__icon {
+        opacity: 0.7;
+      }
+    }
   }
 }

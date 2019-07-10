@@ -1,5 +1,4 @@
 .header-line {
-  position: sticky;
   background-color: $white;
 
   &__content {
@@ -11,5 +10,25 @@
 
   &__logo {
     height: 68px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .header-line {
+    &_opened {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 5px 10px 0px rgba($black, 0.1);
+      z-index: 3;
+    }
+
+    &__content {
+      height: 56px;
+    }
+
+    &__logo {
+      height: 44px;
+    }
   }
 }
