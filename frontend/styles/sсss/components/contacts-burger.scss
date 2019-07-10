@@ -1,0 +1,58 @@
+.contacts-burger {
+  display: none;
+}
+
+@media screen and (max-width: 1199px) {
+  .contacts-burger {
+    padding: 15px 0;
+    background-color: $gray-100;
+
+    &_opened {
+      display: block;
+    }
+
+    &__content {
+      padding-left: 35px;
+      padding-right: 30px;
+    }
+
+    &__phone {
+      text-decoration: none;
+    }
+
+    &__phone:hover,
+    &__phone:focus {
+      text-decoration: underline;
+    }
+
+    &__email {
+      margin-left: 35px;
+      color: $gray-600;
+      font-size: 15px;
+    }
+
+    &__email:hover,
+    &__email:focus {
+      color: $gray-700;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .contacts-burger {
+    &__phone {
+      font-size: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts-burger {
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0;
+    }
+  }
+}
