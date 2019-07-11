@@ -30,6 +30,11 @@
     &_red {
       color: $red;
     }
+
+    &_small {
+      font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+      font-size: 17px;
+    }
   }
 
   &__description {

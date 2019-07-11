@@ -1,5 +1,10 @@
 .contacts-burger {
   display: none;
+
+  &__email {
+    color: $gray-600;
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -25,10 +30,8 @@
       text-decoration: underline;
     }
 
-    &__email {
+    .contacts-burger__email {
       margin-left: 35px;
-      color: $gray-600;
-      font-size: 15px;
     }
 
     &__email:hover,
