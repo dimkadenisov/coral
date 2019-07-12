@@ -30,7 +30,7 @@
       display: none;
     }
 
-    &+.site-sections__list {
+    &~.site-sections__list {
       display: none;
     }
   }
