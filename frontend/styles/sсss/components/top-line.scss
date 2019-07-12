@@ -54,20 +54,18 @@
 @media screen and (max-width: 1199px) {
   .top-line {
     position: relative;
-    margin-right: -2400px;
-    order: initial;
-    background-color: $white;
-    transition: margin-right 0.5s;
-
     width: 0;
     height: 0;
+    order: initial;
+    margin-right: -2400px;
+    background-color: $white;
+    transition: margin-right 0.5s;
     overflow: hidden;
 
     &_opened {
-      margin-right: 0;
-
       width: auto;
       height: auto;
+      margin-right: 0;
       overflow: visible;
     }
 

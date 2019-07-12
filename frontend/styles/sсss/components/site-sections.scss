@@ -12,6 +12,10 @@
     list-style: none;
   }
 
+  &__list-name {
+    display: none;
+  }
+
   &__link {
     display: block;
     padding: 0 10px;
@@ -50,19 +54,18 @@
 @media screen and (max-width: 1199px) {
   .site-sections {
     position: relative;
+    width: 0;
+    height: 0;
+    order: -1;
     margin-right: -2400px;
     background-color: $white;
     transition: margin-right 0.5s;
-
-    width: 0;
-    height: 0;
     overflow: hidden;
 
     &_opened {
-      margin-right: 0;
-
       width: auto;
       height: auto;
+      margin-right: 0;
       overflow: visible;
     }
 
@@ -73,18 +76,22 @@
     }
 
     &__list {
-      flex-direction: column;
-      justify-content: flex-start;
+      display: block;
       position: relative;
       border-bottom: 1px solid $gray-400;
     }
 
 
     &__list-item {
+      display: block;
       border: none;
 
       &:last-of-type {
         border: none;
+      }
+
+      & > .site-sections__list {
+        display: none;
       }
     }
 
@@ -106,6 +113,7 @@
       &:not(:only-child) {
         &::before {
           content: "";
+          display: block;
           position: absolute;
           left: 15px;
           top: 50%;
@@ -144,10 +152,19 @@
           font-weight: normal;
         }
 
-        &+.site-sections__list {
-          display: flex;
+        &~.site-sections__list-name {
+          display: block;
           position: absolute;
           top: 76px;
+          left: 0;
+          width: 100%;
+          z-index: 2;
+        }
+
+        &~.site-sections__list {
+          display: block;
+          position: absolute;
+          top: 124px;
           right: 0;
           left: 0;
           border-bottom: none;
