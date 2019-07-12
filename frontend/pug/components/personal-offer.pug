@@ -8,15 +8,16 @@ form.personal-offer
             |
             |
             span.personal-offer__description Оставьте свой номер телефона и мы перезвоним вам
-        .col-3
-          input(type="text")
-        .col-3
-          input(type="text")
-        .col-3
-          input(type="text")
-        .col-3
-          input(type="submit")
+        .col-12.col-md-4.col-xl-3
+          input(type="text" placeholder="Имя").input-field.input-field_red
+        .col-12.col-md-4.col-xl-3
+          input(type="text" placeholder="E-mail").input-field.input-field_red
+        .col-12.col-md-4.col-xl-3
+          input(type="text" placeholder="Телефон").input-field.input-field_red
+        .col-12.col-md-6.col-lg-4.col-xl-3.offset-0.offset-md-3.offset-lg-4.offset-xl-0
+          button.button.button_icon_left.button_icon_write Оставить заявку
         .col-12
-          label
-            input(type="checkbox")
-            |Нажимая кнопку «Подписаться», я даю свое согласие на обработку моих персональных данных.
+          label.checkbox__label.checkbox__label_light
+            input(type="checkbox").checkbox.visually-hidden
+            span.checkbox__checkbox
+            |Нажимая кнопку «Оставить заявку», я&nbsp;даю свое согласие на&nbsp;обработку моих&nbsp;персональных данных.

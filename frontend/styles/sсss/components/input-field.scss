@@ -1,6 +1,27 @@
 .input-field {
-  width: 56px;
+  max-width: 500px;
+  width: 100%;
   height: 56px;
+  padding-right: 30px;
+  padding-left: 30px;
   border-radius: 56px;
   border-width: 2px;
+  border-color: transparent;
+  background-color: $white;
+  box-shadow: none;
+  border-style: solid;
+  color: $gray-650;
+  font-family: "Raleway", "Helvetica", "Arial", sans-serif;
+  font-size: 15px;
+
+  &_red {
+    border-color: $red-100;
+    background-color: $red-300;
+    color: $white;
+
+    &::-moz-placeholder {color: $white;}
+    &::-webkit-input-placeholder {color: $white;}
+    &::-ms-input-placeholder {color: $white;}
+    &::placeholder {color: $white;}
+  }
 }
