@@ -12,7 +12,9 @@ var changeHeaderState = function changeHeaderState() {
 var changeSubMenuState = function changeSubMenuState(event) {
   event.preventDefault();
   $(event.currentTarget).toggleClass('site-sections__link_opened');
-  $('.header .overlay_white').toggleClass('d-block');
+  $(event.currentTarget).closest('.site-sections__list').children('.site-sections__list-item').toggleClass('d-none');
+  $(event.currentTarget).parent().toggleClass('d-none');
+  $('.top-line').toggleClass('d-none');
 };
 
 $('.burger-menu__checkbox').click(changeHeaderState);
