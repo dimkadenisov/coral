@@ -1,0 +1,43 @@
+.subscription-form {
+  background-color: $gold-100;
+
+  &__fieldset {
+    padding: 16px 0;
+  }
+
+  &__legend {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    color: $gray-700;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  &__input-wrapper {
+    position: relative;
+    max-width: 500px;
+
+    .input-field {
+      padding-right: 55px;
+    }
+
+    .button {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .subscription-form {
+    &__fieldset {
+      padding: 35px 0 40px 0;
+    }
+    &__legend {
+      height: auto;
+      margin-bottom: 25px;
+    }
+  }
+}
