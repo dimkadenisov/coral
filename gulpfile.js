@@ -55,9 +55,8 @@ lazyRequireTask('scripts:libs', './tasks/copy', {
 });
 
 lazyRequireTask('svg:min', './tasks/svg:min', {
-  src: 'frontend/assets/img/icons/*.svg',
-  dest: 'frontend/assets/img/icons-minificated',
-  base: 'frontend/assets/img/icons',
+  src: 'frontend/assets/icons/*.svg',
+  dest: 'public/assets/icons',
   plugins: [
     {cleanupAttrs: true},
     {inlineStyles: true},
@@ -105,10 +104,121 @@ lazyRequireTask('svg:min', './tasks/svg:min', {
   ]
 });
 
+// lazyRequireTask('svg:sprite', './tasks/svg:sprite', {
+//   src: 'frontend/assets/icons/sprite/*.svg',
+//   dest: 'public/assets/icons/sprite',
+//   plugins: [
+//     {cleanupAttrs: true},
+//     {inlineStyles: true},
+//     {removeDoctype: true},
+//     {removeXMLProcInst: true},
+//     {removeComments: true},
+//     {removeMetadata: true},
+//     {removeTitle: true},
+//     {removeDesc: true},
+//     {removeUselessDefs: true},
+//     {removeXMLNS: false},
+//     {removeEditorsNSData: true},
+//     {removeEmptyAttrs: true},
+//     {removeHiddenElems: true},
+//     {removeEmptyText: true},
+//     {emoveEmptyContainers: true},
+//     {removeViewBox: false},
+//     {cleanupEnableBackground: true},
+//     {minifyStyles: false},
+//     {convertStyleToAttrs: true},
+//     {convertColors: true},
+//     {convertPathData: true},
+//     {convertTransform: true},
+//     {removeUnknownsAndDefaults: true},
+//     {removeNonInheritableGroupAttrs: true},
+//     {removeUselessStrokeAndFill: true},
+//     {removeUnusedNS: true},
+//     {cleanupIDs: true},
+//     {cleanupNumericValues: true},
+//     {cleanupListOfValues: true},
+//     {moveElemsAttrsToGroup: true},
+//     {moveGroupAttrsToElems: true},
+//     {collapseGroups: true},
+//     {removeRasterImages: true},
+//     {mergePaths: true},
+//     {convertShapeToPath: true},
+//     {sortAttrs: true},
+//     {removeDimensions: true},
+//     {removeAttrs: true},
+//     {removeElementsByAttr: false},
+//     {addClassesToSVGElement: false},
+//     {addAttributesToSVGElement: false},
+//     {removeStyleElement: false},
+//     {removeScriptElement: false},
+//   ]
+// });
+
 lazyRequireTask('svg:sprite', './tasks/svg:sprite', {
-  src: 'frontend/assets/img/icons-minificated/*.svg',
-  dest: 'public/assets/img/icons/sprite',
+  src: 'frontend/assets/icons/sprite/*.svg',
+  dest: 'public/assets/icons/sprite',
+  config: {
+    shape: {
+      transform: [
+        {svgo: {
+          plugins: [
+            {cleanupAttrs: true},
+            {inlineStyles: true},
+            {removeDoctype: true},
+            {removeXMLProcInst: true},
+            {removeComments: true},
+            {removeMetadata: true},
+            {removeTitle: true},
+            {removeDesc: true},
+            {removeUselessDefs: true},
+            {removeXMLNS: false},
+            {removeEditorsNSData: true},
+            {removeEmptyAttrs: true},
+            {removeHiddenElems: true},
+            {removeEmptyText: true},
+            {emoveEmptyContainers: true},
+            {removeViewBox: false},
+            {cleanupEnableBackground: true},
+            {minifyStyles: false},
+            {convertStyleToAttrs: true},
+            {convertColors: true},
+            {convertPathData: true},
+            {convertTransform: true},
+            {removeUnknownsAndDefaults: true},
+            {removeNonInheritableGroupAttrs: true},
+            {removeUselessStrokeAndFill: true},
+            {removeUnusedNS: true},
+            {cleanupIDs: true},
+            {cleanupNumericValues: true},
+            {cleanupListOfValues: true},
+            {moveElemsAttrsToGroup: true},
+            {moveGroupAttrsToElems: true},
+            {collapseGroups: true},
+            {removeRasterImages: true},
+            {mergePaths: true},
+            {convertShapeToPath: true},
+            {sortAttrs: true},
+            {removeDimensions: true},
+            {removeAttrs: true},
+            {removeElementsByAttr: false},
+            {addClassesToSVGElement: false},
+            {addAttributesToSVGElement: false},
+            {removeStyleElement: false},
+            {removeScriptElement: false},
+          ]
+        }}
+      ],
+      mode: {
+        stack: {
+          sprite: "../sprite.svg"  //sprite file name
+        },
+        // symbol: true,
+        inline: true,
+      },
+    }
+  }
 });
+
 
 lazyRequireTask('images', './tasks/images', {
   src: 'frontend/assets/img/*.*',
