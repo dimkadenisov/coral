@@ -39,7 +39,7 @@ lazyRequireTask('styles', './tasks/styles', {
 });
 
 lazyRequireTask('styles:libs', './tasks/styles:libs', {
-  src: 'frontend/styles/libraries/*.scss',
+  src: 'frontend/styles/libraries/*.*',
   dest: 'public/styles/libraries',
 });
 

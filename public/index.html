@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="styles/libraries/bootstrap.css" />
+    <link rel="stylesheet" href="styles/libraries/swiper.min.css" />
     <link rel="stylesheet" href="styles/main.css" />
     <title>Главная страница</title>
 </head>
@@ -19,11 +20,11 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="header-line__content"><img class="header-line__logo" src="assets/img/logo.jpg" alt="Логотип" />
-                                    <form class="search-form" action=""><input class="visually-hidden search-form__checkbox" type="checkbox" id="search-form__checkbox" /><label class="search-form__label" for="search-form__checkbox"></label><input class="search-form__input" type="search" placeholder="Поиск по сайту..." /><button class="search-form__button" type="button"></button></form>
-                                    <div class="phone-block"><a class="phone-block__link" href="tel:88002508373"><span class="phone-block__icon" role="icon"></span><span class="phone-block__text">
+                                    <form class="search-form"><input class="visually-hidden search-form__checkbox" type="checkbox" id="search-form__checkbox" /><label class="search-form__label" for="search-form__checkbox"></label><input class="search-form__input" type="search" placeholder="Поиск по сайту..." /><button class="search-form__button" type="button"></button></form>
+                                    <div class="phone-block"><a class="phone-block__link" href="tel:88002508373"><span class="phone-block__icon"></span><span class="phone-block__text">
                                                 <span class="phone-block__phone-number">8 (800)
                                                     <span class="phone-block__phone-number phone-block__phone-number_red">250-83-73</span></span><span class="phone-block__description">Звонок по России бесплатный</span></span></a></div>
-                                    <div class="basket"><a class="basket__link" href="#"><span class="basket__icon" role="icon"></span><span class="basket__items-counter">15</span><span class="basket__text">
+                                    <div class="basket"><a class="basket__link" href="#"><span class="basket__icon"></span><span class="basket__items-counter">15</span><span class="basket__text">
                                                 <span class="basket__amount">12 800 500 ₽.</span><span class="basket__description">Минимальный заказ: 30 000 р.</span></span></a></div>
                                     <div class="burger-menu"><label class="burger-menu__label"><input class="visually-hidden burger-menu__checkbox" type="checkbox" /><span class="burger-menu__icon"></span></label></div>
                                 </div>
@@ -37,8 +38,9 @@
                             <div class="col-12">
                                 <nav class="site-sections__nav">
                                     <ul class="site-sections__list">
-                                        <li class="site-sections__list-item"><a class="site-sections__link" href="#">Каталог<span class="site-sections__link-back">Назад</span></a><span class="site-sections__list-name">Коллекции посуды</span>
+                                        <li class="site-sections__list-item"><a class="site-sections__link" href="#">Каталог<span class="site-sections__link-back">Назад</span></a>
                                             <ul class="site-sections__list">
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Коллекции посуды</a></li>
                                                 <li class="site-sections__list-item"><a class="site-sections__link" href="#">Лицензионные коллекции</a></li>
                                                 <li class="site-sections__list-item"><a class="site-sections__link" href="#">Кружки</a></li>
                                                 <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда для чая и кофе</a></li>
@@ -61,8 +63,9 @@
                                         <li class="site-sections__list-item"><a class="site-sections__link" href="#">Новинки</a></li>
                                         <li class="site-sections__list-item"><a class="site-sections__link" href="#">Распродажа</a></li>
                                         <li class="site-sections__list-item"><a class="site-sections__link" href="#">Серии</a></li>
-                                        <li class="site-sections__list-item"><a class="site-sections__link" href="#">Авторские дизайны<span class="site-sections__link-back">Назад</span></a><span class="site-sections__list-name">Коллекции посуды</span>
+                                        <li class="site-sections__list-item"><a class="site-sections__link" href="#">Авторские дизайны<span class="site-sections__link-back">Назад</span></a>
                                             <ul class="site-sections__list">
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Коллекции посуды</a></li>
                                                 <li class="site-sections__list-item"><a class="site-sections__link" href="#">Лицензионные коллекции</a></li>
                                                 <li class="site-sections__list-item"><a class="site-sections__link" href="#">Кружки</a></li>
                                                 <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда для чая и кофе</a></li>
@@ -117,6 +120,7 @@
             </div>
         </div>
     </div>
+    <div class="overlay overlay_black"></div>
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -124,15 +128,28 @@
             </div>
         </div>
     </div>
+    <section class="section news">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-xs-7 col-lg-9 col-xl-8 col-xxl-10"><span class="section__heading">Новости</span></div>
+                <div class="col-12 col-xs-5 col-lg-3 col-xxl-2"><button class="button button_red button_icon button_icon_right button_icon_right_space-between button_icon_next_light button_icon_bg_lighter">Читать еще</button></div>
+                <div class="col-12">
+                    <div class="news-grid">
+                        <div class="news-post">
+                            <div class="news-post__image"><img src="" alt="" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <form class="subscription-form">
         <fieldset class="subscription-form__fieldset">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-sm-8 col-md-6 col-lg-7 col-xl-6 col-xxl-5 offset-xxl-1">
-                        <legend class="subscription-form__legend"><span>Подпишись и&nbsp;получай информацию о&nbsp;всех новинках и&nbsp;акциях!</span></legend>
-                    </div>
+                    <div class="col-12 col-sm-8 col-md-6 col-lg-7 col-xl-6 col-xxl-5 offset-xxl-1"><span class="subscription-form__legend">Подпишись и&nbsp;получай информацию о&nbsp;всех новинках и&nbsp;акциях!</span></div>
                     <div class="col-12 col-md-6 col-lg-5 col-xl-6 col-xxl-5">
-                        <div class="subscription-form__input-wrapper"><input class="input-field" type="email" placeholder="Укажите Вашу почту" /><button class="button button_red button_small button_circle button_circle_small button_icon button_icon_only button_icon_mail-light"></button></div>
+                        <div class="subscription-form__input-wrapper"><input class="input-field" type="email" inputmode="email" placeholder="Укажите Вашу почту" /><button class="button button_red button_small button_circle button_circle_small button_icon button_icon_only button_icon_mail-light"></button></div>
                     </div>
                 </div>
             </div>
@@ -146,58 +163,61 @@
                 </div>
                 <div class="col-12 col-md-11 col-lg-12 col-xl-11">
                     <div class="benefits__items">
-                        <div class="benefit-item">
-                            <div class="benefit-item__icon benefit-item__icon_trolley"></div>
-                            <div class="benefit-item__number">01</div>
-                            <div class="benefit-item__text">
-                                <div class="benefit-item__thesis">Ассортиментное предложение</div>
-                                <div class="benefit-item__description">Востребованный ассортимент посуды
-                                    и&nbsp;товаров для дома от&nbsp;эконом
-                                    до&nbsp;премиум класса</div>
+                        <div class="swiper-wrapper">
+                            <div class="benefit-item">
+                                <div class="benefit-item__icon benefit-item__icon_trolley"></div>
+                                <div class="benefit-item__number">01</div>
+                                <div class="benefit-item__text">
+                                    <div class="benefit-item__thesis">Ассортиментное предложение</div>
+                                    <div class="benefit-item__description">Востребованный ассортимент посуды
+                                        и&nbsp;товаров для дома от&nbsp;эконом
+                                        до&nbsp;премиум класса</div>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-item__icon benefit-item__icon_diamond"></div>
+                                <div class="benefit-item__number">02</div>
+                                <div class="benefit-item__text">
+                                    <div class="benefit-item__thesis">Эксклюзивные проекты</div>
+                                    <div class="benefit-item__description">Более 50-ти новых серий ежегодно. Лицензионные коллекции и&nbsp;авторские дизайны</div>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-item__icon benefit-item__icon_shield"></div>
+                                <div class="benefit-item__number">03</div>
+                                <div class="benefit-item__text">
+                                    <div class="benefit-item__thesis">Качество</div>
+                                    <div class="benefit-item__description">Весь товар сертифицирован
+                                        и&nbsp;соответствует требованиям СанПин</div>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-item__icon benefit-item__icon_boxes"></div>
+                                <div class="benefit-item__number">04</div>
+                                <div class="benefit-item__text">
+                                    <div class="benefit-item__thesis">Наличие товара и сервис</div>
+                                    <div class="benefit-item__description">Собственный склад позволяет поддерживать широкий ассортимент и&nbsp;глубину позиций, обеспечивая непрерывные поставки</div>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-item__icon benefit-item__icon_truck"></div>
+                                <div class="benefit-item__number">05</div>
+                                <div class="benefit-item__text">
+                                    <div class="benefit-item__thesis">Логистика</div>
+                                    <div class="benefit-item__description">Доставка заказов в любую точку России
+                                        и&nbsp;СНГ. Возможна отгрузка в&nbsp;день обращения. Все грузы застрахованы</div>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-item__icon benefit-item__icon_list"></div>
+                                <div class="benefit-item__number">06</div>
+                                <div class="benefit-item__text">
+                                    <div class="benefit-item__thesis">Гарантия</div>
+                                    <div class="benefit-item__description">Замена боя, компенсация или&nbsp;замена производственного брака.</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="benefit-item">
-                            <div class="benefit-item__icon benefit-item__icon_diamond"></div>
-                            <div class="benefit-item__number">02</div>
-                            <div class="benefit-item__text">
-                                <div class="benefit-item__thesis">Эксклюзивные проекты</div>
-                                <div class="benefit-item__description">Более 50-ти новых серий ежегодно. Лицензионные коллекции и&nbsp;авторские дизайны</div>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-item__icon benefit-item__icon_shield"></div>
-                            <div class="benefit-item__number">03</div>
-                            <div class="benefit-item__text">
-                                <div class="benefit-item__thesis">Качество</div>
-                                <div class="benefit-item__description">Весь товар сертифицирован
-                                    и&nbsp;соответствует требованиям СанПин</div>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-item__icon benefit-item__icon_boxes"></div>
-                            <div class="benefit-item__number">04</div>
-                            <div class="benefit-item__text">
-                                <div class="benefit-item__thesis">Наличие товара и сервис</div>
-                                <div class="benefit-item__description">Собственный склад позволяет поддерживать широкий ассортимент и&nbsp;глубину позиций, обеспечивая непрерывные поставки</div>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-item__icon benefit-item__icon_truck"></div>
-                            <div class="benefit-item__number">05</div>
-                            <div class="benefit-item__text">
-                                <div class="benefit-item__thesis">Логистика</div>
-                                <div class="benefit-item__description">Доставка заказов в любую точку России
-                                    и&nbsp;СНГ. Возможна отгрузка в&nbsp;день обращения. Все грузы застрахованы</div>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-item__icon benefit-item__icon_list"></div>
-                            <div class="benefit-item__number">06</div>
-                            <div class="benefit-item__text">
-                                <div class="benefit-item__thesis">Гарантия</div>
-                                <div class="benefit-item__description">Замена боя, компенсация или&nbsp;замена производственного брака.</div>
-                            </div>
-                        </div>
+                        <div class="d-flex d-md-none pagination"></div>
                     </div>
                 </div>
             </div>
@@ -207,13 +227,11 @@
         <fieldset class="personal-offer__fieldset">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <legend class="personal-offer__legend"><span class="personal-offer__heading">Получи персональное предложение</span>
-                            <span class="personal-offer__description">Оставьте свой номер телефона и мы перезвоним вам</span></legend>
-                    </div>
+                    <div class="col-12"><span class="personal-offer__legend"><span class="personal-offer__heading">Получи персональное предложение</span>
+                            <span class="personal-offer__description">Оставьте свой номер телефона и мы перезвоним вам</span></span></div>
                     <div class="col-12 col-md-4 col-xl-3"><input class="input-field input-field_red" type="text" placeholder="Имя" /></div>
-                    <div class="col-12 col-md-4 col-xl-3"><input class="input-field input-field_red" type="text" placeholder="E-mail" /></div>
-                    <div class="col-12 col-md-4 col-xl-3"><input class="input-field input-field_red" type="text" placeholder="Телефон" /></div>
+                    <div class="col-12 col-md-4 col-xl-3"><input class="input-field input-field_red" type="email" inputmode="email" placeholder="E-mail" /></div>
+                    <div class="col-12 col-md-4 col-xl-3"><input class="input-field input-field_red" type="tel" inputmode="tel" placeholder="Телефон" /></div>
                     <div class="col-12 col-md-6 col-lg-4 col-xl-3 offset-0 offset-md-3 offset-lg-4 offset-xl-0"><button class="button button_icon button_icon_left button_icon_write-dark">Оставить заявку</button></div>
                     <div class="col-12"><label class="checkbox__label checkbox__label_light"><input class="checkbox visually-hidden" type="checkbox" /><span class="checkbox__checkbox"></span>Нажимая кнопку «Оставить заявку», я&nbsp;даю свое согласие на&nbsp;обработку моих&nbsp;персональных данных.</label></div>
                 </div>
@@ -313,6 +331,7 @@
         </div>
     </footer>
     <script src="scripts/libraries/jquery.min.js"></script>
+    <script src="scripts/libraries/swiper.min.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 

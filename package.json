@@ -34,7 +34,8 @@
     "stream-combiner2": "^1.1.1",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended-scss": "^3.3.0",
-    "stylelint-scss": "^3.9.0"
+    "stylelint-scss": "^3.9.0",
+    "swiper": "^4.5.0"
   },
   "browserslist": [
     "last 2 versions",

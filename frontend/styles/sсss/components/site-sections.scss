@@ -110,6 +110,13 @@
       text-align: left;
       text-transform: none;
 
+      &:hover,
+      &:focus {
+        background: rgba($black, 0.04);
+        color: $gray-700;
+        font-weight: bold;
+      }
+
       &:not(:only-child) {
         &::before {
           content: "";
@@ -128,10 +135,6 @@
       }
 
       &_opened {
-        // position: absolute;
-        // top: 0;
-        // right: 0;
-        // left: 0;
         padding-left: 15px;
         font-weight: bold;
         z-index: 2;
@@ -150,15 +153,6 @@
           margin-top: -20px;
           color: $gray-600;
           font-weight: normal;
-        }
-
-        &~.site-sections__list-name {
-          display: block;
-          // position: absolute;
-          // top: 76px;
-          // left: 0;
-          width: 100%;
-          z-index: 2;
         }
 
         &~.site-sections__list {
@@ -181,13 +175,6 @@
             text-decoration: underline;
           }
         }
-      }
-
-      &:hover,
-      &:focus {
-        background: rgba($black, 0.04);
-        color: $gray-700;
-        font-weight: bold;
       }
     }
   }

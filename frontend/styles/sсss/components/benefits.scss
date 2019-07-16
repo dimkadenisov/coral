@@ -1,0 +1,27 @@
+.benefits {
+  background-color: $white;
+
+  &__items {
+    margin-top: 50px;
+
+    .swiper-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .benefits {
+    &__items {
+      position: relative;
+      overflow-x: hidden;
+      z-index: 1;
+
+      .swiper-wrapper {
+        flex-wrap: nowrap;
+      }
+    }
+  }
+}

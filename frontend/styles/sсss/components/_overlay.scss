@@ -9,4 +9,8 @@
   &_white {
     background-color: $white;
   }
+
+  &_black {
+    background-color: rgba($black, 0.5);
+  }
 }
