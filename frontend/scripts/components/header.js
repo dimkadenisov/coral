@@ -1,4 +1,4 @@
-const openHeader = () => {
+const openBurgerMenu = () => {
   $('body').addClass('overflow_hidden');
   $('.header+.overlay').addClass('d-block');
   $('.header-line').addClass('header-line_opened');
@@ -8,7 +8,7 @@ const openHeader = () => {
   $('.contacts-burger').addClass('contacts-burger_opened');
 };
 
-const closeHeader = () => {
+const closeBurgerMenu = () => {
   $('body').removeClass('overflow_hidden');
   $('.header+.overlay').removeClass('d-block');
   $('.header-line').removeClass('header-line_opened');
@@ -20,8 +20,8 @@ const closeHeader = () => {
   closeSubMenu();
 };
 
-const toggleHeaderState = () => {
-  return $('.header-line').hasClass('header-line_opened') ? closeHeader() : openHeader();
+const toggleBurgerMenu = () => {
+  return $('.header-line').hasClass('header-line_opened') ? closeBurgerMenu() : openBurgerMenu();
 };
 
 const openSubMenu = (event) => {
@@ -55,6 +55,6 @@ const changeSubMenuState = (event) => {
 }
 
 
-$('.burger-menu__checkbox').click(toggleHeaderState);
+$('.burger-menu__checkbox').click(toggleBurgerMenu);
 
 $('.site-sections__link:not(:only-child').click(toggleSubMenuState);
