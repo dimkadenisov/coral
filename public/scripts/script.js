@@ -69,7 +69,7 @@
   breakpointChecker();
 })();
 
-var openHeader = function openHeader() {
+var openBurgerMenu = function openBurgerMenu() {
   $('body').addClass('overflow_hidden');
   $('.header+.overlay').addClass('d-block');
   $('.header-line').addClass('header-line_opened');
@@ -79,7 +79,7 @@ var openHeader = function openHeader() {
   $('.contacts-burger').addClass('contacts-burger_opened');
 };
 
-var closeHeader = function closeHeader() {
+var closeBurgerMenu = function closeBurgerMenu() {
   $('body').removeClass('overflow_hidden');
   $('.header+.overlay').removeClass('d-block');
   $('.header-line').removeClass('header-line_opened');
@@ -90,8 +90,8 @@ var closeHeader = function closeHeader() {
   closeSubMenu();
 };
 
-var toggleHeaderState = function toggleHeaderState() {
-  return $('.header-line').hasClass('header-line_opened') ? closeHeader() : openHeader();
+var toggleBurgerMenu = function toggleBurgerMenu() {
+  return $('.header-line').hasClass('header-line_opened') ? closeBurgerMenu() : openBurgerMenu();
 };
 
 var openSubMenu = function openSubMenu(event) {
@@ -113,13 +113,19 @@ var toggleSubMenuState = function toggleSubMenuState(event) {
   return $('.site-sections__link').hasClass('site-sections__link_opened') ? closeSubMenu() : openSubMenu(event);
 };
 
-var changeSubMenuState = function changeSubMenuState(event) {
-  event.preventDefault();
-  $(event.currentTarget).toggleClass('site-sections__link_opened');
-  $(event.currentTarget).closest('.site-sections__list').children('.site-sections__list-item').toggleClass('d-none');
-  $(event.currentTarget).parent().toggleClass('d-none');
-  $('.top-line').toggleClass('d-none');
+var addScrollHeader = function addScrollHeader() {
+  $('.header').addClass('header_scrolled');
 };
 
-$('.burger-menu__checkbox').click(toggleHeaderState);
+var removeScrollHeader = function removeScrollHeader() {
+  $('.header').removeClass('header_scrolled');
+  console.log('hello');
+};
+
+var toggleScrollHeader = function toggleScrollHeader() {
+  return window.pageYOffset >= 140 ? addScrollHeader() : removeScrollHeader();
+};
+
+$('.burger-menu__checkbox').click(toggleBurgerMenu);
 $('.site-sections__link:not(:only-child').click(toggleSubMenuState);
+$(window).scroll(toggleScrollHeader);

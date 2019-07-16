@@ -35,26 +35,29 @@ const openSubMenu = (event) => {
 const closeSubMenu = () => {
   $('.site-sections__link_opened').closest('.site-sections__list').children('.site-sections__list-item').removeClass('d-none');
   $('.site-sections__link_opened').removeClass('site-sections__link_opened');
-
   $('.top-line').removeClass('d-none');
 };
 
 const toggleSubMenuState = (event) => {
   event.preventDefault();
-
   return $('.site-sections__link').hasClass('site-sections__link_opened') ? closeSubMenu() : openSubMenu(event);
 }
 
+const addScrollHeader = () => {
+  $('.header').addClass('header_scrolled');
+};
 
-const changeSubMenuState = (event) => {
-  event.preventDefault();
-  $(event.currentTarget).toggleClass('site-sections__link_opened');
-  $(event.currentTarget).closest('.site-sections__list').children('.site-sections__list-item').toggleClass('d-none');
-  $(event.currentTarget).parent().toggleClass('d-none');
-  $('.top-line').toggleClass('d-none');
+const removeScrollHeader = () => {
+  $('.header').removeClass('header_scrolled');
+  console.log('hello');
+};
+
+const toggleScrollHeader = () => {
+  return (window.pageYOffset >= 140) ? addScrollHeader() : removeScrollHeader();
 }
-
 
 $('.burger-menu__checkbox').click(toggleBurgerMenu);
 
 $('.site-sections__link:not(:only-child').click(toggleSubMenuState);
+
+$(window).scroll(toggleScrollHeader);
