@@ -1,28 +1,34 @@
 .header-line {
   background-color: $white;
 
+  &_opened {
+    box-shadow: 0 5px 10px 0px rgba($black, 0.1);
+    z-index: 2;
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100px;
+
+    &_scrolled {
+      height: 56px;
+    }
   }
 
   &__logo {
     height: 68px;
+
+    &_scrolled {
+      height: 44px;
+    }
   }
 }
 
 @media screen and (max-width: 1199px) {
   .header-line {
-    &_opened {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      box-shadow: 0 5px 10px 0px rgba($black, 0.1);
-      z-index: 3;
-    }
+    order: -1;
 
     &__content {
       height: 56px;

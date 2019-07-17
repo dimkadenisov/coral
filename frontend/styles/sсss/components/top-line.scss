@@ -2,6 +2,62 @@
   order: -1;
   background-color: $gray-100;
 
+  &_scrolled {
+    position: relative;
+    width: 0;
+    height: 0;
+    order: initial;
+    margin-right: -2400px;
+    background-color: $white;
+    transition: margin-right 0.5s;
+    overflow: hidden;
+
+    .top-line__nav {
+      flex-direction: column;
+      justify-content: flex-start;
+      height: auto;
+      line-height: 48px;
+    }
+
+    .top-line__list {
+      flex-direction: column;
+      justify-content: flex-start;
+
+      &_left {
+        margin-right: 0;
+        border-bottom: 1px solid $gray-400;
+      }
+
+      &_right {
+        margin-bottom: 30px;
+        margin-left: 0;
+      }
+    }
+
+    .top-line__list-item {
+      margin-right: 0;
+    }
+
+    .top-line__link {
+      padding-left: 35px;
+      padding-right: 30px;
+    }
+
+    .top-line__link:hover,
+    .top-line__link:focus {
+      background: rgba($black, 0.04);
+      color: $gray-700;
+      font-weight: bold;
+    }
+  }
+
+  &_opened {
+    width: auto;
+    height: auto;
+    margin-right: 0;
+    overflow: visible;
+  }
+
   &__nav {
     display: flex;
     justify-content: space-between;
