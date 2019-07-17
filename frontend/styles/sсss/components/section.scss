@@ -17,3 +17,23 @@
     font-weight: 600;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .section {
+    &__heading {
+      font-size: 25px;
+    }
+
+    &__description {
+      font-size: 17px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .section {
+    &__heading {
+      font-size: 24px;
+    }
+  }
+}
