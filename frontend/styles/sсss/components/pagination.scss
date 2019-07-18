@@ -1,6 +1,8 @@
 .pagination {
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 1;
 
   &__item {
     width: 16px;
