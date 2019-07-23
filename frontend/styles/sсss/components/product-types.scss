@@ -1,6 +1,6 @@
 .product-types {
   position: relative;
-  padding-top: 55px;
+  padding-top: 60px;
   padding-bottom: 30px;
   background: $gray-200;
 
@@ -15,31 +15,57 @@
     height: 10px;
     background-size: 20px 20px;
     background-image:
-      radial-gradient(circle at 10px -5px, transparent 12px, $gray-200 13px);
-      z-index: 2;
+      radial-gradient(circle at 10px -10px,transparent 13px,#f8f7f2 13px);
+    z-index: 2;
   }
 
-  &:after{
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 100%;
-    right: 0;
-    background-repeat: repeat;
-    height: 15px;
-    background-size: 40px 20px;
-    background-image:
-      radial-gradient(circle at 10px 15px, $gray-200 12px, transparent 13px);
-    z-index: 2;
+  // &::before {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: 100%;
+  //   right: 0;
+  //   background-repeat: repeat;
+  //   height: 10px;
+  //   background-size: 20px 20px;
+  //   background-image:
+  //     radial-gradient(circle at 10px -5px, transparent 12px, $gray-200 13px);
+  //   z-index: 2;
+  // }
+
+  // &:after{
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: 100%;
+  //   right: 0;
+  //   background-repeat: repeat;
+  //   height: 15px;
+  //   background-size: 40px 20px;
+  //   background-image:
+  //     radial-gradient(circle at 10px 15px, $gray-200 12px, transparent 13px);
+  //   z-index: 2;
+  // }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  &__list-item {
+    flex-basis: 25%;
+    flex-shrink: 0;
+    padding-right: 45px;
+    padding-bottom: 35px;
   }
 
   &__link {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-right: 45px;
-    margin-bottom: 35px;
     color: $gray-700;
     font-style: 15px;
     font-weight: 600;
@@ -65,37 +91,29 @@
 
 @media screen and (max-width: 1343px) {
   .product-types {
-    background: repeating-linear-gradient(
-      90deg,
-      $gray-200,
-      $gray-200 7px,
-      $gray-350 7px,
-      $gray-350 9px,
-    );
-
-    &::before,
-    &::after {
-      display: none;
-    }
-
-    &__link {
-      margin-right: 85px;
+    &__list-item {
+      flex-basis: 33.3333%;
+      padding-right: 85px;
     }
   }
 }
 
 @media screen and (max-width: 1199px) {
   .product-types {
-    &__link {
-      margin-right: 0;
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+    &__list-item {
+      padding-right: 0;
     }
   }
 }
 
 @media screen and (max-width: 991px) {
   .product-types {
-    &__link {
-      margin-right: 60px;
+    &__list-item {
+      flex-basis: 50%;
+      padding-right: 60px;
     }
 
     &__icon {
@@ -107,15 +125,38 @@
 
 @media screen and (max-width: 767px) {
   .product-types {
-    &__link {
-      margin-right: 60px;
+    padding-bottom: 40px;
+
+    &__list-item {
+      padding-right: 15px;
+      padding-bottom: 15px;
     }
 
     &__icon {
       width: 6px;
       height: 6px;
+      margin-right: 15px;
       border: 2px solid $red-200;
       border-radius: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .product-types {
+    padding-bottom: 60px;
+
+    &__list-item {
+      flex-basis: 100%;
+
+      &:nth-of-type(n + 9) {
+        display: none;
+      }
+    }
+    .button {
+      margin-top: 20px;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 }

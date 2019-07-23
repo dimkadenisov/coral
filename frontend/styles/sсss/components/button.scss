@@ -133,6 +133,14 @@
     }
   }
 
+  &_icon_down_light {
+    &::before,
+    &::after {
+      border-radius: 50%;
+      background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyBoZWlnaHQ9IjI0IiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNNy40MSA3Ljg0TDEyIDEyLjQybDQuNTktNC41OEwxOCA5LjI1bC02IDYtNi02eiIvPgo8L3N2Zz4=);
+    }
+  }
+
   &_icon_bg_lighter {
     &::before,
     &::after {
@@ -145,5 +153,11 @@
     &::after {
       background-color: $red-200;
     }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .button {
+    max-width: 290px;
   }
 }
