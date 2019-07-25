@@ -1,0 +1,44 @@
+mixin button(props)
+
+  - var {type="", size="", color="", iconId="", iconBg="", otherClasses=""} = props
+  - var classList= 'button'
+
+  - if (iconId != "")
+    - classList+= ` button_icon`
+
+  - if (type != "")
+    - classList+= ` button_${type}`
+
+  - if (color != "")
+    - classList+= ` button_${color}`
+
+  - if (size != "")
+    - classList+= ` button_${size}`
+
+  - if (iconBg != "")
+    - classList+= ` button_icon_bg_${iconBg}`
+
+  - if (otherClasses != "")
+    - classList+= ` ${otherClasses}`
+
+
+  case type
+    when "circle"
+      button(class= classList)
+        svg.button__icon
+          use(xlink:href= iconId)
+
+    when "icon_left"
+      button(class= classList)
+        svg.button__icon
+          use(xlink:href= iconId)
+        span.button__text
+          block
+
+
+    when "icon_right"
+      button(class= classList)
+        span.button__text
+          block
+        svg.button__icon
+          use(xlink:href= iconId)
