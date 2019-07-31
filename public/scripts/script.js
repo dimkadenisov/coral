@@ -69,6 +69,30 @@
   breakpointChecker();
 })();
 
+var newArrivalsDates = new Swiper('.dates-swiper', {
+  slideClass: 'date',
+  slidesPerView: 7,
+  spaceBetween: 0,
+  allowTouchMove: false,
+  observer: true,
+  observerParents: true,
+  observeSlideChildren: true,
+  breakpoints: {
+    991: {
+      slidesPerView: 4,
+      navigation: {
+        prevEl: '.prev',
+        nextEl: '.next'
+      }
+    },
+    767: {
+      slidesPerView: 2
+    },
+    575: {
+      slidesPerView: 3
+    }
+  }
+});
 'use strict';
 
 var openBurgerMenu = function openBurgerMenu() {
@@ -97,15 +121,18 @@ var toggleBurgerMenu = function toggleBurgerMenu() {
 };
 
 var openSubMenu = function openSubMenu(event) {
-  event.preventDefault();
-  $(event.target).addClass('site-sections__link_opened');
-  $(event.target).closest('.site-sections__list').children('.site-sections__list-item').addClass('d-none');
-  $(event.target).next().addClass('d-block');
-  $(event.target).parent().removeClass('d-none');
-  $('.top-line').addClass('d-none');
+  if ($('.site-sections').hasClass('site-sections_opened') || $('.site-sections').hasClass('site-sections_scrolled')) {
+    event.preventDefault();
+    $(event.target).addClass('site-sections__link_opened');
+    $(event.target).closest('.site-sections__list').children('.site-sections__list-item').addClass('d-none');
+    $(event.target).next().addClass('d-block');
+    $(event.target).parent().removeClass('d-none');
+    $('.top-line').addClass('d-none');
+  }
 };
 
 var closeSubMenu = function closeSubMenu() {
+  event.preventDefault();
   $('.site-sections__link_opened').closest('.site-sections__list').children('.site-sections__list-item').removeClass('d-none');
   $('.site-sections__link_opened').next().removeClass('d-block');
   $('.site-sections__link_opened').removeClass('site-sections__link_opened');
@@ -113,7 +140,6 @@ var closeSubMenu = function closeSubMenu() {
 };
 
 var toggleSubMenuState = function toggleSubMenuState(event) {
-  event.preventDefault();
   return $('.site-sections__link').hasClass('site-sections__link_opened') ? closeSubMenu() : openSubMenu(event);
 };
 
@@ -155,8 +181,8 @@ var heroSwiper = new Swiper('.hero-swiper', {
   slidesPerView: 1,
   spaceBetween: 0,
   navigation: {
-    prevEl: '.button_icon_prev_gray',
-    nextEl: '.button_icon_next_gray'
+    prevEl: '.prev',
+    nextEl: '.next'
   },
   pagination: {
     el: '.pagination',
@@ -164,6 +190,71 @@ var heroSwiper = new Swiper('.hero-swiper', {
     bulletClass: 'pagination__item',
     bulletActiveClass: 'pagination__item_active'
   },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true
+  },
+  observer: true,
+  observerParents: true,
+  observeSlideChildren: true
+});
+
+var generateItemsSwipers = function generateItemsSwipers() {
+  var itemsSwipersNodes = $('.items-swiper');
+  var swipers = {};
+  itemsSwipersNodes.each(function (index) {
+    $(this).addClass("items-swiper-".concat(index));
+    swipers[index] = new Swiper(".items-swiper-".concat(index), {
+      slideClass: 'catalog-item',
+      slidesPerView: 5,
+      spaceBetween: 30,
+      allowTouchMove: false,
+      navigation: {
+        prevEl: '.prev',
+        nextEl: '.next'
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true
+      },
+      observer: true,
+      observerParents: true,
+      observeSlideChildren: true,
+      breakpoints: {
+        1343: {
+          slidesPerView: 4
+        },
+        991: {
+          slidesPerView: 3
+        },
+        767: {
+          slidesPerView: 2
+        },
+        575: {
+          slidesPerView: 1
+        }
+      }
+    });
+  });
+};
+
+generateItemsSwipers();
+$('.button_heart').click(function () {
+  $(this).find('#gold').addClass('qwe');
+});
+var newArrrivalsSwiper = new Swiper('.new-arrivals__swiper', {
+  slideClass: 'new-arrivals__slide',
+  slidesPerView: 1,
+  spaceBetween: 30,
+  allowTouchMove: false,
+  thumbs: {
+    swiper: newArrivalsDates,
+    slideThumbActiveClass: 'date_active'
+  },
+  // navigation: {
+  //   prevEl: '.prev',
+  //   nextEl: '.next',
+  // },
   keyboard: {
     enabled: true,
     onlyInViewport: true
