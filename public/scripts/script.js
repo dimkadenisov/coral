@@ -69,6 +69,24 @@
   breakpointChecker();
 })();
 
+$('.catalog-item .button_heart').click(function () {
+  $(this).toggleClass('button_heart_clicked');
+
+  if ($(this).hasClass('button_heart_clicked')) {
+    $(this).attr('data-description', 'Удалить товар из избранного');
+    $(this).css({
+      'display': 'flex'
+    });
+  } else {
+    $(this).attr('data-description', 'Добавить товар в избранное');
+    $(this).removeAttr('style');
+  }
+});
+$('.catalog-item__buy').click(function () {
+  $(this).toggleClass('button_red');
+  $(this).toggleClass('button_gray');
+  $(this).toggleClass('catalog-item__buy_clicked');
+});
 var newArrivalsDates = new Swiper('.dates-swiper', {
   slideClass: 'date',
   slidesPerView: 7,
@@ -92,7 +110,53 @@ var newArrivalsDates = new Swiper('.dates-swiper', {
       slidesPerView: 3
     }
   }
-});
+}); // (function() {
+//   const breakpoints = [window.matchMedia( '(max-width: 991px)' ), window.matchMedia( '(max-width: 767px)' ), window.matchMedia( '(max-width: 575px)' )];
+//   let newArrivalsDates;
+//   const breakpointChecker = function() {
+//     for (let i = 0; i < breakpoints.length; i++) {
+//       const breakpoint = breakpoints[i];
+//       if (breakpoint.matches === true) {
+//         if (newArrivalsDates !== undefined) newArrivalsDates.destroy(true, true);
+//         return;
+//       } else if (breakpoint.matches === false) {
+//         return enableSwiper();
+//       }
+//     }
+//   };
+//   const enableSwiper = function() {
+//     newArrivalsDates = new Swiper('.dates-swiper', {
+//       slideClass: 'date',
+//       slidesPerView: 7,
+//       spaceBetween: 0,
+//       allowTouchMove: false,
+//       observer: true,
+//       observerParents: true,
+//       observeSlideChildren: true,
+//       breakpoints: {
+//         991: {
+//           slidesPerView: 4,
+//           navigation: {
+//             prevEl: '.prev',
+//             nextEl: '.next',
+//           },
+//         },
+//         767: {
+//           slidesPerView: 2,
+//         },
+//         575: {
+//           slidesPerView: 3,
+//         },
+//       }
+//     });
+//   };
+//   for (let i = 0; i < breakpoints.length; i++) {
+//     const breakpoint = breakpoints[i];
+//     breakpoint.addListener(breakpointChecker);
+//   }
+//   breakpointChecker();
+// })();
+
 'use strict';
 
 var openBurgerMenu = function openBurgerMenu() {
@@ -238,10 +302,53 @@ var generateItemsSwipers = function generateItemsSwipers() {
   });
 };
 
-generateItemsSwipers();
-$('.button_heart').click(function () {
-  $(this).find('#gold').addClass('qwe');
-});
+generateItemsSwipers(); // (function() {
+//   const breakpoints = [window.matchMedia( '(max-width: 991px)' ), window.matchMedia( '(max-width: 767px)' ), window.matchMedia( '(max-width: 575px)' )];
+//   let newArrivalsDates;
+//   const breakpointChecker = function() {
+//     for (let i = 0; i < breakpoints.length; i++) {
+//       const breakpoint = breakpoints[i];
+//       if (breakpoint.matches === true) {
+//         if (newArrivalsDates !== undefined) newArrivalsDates.destroy(true, true);
+//         return;
+//       } else if (breakpoint.matches === false) {
+//         return enableSwiper();
+//       }
+//     }
+//   };
+//   const enableSwiper = function() {
+//     newArrivalsDates = new Swiper('.dates-swiper', {
+//       slideClass: 'date',
+//       slidesPerView: 7,
+//       spaceBetween: 0,
+//       allowTouchMove: false,
+//       observer: true,
+//       observerParents: true,
+//       observeSlideChildren: true,
+//       breakpoints: {
+//         991: {
+//           slidesPerView: 4,
+//           navigation: {
+//             prevEl: '.prev',
+//             nextEl: '.next',
+//           },
+//         },
+//         767: {
+//           slidesPerView: 2,
+//         },
+//         575: {
+//           slidesPerView: 3,
+//         },
+//       }
+//     });
+//   };
+//   for (let i = 0; i < breakpoints.length; i++) {
+//     const breakpoint = breakpoints[i];
+//     breakpoint.addListener(breakpointChecker);
+//   }
+//   breakpointChecker();
+// })();
+
 var newArrrivalsSwiper = new Swiper('.new-arrivals__swiper', {
   slideClass: 'new-arrivals__slide',
   slidesPerView: 1,
