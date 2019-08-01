@@ -36,27 +36,17 @@
     height: 56px;
 
     &__content {
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
-      bottom: 0;
       left: 0;
       box-shadow: 0 5px 10px 0px rgba($black, 0.1);
-
-      &_scrolled {
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: auto;
-        width: 100%;
-        z-index: 10;
-      }
+      z-index: 10;
 
       &_opened {
         bottom: auto;
 
         .header__scroll-container {
-          // padding-top: 56px;
           max-height: 100vh;
           overflow-y: auto;
           overflow-x: hidden;

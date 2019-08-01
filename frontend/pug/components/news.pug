@@ -1,10 +1,14 @@
+include ../templates/button
+
 .section.news
   .container
     .row
       .col-12.col-sm-7.col-md-8.col-xl-8.col-xxl-10.order-0
         span.section__heading Новости
       .col-12.col-sm-5.col-md-4.col-xl-4.col-xxl-2.order-10.order-sm-0
-        button.button.button_red.button_icon.button_icon_right.button_icon_next_light.button_icon_bg_lighter Читать еще
+        //- button.button.button_red.button_icon.button_icon_right.button_icon_next_light.button_icon_bg_lighter Читать еще
+        +button({type: 'icon_right', color: 'red', iconId: '#arrow-right', iconBg: 'lighter'})
+          |Читать еще
       .col-12.col-sm-6.col-md-4.col-lg-3.col-xl-6
         .news-post.news-post_big
           .news-post__image-wrapper

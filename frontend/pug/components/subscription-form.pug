@@ -1,3 +1,5 @@
+include ../templates/button
+
 form.subscription-form
   fieldset.subscription-form__fieldset
     .container
@@ -8,3 +10,4 @@ form.subscription-form
           .subscription-form__input-wrapper
             input(type="email" inputmode="email" placeholder="Укажите Вашу почту").input-field
             button.button.button_red.button_small.button_circle.button_circle_small.button_icon.button_icon_only.button_icon_mail-light
+            +button({type: 'circle', size: 'small', color: 'red', iconId: '#mail'})

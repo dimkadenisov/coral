@@ -1,0 +1,29 @@
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.rating__star {
+  display: inline-block;
+  position: relative;
+  padding-right: 0.1em;
+  padding-left: 0.1em;
+  color: $gray-500;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.rating__star:hover,
+.rating__star:hover ~ .rating__star {
+  color: transparent;
+}
+
+.rating__star:hover:before,
+.rating__star:hover ~ .rating__star:before {
+  content: "\2605";
+  display: block;
+  position: absolute;
+  left: 0.1em;
+  color: $orange-100;
+}

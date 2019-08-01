@@ -1,0 +1,39 @@
+.new-arrivals {
+  &__head {
+    margin-bottom: 55px;
+    border-bottom: 2px solid $gray-400;
+  }
+
+  .section__heading {
+    margin-bottom: 0;
+    line-height: 45px;
+  }
+
+  &__swiper {
+    overflow-x: hidden;
+  }
+
+  &__slide {
+    flex-shrink: 0;
+  }
+
+  &__slide-heading {
+    display: block;
+    margin-bottom: 35px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .new-arrivals {
+    &__head {
+      border-bottom: none;
+    }
+
+    .section__heading {
+      display: block;
+      border-bottom: 2px solid $gray-400;
+    }
+  }
+}

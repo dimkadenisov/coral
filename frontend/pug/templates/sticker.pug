@@ -1,0 +1,17 @@
+mixin sticker(props)
+  - let {type} = props;
+
+  case type
+    when 'new'
+      span.sticker.sticker_new New
+
+    when 'hit'
+      span.sticker.sticker_hit Хит
+
+    when 'sale'
+      span.sticker.sticker_sale %
+
+    when 'gift'
+      span.sticker.sticker_gift
+        svg.sticker__icon
+          use(xlink:href="#gift")

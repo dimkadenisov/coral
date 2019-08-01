@@ -14,3 +14,48 @@
     overflow: hidden;
   }
 }
+
+.show-tooltip {
+  position: relative;
+
+  &::before {
+    content: attr(data-description);
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    padding: 2px 4px;
+    background-color: rgba($black, 0.6);
+    border-radius: 2px;
+    color: $white;
+    font-style: 10px;
+    font-weight: normal;
+    text-transform: none;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 5px);
+    left: 50%;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid rgba($black, 0.6);
+    transform: translateX(-50%);
+  }
+
+  &_top-right {
+    &::before {
+      left: 100%;
+    }
+  }
+
+  &:hover {
+    &:before,
+    &::after {
+      display: block;
+    }
+  }
+}

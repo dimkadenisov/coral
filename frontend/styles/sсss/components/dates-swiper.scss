@@ -1,0 +1,72 @@
+.dates-swiper {
+  position: relative;
+  max-width: 490px;
+  margin-left: auto;
+  overflow: hidden;
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: -45px;
+    width: 25px;
+    height: 25px;
+    color: $gray-700;
+    transform: translateY(-50%);
+  }
+
+  .button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .dates-swiper {
+    padding-right: 40px;
+    padding-left: 40px;
+    display: flex;
+
+    &__icon {
+      display: none;
+    }
+
+    .swiper-wrapper {
+      width: auto;
+    }
+
+    .button {
+      display: flex;
+      position: absolute;
+      top: 50%;
+      width: 40px;
+      height: 50px;
+      opacity: 1;
+      border-radius: 0;
+      transform: translateY(-50%);
+      z-index: 2;
+
+      &:hover,
+      &:focus {
+        box-shadow: none;
+
+        .button__icon {
+          color: $red-200;
+        }
+      }
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .dates-swiper {
+    max-width: none;
+    margin-left: 0;
+  }
+}

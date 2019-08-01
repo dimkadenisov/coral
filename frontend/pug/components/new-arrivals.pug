@@ -1,0 +1,42 @@
+.section.new-arrivals
+  .container
+    .row
+      .col-12
+        .new-arrivals__head
+          .row
+            .col-12.col-sm-7.col-md-6.col-lg-5
+              span.section__heading Новые поступления
+            .col-12.col-sm-5.col-md-6.col-lg-7
+              include ./dates-swiper.pug
+        .new-arrivals__swiper
+          .swiper-wrapper
+            .new-arrivals__slide
+              include ./items-swiper
+              hr.separator.separator_gray
+              include ./items-swiper
+                            input.visually-hidden.rating__input(type="radio" name="product-rating" value="5")
+                            span.rating__star
+            .new-arrivals__slide
+              include ./items-swiper
+              hr.separator.separator_gray
+              include ./items-swiper
+            .new-arrivals__slide
+              include ./items-swiper
+              hr.separator.separator_gray
+              include ./items-swiper
+            .new-arrivals__slide
+              include ./items-swiper
+              hr.separator.separator_gray
+              include ./items-swiper
+            .new-arrivals__slide
+              include ./items-swiper
+              hr.separator.separator_gray
+              include ./items-swiper
+            .new-arrivals__slide
+              include ./items-swiper
+              hr.separator.separator_gray
+              include ./items-swiper
+            .new-arrivals__slide
+              include ./items-swiper
+              hr.separator.separator_gray
+              include ./items-swiper

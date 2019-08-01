@@ -1,0 +1,12 @@
+.price {
+  color: $red-200;
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+  font-size: 17px;
+
+  &__old-value {
+    color: $gray-700;
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+    font-size: 13px;
+    text-decoration: line-through;
+  }
+}

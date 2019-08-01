@@ -1,0 +1,36 @@
+.sticker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  padding-right: 14px;
+  padding-left: 14px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: $white;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  &__icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  &_new {
+    background-color: $green-400;
+  }
+
+  &_hit {
+    background-color: $red-50;
+  }
+
+  &_sale {
+    color: $gray-700;
+    background-color: $gold-100;
+  }
+
+  &_gift {
+    background-color: $orange-100;
+  }
+}

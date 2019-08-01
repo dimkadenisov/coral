@@ -1,0 +1,16 @@
+include ../templates/catalog-item.pug
+
+.items-swiper
+  span.new-arrivals__slide-heading Серия «Оранж»
+  .swiper-wrapper
+    +catalog-item()
+    +catalog-item({stickers: ['sale'], name: 'Тёрка'})
+    +catalog-item({type: 'more'})
+    +catalog-item({stickers: ['hit'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true})
+    +catalog-item({stickers: ['gift', 'hit', 'sale', 'new']})
+    +catalog-item({stickers: ['sale', 'hit']})
+    +catalog-item({stickers: ['gift', 'hit']})
+
+  .pagination
+  +button({type: 'circle', half: 'half_left', color: 'brown', iconId: '#arrow-left', otherClasses: 'prev'})
+  +button({type: 'circle', half: 'half_right', color: 'brown', iconId: '#arrow-right', otherClasses: 'next'})

@@ -1,0 +1,24 @@
+include ../templates/date.pug
+
+.dates-swiper
+  svg.dates-swiper__icon
+    use(xlink:href="#calendar")
+
+  .swiper-wrapper
+    +date
+      |23.04
+    +date
+      |22.04
+    +date
+      |21.04
+    +date
+      |20.04
+    +date
+      |19.04
+    +date
+      |18.04
+    +date
+      |17.04
+
+  +button({type: 'circle', opacity: '09', iconId: '#arrow-left', otherClasses: 'prev'})
+  +button({type: 'circle', opacity: '09', iconId: '#arrow-right', otherClasses: 'next'})

@@ -1,0 +1,12 @@
+include ../templates/button.pug
+
+.items-counter
+  +button({type: 'underlined'})
+    | -
+  input(type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1").input-field.input-field_underlined
+  +button({type: 'underlined'})
+    | +
+  .items-counter__pack
+    svg.items-counter__icon
+      use(xlink:href="#box-closed-filled")
+    span.catalog-item__small-text.items-counter__amount 6/72

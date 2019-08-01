@@ -41,6 +41,7 @@
     .top-line__link {
       padding-left: 35px;
       padding-right: 30px;
+      font-size: 15px;
     }
 
     .top-line__link:hover,
@@ -56,6 +57,10 @@
     height: auto;
     margin-right: 0;
     overflow: visible;
+
+    .container {
+      padding: 0;
+    }
   }
 
   &__nav {
@@ -154,6 +159,7 @@
     &__link {
       padding-left: 35px;
       padding-right: 30px;
+      font-size: 15px;
     }
 
     &__link:hover,
@@ -180,6 +186,12 @@
 
     &__list_right {
       display: none;
+    }
+
+    &_scrolled {
+      .top-line__list_left{
+        border-bottom: none;
+      }
     }
   }
 }
