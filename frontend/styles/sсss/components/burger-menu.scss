@@ -1,16 +1,13 @@
 .burger-menu {
   display: none;
+  justify-content: center;
+  align-items: center;
   width: 48px;
   height: 48px;
-
-  &__label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-  }
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
 
   &__icon {
     display: block;
@@ -46,8 +43,8 @@
     }
   }
 
-  &__checkbox:checked {
-    & + .burger-menu__icon {
+  &_clicked {
+    .burger-menu__icon {
       background-color: transparent;
 
       &::before {
@@ -60,7 +57,7 @@
     }
   }
 
-  &__label:hover {
+  &:hover {
     .burger-menu__icon {
       opacity: 0.7;
     }
@@ -69,6 +66,6 @@
 
 @media screen and (max-width: 1199px) {
   .burger-menu {
-    display: block;
+    display: flex;
   }
 }
