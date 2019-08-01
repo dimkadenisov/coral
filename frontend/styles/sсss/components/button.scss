@@ -13,6 +13,12 @@
   letter-spacing: 0.1em;
   cursor: pointer;
 
+  &__icon {
+    display: block;
+    width: 1.6em;
+    height: 1.6em;
+  }
+
   &:hover,
   &:focus {
     box-shadow: 2px 10px 20px 0 rgba($black, 0.1);
@@ -28,7 +34,25 @@
     }
   }
 
-  &_transparent {
+  &_gray {
+    background-color: $gray-400;
+  }
+
+  &_brown {
+    color: $white;
+    background-color: $brown-500;
+
+    &:hover,
+    &:focus {
+      box-shadow: 1.5px 5px 10px 0 rgba($brown-500, 0.3);
+    }
+  }
+
+  &_no-bg {
+    background-color: transparent;
+  }
+
+  &_opacity_09 {
     opacity: 0.9;
 
     .button__icon {
@@ -57,18 +81,52 @@
     &.button_circle {
       width: 40px;
     }
+
+    &.button_half {
+      width: 20px;
+    }
+  }
+
+  &_extra-small {
+    height: 32px;
+    border-radius: 16px;
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: none;
+
+    &.button_circle {
+      width: 32px;
+    }
+
+    .button__icon {
+      width: 1.2em;
+      height: 1.2em;
+    }
+
+    &.button_half {
+      width: 16px;
+    }
+  }
+
+  &_half {
+    width: 28px;
+    padding: 0;
+  }
+
+  &_half_left {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &_half_right {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   &_icon {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .button__icon {
-      display: block;
-      width: 1.5em;
-      height: 1.5em;
-    }
   }
 
   &_icon_left {
@@ -80,6 +138,19 @@
   &_icon_right {
     .button__icon {
       margin-left: 0.6em;
+    }
+  }
+
+  &_underlined {
+    width: 30px;
+    height: 23px;
+    border-bottom: 1px solid $gray-400;
+    border-radius: 0;
+
+    &:hover,
+    &:focus {
+      border-color: $gray-500;
+      box-shadow: none;
     }
   }
 
@@ -95,6 +166,32 @@
       border-radius: 50%;
       background-color: $red-200;
       color: $white;
+    }
+  }
+
+  &_heart {
+    color: $gray-700;
+
+    .button__icon {
+      width: 2em;
+      height: 2em;
+    }
+
+    &_clicked {
+      background-image: url("../assets/icons/heart-filled.svg");
+      background-size: 20px 20px;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      .button__icon {
+        display: none;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      color: $red-200;
     }
   }
 }

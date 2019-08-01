@@ -1,7 +1,8 @@
-mixin button(props)
+mixin button(props= 0)
 
-  - var {type="", size="", color="", iconId="", iconBg="", otherClasses=""} = props
-  - var classList= 'button'
+  - let {type="", size="", color="", iconId="", iconBg="", half="", opacity="", otherClasses=""} = props
+
+  - let classList= 'button'
 
   - if (iconId != "")
     - classList+= ` button_icon`
@@ -18,27 +19,42 @@ mixin button(props)
   - if (iconBg != "")
     - classList+= ` button_icon_bg_${iconBg}`
 
+  - if (half != "")
+    - classList+= ` button_half button_${half}`
+
+  - if (opacity != "")
+    - classList+= ` button_opacity_${opacity}`
+
   - if (otherClasses != "")
     - classList+= ` ${otherClasses}`
 
 
   case type
     when "circle"
-      button(class= classList)
+      button(class= classList)&attributes(attributes)= attrs
         svg.button__icon
           use(xlink:href= iconId)
 
     when "icon_left"
-      button(class= classList)
+      button(class= classList)&attributes(attributes)= attrs
         svg.button__icon
           use(xlink:href= iconId)
         span.button__text
           block
-
 
     when "icon_right"
-      button(class= classList)
+      button(class= classList)&attributes(attributes)= attrs
         span.button__text
           block
         svg.button__icon
           use(xlink:href= iconId)
+
+    when "underlined"
+      button(class= classList)&attributes(attributes)= rest
+        span.button__text
+          block
+
+    default
+      button(class= classList)&attributes(attributes)= rest
+        span.button__text
+          block
