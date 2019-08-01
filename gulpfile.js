@@ -101,64 +101,22 @@ lazyRequireTask('svg:min', './tasks/svg:min', {
     {addAttributesToSVGElement: false},
     {removeStyleElement: false},
     {removeScriptElement: false},
+    {prefixIds: false},
   ]
 });
 
-// lazyRequireTask('svg:sprite', './tasks/svg:sprite', {
-//   src: 'frontend/assets/icons/sprite/*.svg',
-//   dest: 'public/assets/icons/sprite',
-//   plugins: [
-//     {cleanupAttrs: true},
-//     {inlineStyles: true},
-//     {removeDoctype: true},
-//     {removeXMLProcInst: true},
-//     {removeComments: true},
-//     {removeMetadata: true},
-//     {removeTitle: true},
-//     {removeDesc: true},
-//     {removeUselessDefs: true},
-//     {removeXMLNS: false},
-//     {removeEditorsNSData: true},
-//     {removeEmptyAttrs: true},
-//     {removeHiddenElems: true},
-//     {removeEmptyText: true},
-//     {emoveEmptyContainers: true},
-//     {removeViewBox: false},
-//     {cleanupEnableBackground: true},
-//     {minifyStyles: false},
-//     {convertStyleToAttrs: true},
-//     {convertColors: true},
-//     {convertPathData: true},
-//     {convertTransform: true},
-//     {removeUnknownsAndDefaults: true},
-//     {removeNonInheritableGroupAttrs: true},
-//     {removeUselessStrokeAndFill: true},
-//     {removeUnusedNS: true},
-//     {cleanupIDs: true},
-//     {cleanupNumericValues: true},
-//     {cleanupListOfValues: true},
-//     {moveElemsAttrsToGroup: true},
-//     {moveGroupAttrsToElems: true},
-//     {collapseGroups: true},
-//     {removeRasterImages: true},
-//     {mergePaths: true},
-//     {convertShapeToPath: true},
-//     {sortAttrs: true},
-//     {removeDimensions: true},
-//     {removeAttrs: true},
-//     {removeElementsByAttr: false},
-//     {addClassesToSVGElement: false},
-//     {addAttributesToSVGElement: false},
-//     {removeStyleElement: false},
-//     {removeScriptElement: false},
-//   ]
-// });
-
 lazyRequireTask('svg:sprite', './tasks/svg:sprite', {
   src: 'frontend/assets/icons/sprite/*.svg',
-  dest: 'public/assets/icons/sprite',
+  dest: 'frontend/assets/icons/sprite/',
   config: {
     shape: {
+      dimension: {
+        maxWidth: 40,
+        maxHeight: 40
+      },
+      spacing: {
+        padding: 10
+      },
       transform: [
         {svgo: {
           plugins: [
@@ -205,16 +163,18 @@ lazyRequireTask('svg:sprite', './tasks/svg:sprite', {
             {addAttributesToSVGElement: false},
             {removeStyleElement: false},
             {removeScriptElement: false},
+            {prefixIds: false},
           ]
         }}
-      ],
-      mode: {
-        stack: {
-          sprite: "../sprite.svg"  //sprite file name
-        },
-        // symbol: true,
-        inline: true,
-      },
+      ]
+    },
+    mode: {
+      symbol: true,
+      inline: true,
+    },
+    svg: {
+      namespaceIDs: false,
+      namespaceClassnames: false
     }
   }
 });
@@ -247,7 +207,7 @@ lazyRequireTask('server', './tasks/server', {
 gulp.task('assets', gulp.series('svg:min', 'svg:sprite', gulp.parallel('images', 'fonts')));
 
 
-gulp.task('build', gulp.series(gulp.parallel('scripts:libs', 'scripts', 'pug', 'styles','styles:libs', 'assets')));
+gulp.task('build', gulp.series('assets', gulp.parallel('scripts:libs', 'scripts', 'pug', 'styles','styles:libs')));
 
 
 gulp.task('watch', function () {
@@ -256,7 +216,7 @@ gulp.task('watch', function () {
   gulp.watch('frontend/styles/sсss/**/*.scss', gulp.series('styles'));
   gulp.watch('frontend/styles/libraries/**/*.scss', gulp.series('styles:libs'));
   gulp.watch('frontend/pug/**/*.pug', gulp.series('pug'));
-  gulp.watch('frontend/assets/**/*.*', gulp.series('assets', 'pug'));
+  gulp.watch(['frontend/assets/**/*.*', '!frontend/assets/icons/sprite/symbol/**/*.*'], gulp.series('assets', 'pug'));
 });
 
 
