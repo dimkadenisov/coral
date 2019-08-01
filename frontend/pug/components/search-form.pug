@@ -1,5 +1,8 @@
 form.search-form
-  input(type="checkbox" id="search-form__checkbox").visually-hidden.search-form__checkbox
-  label(for="search-form__checkbox").search-form__label
+  button(type="button").search-form__button.search-form__button_open
+    svg.search-form__icon
+      use(xlink:href="#search")
   input(type="search" placeholder="Поиск по сайту...").search-form__input
-  button(type="button").search-form__button
+  button.search-form__button.search-form__button_search
+    svg.search-form__icon
+      use(xlink:href="#search")
