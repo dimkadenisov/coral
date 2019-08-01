@@ -1,3 +1,5 @@
+include ../templates/button
+
 .hero-swiper
   .swiper-wrapper
     .hero-swiper__slide
@@ -23,7 +25,8 @@
               span.hero-swiper__description.
                 Небольшое описание акции примернов несколько
                 строчек, около двух или трех в общей сложности
-              button.button.button_icon.button_icon_right.button_icon_next_light.button_icon_bg_red Подробнее
+              +button({type: 'icon_right', iconId: '#arrow-right', iconBg: 'red'})
+                |Подробнее
     .hero-swiper__slide
       picture.hero-swiper__image
         source(media="(min-width: 1344px)" srcset="assets/img/hero-swiper-slide-1920.jpg")
@@ -47,11 +50,12 @@
               span.hero-swiper__description.
                 Небольшое описание акции примернов несколько
                 строчек, около двух или трех в общей сложности
-              button.button.button_icon.button_icon_right.button_icon_next_light.button_icon_bg_red Подробнее
+              +button({type: 'icon_right', iconId: '#arrow-right', iconBg: 'red'})
+                |Подробнее
   .pagination
   .d-none.d-xl-block.hero-swiper__navigation
     .container
       .row
         .col-12
-          .button.button_circle.button_transparent.button_icon.button_icon_only.button_icon_prev_gray
-          .button.button_circle.button_transparent.button_icon.button_icon_only.button_icon_next_gray
+          +button({type: 'circle', opacity: '09', iconId: '#arrow-left', otherClasses: 'prev'})
+          +button({type: 'circle', opacity: '09', iconId: '#arrow-right', otherClasses: 'next'})

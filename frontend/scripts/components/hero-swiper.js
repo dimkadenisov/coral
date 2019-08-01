@@ -4,8 +4,8 @@ let heroSwiper = new Swiper('.hero-swiper', {
   spaceBetween: 0,
 
   navigation: {
-    prevEl: '.button_icon_prev_gray',
-    nextEl: '.button_icon_next_gray',
+    prevEl: '.prev',
+    nextEl: '.next',
   },
 
   pagination: {
