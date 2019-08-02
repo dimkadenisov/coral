@@ -111,6 +111,10 @@
         }
       }
     }
+
+    .container {
+      padding: 0;
+    }
   }
 
   &_opened {
@@ -123,10 +127,10 @@
     .site-sections__icon {
       display: block;
     }
-  }
 
-  .container {
-    padding: 0;
+    .container {
+      padding: 0;
+    }
   }
 
   &__nav {
