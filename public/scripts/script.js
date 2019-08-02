@@ -118,53 +118,7 @@ var newArrivalsDates = new Swiper('.dates-swiper', {
       }
     }
   }
-}); // (function() {
-//   const breakpoints = [window.matchMedia( '(max-width: 991px)' ), window.matchMedia( '(max-width: 767px)' ), window.matchMedia( '(max-width: 575px)' )];
-//   let newArrivalsDates;
-//   const breakpointChecker = function() {
-//     for (let i = 0; i < breakpoints.length; i++) {
-//       const breakpoint = breakpoints[i];
-//       if (breakpoint.matches) {
-//         if (newArrivalsDates !== undefined) newArrivalsDates.destroy(true, true);
-//         return;
-//       } else if (breakpoint.matches === false) {
-//         return enableSwiper();
-//       }
-//     }
-//   };
-//   const enableSwiper = function() {
-//     newArrivalsDates = new Swiper('.dates-swiper', {
-//       slideClass: 'date',
-//       slidesPerView: 7,
-//       spaceBetween: 0,
-//       allowTouchMove: false,
-//       observer: true,
-//       observerParents: true,
-//       observeSlideChildren: true,
-//       breakpoints: {
-//         991: {
-//           slidesPerView: 4,
-//           navigation: {
-//             prevEl: '.prev',
-//             nextEl: '.next',
-//           },
-//         },
-//         767: {
-//           slidesPerView: 2,
-//         },
-//         575: {
-//           slidesPerView: 3,
-//         },
-//       }
-//     });
-//   };
-//   for (let i = 0; i < breakpoints.length; i++) {
-//     const breakpoint = breakpoints[i];
-//     breakpoint.addListener(breakpointChecker);
-//   }
-//   breakpointChecker();
-// })();
-
+});
 'use strict';
 
 var openBurgerMenu = function openBurgerMenu() {
@@ -297,58 +251,7 @@ var incrementDecrementValue = function incrementDecrementValue() {
   }
 };
 
-$('.items-counter .button').click(incrementDecrementValue); // const generateItemsSwipers = function() {
-//   const itemsSwipersNodes = $('.items-swiper');
-//   let swipers = {};
-//   itemsSwipersNodes.each(function(index) {
-//     $(this).addClass(`items-swiper-${index}`);
-//     swipers[index] = new Swiper(`.items-swiper-${index}`, {
-//       slideClass: 'catalog-item',
-//       slidesPerView: 5,
-//       spaceBetween: 30,
-//       allowTouchMove: false,
-//       navigation: {
-//         prevEl: '.prev',
-//         nextEl: '.next',
-//       },
-//       keyboard: {
-//         enabled: true,
-//         onlyInViewport: true,
-//       },
-//       observer: true,
-//       observerParents: true,
-//       observeSlideChildren: true,
-//       breakpoints: {
-//         1343: {
-//           slidesPerView: 4,
-//         },
-//         991: {
-//           slidesPerView: 3,
-//         },
-//         767: {
-//           slidesPerView: 2,
-//           allowTouchMove: true,
-//           pagination: {
-//             el: '.pagination',
-//             bulletElement: 'div',
-//             bulletClass: 'pagination__item',
-//             bulletActiveClass: 'pagination__item_active',
-//           },
-//         },
-//         575: {
-//           slidesPerView: 1,
-//           pagination: {
-//             el: '.pagination',
-//             bulletElement: 'div',
-//             bulletClass: 'pagination__item',
-//             bulletActiveClass: 'pagination__item_active',
-//           },
-//         },
-//       },
-//     })
-//   });
-// };
-// generateItemsSwipers();
+$('.items-counter .button').click(incrementDecrementValue);
 
 (function () {
   var breakpoints = [window.matchMedia('(max-width: 991px)'), window.matchMedia('(max-width: 767px)'), window.matchMedia('(max-width: 575px)')];

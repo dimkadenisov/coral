@@ -15,7 +15,6 @@ module.exports = (options) => {
         grid: true
       }),
       $.csso(),
-      // resolveUrl(),
       $.sourcemaps.write('../maps'),
       gulp.dest(options.dest)
     ).on('error', $.notify.onError(function(err) {

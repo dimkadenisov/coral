@@ -1,14 +1,6 @@
 'use strict'
 
 const gulp = require('gulp');
-// const $ = require('gulp-load-plugins')();
-// const del = require('del');
-// const browserSync = require('browser-sync').create();
-// const resolveUrl = require('gulp-resolve-url');
-// const prettify = require('gulp-jsbeautifier');
-// const combiner = require('stream-combiner2').obj;
-// const svgSprite = require('gulp-svg-sprite');
-
 
 //--------------
 //--------------
