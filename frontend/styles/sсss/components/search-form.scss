@@ -23,6 +23,11 @@
     }
   }
 
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
   &__button {
     display: flex;
     justify-content: center;
@@ -65,11 +70,6 @@
         opacity: 0.7;
       }
     }
-  }
-
-  &__icon {
-    width: 24px;
-    height: 24px;
   }
 }
 
