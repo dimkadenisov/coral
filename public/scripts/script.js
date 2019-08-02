@@ -205,7 +205,7 @@ var toggleScrollHeader = function toggleScrollHeader() {
 };
 
 $('.burger-menu').click(toggleBurgerMenu);
-$('.site-sections__link:not(:only-child').click(toggleSubMenuState);
+$('.site-sections__link:not(:only-child)').click(toggleSubMenuState);
 $(window).scroll(toggleScrollHeader);
 var heroSwiper = new Swiper('.hero-swiper', {
   slideClass: 'hero-swiper__slide',
