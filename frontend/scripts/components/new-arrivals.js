@@ -1,4 +1,4 @@
-let newArrrivalsSwiper = new Swiper('.new-arrivals__swiper', {
+let newArrrivalsSwiper = $('.new-arrivals__swiper').length ? new Swiper('.new-arrivals__swiper', {
   slideClass: 'new-arrivals__slide',
   slidesPerView: 1,
   spaceBetween: 0,
@@ -17,9 +17,10 @@ let newArrrivalsSwiper = new Swiper('.new-arrivals__swiper', {
   observer: true,
   observerParents: true,
   observeSlideChildren: true,
-});
+}) : false;
 
 const updateSwiperInstance = function(swiper) {
+  if(!swiper) return;
   const breakpoints = [window.matchMedia( '(max-width: 1199px)' ), window.matchMedia( '(max-width: 991px)' ), window.matchMedia( '(max-width: 767px)' ), window.matchMedia( '(max-width: 575px)' )];
 
   const breakpointChecker = function() {

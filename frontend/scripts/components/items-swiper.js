@@ -1,15 +1,14 @@
 (function() {
+  if ($('.items-swiper').length === 0) return;
 
   const breakpoints = [window.matchMedia( '(max-width: 991px)' ), window.matchMedia( '(max-width: 767px)' ), window.matchMedia( '(max-width: 575px)' )];
 
   let generateItemsSwipers;
 
   const breakpointChecker = function() {
-    for (let i = 0; i < breakpoints.length; i++) {
-      const breakpoint = breakpoints[i];
-
-      if (breakpoint.matches) generateItemsSwipers()
-    }
+    breakpoints.forEach((breakpoint) => {
+      if (breakpoint.matches) return generateItemsSwipers();
+    })
   };
 
   generateItemsSwipers = function() {
@@ -63,6 +62,7 @@
 
           575: {
             slidesPerView: 1,
+            allowTouchMove: true,
 
             pagination: {
               el: '.pagination',

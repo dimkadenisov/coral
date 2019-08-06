@@ -1,4 +1,4 @@
-let newArrivalsDates = new Swiper('.dates-swiper', {
+let newArrivalsDates = $('.dates-swiper').length ? new Swiper('.dates-swiper', {
   slideClass: 'date',
   slidesPerView: 7,
   spaceBetween: 0,
@@ -37,4 +37,4 @@ let newArrivalsDates = new Swiper('.dates-swiper', {
       },
     },
   }
-});
+}) : false;
