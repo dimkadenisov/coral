@@ -1,60 +1,77 @@
+//- button props:
+
+//- type: 'circle' / 'icon_left' / 'icon_right' / 'underlined' /// может быть пустым
+//- tag: default - 'button'  /  'a'                            /// может быть пустым
+//- size: 'small' / 'extra-small'                              /// может быть пустым
+//- color: 'gray' / 'brown' / 'no-bg'                          /// может быть пустым
+//- borderColor: 'red'                                         /// может быть пустым
+//- iconId: '#id-иконки-из спрайта'                            /// может быть пустым
+//- iconBg: 'lighter' / 'red'                                  /// может быть пустым
+//- half: 'left' / 'right'                                     /// может быть пустым
+//- opacity: '09'                                              /// может быть пустым
+//- otherClasses: 'любой-класс или-классы через-пробел'        /// может быть пустым
+
+
 mixin button(props= 0)
 
-  - let {type="", size="", color="", iconId="", iconBg="", half="", opacity="", otherClasses=""} = props
+  - let {type='', tag='button', size='', color='', iconId='', iconBg='', half='', opacity='', borderColor='', otherClasses=''} = props
 
   - let classList= 'button'
 
-  - if (iconId != "")
-    - classList+= ` button_icon`
+  //- - if (iconId != '')
+  //-   - classList+= ` button_icon`
 
-  - if (type != "")
+  - if (type != '')
     - classList+= ` button_${type}`
 
-  - if (color != "")
+  - if (color != '')
     - classList+= ` button_${color}`
 
-  - if (size != "")
+  - if (size != '')
     - classList+= ` button_${size}`
 
-  - if (iconBg != "")
+  - if (iconBg != '')
     - classList+= ` button_icon_bg_${iconBg}`
 
-  - if (half != "")
+  - if (half != '')
     - classList+= ` button_half button_${half}`
 
-  - if (opacity != "")
+  - if (opacity != '')
     - classList+= ` button_opacity_${opacity}`
 
-  - if (otherClasses != "")
+  - if (borderColor != '')
+    - classList+= ` button_border-${borderColor}`
+
+  - if (otherClasses != '')
     - classList+= ` ${otherClasses}`
 
 
   case type
     when "circle"
-      button(class= classList)&attributes(attributes)= attrs
+      #{tag}(class= classList)&attributes(attributes)
         svg.button__icon
           use(xlink:href= iconId)
 
     when "icon_left"
-      button(class= classList)&attributes(attributes)= attrs
+      #{tag}(class= classList)&attributes(attributes)
         svg.button__icon
           use(xlink:href= iconId)
         span.button__text
           block
 
     when "icon_right"
-      button(class= classList)&attributes(attributes)= attrs
+      #{tag}(class= classList)&attributes(attributes)
         span.button__text
           block
         svg.button__icon
           use(xlink:href= iconId)
 
     when "underlined"
-      button(class= classList)&attributes(attributes)= rest
+      #{tag}(class= classList)&attributes(attributes)
         span.button__text
           block
 
     default
-      button(class= classList)&attributes(attributes)= rest
+      #{tag}(class= classList)&attributes(attributes)
         span.button__text
           block

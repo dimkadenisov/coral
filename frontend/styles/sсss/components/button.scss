@@ -1,9 +1,14 @@
 .button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  max-width: 500px;
-  width: 100%;
+  // max-width: 500px;
+  // width: 100%;
   height: 56px;
   border: none;
+  padding-left: 30px;
+  padding-right: 30px;
   border-radius: 28px;
   background-color: $white;
   color: $gray-700;
@@ -15,8 +20,8 @@
 
   &__icon {
     display: block;
-    width: 1.6em;
-    height: 1.6em;
+    width: 20px;
+    height: 20px;
   }
 
   &:hover,
@@ -52,6 +57,10 @@
     background-color: transparent;
   }
 
+  &_border-red {
+    border: 2px solid $red-200;
+  }
+
   &_opacity_09 {
     opacity: 0.9;
 
@@ -65,21 +74,16 @@
     }
   }
 
-  &_circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 56px;
-    height: 56px;
-  }
-
   &_small {
     height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
     border-radius: 20px;
-    font-size: 10px;
 
     &.button_circle {
       width: 40px;
+      height: 40px;
+      padding: 0;
     }
 
     &.button_half {
@@ -108,6 +112,11 @@
     }
   }
 
+  &_circle {
+    width: 56px;
+    padding: 0;
+  }
+
   &_half {
     width: 28px;
     padding: 0;
@@ -121,12 +130,6 @@
   &_half_right {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-  }
-
-  &_icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   &_icon_left {
@@ -144,6 +147,7 @@
   &_underlined {
     width: 30px;
     height: 23px;
+    padding: 0;
     border-bottom: 1px solid $gray-400;
     border-radius: 0;
 
@@ -171,11 +175,6 @@
 
   &_heart {
     color: $gray-700;
-
-    .button__icon {
-      width: 2em;
-      height: 2em;
-    }
 
     &_clicked {
       background-image: url("../assets/icons/heart-filled.svg");
