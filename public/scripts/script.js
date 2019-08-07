@@ -120,6 +120,18 @@ var newArrivalsDates = $('.dates-swiper').length ? new Swiper('.dates-swiper', {
     }
   }
 }) : false;
+
+var generateSwipers = function generateSwipers(swiperClass, swiperConfig) {
+  if (!$('.' + swiperClass).length) return false;
+  var itemsSwipersNodes = $('.' + swiperClass);
+  var swipers = {};
+  itemsSwipersNodes.each(function (index) {
+    $(this).addClass(swiperClass + '-' + index);
+    swipers[index] = new Swiper('.' + swiperClass + '-' + index, swiperConfig);
+  });
+  return swipers;
+};
+
 'use strict';
 
 var openBurgerMenu = function openBurgerMenu() {
@@ -255,70 +267,61 @@ var incrementDecrementValue = function incrementDecrementValue() {
 $('.items-counter .button').click(incrementDecrementValue);
 
 (function () {
-  if ($('.items-swiper').length === 0) return;
+  if ($('.items-swiper').length === 0) return false;
   var breakpoints = [window.matchMedia('(max-width: 991px)'), window.matchMedia('(max-width: 767px)'), window.matchMedia('(max-width: 575px)')];
-  var generateItemsSwipers;
+  var itemsSwiperConfig = {
+    slideClass: 'catalog-item',
+    slidesPerView: 5,
+    spaceBetween: 30,
+    allowTouchMove: false,
+    navigation: {
+      prevEl: '.prev',
+      nextEl: '.next'
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true
+    },
+    observer: true,
+    observerParents: true,
+    observeSlideChildren: true,
+    breakpoints: {
+      1343: {
+        slidesPerView: 4
+      },
+      991: {
+        slidesPerView: 3
+      },
+      767: {
+        slidesPerView: 2,
+        allowTouchMove: true,
+        pagination: {
+          el: '.pagination',
+          bulletElement: 'div',
+          bulletClass: 'pagination__item',
+          bulletActiveClass: 'pagination__item_active'
+        }
+      },
+      575: {
+        slidesPerView: 1,
+        allowTouchMove: true,
+        pagination: {
+          el: '.pagination',
+          bulletElement: 'div',
+          bulletClass: 'pagination__item',
+          bulletActiveClass: 'pagination__item_active'
+        }
+      }
+    }
+  };
 
   var breakpointChecker = function breakpointChecker() {
     breakpoints.forEach(function (breakpoint) {
-      if (breakpoint.matches) return generateItemsSwipers();
+      if (breakpoint.matches) return generateSwipers('items-swiper', itemsSwiperConfig);
     });
   };
 
-  generateItemsSwipers = function generateItemsSwipers() {
-    var itemsSwipersNodes = $('.items-swiper');
-    var swipers = {};
-    itemsSwipersNodes.each(function (index) {
-      $(this).addClass("items-swiper-".concat(index));
-      swipers[index] = new Swiper(".items-swiper-".concat(index), {
-        slideClass: 'catalog-item',
-        slidesPerView: 5,
-        spaceBetween: 30,
-        allowTouchMove: false,
-        navigation: {
-          prevEl: '.prev',
-          nextEl: '.next'
-        },
-        keyboard: {
-          enabled: true,
-          onlyInViewport: true
-        },
-        observer: true,
-        observerParents: true,
-        observeSlideChildren: true,
-        breakpoints: {
-          1343: {
-            slidesPerView: 4
-          },
-          991: {
-            slidesPerView: 3
-          },
-          767: {
-            slidesPerView: 2,
-            allowTouchMove: true,
-            pagination: {
-              el: '.pagination',
-              bulletElement: 'div',
-              bulletClass: 'pagination__item',
-              bulletActiveClass: 'pagination__item_active'
-            }
-          },
-          575: {
-            slidesPerView: 1,
-            allowTouchMove: true,
-            pagination: {
-              el: '.pagination',
-              bulletElement: 'div',
-              bulletClass: 'pagination__item',
-              bulletActiveClass: 'pagination__item_active'
-            }
-          }
-        }
-      });
-    });
-  };
-
-  generateItemsSwipers();
+  generateSwipers('items-swiper', itemsSwiperConfig);
 
   for (var i = 0; i < breakpoints.length; i++) {
     var breakpoint = breakpoints[i];
@@ -369,9 +372,86 @@ updateSwiperInstance(newArrrivalsSwiper);
 $('.header .search-form__button_open').click(function () {
   $(this).parent().toggleClass('search-form_opened');
 });
+var seenedItems = $('.seened-items__swiper').length ? new Swiper('.seened-items__swiper', {
+  slideClass: 'catalog-item',
+  slidesPerView: 4,
+  spaceBetween: 30,
+  allowTouchMove: false,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true
+  },
+  navigation: {
+    prevEl: '.prev',
+    nextEl: '.next',
+    disabledClass: 'visually-hidden'
+  },
+  observer: true,
+  observerParents: true,
+  observeSlideChildren: true,
+  breakpoints: {
+    1343: {
+      slidesPerView: 3
+    },
+    767: {
+      slidesPerView: 2,
+      allowTouchMove: true,
+      pagination: {
+        el: '.pagination',
+        bulletElement: 'div',
+        bulletClass: 'pagination__item',
+        bulletActiveClass: 'pagination__item_active'
+      }
+    },
+    575: {
+      slidesPerView: 1,
+      allowTouchMove: true
+    }
+  }
+}) : false;
 $('.sort-block__change-layout-button').click(function () {
   if (!$(this).hasClass('sort-block__change-layout-button_active')) {
     $('.sort-block__change-layout-button').removeClass('sort-block__change-layout-button_active');
     $(this).addClass('sort-block__change-layout-button_active');
   }
 });
+var textPageSwipersConfig = {
+  slideClass: 'photo-gallery__item',
+  slidesPerView: 3,
+  spaceBetween: 30,
+  allowTouchMove: false,
+  navigation: {
+    prevEl: '.prev',
+    nextEl: '.next'
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true
+  },
+  observer: true,
+  observerParents: true,
+  observeSlideChildren: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      allowTouchMove: true,
+      pagination: {
+        el: '.pagination',
+        bulletElement: 'div',
+        bulletClass: 'pagination__item',
+        bulletActiveClass: 'pagination__item_active'
+      }
+    },
+    575: {
+      slidesPerView: 1,
+      allowTouchMove: true,
+      pagination: {
+        el: '.pagination',
+        bulletElement: 'div',
+        bulletClass: 'pagination__item',
+        bulletActiveClass: 'pagination__item_active'
+      }
+    }
+  }
+};
+var textPageSwipers = generateSwipers('photo-gallery', textPageSwipersConfig);
