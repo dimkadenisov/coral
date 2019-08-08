@@ -369,6 +369,46 @@ var updateSwiperInstance = function updateSwiperInstance(swiper) {
 };
 
 updateSwiperInstance(newArrrivalsSwiper);
+var photoSwiperConfig = {
+  slideClass: 'photo-swiper__item',
+  slidesPerView: 3,
+  spaceBetween: 30,
+  allowTouchMove: false,
+  navigation: {
+    prevEl: '.prev',
+    nextEl: '.next'
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true
+  },
+  observer: true,
+  observerParents: true,
+  observeSlideChildren: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      allowTouchMove: true,
+      pagination: {
+        el: '.pagination',
+        bulletElement: 'div',
+        bulletClass: 'pagination__item',
+        bulletActiveClass: 'pagination__item_active'
+      }
+    },
+    575: {
+      slidesPerView: 1,
+      allowTouchMove: true,
+      pagination: {
+        el: '.pagination',
+        bulletElement: 'div',
+        bulletClass: 'pagination__item',
+        bulletActiveClass: 'pagination__item_active'
+      }
+    }
+  }
+};
+var photoSwipers = generateSwipers('photo-swiper', photoSwiperConfig);
 $('.header .search-form__button_open').click(function () {
   $(this).parent().toggleClass('search-form_opened');
 });
@@ -415,43 +455,3 @@ $('.sort-block__change-layout-button').click(function () {
     $(this).addClass('sort-block__change-layout-button_active');
   }
 });
-var textPageSwipersConfig = {
-  slideClass: 'photo-gallery__item',
-  slidesPerView: 3,
-  spaceBetween: 30,
-  allowTouchMove: false,
-  navigation: {
-    prevEl: '.prev',
-    nextEl: '.next'
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true
-  },
-  observer: true,
-  observerParents: true,
-  observeSlideChildren: true,
-  breakpoints: {
-    767: {
-      slidesPerView: 2,
-      allowTouchMove: true,
-      pagination: {
-        el: '.pagination',
-        bulletElement: 'div',
-        bulletClass: 'pagination__item',
-        bulletActiveClass: 'pagination__item_active'
-      }
-    },
-    575: {
-      slidesPerView: 1,
-      allowTouchMove: true,
-      pagination: {
-        el: '.pagination',
-        bulletElement: 'div',
-        bulletClass: 'pagination__item',
-        bulletActiveClass: 'pagination__item_active'
-      }
-    }
-  }
-};
-var textPageSwipers = generateSwipers('photo-gallery', textPageSwipersConfig);
