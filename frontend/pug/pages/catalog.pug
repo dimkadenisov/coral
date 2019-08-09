@@ -1,0 +1,26 @@
+extends ../templates/page
+include ../templates/button
+include ../templates/catalog-item.pug
+
+block title
+  |Каталог
+
+block content
+  main.main.main_catalog
+    .container
+      .row
+        .d-none.d-lg-block.col-3
+          include ../components/sidebar.pug
+        .col-12.col-lg-9
+          include ../components/breadcrumbs.pug
+          h1.section__heading Каталог
+          include ../components/sort-block.pug
+          hr.separator
+          include ../components/catalog-layout
+          .row
+            .col-12
+              include ../components/site-pagination.pug
+              hr.separator
+              include ../components/seened-items
+              hr.separator
+              include ../components/seo-block
