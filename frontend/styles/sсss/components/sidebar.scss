@@ -1,0 +1,39 @@
+.sidebar {
+  display: block;
+  margin-bottom: 20px;
+  padding-top: 30px;
+
+  &__heading {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  &__list {
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: $gray-100;
+    list-style: none;
+    font-size: 15px;
+  }
+
+  &__link {
+    display: block;
+    padding: 15px 30px;
+    background-color: $gray-100;
+    color: $gray-700;
+    text-decoration: none;
+
+    &_separate {
+      background-color: $gray-200;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $gray-400;
+      font-weight: bold;
+    }
+  }
+}
