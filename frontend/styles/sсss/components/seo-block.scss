@@ -1,0 +1,21 @@
+.seo-block {
+  margin-bottom: 90px;
+
+  &__text {
+    margin-bottom: 22px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .seo-block {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .seo-block {
+    margin-bottom: 45px;
+  }
+}
