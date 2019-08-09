@@ -1,4 +1,5 @@
 (function() {
+  if ($('.benefits__items').length === 0) return;
 
   const breakpoints = [window.matchMedia('(min-width: 768px)')];
   let benefitsSwiper;

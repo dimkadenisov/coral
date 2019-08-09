@@ -1,4 +1,5 @@
 include ../templates/button
+include ../templates/input-field
 
 form.personal-offer
   fieldset.personal-offer__fieldset
@@ -11,11 +12,11 @@ form.personal-offer
             |
             span.personal-offer__description Оставьте свой номер телефона и мы перезвоним вам
         .col-12.col-md-4.col-xl-3
-          input(type="text" placeholder="Имя").input-field.input-field_red
+          +input-field({type: 'text', color: 'red'})(placeholder='Имя', autocorrect='off', autocomplete='name' required)
         .col-12.col-md-4.col-xl-3
-          input(type="email" inputmode="email" placeholder="E-mail").input-field.input-field_red
+          +input-field({type: 'email', color: 'red'})(placeholder='E-mail', inputmode='email', autocapitalize='off', autocorrect='off' autocomplete='email', required)
         .col-12.col-md-4.col-xl-3
-          input(type="tel" inputmode="tel" placeholder="Телефон").input-field.input-field_red
+          +input-field({type: 'tel', color: 'red'})(placeholder='Телефон', inputmode='tel', autocorrect='off', autocomplete='email', required)
         .col-12.col-md-6.col-lg-4.col-xl-3.offset-0.offset-md-3.offset-lg-4.offset-xl-0
 
           +button({type: 'icon_left', iconId: '#writing'})

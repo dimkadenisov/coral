@@ -1,13 +1,14 @@
 .separator {
-  height: 2px;
-  width: 100%;
   margin: 20px 0;
+
+  color: $gray-400;
+  background-color:$gray-400;
+  border: 2px none;
+  height: 1px;
+  clear:both;
 
   &_red {
     color: $red-200;
-  }
-
-  &_gray {
-    color: $gray-400;
+    background-color:$red-200;
   }
 }
