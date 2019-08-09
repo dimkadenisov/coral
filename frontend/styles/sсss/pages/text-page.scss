@@ -1,0 +1,217 @@
+.text-page {
+  h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  h3 {
+    margin-bottom: 15px;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 24px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  & a {
+    color: $red-200;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  figure {
+    margin: 0 0 24px 0;
+  }
+
+  .image-big {
+    display: block;
+    max-width: 100%;
+    margin: 0 0 24px 0;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  figcaption {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.6;
+  }
+
+  ol {
+    margin: 0 0 40px 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      margin-bottom: 15px;
+      padding-left: 50px;
+      font-size: 15px;
+      line-height: 22px;
+      counter-increment: step-counter;
+
+      &::before {
+        content: counter(step-counter);
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35px;
+        padding-right: 10px;
+        background: radial-gradient(circle, transparent 30%, $red-200 30%, $red-200 60%, transparent 60%);
+        background-size: 8px 8px;
+        background-position: right 10px;
+        background-repeat: no-repeat;
+        color: $red-200;
+        font-weight: 900;
+        font-size: 15px;
+        text-align: right;
+      }
+    }
+  }
+
+  ul {
+    margin: 0 0 40px 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      margin-bottom: 15px;
+      padding-left: 50px;
+      font-size: 15px;
+      line-height: 22px;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35px;
+        height: 22px;
+        background: radial-gradient(circle, transparent 30%, $red-200 30%, $red-200 60%, transparent 60%);
+        background-size: 8px 8px;
+        background-position: right center;
+        background-repeat: no-repeat;
+        color: $red-200;
+      }
+    }
+  }
+
+  blockquote {
+    display: block;
+    padding: 35px 60px 30px 105px;
+    margin: 0 0 55px 0;
+    background: 30px 40px / 48px 48px url("../../assets/icons/quote.svg") no-repeat $gray-200;
+    border-left: 3px solid $red-200;
+
+    & cite {
+      font-style: normal;
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
+}
+
+.responsive-table {
+  max-width: 100%;
+  margin: 0 0 50px 0;
+  overflow-x: auto;
+}
+
+.responsive-table table,
+.text-page table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.responsive-table table tr:nth-child(odd),
+.text-page table tr:nth-child(odd) {
+  background: $gray-100;
+}
+
+.responsive-table table tr th,
+.responsive-table table tr td,
+.text-page table tr th,
+.text-page table tr td {
+  padding: 16px 12px;
+  color: $gray-700;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 992px) {
+  .text-page {
+    .image-right {
+      display: block;
+      float: right;
+      max-width: calc(50% - 30px);
+      margin: 0 0 24px 30px;
+    }
+
+    .image-left{
+      display: block;
+      float: left;
+      max-width: calc(50% - 30px);
+      margin: 0 30px 24px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .text-page {
+    h1 {
+      font-size: 32px;
+    }
+
+    h2 {
+      font-size: 20px
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .text-page {
+    h1 {
+      font-size: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .text-page {
+    h1 {
+      font-size: 24px
+    }
+
+    blockquote {
+      padding: 115px 20px 30px 12px;
+      margin: 0 0 40px 0;
+      background-position: 12px 40px;
+    }
+  }
+
+  .responsive-table {
+    margin-bottom: 40px;
+  }
+}
