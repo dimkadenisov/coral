@@ -1,0 +1,9 @@
+include ../templates/button
+
+.article-footer
+  +button({type: 'icon_left', color: 'red', iconId: '#arrow-left', iconBg: 'lighter'})
+    |Возврат к списку
+  .article-footer__rating
+    span.social-share__text Оцените материал:
+    include ./rating
+  include ./social-share
