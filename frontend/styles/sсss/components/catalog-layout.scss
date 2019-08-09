@@ -1,0 +1,37 @@
+@for $i from 1 through 8 {
+  .catalog-layout__item:nth-of-type(#{$i}) {
+    order: #{$i};
+  }
+}
+
+.catalog-layout__item:nth-of-type(n + 9) {
+  order: 9;
+}
+
+.catalog-layout__banner[data-order='1'] {
+  order: 4;
+}
+
+.catalog-layout__banner[data-order='2'] {
+  order: 8;
+}
+
+@media screen and (max-width: 1343px) {
+  .catalog-layout__banner[data-order='1'] {
+    order: 3;
+  }
+
+  .catalog-layout__banner[data-order='2'] {
+    order: 6;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .catalog-layout__banner[data-order='1'] {
+    order: 2;
+  }
+
+  .catalog-layout__banner[data-order='2'] {
+    order: 4;
+  }
+}
