@@ -1,0 +1,38 @@
+//- input props:
+
+//- type: 'select'                                          /// может быть пустым
+//- size: 'small'                                           /// может быть пустым
+//- color: 'red'                                            /// может быть пустым
+//- borderColor: 'transparent'                                         /// может быть пустым
+//- otherClasses: 'любой-класс или-классы через-пробел'     /// может быть пустым
+
+
+mixin input-field(props)
+
+  - let {type, size='', color='', borderColor='', otherClasses=''} = props;
+
+  - let classList= 'input-field'
+
+  - if (size != "")
+    - classList+= ` input-field_${size}`
+
+  - if (color != "")
+    - classList+= ` input-field_${color}`
+
+  - if (borderColor != '')
+    - classList+= ` input-field_border-${borderColor}`
+
+  - if (otherClasses != '')
+    - classList+= ` ${otherClasses}`
+
+  case type
+
+    when 'select'
+      .input-field__wrapper
+        select(class= 'input-field__select ' + classList)&attributes(attributes)
+          block
+        svg.input-field__icon
+          use(xlink:href="#arrow-down")
+
+    default
+      input(type= type, class= classList)&attributes(attributes)

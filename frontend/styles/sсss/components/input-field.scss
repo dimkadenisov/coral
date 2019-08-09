@@ -6,13 +6,20 @@
   padding-left: 30px;
   border-radius: 56px;
   border-width: 2px;
-  border-color: transparent;
+  border-color: $gray-400;
   background-color: $white;
   box-shadow: none;
   border-style: solid;
   color: $gray-650;
   font-family: "Raleway", "Helvetica", "Arial", sans-serif;
   font-size: 15px;
+
+  &_small {
+    height: 40px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 20px;
+  }
 
   &_red {
     border-color: $red-100;
@@ -23,6 +30,10 @@
     &::-webkit-input-placeholder {color: $white;}
     &::-ms-input-placeholder {color: $white;}
     &::placeholder {color: $white;}
+  }
+
+  &_border-transparent {
+    border-color: transparent;
   }
 
   &_underlined {
@@ -40,5 +51,35 @@
     &:focus {
       border-color: $gray-500;
     }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 0.75em;
+    width: 1.5em;
+    height: 1.5em;
+    transform: translateY(-50%);
+  }
+
+  &__select {
+    padding-right: 2em;
+    background-color: transparent;
+    cursor: pointer;
+
+    & + .input-field__icon {
+      z-index: -1;
+    }
+  }
+
+  &__wrapper {
+    display: inline-block;
+    position: relative;
+    color: $gray-650;
+  }
+
+  &:focus,
+  &:hover {
+    border-color: $gray-500;
   }
 }
