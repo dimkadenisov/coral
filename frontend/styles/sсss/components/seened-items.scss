@@ -1,0 +1,22 @@
+.seened-items {
+  &__swiper {
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+}
