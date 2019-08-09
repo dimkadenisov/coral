@@ -1,0 +1,23 @@
+.social-share {
+  margin-bottom: 40px;
+
+  &__text {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  ul {
+    li {
+      padding: 0;
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
