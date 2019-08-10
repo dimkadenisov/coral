@@ -53,3 +53,33 @@ mixin catalog-item(props= 0)
         +button({type: 'icon_left', size: 'extra-small', opacity: '09', iconId: '#eye', otherClasses: 'catalog-item__quick-view'})
           |Быстрый просмотр
         +button({type: 'circle', size: 'small', color: 'no-bg', iconId: '#heart', otherClasses: 'button_heart show-tooltip show-tooltip_top-right'})(data-description="Добавить товар в избранное")
+
+    when 'table'
+
+      .catalog-item.catalog-item_table
+        a(href="#").catalog-item__link
+          .catalog-item__image-wrapper
+            picture.catalog-item__image
+              img(src="assets/img/catalog-item-sample-itmage-1.jpg", alt="Изображение товара").catalog-item__image
+        a(href="#").catalog-item__name= name
+        include ../components/item-characteristics.pug
+        .catalog-item__stickers
+          - if (stickers != "")
+            - classList+= ` button_${type}`
+            each val in stickers
+              +sticker({type: `${val}`})
+        .catalog-item__group
+          include ../components/rating.pug
+          span.catalog-item__small-text.catalog-item__code Код 799180
+        span.price
+          if sale
+            span.price__old-value 99 999
+            span.price__value 99 175 ₽/шт.
+          else
+            span.price__value 99 175 ₽/шт.
+        .catalog-item__checkout
+          include ../components/items-counter.pug
+          +button({type: 'circle', size: 'small', color: 'red', iconId: '#shopping-basket', otherClasses: 'catalog-item__buy'})
+        +button({type: 'icon_left', size: 'extra-small', opacity: '09', iconId: '#eye', otherClasses: 'catalog-item__quick-view'})
+          |Быстрый просмотр
+        +button({type: 'circle', size: 'small', color: 'no-bg', iconId: '#heart', otherClasses: 'button_heart show-tooltip show-tooltip_top-right'})(data-description="Добавить товар в избранное")
