@@ -3,7 +3,7 @@ include ../templates/button
 include ../templates/catalog-layout.pug
 
 block title
-  |Каталог
+  |Каталог Таблица
 
 block content
   main.main.main_catalog
@@ -16,7 +16,7 @@ block content
           h1.section__heading Каталог
           include ../components/sort-block.pug
           hr.separator
-          +catalog-layout()
+          +catalog-layout({type: 'table'})
           .row
             .col-12
               include ../components/site-pagination.pug

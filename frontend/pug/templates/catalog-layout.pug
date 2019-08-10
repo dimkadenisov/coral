@@ -1,0 +1,31 @@
+include ./catalog-item.pug
+
+mixin catalog-layout(props= 0)
+
+  - let { type=0, itemsCount= 12} = props
+
+  - const catalogItemType = type === 'table' ? 'table' : 0;
+  - const layoutClasses = type === 'table' ? 'catalog-layout catalog-layout_table' : 'catalog-layout';
+  - const itemWrapperClasses = type === 'table' ? 'col-12 catalog-layout__item' : 'col-12 col-sm-6 col-md-4 col-xxl-3 catalog-layout__item';
+
+  div(class= layoutClasses)
+    .row
+      while itemsCount > 0
+        div(class= itemWrapperClasses)
+          +catalog-item({type: catalogItemType, stickers: ['gift', 'hit', 'sale', 'new'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true})
+          - itemsCount--
+
+      .col-12.catalog-layout__banner(data-order='1')
+        .banner.banner_bg_pattern
+          .banner__offer
+            span.banner__text Хотите узнать цену? Зарегистрируйтесь!
+            +button({tag: 'a'})(href='#')
+              |Регистрация
+      .col-12.catalog-layout__banner(data-order='2')
+        .banner
+          a(href="#").banner__link
+            picture.banner__image
+              source(media="(min-width: 1200px)" srcset="assets/img/banner-image-960.jpg")
+              source(media="(min-width: 768px)" srcset="assets/img/banner-image-690.jpg")
+              source(media="(min-width: 320px)" srcset="assets/img/banner-image-545.jpg")
+              img(src="assets/img/banner-image-960.jpg", alt="Коллекция посуды Home Collection").banner__image
