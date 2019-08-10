@@ -1,0 +1,19 @@
+.item-characteristics {
+  &__item {
+    display: flex;
+    // margin-bottom: 5px;
+  }
+
+  &__text {
+    flex-shrink: 0;
+    line-height: 1.7;
+  }
+
+  &__separator {
+    flex-basis: 80%;
+    height: 1.18em;
+    margin-right: 8px;
+    margin-left: 8px;
+    border-bottom: 1px dotted $gray-700;
+  }
+}
