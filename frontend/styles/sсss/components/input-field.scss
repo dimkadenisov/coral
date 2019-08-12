@@ -21,6 +21,13 @@
     border-radius: 20px;
   }
 
+  &_extra-small {
+    height: 32px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 16px;
+  }
+
   &_red {
     border-color: $red-100;
     background-color: $red-300;
