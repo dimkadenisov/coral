@@ -53,12 +53,25 @@
     }
   }
 
+  &_light-orange {
+    background-color: $orange-50;
+
+    &:hover,
+    &:focus {
+      box-shadow: 1.5px 5px 10px 0 rgba($orange-50, 0.8);
+    }
+  }
+
   &_no-bg {
     background-color: transparent;
   }
 
   &_border-red {
     border: 2px solid $red-200;
+  }
+
+  &_border-gray {
+    border: 2px solid $gray-600;
   }
 
   &_opacity_09 {
