@@ -70,6 +70,25 @@
   breakpointChecker();
 })();
 
+$('.filter-row-trigger').click(function (e) {
+  e.preventDefault();
+  if ($(window).width() > 991) $(this).closest('.filter-row').toggleClass('active');
+});
+
+(function () {
+  var timer;
+
+  window.onresize = function () {
+    if (timer) clearTimeout(timer);
+
+    if ($(window).width() > 991) {
+      timer = setTimeout(function () {
+        $('#catalog-filter').css('display', 'block');
+      }, 200);
+    }
+  };
+})();
+
 $('.catalog-item .button_heart').click(function () {
   $(this).toggleClass('button_heart_clicked');
 
@@ -454,4 +473,13 @@ $('.sort-block__change-layout-button').click(function () {
     $('.sort-block__change-layout-button').removeClass('sort-block__change-layout-button_active');
     $(this).addClass('sort-block__change-layout-button_active');
   }
+});
+$('.show-more-button').click(function () {
+  if ($(this).closest('.tags').hasClass('tags_show-all')) {
+    $(this).text('Показать еще');
+  } else {
+    $(this).text('Скрыть');
+  }
+
+  $(this).closest('.tags').toggleClass('tags_show-all');
 });
