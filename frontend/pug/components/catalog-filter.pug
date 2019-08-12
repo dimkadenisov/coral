@@ -1,0 +1,82 @@
+include ../templates/input-field
+
+.catalog-filter#catalog-filter
+  .catalog-smart-filter.bx-filter
+    .filter-heading Подбор по параметрам
+    form.smartfilter
+      .filter-row.bx-filter-parameters-box
+        .filter-row-caption
+          a.filter-row-trigger(href="#")
+            span Цена (₽)
+        .filter-row-fields.bx-filter-block
+          span.bx-filter-container-modef
+          .row.bx-filter-parameters-box-container
+            .col-6.bx-filter-parameters-box-container-block.bx-left
+              span.bx-ft-sub От
+              .bx-filter-input-container
+                +input-field({size: 'extra-small', borderColor: 'transparent'})(type="text" name="arrFilter_P3_MIN" id="arrFilter_P3_MIN" value="" size="5" onkeyup="smartFilter.keyup(this)")
+            .col-6.bx-filter-parameters-box-container-block.bx-right
+              span.bx-ft-sub До
+              .bx-filter-input-container
+                +input-field({size: 'extra-small', borderColor: 'transparent'})(type="text" name="arrFilter_P3_MAX" id="arrFilter_P3_MAX" value="" size="5" onkeyup="smartFilter.keyup(this)")
+
+
+            .col-12.bx-ui-slider-track-container
+              .bx-ui-slider-track
+
+                //- .bx-ui-slider-part.p1
+                //-   span 0.60
+                //- .bx-ui-slider-part.p2
+                //-   span 215.70
+                //- .bx-ui-slider-part.p3
+                //-   span 430.80
+                //- .bx-ui-slider-part.p4
+                //-   span 645.90
+                //- .bx-ui-slider-part.p5
+                //-   span 861
+
+                //- .bx-ui-slider-pricebar-vd#colorUnavailableActive_eccbc87e4b5ce2fe28308fd9f2a7baf3(style="left: 0;right: 0;")
+                //- .bx-ui-slider-pricebar-vncolorAvailableInactive_eccbc87e4b5ce2fe28308fd9f2a7baf3(style="left: 0%; right: 0%;")
+                //- .bx-ui-slider-pricebar-v#colorAvailableActive_eccbc87e4b5ce2fe28308fd9f2a7baf3(style="left: 0%; right: 0%;")
+
+                .bx-ui-slider-range
+                  a.bx-ui-slider-handle.left(href="javascript:void(0)")
+                  a.bx-ui-slider-handle.right(href="javascript:void(0)")
+
+      .filter-row.bx-filter-parameters-box
+        .filter-row-caption
+          a.filter-row-trigger(href="#")
+            span Форма
+        .filter-row-fields.bx-filter-block(data-role="bx_filter_block")
+          span.bx-filter-container-modef
+          .row.bx-filter-parameters-box-container
+            .col-12.multiple-columns
+              .checkbox
+                label.bx-filter-param-label
+                  span.bx-filter-input-checkbox
+                    input(type="checkbox" onclick="smartFilter.click(this)")
+                    span.bx-filter-param-text.field-text(title="Круг") Круг
+              .checkbox
+                label.bx-filter-param-label
+                  span.bx-filter-input-checkbox
+                    input(type="checkbox" onclick="smartFilter.click(this)")
+                    span.bx-filter-param-text.field-text(title="Квадрат") Квадрат
+              .checkbox
+                label.bx-filter-param-label
+                  span.bx-filter-input-checkbox
+                    input(type="checkbox" onclick="smartFilter.click(this)")
+                    span.bx-filter-param-text.field-text(title="Овал") Овал
+
+      .submit-row
+        .bx-filter-parameters-box-container
+          input.button.button_small.button_gray.set-filter-button#set_filter(type="button" name="set_filter" value="Показать")
+          input.button.button_small.button_no-bg.button_border-gray.reset-filter-button#del_filter(type="button" name="del_filter" value="Сбросить")
+          .bx-filter-popup-result.left#modef
+            |Выбрано:
+            |
+            |
+            span#modef_num 0
+            span.arrow
+            br
+            a(href="/catalog/bolty_3/filter/clear/?catalog_sort=&amp;catalog_items=" target="") Показать
+      .clb

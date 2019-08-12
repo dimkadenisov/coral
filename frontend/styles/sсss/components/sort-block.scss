@@ -48,7 +48,7 @@
 @media screen and (max-width: 991px) {
   .sort-block {
     &__filter-button {
-      display: block;
+      display: inline-flex;
     }
 
     &__sort-type {

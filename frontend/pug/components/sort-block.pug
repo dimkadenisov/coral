@@ -2,7 +2,7 @@ include ../templates/button
 include ../templates/input-field
 
 .sort-block
-  +button({size: 'small', color: 'red', otherClasses: 'sort-block__filter-button'})
+  +button({tag: 'a', size: 'small', color: 'red', otherClasses: 'sort-block__filter-button'})(data-fancybox data-src="#catalog-filter" href="javascript:;")
     |Фильтр
 
   .sort-block__group
