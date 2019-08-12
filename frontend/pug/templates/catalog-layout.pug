@@ -12,7 +12,7 @@ mixin catalog-layout(props= 0)
     .row
       while itemsCount > 0
         div(class= itemWrapperClasses)
-          +catalog-item({type: catalogItemType, stickers: ['gift', 'hit', 'sale', 'new'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true})
+          +catalog-item({type: catalogItemType, stickers: ['hit', 'new'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true})
           - itemsCount--
 
       .col-12.catalog-layout__banner(data-order='1')
