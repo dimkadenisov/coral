@@ -1,0 +1,28 @@
+extends ../templates/page
+include ../templates/button
+include ../templates/catalog-layout
+include ../templates/tags
+
+block title
+  |Раздел каталога
+block content
+  main.main.main_catalog-section
+    .container
+      .row
+        .d-none.d-lg-block.col-3
+          include ../components/sidebar
+          include ../components/catalog-filter
+        .col-12.col-lg-9
+          include ../components/breadcrumbs
+          h1.section__heading Коллекции посуды
+          +tags({amount: 14, showMoreButton: true})
+          include ../components/sort-block
+          hr.separator
+          +catalog-layout()
+          .row
+            .col-12
+              include ../components/site-pagination
+              hr.separator
+              include ../components/seened-items
+              hr.separator
+              include ../components/seo-block
