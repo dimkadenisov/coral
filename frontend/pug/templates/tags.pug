@@ -1,0 +1,15 @@
+include ../templates/button
+
+mixin tags(props= 0)
+
+  - let { amount= 10, showMoreButton= true} = props;
+  - let tags = ['В подарочной упаковке', 'Белые', 'Цветные', 'Рельефные', 'С цветами', 'С животными', 'С бабочкой', 'Набор', '8 марта', '23 февраля', 'Новый год', 'Рождество', 'Лицензионные коллекции', 'Импортные'];
+
+  .tags
+    if showMoreButton
+      +button({size: 'small', color: 'gray', otherClasses: 'show-more-button'})
+        |Показать еще...
+
+    - for (let i = 0; i < amount; i++)
+        +button({tag: 'a', size: 'small', color: 'light-orange', otherClasses: 'tag'})
+          |#{tags[i]}
