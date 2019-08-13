@@ -1,6 +1,6 @@
 include ../templates/input-field
 
-.catalog-filter#catalog-filter
+.catalog-filter
   .catalog-smart-filter.bx-filter
     .filter-heading Подбор по параметрам
     form.smartfilter
@@ -54,17 +54,17 @@ include ../templates/input-field
               .checkbox
                 label.bx-filter-param-label
                   span.bx-filter-input-checkbox
-                    input(type="checkbox" onclick="smartFilter.click(this)")
+                    input(type="checkbox" onclick="smartFilter.click(this)").visually-hidden
                     span.bx-filter-param-text.field-text(title="Круг") Круг
               .checkbox
                 label.bx-filter-param-label
                   span.bx-filter-input-checkbox
-                    input(type="checkbox" onclick="smartFilter.click(this)")
+                    input(type="checkbox" onclick="smartFilter.click(this)").visually-hidden
                     span.bx-filter-param-text.field-text(title="Квадрат") Квадрат
               .checkbox
                 label.bx-filter-param-label
                   span.bx-filter-input-checkbox
-                    input(type="checkbox" onclick="smartFilter.click(this)")
+                    input(type="checkbox" onclick="smartFilter.click(this)").visually-hidden
                     span.bx-filter-param-text.field-text(title="Овал") Овал
 
       .submit-row
