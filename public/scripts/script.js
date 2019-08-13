@@ -293,17 +293,6 @@ var itemGallerySwiperConfig = {
         onlyInViewport: true
       }
     }
-  },
-  breakpoints: {
-    767: {
-      thumbs: null,
-      pagination: {
-        el: '.pagination',
-        bulletElement: 'div',
-        bulletClass: 'pagination__item',
-        bulletActiveClass: 'pagination__item_active'
-      }
-    }
   }
 };
 
@@ -481,6 +470,18 @@ $('.catalog-item__quick-view').click(function () {
   });
   generateSwipers('item-gallery', itemGallerySwiperConfig);
 });
+
+(function () {
+  var timer;
+
+  window.onresize = function () {
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(function () {
+      if ($(window).width() < 992) $.fancybox.close(true);
+    }, 100);
+  };
+})();
+
 $('.header .search-form__button_open').click(function () {
   $(this).parent().toggleClass('search-form_opened');
 });
