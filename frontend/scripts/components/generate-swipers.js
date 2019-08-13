@@ -1,4 +1,4 @@
-const generateSwipers = function(swiperClass, swiperConfig) {
+function generateSwipers(swiperClass, swiperConfig) {
   if (!$('.' + swiperClass).length) return false;
 
   const itemsSwipersNodes = $('.' + swiperClass);
