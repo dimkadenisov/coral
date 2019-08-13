@@ -1,0 +1,67 @@
+.quick-view {
+  max-width: 850px;
+  width: 100%;
+  padding: 30px;
+
+  .section__description {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  &__stickers {
+    display: inline-block;
+  }
+
+  .sticker {
+    margin-right: 5px;
+  }
+
+  .rating {
+    margin-right: auto;
+    margin-left: auto;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__checkout {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .items-counter {
+    flex-basis: 150px;
+    margin-right: 25px;
+    margin-left: auto;
+  }
+
+  .item-characteristics,
+  .item-thumbs {
+    margin-bottom: 40px;
+  }
+
+  .item-benefits {
+    margin-bottom: 20px;
+  }
+
+  &__show-more-button {
+    display: flex;
+    max-width: 325px;
+    margin-right: auto;
+    margin-left: auto;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
