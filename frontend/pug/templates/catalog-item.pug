@@ -34,7 +34,7 @@ mixin catalog-item(props= 0)
         +price({sale})
         .catalog-item__checkout
           include ../components/items-counter.pug
-          +button({type: 'circle', size: 'small', color: 'red', iconId: '#shopping-basket', otherClasses: 'catalog-item__buy'})
+          +button({type: 'circle', size: 'small', color: 'red', iconId: '#shopping-basket', otherClasses: 'catalog-item__buy buy-button'})
         +button({type: 'icon_left', size: 'extra-small', opacity: '09', iconId: '#eye', otherClasses: 'catalog-item__quick-view'})
           |Быстрый просмотр
         +button({type: 'circle', size: 'small', color: 'no-bg', iconId: '#heart', otherClasses: 'button_heart show-tooltip show-tooltip_top-right'})(data-description="Добавить товар в избранное")
@@ -77,7 +77,7 @@ mixin catalog-item(props= 0)
         +price({sale})
         .catalog-item__checkout
           include ../components/items-counter.pug
-          +button({type: 'circle', size: 'small', color: 'red', iconId: '#shopping-basket', otherClasses: 'catalog-item__buy'})
+          +button({type: 'circle', size: 'small', color: 'red', iconId: '#shopping-basket', otherClasses: 'catalog-item__buy buy-button'})
         +button({type: 'icon_left', size: 'extra-small', opacity: '09', iconId: '#eye', otherClasses: 'catalog-item__quick-view'})
           |Быстрый просмотр
         +button({type: 'circle', size: 'small', color: 'no-bg', iconId: '#heart', otherClasses: 'button_heart show-tooltip show-tooltip_top-right'})(data-description="Добавить товар в избранное")

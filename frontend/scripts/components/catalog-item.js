@@ -10,7 +10,7 @@ $('.catalog-item .button_heart').click(function() {
 });
 
 
-$('.catalog-item__buy').click(function() {
+$('.buy-button').click(function() {
   $(this).toggleClass('button_red');
   $(this).toggleClass('button_gray');
   $(this).toggleClass('catalog-item__buy_clicked');
