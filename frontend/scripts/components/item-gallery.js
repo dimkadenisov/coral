@@ -37,16 +37,4 @@ const itemGallerySwiperConfig = {
       },
     }
   },
-
-  breakpoints: {
-    767: {
-      thumbs: null,
-      pagination: {
-        el: '.pagination',
-        bulletElement: 'div',
-        bulletClass: 'pagination__item',
-        bulletActiveClass: 'pagination__item_active',
-      },
-    }
-  }
 };
