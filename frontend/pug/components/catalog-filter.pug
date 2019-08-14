@@ -14,11 +14,13 @@ include ../templates/input-field
             .col-6.bx-filter-parameters-box-container-block.bx-left
               span.bx-ft-sub От
               .bx-filter-input-container
-                +input-field({size: 'extra-small', borderColor: 'transparent'})(type="text" name="arrFilter_P3_MIN" id="arrFilter_P3_MIN" value="" size="5" onkeyup="smartFilter.keyup(this)")
+                +input-field({size: 'extra-small', borderColor: 'transparent'})(type="text" name="arrFilter_P3_MIN" id="arrFilter_P3_MIN" value="" size="5" onkeyup="smartFilter.keyup(this)" placeholder="100")
+              .catalog-filter__separator
+
             .col-6.bx-filter-parameters-box-container-block.bx-right
               span.bx-ft-sub До
               .bx-filter-input-container
-                +input-field({size: 'extra-small', borderColor: 'transparent'})(type="text" name="arrFilter_P3_MAX" id="arrFilter_P3_MAX" value="" size="5" onkeyup="smartFilter.keyup(this)")
+                +input-field({size: 'extra-small', borderColor: 'transparent'})(type="text" name="arrFilter_P3_MAX" id="arrFilter_P3_MAX" value="" size="5" onkeyup="smartFilter.keyup(this)" placeholder="9999")
 
 
             .col-12.bx-ui-slider-track-container

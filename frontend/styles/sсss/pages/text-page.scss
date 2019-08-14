@@ -76,7 +76,7 @@
         left: 0;
         width: 35px;
         padding-right: 10px;
-        background: radial-gradient(circle, transparent 30%, $red-200 30%, $red-200 60%, transparent 60%);
+        background-image: radial-gradient(circle, transparent 25%, $red-200 25%, $red-200 60%, transparent 60%);
         background-size: 8px 8px;
         background-position: right 10px;
         background-repeat: no-repeat;
@@ -103,11 +103,11 @@
         content: '';
         display: inline-block;
         position: absolute;
-        top: 0;
+        top: -1px;
         left: 0;
         width: 35px;
         height: 22px;
-        background: radial-gradient(circle, transparent 30%, $red-200 30%, $red-200 60%, transparent 60%);
+        background-image: radial-gradient(circle, transparent 25%, $red-200 25%, $red-200 60%, transparent 60%);
         background-size: 8px 8px;
         background-position: right center;
         background-repeat: no-repeat;
@@ -120,7 +120,7 @@
     display: block;
     padding: 35px 60px 30px 105px;
     margin: 0 0 55px 0;
-    background: 30px 40px / 48px 48px url("../../assets/icons/quote.svg") no-repeat $gray-200;
+    background: 30px 40px / 48px 48px url("../assets/icons/quote.svg") no-repeat $gray-200;
     border-left: 3px solid $red-200;
 
     & cite {

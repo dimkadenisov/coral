@@ -21,9 +21,10 @@
 
 @media screen and (max-width: 991px) {
   .dates-swiper {
-    padding-right: 40px;
-    padding-left: 40px;
     display: flex;
+    max-width: none;
+    padding-right: 25px;
+    padding-left: 25px;
 
     &__icon {
       display: none;
@@ -55,11 +56,19 @@
     }
 
     .prev {
-      left: 0;
+      left: -15px;
+
+      .button__icon {
+        margin-left: auto;
+      }
     }
 
     .next {
-      right: 0;
+      right: -15px;
+
+      .button__icon {
+        margin-right: auto;
+      }
     }
   }
 }

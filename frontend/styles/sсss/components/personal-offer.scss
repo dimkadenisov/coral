@@ -43,6 +43,7 @@
 @media screen and (max-width: 991px) {
   .personal-offer {
     .button {
+      display: flex;
       max-width: 255px;
       margin-right: auto;
       margin-left: auto;

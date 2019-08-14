@@ -1,6 +1,7 @@
 extends ../templates/page
 include ../templates/button
 include ../templates/catalog-layout.pug
+include ../templates/sort-block
 
 block title
   |Каталог Таблица
@@ -14,7 +15,7 @@ block content
         .col-12.col-lg-9
           include ../components/breadcrumbs.pug
           h1.section__heading Каталог
-          include ../components/sort-block.pug
+          +sort-block()
           hr.separator
           +catalog-layout({type: 'table'})
           .row

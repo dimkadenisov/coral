@@ -12,6 +12,7 @@
     color: $gray-700;
     font-size: 17px;
     font-weight: 600;
+    text-align: right;
   }
 
   &__input-wrapper {
@@ -38,6 +39,7 @@
     &__legend {
       height: auto;
       margin-bottom: 25px;
+      text-align: left;
     }
   }
 }

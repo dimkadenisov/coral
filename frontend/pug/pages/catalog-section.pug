@@ -2,6 +2,7 @@ extends ../templates/page
 include ../templates/button
 include ../templates/catalog-layout
 include ../templates/tags
+include ../templates/sort-block
 
 block title
   |Раздел каталога
@@ -16,7 +17,7 @@ block content
           include ../components/breadcrumbs
           h1.section__heading Коллекции посуды
           +tags({amount: 14, showMoreButton: true})
-          include ../components/sort-block
+          +sort-block({filter: true})
           hr.separator
           +catalog-layout()
           .row

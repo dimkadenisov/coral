@@ -24,9 +24,18 @@
   }
 }
 
+@media screen and (max-width: 991px) {
+  .article-footer,
+  .article-footer__rating,
+  .social-share {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .article-footer {
     flex-wrap: wrap;
+    margin-bottom: 55px;
 
     .button {
       order: 1;

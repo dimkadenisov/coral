@@ -22,6 +22,8 @@ let newArrivalsDates = $('.dates-swiper').length ? new Swiper('.dates-swiper', {
     767: {
       slidesPerView: 2,
 
+      allowTouchMove: true,
+
       navigation: {
         prevEl: '.prev',
         nextEl: '.next',

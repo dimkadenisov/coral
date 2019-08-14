@@ -27,8 +27,17 @@
   &__change-layout-button {
     margin-left: 7px;
 
+    .button__icon {
+      width: 23px;
+      height: 23px;
+    }
+
     &_active {
       color: $red-200;
+    }
+
+    &:last-of-type {
+      margin-right: -10px;
     }
   }
 }
@@ -88,17 +97,33 @@
 @media screen and (max-width: 575px) {
   .sort-block {
     &__filter-button {
-      display: none;
+      max-width: none;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 25px;
+      order: 0;
     }
 
     &__group {
       &:first-of-type {
+        display: flex;
+        flex-grow: 1;
         margin-right: 0;
+
+        .input-field__wrapper {
+          flex-grow: 1;
+        }
       }
 
       &:last-of-type {
         flex-basis: calc(100% - 90px);
       }
     }
+
+    &__sort-type {
+      display: inline-block;
+      min-width: 110px
+    }
+
   }
 }

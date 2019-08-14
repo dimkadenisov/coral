@@ -12,7 +12,7 @@ $('.filter-row-trigger').click(function(e) {
     if ($(window).width() > 991) {
       timer = setTimeout(() => {
         $('#catalog-filter').css('display', 'block');
-      }, 200)
+      }, 100)
     }
   };
 
