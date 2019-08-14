@@ -89,7 +89,7 @@ $('.filter-row-trigger').click(function (e) {
   };
 })();
 
-$('.catalog-item .button_heart').click(function () {
+$('.button_heart').click(function () {
   $(this).toggleClass('button_heart_clicked');
 
   if ($(this).hasClass('button_heart_clicked')) {
@@ -263,6 +263,19 @@ var heroSwiper = $('.hero-swiper').length ? new Swiper('.hero-swiper', {
   observerParents: true,
   observeSlideChildren: true
 }) : false;
+$('.item-card__show-more-button').click(function () {
+  var characteristicksTable = $(this).closest('.item-card').find('.item-characteristics');
+
+  if (characteristicksTable.hasClass('item-characteristics_opened')) {
+    $(this).text('Больше характеристик');
+    $(this).removeClass('button_gray');
+    characteristicksTable.removeClass('item-characteristics_opened');
+  } else {
+    $(this).text('Меньше характеристик');
+    $(this).addClass('button_gray');
+    characteristicksTable.addClass('item-characteristics_opened');
+  }
+});
 var itemGallerySwiperConfig = {
   slideClass: 'item-gallery__slide',
   slidesPerView: 1,
@@ -280,7 +293,7 @@ var itemGallerySwiperConfig = {
   },
   thumbs: {
     swiper: {
-      el: '.item-thumbs',
+      el: '.item-gallery__thumbs',
       slideClass: 'item-gallery__slide',
       slidesPerView: 3,
       spaceBetween: 15,
@@ -296,6 +309,7 @@ var itemGallerySwiperConfig = {
     }
   }
 };
+generateSwipers('item-gallery__swiper', itemGallerySwiperConfig);
 
 var incrementDecrementValue = function incrementDecrementValue() {
   var input = $(this).next().hasClass('input-field_underlined') ? $(this).next() : $(this).prev();
@@ -469,7 +483,7 @@ $('.catalog-item__quick-view').click(function () {
     type: 'inline',
     touch: false
   });
-  generateSwipers('item-gallery', itemGallerySwiperConfig);
+  generateSwipers('item-gallery__swiper', itemGallerySwiperConfig);
 });
 
 (function () {
