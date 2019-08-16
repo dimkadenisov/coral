@@ -144,7 +144,7 @@ var newArrivalsDates = $('.dates-swiper').length ? new Swiper('.dates-swiper', {
 function generateSwipers(swiperClass, swiperConfig) {
   if (!$('.' + swiperClass).length) return false;
   var itemsSwipersNodes = $('.' + swiperClass);
-  var swipers = {};
+  var swipers = [];
   itemsSwipersNodes.each(function (index) {
     $(this).addClass(swiperClass + '-' + index);
     swipers[index] = new Swiper('.' + swiperClass + '-' + index, swiperConfig);
@@ -504,6 +504,66 @@ $('.catalog-item__quick-view').click(function () {
       if ($(window).width() < 992) $.fancybox.close(true);
     }, 100);
   };
+})();
+
+(function () {
+  if ($('.reviews-swiper').length === 0) return false;
+  var breakpoints = [window.matchMedia('(max-width: 991px)'), window.matchMedia('(min-width: 992px)')];
+  var reviewsSwiperConfig = {
+    slideClass: 'review',
+    slidesPerView: 2,
+    slidesPerColumn: 2,
+    spaceBetween: 30,
+    allowTouchMove: false,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true
+    },
+    observer: true,
+    observerParents: true,
+    observeSlideChildren: true,
+    breakpoints: {
+      991: {
+        slideClass: 'review',
+        slidesPerView: 1,
+        slidesPerColumn: 1,
+        spaceBetween: 30,
+        allowTouchMove: true,
+        keyboard: {
+          enabled: true,
+          onlyInViewport: true
+        },
+        observer: true,
+        observerParents: true,
+        observeSlideChildren: true,
+        pagination: {
+          el: '.pagination',
+          bulletElement: 'div',
+          bulletClass: 'pagination__item',
+          bulletActiveClass: 'pagination__item_active'
+        }
+      }
+    }
+  };
+  var reviewsSwipers = generateSwipers('reviews-swiper', reviewsSwiperConfig);
+
+  var breakpointChecker = function breakpointChecker() {
+    breakpoints.forEach(function (breakpoint) {
+      if (breakpoint.matches) {
+        reviewsSwipers.forEach(function (item) {
+          item.destroy();
+        });
+        reviewsSwipers = generateSwipers('reviews-swiper', reviewsSwiperConfig);
+      }
+    });
+  };
+
+  for (var i = 0; i < breakpoints.length; i++) {
+    var breakpoint = breakpoints[i];
+    breakpoint.addListener(breakpointChecker);
+  }
+
+  breakpointChecker();
 })();
 
 $('.header .search-form__button_open').click(function () {
