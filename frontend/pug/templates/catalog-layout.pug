@@ -16,7 +16,9 @@ mixin catalog-layout(props= 0)
 
   div(class= layoutClasses)
     .row
-      while itemsCount > 0
+      div(class= itemWrapperClasses)
+        +catalog-item({type: `${catalogItemType === 'table' ? 'table_more' : 'more'}`, stickers: ['hit', 'new'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true})
+      while itemsCount > 1
         div(class= itemWrapperClasses)
           +catalog-item({type: catalogItemType, stickers: ['hit', 'new'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true})
           - itemsCount--

@@ -1,3 +1,12 @@
+.catalog-layout__item {
+  display: flex;
+  flex-direction: column;
+
+  .catalog-item {
+    flex-grow: 1;
+  }
+}
+
 @for $i from 1 through 8 {
   .catalog-layout__item:nth-of-type(#{$i}) {
     order: #{$i};
