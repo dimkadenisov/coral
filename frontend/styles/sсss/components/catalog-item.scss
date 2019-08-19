@@ -14,11 +14,21 @@
     text-decoration: none;
   }
 
+  &__swiper {
+    position: relative;
+    // width: 100%;
+    margin-bottom: 20px;
+    overflow-x: hidden;
+  }
+
+  &__slide {
+    flex-shrink: 0;
+  }
+
   &__image-wrapper {
     position: relative;
-    width: 100%;
-    margin-bottom: 20px;
     padding-top: 66.6666%;
+    overflow: hidden;
   }
 
   &__image {
@@ -41,6 +51,7 @@
     top: 0;
     right: 0;
     padding-left: 40px;
+    z-index: 2;
 
     .sticker {
       margin-bottom: 5px;
@@ -173,6 +184,7 @@
     min-width: 182px;
     width: auto;
     transform: translate(-50%, -50%);
+    z-index: 2;
 
     .button__text {
       white-space: nowrap;
@@ -192,6 +204,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 2;
   }
 
   &:hover {
@@ -208,7 +221,8 @@
 
   &_table {
     display: grid;
-    grid-template-columns: 1fr 30px 2fr 30px 1fr;
+    // grid-template-columns: 1fr 30px 2fr 30px 1fr;
+    grid-template-columns: calc((100% - 30px * 2) / 4) 30px calc((100% - 30px * 2) / 2) 30px calc((100% - 30px * 2) / 4);
     grid-template-rows: 48px 48px 48px 1fr;
     padding: 30px;
 
@@ -320,7 +334,8 @@
 @media screen and (max-width: 1199px) {
   .catalog-item {
     &_table {
-      grid-template-columns: 1fr 20px 1fr 20px 1fr;
+      // grid-template-columns: 1fr 20px 1fr 20px 1fr;
+      grid-template-columns: calc((100% - 20px * 2) / 3) 20px calc((100% - 20px * 2) / 3) 20px calc((100% - 20px * 2) / 3);
       grid-template-rows: 48px 48px 48px;
       padding: 20px;
 
@@ -368,7 +383,8 @@
 
 @media screen and (max-width: 767px) {
   .catalog-item_table {
-    grid-template-columns: 1fr 20px 1fr;
+    // grid-template-columns: 1fr 20px 1fr;
+    grid-template-columns: calc((100% - 20px) / 2) 20px calc((100% - 20px) / 2);
     grid-template-rows: 1fr 48px 48px 48px;
 
     .catalog-item__link {

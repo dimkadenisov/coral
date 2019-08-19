@@ -7,7 +7,8 @@ function generateSwipers(swiperClass, swiperConfig) {
   itemsSwipersNodes.each(function(index) {
     $(this).addClass(swiperClass + '-' + index);
 
-    swipers[index] = new Swiper('.' + swiperClass + '-' + index, swiperConfig)
+    swipers[index] = new Swiper('.' + swiperClass + '-' + index, swiperConfig);
+    swipers[index].id = index;
   });
 
   return swipers;
