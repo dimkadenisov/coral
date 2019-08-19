@@ -129,22 +129,23 @@
     max-height: 120px;
     overflow: hidden;
     transition: max-height 0.3s;
-
-    &_opened {
-      max-height: 500px;
-    }
   }
 
   &__show-more-button {
     grid-column: 13 / 24;
     grid-row: 7 / 8;
+    display: inline-block;
+    height: auto;
     margin-top: 20px;
     margin-bottom: 20px;
+    padding-right: 0;
+    padding-left: 0;
     text-decoration: underline;
 
     &:hover,
     &:focus {
       text-decoration: none;
+      box-shadow: none;
     }
   }
 }

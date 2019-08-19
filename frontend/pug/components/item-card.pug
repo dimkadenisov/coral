@@ -14,5 +14,5 @@ include ../templates/rating
   span.item-card__total-price Итого: 99 201 ₽
   include ./item-benefits
   include ./item-characteristics
-  +button({size: 'small', otherClasses: 'item-card__show-more-button'})
+  +button({tag: 'a', size: 'small', otherClasses: 'item-card__show-more-button'})(href="#characteristics")
     |Больше характеристик
