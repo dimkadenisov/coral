@@ -1,0 +1,52 @@
+mixin item-gallery(props= 0)
+
+  include ../templates/button
+  include ../templates/sticker
+
+  - const {stickers= false} = props;
+
+  .item-gallery
+    if stickers
+      .stickers
+        +sticker({type: "hit"})
+        +sticker({type: "new"})
+    .item-gallery__swiper
+      .swiper-wrapper
+        a(href="assets/img/catalog-item-sample-itmage-1.jpg" data-fancybox="item-gallery").item-gallery__slide
+          .item-gallery__image-wrapper
+            picture.item-gallery__image
+              source(srcset="assets/img/catalog-item-sample-itmage-1.jpg")
+              img(src="assets/img/catalog-item-sample-itmage-1.jpg", alt="").item-gallery__image
+        a(href="assets/img/catalog-item-sample-itmage-1.jpg" data-fancybox="item-gallery").item-gallery__slide
+          .item-gallery__image-wrapper
+            picture.item-gallery__image
+              source(srcset="assets/img/catalog-item-sample-itmage-1.jpg")
+              img(src="assets/img/catalog-item-sample-itmage-1.jpg", alt="").item-gallery__image
+        a(href="assets/img/catalog-item-sample-itmage-1.jpg" data-fancybox="item-gallery").item-gallery__slide
+          .item-gallery__image-wrapper
+            picture.item-gallery__image
+              source(srcset="assets/img/catalog-item-sample-itmage-1.jpg")
+              img(src="assets/img/catalog-item-sample-itmage-1.jpg", alt="").item-gallery__image
+        a(href="assets/img/catalog-item-sample-itmage-1.jpg" data-fancybox="item-gallery").item-gallery__slide
+          .item-gallery__image-wrapper
+            picture.item-gallery__image
+              source(srcset="assets/img/catalog-item-sample-itmage-1.jpg")
+              img(src="assets/img/catalog-item-sample-itmage-1.jpg", alt="").item-gallery__image
+
+    .d-none.d-md-block.item-gallery__thumbs
+      .swiper-wrapper
+        .item-gallery__slide
+          .item-gallery__image-wrapper
+            img(src="assets/img/catalog-item-sample-itmage-1.jpg", alt="").item-gallery__image
+        .item-gallery__slide
+          .item-gallery__image-wrapper
+            img(src="assets/img/catalog-item-sample-itmage-1.jpg", alt="").item-gallery__image
+        .item-gallery__slide
+          .item-gallery__image-wrapper
+            img(src="assets/img/catalog-item-sample-itmage-1.jpg", alt="").item-gallery__image
+        .item-gallery__slide
+          .item-gallery__image-wrapper
+            img(src="assets/img/catalog-item-sample-itmage-1.jpg", alt="").item-gallery__image
+
+      +button({type: 'circle', half: 'half_left', size: 'small', color: 'brown', iconId: '#arrow-left', otherClasses: 'prev'})
+      +button({type: 'circle', half: 'half_right', size: 'small', color: 'brown', iconId: '#arrow-right', otherClasses: 'next'})

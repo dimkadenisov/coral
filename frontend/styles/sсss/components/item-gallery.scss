@@ -1,9 +1,14 @@
 .item-gallery {
-  margin-bottom: 15px;
-  overflow-x: hidden;
+  &__swiper {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-x: hidden;
+  }
 
   &__slide {
+    display: block;
     flex-shrink: 0;
+    width: 100%;
     cursor: pointer;
   }
 
@@ -25,24 +30,25 @@
     object-fit: cover;
     transform: translate(-50%,-50%);
   }
-}
 
-.item-thumbs {
-  position: relative;
-  overflow-x: hidden;
+  &__thumbs {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 
-  .button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-  }
+    .button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
 
-  .prev {
-    left: 0;
-  }
+    .prev {
+      left: 0;
+    }
 
-  .next {
-    right: 0;
+    .next {
+      right: 0;
+    }
   }
 }

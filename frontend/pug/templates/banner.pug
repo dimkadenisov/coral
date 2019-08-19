@@ -1,0 +1,23 @@
+mixin banner(props= 0)
+
+  include ./button
+
+  - const {pattern= false} = props;
+
+  if pattern
+
+    .banner.banner_bg_pattern
+      .banner__offer
+        span.banner__text Хотите узнать цену? Зарегистрируйтесь!
+        +button({tag: 'a'})(href='#')
+          |Регистрация
+
+  else
+
+    .banner
+      a(href="#").banner__link
+        picture.banner__image
+          source(media="(min-width: 1200px)" srcset="assets/img/banner-image-960.jpg")
+          source(media="(min-width: 768px)" srcset="assets/img/banner-image-690.jpg")
+          source(media="(min-width: 320px)" srcset="assets/img/banner-image-545.jpg")
+          img(src="assets/img/banner-image-960.jpg", alt="Коллекция посуды Home Collection").banner__image

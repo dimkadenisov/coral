@@ -1,4 +1,9 @@
 .seened-items {
+  .section__description {
+    display: block;
+    margin-bottom: 35px;
+  }
+
   &__swiper {
     position: relative;
     overflow-x: hidden;
@@ -18,5 +23,13 @@
     right: 0;
     transform: translateY(-50%);
     z-index: 2;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .seened-items {
+    .section__description {
+      margin-bottom: 25px;
+    }
   }
 }

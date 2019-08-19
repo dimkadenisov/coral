@@ -1,4 +1,5 @@
 include ../templates/price
+include ../templates/item-gallery
 
 .quick-view#quick-view(style="display: none;")
   .container
@@ -14,7 +15,7 @@ include ../templates/price
           +button({type: 'circle', size: 'small', color: 'no-bg', iconId: '#heart', otherClasses: 'button_heart show-tooltip show-tooltip_top-right'})(data-description="Добавить товар в избранное")
       .col-7
       .col-5
-        include ./item-gallery
+        +item-gallery()
       .col-7
         .quick-view__checkout
           +price({sale: true})
@@ -23,5 +24,5 @@ include ../templates/price
         include ./item-characteristics
       .col-12
         include ./item-benefits
-        +button({tag: 'a', otherClasses: 'quick-view__show-more-button'})
+        +button({tag: 'a', otherClasses: 'quick-view__show-more-button'})(type="button")
           |Больше информации о товаре

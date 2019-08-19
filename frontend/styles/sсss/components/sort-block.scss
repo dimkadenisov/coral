@@ -11,17 +11,16 @@
     &:first-of-type {
       margin-right: 20px;
     }
+
+    &:last-of-type {
+      margin-right: auto;
+    }
   }
 
   &__sort-type {
     margin-right: 10px;
     font-size: 15px;
     line-height: 40px;
-  }
-
-  &__pricelist-button {
-    width: auto;
-    margin-left: auto;
   }
 
   &__change-layout-button {
@@ -46,10 +45,6 @@
   .sort-block {
     &__pricelist-button {
       display: none;
-
-      & + .sort-block__change-layout-button {
-        margin-left: auto;
-      }
     }
   }
 }
@@ -88,8 +83,16 @@
       }
     }
 
+    &__filter-button {
+      margin-right: auto;
+    }
+
     &__change-layout-button {
       order: 2;
+
+      &:first-of-type {
+        margin-left: auto;
+      }
     }
   }
 }

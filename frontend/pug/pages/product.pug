@@ -1,0 +1,51 @@
+extends ../templates/page
+include ../templates/tags
+include ../templates/price
+include ../templates/button
+include ../templates/banner
+include ../templates/item-gallery
+
+block title
+  |Товар
+
+block content
+  main.main.main_product
+    .container
+      .row
+        .col-12
+          include ../components/breadcrumbs
+        .col-12
+          include ../components/item-card
+          hr.separator
+        .col-12
+          span.section__description Подробные характеристики
+        .col-4
+          span.item-characteristics__heading Блок характеристик
+          include ../components/item-characteristics
+        .col-4
+          span.item-characteristics__heading Блок характеристик
+          include ../components/item-characteristics
+        .col-4
+          span.item-characteristics__heading Блок характеристик
+          include ../components/item-characteristics
+        .col-12
+          hr.separator
+        .col-12
+          span.section__description С этим товаром покупаюь
+          include ../components/items-swiper
+          hr.separator
+        .col-12
+          span.section__description Подробные характеристики
+          include ../components/items-swiper
+          hr.separator
+        .col-12
+          +banner
+        .col-12
+          span.section__description Отзывы
+          .row
+            .col-12
+              include ../components/reviews-swiper
+
+        .col-12
+          span.section__description Вы смотрели
+          include ../components/items-swiper

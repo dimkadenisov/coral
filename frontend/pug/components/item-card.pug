@@ -1,0 +1,16 @@
+.item-card
+  h1.section__heading Подставка для ножей 11х22см Оранжевый мрамор с&nbsp;цветной вставкой
+  +item-gallery({stickers: true})
+  +tags({amount: 3, showMoreButton: false})
+  +price({sale: false})
+  include ./rating
+  +button({type: 'icon_left', size: 'small', color: 'no-bg', iconId: '#heart', otherClasses: 'button_heart'})
+    |В избранное
+  include ./items-counter
+  +button({type: 'icon_left', color: 'red', iconId: '#shopping-basket', otherClasses: 'buy-button'})
+    | В корзину
+  span.item-card__total-price Итого: 99 201 ₽
+  include ./item-benefits
+  include ./item-characteristics
+  +button({size: 'small', otherClasses: 'item-card__show-more-button'})
+    |Больше характеристик

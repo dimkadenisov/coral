@@ -17,11 +17,17 @@
     flex-shrink: 0;
   }
 
-  &__slide-heading {
+  .section__description {
     display: block;
     margin-bottom: 35px;
-    font-size: 25px;
-    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .new-arrivals {
+    .section__description {
+      margin-bottom: 25px;
+    }
   }
 }
 

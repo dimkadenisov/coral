@@ -3,7 +3,8 @@
 //- type: table'                                               /// может быть пустым
 //- itemsCount: default - '12'  /  number                      /// может быть пустым
 
-include ./catalog-item.pug
+include ./catalog-item
+include ./banner
 
 mixin catalog-layout(props= 0)
 
@@ -21,16 +22,6 @@ mixin catalog-layout(props= 0)
           - itemsCount--
 
       .col-12.catalog-layout__banner(data-order='1')
-        .banner.banner_bg_pattern
-          .banner__offer
-            span.banner__text Хотите узнать цену? Зарегистрируйтесь!
-            +button({tag: 'a'})(href='#')
-              |Регистрация
+        +banner({pattern: true})
       .col-12.catalog-layout__banner(data-order='2')
-        .banner
-          a(href="#").banner__link
-            picture.banner__image
-              source(media="(min-width: 1200px)" srcset="assets/img/banner-image-960.jpg")
-              source(media="(min-width: 768px)" srcset="assets/img/banner-image-690.jpg")
-              source(media="(min-width: 320px)" srcset="assets/img/banner-image-545.jpg")
-              img(src="assets/img/banner-image-960.jpg", alt="Коллекция посуды Home Collection").banner__image
+        +banner({pattern: false})

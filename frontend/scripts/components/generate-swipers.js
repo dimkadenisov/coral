@@ -2,7 +2,7 @@ function generateSwipers(swiperClass, swiperConfig) {
   if (!$('.' + swiperClass).length) return false;
 
   const itemsSwipersNodes = $('.' + swiperClass);
-  let swipers = {};
+  let swipers = [];
 
   itemsSwipersNodes.each(function(index) {
     $(this).addClass(swiperClass + '-' + index);

@@ -3,8 +3,6 @@ const itemGallerySwiperConfig = {
   slidesPerView: 1,
   spaceBetween: 10,
 
-  allowTouchMove: false,
-
   keyboard: {
     enabled: true,
     onlyInViewport: true,
@@ -19,7 +17,7 @@ const itemGallerySwiperConfig = {
 
   thumbs: {
     swiper: {
-      el: '.item-thumbs',
+      el: '.item-gallery__thumbs',
       slideClass: 'item-gallery__slide',
       slidesPerView: 3,
       spaceBetween: 15,
@@ -38,3 +36,5 @@ const itemGallerySwiperConfig = {
     }
   },
 };
+
+generateSwipers('item-gallery__swiper', itemGallerySwiperConfig);

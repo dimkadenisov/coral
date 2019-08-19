@@ -5,7 +5,7 @@ $('.catalog-item__quick-view').click(() => {
     touch: false,
   });
 
-  generateSwipers('item-gallery', itemGallerySwiperConfig)
+  generateSwipers('item-gallery__swiper', itemGallerySwiperConfig)
 });
 
 (function() {
@@ -18,4 +18,4 @@ $('.catalog-item__quick-view').click(() => {
       if($(window).width() < 992) $.fancybox.close(true);
     }, 100);
   }
-})()
+})();

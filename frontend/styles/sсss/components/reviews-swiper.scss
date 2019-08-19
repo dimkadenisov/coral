@@ -1,0 +1,12 @@
+.reviews-swiper {
+  overflow: hidden;
+
+  .review {
+    flex-shrink: 0;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,4 +1,4 @@
-$('.catalog-item .button_heart').click(function() {
+$('.button_heart').click(function() {
   $(this).toggleClass('button_heart_clicked');
   if ($(this).hasClass('button_heart_clicked')) {
     $(this).attr('data-description', 'Удалить товар из избранного');
@@ -9,9 +9,8 @@ $('.catalog-item .button_heart').click(function() {
   }
 });
 
-
 $('.buy-button').click(function() {
   $(this).toggleClass('button_red');
   $(this).toggleClass('button_gray');
-  $(this).toggleClass('catalog-item__buy_clicked');
+  $(this).toggleClass('buy-button_clicked');
 });

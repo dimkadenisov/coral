@@ -5,5 +5,5 @@ $('.show-more-button').click(function() {
     $(this).text('Скрыть');
   }
 
-  $(this).closest('.tags').toggleClass('tags_show-all')
-})
+  $(this).closest('.tags').toggleClass('tags_show-all');
+});
