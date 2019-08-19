@@ -14,13 +14,30 @@
   cursor: pointer;
 }
 
-.rating__star:hover,
-.rating__star:hover ~ .rating__star {
-  color: transparent;
+.rating[data-disabled] {
+  .rating__star {
+    cursor: default;
+  }
 }
 
-.rating__star:hover:before,
-.rating__star:hover ~ .rating__star:before {
+.rating:not([data-disabled]) {
+  .rating__star:hover:before,
+  .rating__star:hover ~ .rating__star:before {
+    content: "\2605";
+    display: block;
+    position: absolute;
+    left: 0.1em;
+    color: $orange-100;
+  }
+
+  .rating__star:hover,
+  .rating__star:hover ~ .rating__star {
+    color: transparent;
+  }
+}
+
+.rating__star_active:before,
+.rating__star_active ~ .rating__star:before {
   content: "\2605";
   display: block;
   position: absolute;

@@ -1,5 +1,6 @@
 include ../templates/price
 include ../templates/item-gallery
+include ../templates/rating
 
 .quick-view#quick-view(style="display: none;")
   .container
@@ -11,7 +12,7 @@ include ../templates/item-gallery
           .quick-view__stickers
             +sticker({type: `new`})
             +sticker({type: `hit`})
-          include ./rating
+          +rating
           +button({type: 'circle', size: 'small', color: 'no-bg', iconId: '#heart', otherClasses: 'button_heart show-tooltip show-tooltip_top-right'})(data-description="Добавить товар в избранное")
       .col-7
       .col-5

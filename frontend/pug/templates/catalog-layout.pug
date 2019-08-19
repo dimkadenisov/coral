@@ -17,10 +17,10 @@ mixin catalog-layout(props= 0)
   div(class= layoutClasses)
     .row
       div(class= itemWrapperClasses)
-        +catalog-item({type: `${catalogItemType === 'table' ? 'table_more' : 'more'}`, stickers: ['hit', 'new'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true})
+        +catalog-item({type: `${catalogItemType === 'table' ? 'table_more' : 'more'}`, stickers: ['hit', 'new'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true, rating: {stars: 0, disabled: true}})
       while itemsCount > 1
         div(class= itemWrapperClasses)
-          +catalog-item({type: catalogItemType, stickers: ['hit', 'new'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true})
+          +catalog-item({type: catalogItemType, stickers: ['hit', 'new'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true, rating: {stars: 4, disabled: true}})
           - itemsCount--
 
       .col-12.catalog-layout__banner(data-order='1')

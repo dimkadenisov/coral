@@ -8,10 +8,11 @@
 include ./button.pug
 include ./sticker.pug
 include ./price.pug
+include ./rating.pug
 
 mixin catalog-item(props= 0)
 
-  - let {type='', stickers='', name='Замечательный товар, который нужен всем людям в мире', sale= false} = props;
+  - let {type='', stickers='', name='Замечательный товар, который нужен всем людям в мире', sale= false, rating= {}} = props;
 
   case type
 
@@ -35,7 +36,7 @@ mixin catalog-item(props= 0)
             - classList+= ` button_${type}`
             each val in stickers
               +sticker({type: `${val}`})
-        include ../components/rating.pug
+        +rating(rating)
         +price({sale})
         .catalog-item__checkout
           include ../components/items-counter.pug
@@ -60,7 +61,7 @@ mixin catalog-item(props= 0)
           span.catalog-item__small-text.catalog-item__type Керамика
           span.catalog-item__small-text.catalog-item__code Код 799180
         .catalog-item__stickers
-        include ../components/rating.pug
+        +rating(rating)
         +button({color: 'gray', size: 'small', otherClasses: 'catalog-item__more'})
           |Подробнее
         +button({type: 'icon_left', size: 'extra-small', opacity: '09', iconId: '#eye', otherClasses: 'catalog-item__quick-view'})
@@ -87,7 +88,7 @@ mixin catalog-item(props= 0)
             each val in stickers
               +sticker({type: `${val}`})
         .catalog-item__group
-          include ../components/rating.pug
+          +rating(rating)
           span.catalog-item__small-text.catalog-item__code Код 799180
         +price({sale})
         .catalog-item__checkout
@@ -117,7 +118,7 @@ mixin catalog-item(props= 0)
             each val in stickers
               +sticker({type: `${val}`})
         .catalog-item__group
-          include ../components/rating.pug
+          +rating(rating)
           span.catalog-item__small-text.catalog-item__code Код 799180
         +button({size: 'small', color: 'gray', otherClasses: 'catalog-item__more'})
             |Подробнее

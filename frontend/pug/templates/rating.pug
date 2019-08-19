@@ -1,0 +1,8 @@
+mixin rating(props= 0)
+
+  - const { disabled= false, stars= 3 } = props;
+
+  .rating(data-disabled= disabled)
+    - for (let i = 5; i > 0; i--)
+        - const starClassList = i === stars ? 'rating__star rating__star_active' : 'rating__star'
+        span(data-value= i class= starClassList) ☆
