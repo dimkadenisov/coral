@@ -20,6 +20,9 @@ const catalogItemSwiperConfig = {
   slidesPerView: 1,
   spaceBetween: 10,
 
+  effect: 'fade',
+  runCallbacksOnInit: false,
+
   allowTouchMove: true,
 
   observer: true,
