@@ -32,20 +32,23 @@ const catalogItemSwiperConfig = {
 
 const catalogItemSwipers = generateSwipers('catalog-item__swiper', catalogItemSwiperConfig);
 
-$('.catalog-item__swiper').on('mouseenter', function() {
+$('.catalog-item').on('mouseenter', function() {
 
-  const idClass = this.className.split(/\s+/).find((item) => item.match(/catalog-item__swiper-\d*$/));
+  const idClass = this.querySelector('.catalog-item__swiper').className.split(/\s+/).find((item) => item.match(/catalog-item__swiper-\d*$/));
+
   const id = idClass.match(/\d*$/)[0];
 
-  catalogItemSwipers[id].params.autoplay.delay = 1000;
+  catalogItemSwipers[id].params.autoplay.delay = 1300;
   catalogItemSwipers[id].autoplay.start();
 
 });
 
-$('.catalog-item__swiper').on('mouseleave', function() {
+$('.catalog-item').on('mouseleave', function() {
 
-  const idClass = this.className.split(/\s+/).find((item) => item.match(/catalog-item__swiper-\d*$/));
+  const idClass = this.querySelector('.catalog-item__swiper').className.split(/\s+/).find((item) => item.match(/catalog-item__swiper-\d*$/));
+
   const id = idClass.match(/\d*$/)[0];
 
   catalogItemSwipers[id].autoplay.stop();
+
 });
