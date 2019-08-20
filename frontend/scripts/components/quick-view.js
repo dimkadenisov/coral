@@ -5,7 +5,7 @@ $('.catalog-item__quick-view').click(() => {
     touch: false,
   });
 
-  generateSwipers('item-gallery__swiper', itemGallerySwiperConfig)
+  generateSwipers('item-gallery__swiper', itemGallerySwiperConfig);
 });
 
 (function() {
