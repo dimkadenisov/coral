@@ -18,6 +18,7 @@ mixin catalog-layout(props= 0)
     .row
       div(class= itemWrapperClasses)
         +catalog-item({type: `${catalogItemType === 'table' ? 'table_more' : 'more'}`, stickers: ['hit', 'new'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true, rating: {stars: 0, disabled: true}})
+      div(class= itemWrapperClasses)
         +catalog-item({type: `${catalogItemType === 'table' ? 'table_more' : 'more'}`, stickers: ['hit', 'new'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true, rating: false})
       while itemsCount > 2
         div(class= itemWrapperClasses)
