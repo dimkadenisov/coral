@@ -21,7 +21,7 @@
 
 @media screen and (max-width: 991px) {
   .dates-swiper {
-    display: flex;
+    display: block;
     max-width: none;
     padding-right: 25px;
     padding-left: 25px;
@@ -31,6 +31,7 @@
     }
 
     .swiper-wrapper {
+      display: inline-flex;
       width: auto;
     }
 
@@ -59,7 +60,7 @@
       left: -15px;
 
       .button__icon {
-        margin-left: auto;
+        margin-left: 10px;
       }
     }
 
@@ -67,8 +68,16 @@
       right: -15px;
 
       .button__icon {
-        margin-right: auto;
+        margin-right: 10px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) and (-ms-high-contrast: active) and (-ms-high-contrast: none) {
+  .dates-swiper {
+    .swiper-wrapper {
+      width: 2000px;
     }
   }
 }
