@@ -42,5 +42,5 @@ let itemGallerySwiper = $('.item-gallery__swiper').length
   : false;
 
 $('.item-gallery__thumbs').on('mouseenter','.item-gallery__slide', function() {
-  itemGallerySwiper.slideTo($(this).index());
+  itemGallerySwiper.slideTo($(this).index(), 0, false);
 });
