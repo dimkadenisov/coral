@@ -1,7 +1,6 @@
 include ../templates/catalog-item.pug
 
 .items-swiper
-  //- span.new-arrivals__slide-heading Серия «Оранж»
   .swiper-wrapper
     +catalog-item({rating: {disabled: true, stars: 1}})
     +catalog-item({stickers: ['sale'], name: 'Тёрка', rating: {disabled: true, stars: 2}})
