@@ -107,6 +107,31 @@ $('.buy-button').click(function () {
   $(this).toggleClass('button_gray');
   $(this).toggleClass('buy-button_clicked');
 });
+var catalogItemSwiperConfig = {
+  slideClass: 'catalog-item__slide',
+  slidesPerView: 1,
+  spaceBetween: 10,
+  allowTouchMove: true,
+  observer: true,
+  observerParents: true,
+  observeSlideChildren: true
+};
+var catalogItemSwipers = generateSwipers('catalog-item__swiper', catalogItemSwiperConfig);
+$('.catalog-item__swiper').on('mouseenter', function () {
+  var idClass = this.className.split(/\s+/).find(function (item) {
+    return item.match(/catalog-item__swiper-\d*$/);
+  });
+  var id = idClass.match(/\d*$/)[0];
+  catalogItemSwipers[id].params.autoplay.delay = 1000;
+  catalogItemSwipers[id].autoplay.start();
+});
+$('.catalog-item__swiper').on('mouseleave', function () {
+  var idClass = this.className.split(/\s+/).find(function (item) {
+    return item.match(/catalog-item__swiper-\d*$/);
+  });
+  var id = idClass.match(/\d*$/)[0];
+  catalogItemSwipers[id].autoplay.stop();
+});
 var newArrivalsDates = $('.dates-swiper').length ? new Swiper('.dates-swiper', {
   slideClass: 'date',
   slidesPerView: 7,
@@ -148,6 +173,7 @@ function generateSwipers(swiperClass, swiperConfig) {
   itemsSwipersNodes.each(function (index) {
     $(this).addClass(swiperClass + '-' + index);
     swipers[index] = new Swiper('.' + swiperClass + '-' + index, swiperConfig);
+    swipers[index].id = index;
   });
   return swipers;
 }
@@ -270,19 +296,6 @@ $('.item-card .button_heart').click(function () {
     $(this).find('.button__text').text('В избранное');
   }
 });
-$('.item-card__show-more-button').click(function () {
-  var characteristicksTable = $(this).closest('.item-card').find('.item-characteristics');
-
-  if (characteristicksTable.hasClass('item-characteristics_opened')) {
-    $(this).text('Больше характеристик');
-    $(this).removeClass('button_gray');
-    characteristicksTable.removeClass('item-characteristics_opened');
-  } else {
-    $(this).text('Меньше характеристик');
-    $(this).addClass('button_gray');
-    characteristicksTable.addClass('item-characteristics_opened');
-  }
-});
 $('.item-card .buy-button').click(function () {
   $(this).hasClass('buy-button_clicked') ? $(this).find('.button__text').text("\u0423\u0434\u0430\u043B\u0438\u0442\u044C \u0438\u0437\xA0\u043A\u043E\u0440\u0437\u0438\u043D\u044B") : $(this).find('.button__text').text('В корзину');
 });
@@ -318,7 +331,10 @@ var itemGallerySwiperConfig = {
     }
   }
 };
-generateSwipers('item-gallery__swiper', itemGallerySwiperConfig);
+var itemGallerySwiper = $('.item-gallery__swiper').length ? new Swiper('.item-gallery__swiper', itemGallerySwiperConfig) : false;
+$('.item-gallery__thumbs').on('mouseenter', '.item-gallery__slide', function () {
+  itemGallerySwiper.slideTo($(this).index());
+});
 
 var incrementDecrementValue = function incrementDecrementValue() {
   var input = $(this).next().hasClass('input-field_underlined') ? $(this).next() : $(this).prev();
@@ -486,6 +502,10 @@ var photoSwiperConfig = {
   }
 };
 var photoSwipers = generateSwipers('photo-swiper', photoSwiperConfig);
+$('.product-types .button').click(function () {
+  $(this).closest('.product-types').find('.product-types__list').addClass('product-types__list_opened');
+  $(this).addClass('d-none');
+});
 $('.catalog-item__quick-view').click(function () {
   $.fancybox.open({
     src: '#quick-view',
@@ -505,6 +525,16 @@ $('.catalog-item__quick-view').click(function () {
     }, 100);
   };
 })();
+
+$('.rating__star').click(function () {
+  if ($(this).closest('.rating').attr('data-disabled')) return;
+  $(this).closest('.rating').find('.rating__star').each(function () {
+    $(this).removeClass('rating__star_active');
+  });
+  $(this).addClass('rating__star_active');
+  $(this).closest('.rating').attr('data-value', $(this).attr('data-value'));
+  $(this).closest('.rating').attr('data-disabled', 'data-disabled');
+});
 
 (function () {
   if ($('.reviews-swiper').length === 0) return false;
