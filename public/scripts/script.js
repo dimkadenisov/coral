@@ -111,6 +111,8 @@ var catalogItemSwiperConfig = {
   slideClass: 'catalog-item__slide',
   slidesPerView: 1,
   spaceBetween: 10,
+  effect: 'fade',
+  runCallbacksOnInit: false,
   allowTouchMove: true,
   observer: true,
   observerParents: true,
@@ -333,7 +335,7 @@ var itemGallerySwiperConfig = {
 };
 var itemGallerySwiper = $('.item-gallery__swiper').length ? new Swiper('.item-gallery__swiper', itemGallerySwiperConfig) : false;
 $('.item-gallery__thumbs').on('mouseenter', '.item-gallery__slide', function () {
-  itemGallerySwiper.slideTo($(this).index());
+  itemGallerySwiper.slideTo($(this).index(), 0, false);
 });
 
 var incrementDecrementValue = function incrementDecrementValue() {
@@ -357,78 +359,121 @@ var incrementDecrementValue = function incrementDecrementValue() {
   }
 };
 
-$('.items-counter .button').click(incrementDecrementValue);
+$('.items-counter .button').click(incrementDecrementValue); // (function() {
+//   if ($('.items-swiper').length === 0) return false;
+//   const breakpoints = [window.matchMedia( '(max-width: 991px)' ), window.matchMedia( '(max-width: 767px)' ), window.matchMedia( '(max-width: 575px)' )];
+//   const itemsSwiperConfig = {
+//     slideClass: 'catalog-item',
+//     slidesPerView: 5,
+//     spaceBetween: 30,
+//     watchOverflow: true,
+//     allowTouchMove: false,
+//     navigation: {
+//       prevEl: '.prev',
+//       nextEl: '.next',
+//     },
+//     keyboard: {
+//       enabled: true,
+//       onlyInViewport: true,
+//     },
+//     observer: true,
+//     observerParents: true,
+//     observeSlideChildren: true,
+//     breakpoints: {
+//       1343: {
+//         slidesPerView: 4,
+//       },
+//       991: {
+//         slidesPerView: 3,
+//       },
+//       767: {
+//         slidesPerView: 2,
+//         allowTouchMove: true,
+//         pagination: {
+//           el: '.pagination',
+//           bulletElement: 'div',
+//           bulletClass: 'pagination__item',
+//           bulletActiveClass: 'pagination__item_active',
+//         },
+//       },
+//       575: {
+//         slidesPerView: 1,
+//         allowTouchMove: true,
+//         pagination: {
+//           el: '.pagination',
+//           bulletElement: 'div',
+//           bulletClass: 'pagination__item',
+//           bulletActiveClass: 'pagination__item_active',
+//         },
+//       },
+//     },
+//   };
+//   const breakpointChecker = function() {
+//     breakpoints.forEach((breakpoint) => {
+//       if (breakpoint.matches) return generateSwipers('items-swiper', itemsSwiperConfig);
+//     })
+//   };
+//   generateSwipers('items-swiper', itemsSwiperConfig);
+//   for (let i = 0; i < breakpoints.length; i++) {
+//     const breakpoint = breakpoints[i];
+//     breakpoint.addListener(breakpointChecker);
+//   }
+//   breakpointChecker();
+// })();
 
-(function () {
-  if ($('.items-swiper').length === 0) return false;
-  var breakpoints = [window.matchMedia('(max-width: 991px)'), window.matchMedia('(max-width: 767px)'), window.matchMedia('(max-width: 575px)')];
-  var itemsSwiperConfig = {
-    slideClass: 'catalog-item',
-    slidesPerView: 5,
-    spaceBetween: 30,
-    allowTouchMove: false,
-    navigation: {
-      prevEl: '.prev',
-      nextEl: '.next'
+var itemsSwiperConfig = {
+  slideClass: 'catalog-item',
+  slidesPerView: 5,
+  spaceBetween: 30,
+  watchOverflow: true,
+  allowTouchMove: false,
+  navigation: {
+    prevEl: '.prev',
+    nextEl: '.next'
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true
+  },
+  observer: true,
+  observerParents: true,
+  observeSlideChildren: true,
+  breakpoints: {
+    1343: {
+      slidesPerView: 4
     },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true
+    991: {
+      slidesPerView: 3
     },
-    observer: true,
-    observerParents: true,
-    observeSlideChildren: true,
-    breakpoints: {
-      1343: {
-        slidesPerView: 4
-      },
-      991: {
-        slidesPerView: 3
-      },
-      767: {
-        slidesPerView: 2,
-        allowTouchMove: true,
-        pagination: {
-          el: '.pagination',
-          bulletElement: 'div',
-          bulletClass: 'pagination__item',
-          bulletActiveClass: 'pagination__item_active'
-        }
-      },
-      575: {
-        slidesPerView: 1,
-        allowTouchMove: true,
-        pagination: {
-          el: '.pagination',
-          bulletElement: 'div',
-          bulletClass: 'pagination__item',
-          bulletActiveClass: 'pagination__item_active'
-        }
+    767: {
+      slidesPerView: 2,
+      allowTouchMove: true,
+      pagination: {
+        el: '.pagination',
+        bulletElement: 'div',
+        bulletClass: 'pagination__item',
+        bulletActiveClass: 'pagination__item_active'
+      }
+    },
+    575: {
+      slidesPerView: 1,
+      allowTouchMove: true,
+      pagination: {
+        el: '.pagination',
+        bulletElement: 'div',
+        bulletClass: 'pagination__item',
+        bulletActiveClass: 'pagination__item_active'
       }
     }
-  };
-
-  var breakpointChecker = function breakpointChecker() {
-    breakpoints.forEach(function (breakpoint) {
-      if (breakpoint.matches) return generateSwipers('items-swiper', itemsSwiperConfig);
-    });
-  };
-
-  generateSwipers('items-swiper', itemsSwiperConfig);
-
-  for (var i = 0; i < breakpoints.length; i++) {
-    var breakpoint = breakpoints[i];
-    breakpoint.addListener(breakpointChecker);
   }
-
-  breakpointChecker();
-})();
-
+};
+generateSwipers('items-swiper', itemsSwiperConfig);
 var newArrrivalsSwiper = $('.new-arrivals__swiper').length ? new Swiper('.new-arrivals__swiper', {
   slideClass: 'new-arrivals__slide',
   slidesPerView: 1,
   spaceBetween: 0,
   allowTouchMove: false,
+  watchOverflow: true,
   thumbs: {
     swiper: newArrivalsDates,
     slideThumbActiveClass: 'date_active'
@@ -440,28 +485,23 @@ var newArrrivalsSwiper = $('.new-arrivals__swiper').length ? new Swiper('.new-ar
   observer: true,
   observerParents: true,
   observeSlideChildren: true
-}) : false;
+}) : false; // const updateSwiperInstance = function(swiper) {
+//   if(!swiper) return;
+//   const breakpoints = [window.matchMedia( '(max-width: 1199px)' ), window.matchMedia( '(max-width: 991px)' ), window.matchMedia( '(max-width: 767px)' ), window.matchMedia( '(max-width: 575px)' )];
+//   const breakpointChecker = function() {
+//     for (let i = 0; i < breakpoints.length; i++) {
+//       const breakpoint = breakpoints[i];
+//       if (breakpoint.matches) swiper.update();
+//     }
+//   };
+//   for (let i = 0; i < breakpoints.length; i++) {
+//     const breakpoint = breakpoints[i];
+//     breakpoint.addListener(breakpointChecker);
+//   }
+//   breakpointChecker();
+// };
+// updateSwiperInstance(newArrrivalsSwiper);
 
-var updateSwiperInstance = function updateSwiperInstance(swiper) {
-  if (!swiper) return;
-  var breakpoints = [window.matchMedia('(max-width: 1199px)'), window.matchMedia('(max-width: 991px)'), window.matchMedia('(max-width: 767px)'), window.matchMedia('(max-width: 575px)')];
-
-  var breakpointChecker = function breakpointChecker() {
-    for (var i = 0; i < breakpoints.length; i++) {
-      var breakpoint = breakpoints[i];
-      if (breakpoint.matches) swiper.update();
-    }
-  };
-
-  for (var i = 0; i < breakpoints.length; i++) {
-    var breakpoint = breakpoints[i];
-    breakpoint.addListener(breakpointChecker);
-  }
-
-  breakpointChecker();
-};
-
-updateSwiperInstance(newArrrivalsSwiper);
 var photoSwiperConfig = {
   slideClass: 'photo-swiper__item',
   slidesPerView: 3,
@@ -608,6 +648,7 @@ $('.header .search-form__button_open').click(function () {
     slidesPerView: 4,
     spaceBetween: 30,
     allowTouchMove: false,
+    watchOverflow: true,
     pagination: {},
     keyboard: {
       enabled: true,
