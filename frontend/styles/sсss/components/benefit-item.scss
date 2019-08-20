@@ -92,8 +92,10 @@
 
     &__text {
       position: relative;
-      top: unset;
-      left: unset;
+      // top: unset;
+      // left: unset;
+      top: auto;
+      left: auto;
       z-index: 2;
       margin-top: 10px;
     }

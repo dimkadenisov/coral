@@ -1,37 +1,36 @@
-let newArrivalsDates = $('.dates-swiper').length ? new Swiper('.dates-swiper', {
-  slideClass: 'date',
-  slidesPerView: 7,
-  spaceBetween: 0,
+function generateNewArrivalsDates() {
+  const newArrivalsDatesConfig = {
+    slideClass: 'date',
+    slidesPerView: 7,
+    spaceBetween: 0,
 
-  allowTouchMove: false,
+    allowTouchMove: false,
 
-  observer: true,
-  observerParents: true,
-  observeSlideChildren: true,
+    observer: true,
+    observerParents: true,
+    observeSlideChildren: true,
 
-  breakpoints: {
-    991: {
-      slidesPerView: 4,
+    navigation: {
+      prevEl: '.prev',
+      nextEl: '.next',
+    },
 
-      navigation: {
-        prevEl: '.prev',
-        nextEl: '.next',
+    breakpoints: {
+      991: {
+        slidesPerView: 4,
       },
-    },
 
-    767: {
-      slidesPerView: 2,
+      767: {
+        slidesPerView: 2,
 
-      allowTouchMove: true,
-
-      navigation: {
-        prevEl: '.prev',
-        nextEl: '.next',
+        allowTouchMove: true,
       },
-    },
 
-    575: {
-      slidesPerView: 3,
-    },
-  }
-}) : false;
+      575: {
+        slidesPerView: 3,
+      },
+    }
+  };
+
+  return generateSwipers('dates-swiper', newArrivalsDatesConfig);
+};

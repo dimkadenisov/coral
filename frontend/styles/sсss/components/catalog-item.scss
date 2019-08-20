@@ -22,7 +22,11 @@
   }
 
   &__slide {
+    position: relative;
     flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    transition-property: transform;
   }
 
   &__image-wrapper {

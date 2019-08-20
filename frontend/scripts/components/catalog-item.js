@@ -15,40 +15,46 @@ $('.buy-button').click(function() {
   $(this).toggleClass('buy-button_clicked');
 });
 
-const catalogItemSwiperConfig = {
-  slideClass: 'catalog-item__slide',
-  slidesPerView: 1,
-  spaceBetween: 10,
+function generateCatalogItemSwipers() {
+  const catalogItemSwiperConfig = {
+    slideClass: 'catalog-item__slide',
+    slidesPerView: 1,
+    spaceBetween: 10,
 
-  effect: 'fade',
-  runCallbacksOnInit: false,
+    effect: 'fade',
+    runCallbacksOnInit: false,
 
-  allowTouchMove: true,
+    allowTouchMove: true,
 
-  observer: true,
-  observerParents: true,
-  observeSlideChildren: true,
+    observer: true,
+    observerParents: true,
+    observeSlideChildren: true,
+  };
+
+  let catalogItemSwipers = generateSwipers('catalog-item__swiper', catalogItemSwiperConfig);
+
+  $('.catalog-item').on('mouseenter', function() {
+
+    // const idClass = this.querySelector('.catalog-item__swiper').className.split(/\s+/).find(item => item.match(/catalog-item__swiper-\d*$/));
+
+    const idClass = $.grep(this.querySelector('.catalog-item__swiper').className.split(/\s+/), item => item.match(/catalog-item__swiper-\d*$/));
+
+    const id = idClass[0].match(/\d*$/)[0];
+
+    catalogItemSwipers[id].params.autoplay.delay = 1300;
+    catalogItemSwipers[id].autoplay.start();
+
+  });
+
+  $('.catalog-item').on('mouseleave', function() {
+
+    const idClass = $.grep(this.querySelector('.catalog-item__swiper').className.split(/\s+/), item => item.match(/catalog-item__swiper-\d*$/));
+
+    const id = idClass[0].match(/\d*$/)[0];
+
+    catalogItemSwipers[id].autoplay.stop();
+
+  });
+
+  return catalogItemSwipers;
 };
-
-const catalogItemSwipers = generateSwipers('catalog-item__swiper', catalogItemSwiperConfig);
-
-$('.catalog-item').on('mouseenter', function() {
-
-  const idClass = this.querySelector('.catalog-item__swiper').className.split(/\s+/).find((item) => item.match(/catalog-item__swiper-\d*$/));
-
-  const id = idClass.match(/\d*$/)[0];
-
-  catalogItemSwipers[id].params.autoplay.delay = 1300;
-  catalogItemSwipers[id].autoplay.start();
-
-});
-
-$('.catalog-item').on('mouseleave', function() {
-
-  const idClass = this.querySelector('.catalog-item__swiper').className.split(/\s+/).find((item) => item.match(/catalog-item__swiper-\d*$/));
-
-  const id = idClass.match(/\d*$/)[0];
-
-  catalogItemSwipers[id].autoplay.stop();
-
-});

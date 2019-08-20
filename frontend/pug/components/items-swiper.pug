@@ -10,6 +10,6 @@ include ../templates/catalog-item.pug
     +catalog-item({stickers: ['sale', 'hit'], rating: {disabled: true, stars: 5}})
     +catalog-item({stickers: ['gift', 'hit'], rating: {disabled: true, stars: 1}})
 
-  .pagination
+  .d-lg-none.pagination
   +button({type: 'circle', half: 'half_left', color: 'brown', iconId: '#arrow-left', otherClasses: 'prev'})
   +button({type: 'circle', half: 'half_right', color: 'brown', iconId: '#arrow-right', otherClasses: 'next'})

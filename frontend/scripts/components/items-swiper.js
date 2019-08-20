@@ -1,8 +1,4 @@
-(function() {
-  if ($('.items-swiper').length === 0) return false;
-
-  const breakpoints = [window.matchMedia( '(max-width: 991px)' ), window.matchMedia( '(max-width: 767px)' ), window.matchMedia( '(max-width: 575px)' )];
-
+function generateItemsSwipers() {
   const itemsSwiperConfig = {
     slideClass: 'catalog-item',
     slidesPerView: 5,
@@ -11,6 +7,13 @@
     watchOverflow: true,
 
     allowTouchMove: false,
+
+    pagination: {
+      el: '.pagination',
+      bulletElement: 'div',
+      bulletClass: 'pagination__item',
+      bulletActiveClass: 'pagination__item_active',
+    },
 
     navigation: {
       prevEl: '.prev',
@@ -38,40 +41,14 @@
       767: {
         slidesPerView: 2,
         allowTouchMove: true,
-
-        pagination: {
-          el: '.pagination',
-          bulletElement: 'div',
-          bulletClass: 'pagination__item',
-          bulletActiveClass: 'pagination__item_active',
-        },
       },
 
       575: {
         slidesPerView: 1,
         allowTouchMove: true,
-
-        pagination: {
-          el: '.pagination',
-          bulletElement: 'div',
-          bulletClass: 'pagination__item',
-          bulletActiveClass: 'pagination__item_active',
-        },
       },
     },
   };
 
-  const breakpointChecker = function() {
-    breakpoints.forEach((breakpoint) => {
-      if (breakpoint.matches) return generateSwipers('items-swiper', itemsSwiperConfig);
-    })
-  };
-
-  generateSwipers('items-swiper', itemsSwiperConfig);
-
-  for (let i = 0; i < breakpoints.length; i++) {
-    const breakpoint = breakpoints[i];
-    breakpoint.addListener(breakpointChecker);
-  }
-  breakpointChecker();
-})();
+  return generateSwipers('items-swiper', itemsSwiperConfig);
+};
