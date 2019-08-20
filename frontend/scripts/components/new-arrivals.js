@@ -4,6 +4,8 @@ let newArrrivalsSwiper = $('.new-arrivals__swiper').length ? new Swiper('.new-ar
   spaceBetween: 0,
   allowTouchMove: false,
 
+  watchOverflow: true,
+
   thumbs: {
     swiper: newArrivalsDates,
     slideThumbActiveClass: 'date_active',

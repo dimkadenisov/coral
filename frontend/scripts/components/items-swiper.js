@@ -8,6 +8,8 @@
     slidesPerView: 5,
     spaceBetween: 30,
 
+    watchOverflow: true,
+
     allowTouchMove: false,
 
     navigation: {

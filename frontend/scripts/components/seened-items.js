@@ -9,6 +9,8 @@
     spaceBetween: 30,
     allowTouchMove: false,
 
+    watchOverflow: true,
+
     pagination: {},
 
     keyboard: {
