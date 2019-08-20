@@ -119,16 +119,16 @@ var catalogItemSwiperConfig = {
   observeSlideChildren: true
 };
 var catalogItemSwipers = generateSwipers('catalog-item__swiper', catalogItemSwiperConfig);
-$('.catalog-item__swiper').on('mouseenter', function () {
-  var idClass = this.className.split(/\s+/).find(function (item) {
+$('.catalog-item').on('mouseenter', function () {
+  var idClass = this.querySelector('.catalog-item__swiper').className.split(/\s+/).find(function (item) {
     return item.match(/catalog-item__swiper-\d*$/);
   });
   var id = idClass.match(/\d*$/)[0];
-  catalogItemSwipers[id].params.autoplay.delay = 1000;
+  catalogItemSwipers[id].params.autoplay.delay = 1300;
   catalogItemSwipers[id].autoplay.start();
 });
-$('.catalog-item__swiper').on('mouseleave', function () {
-  var idClass = this.className.split(/\s+/).find(function (item) {
+$('.catalog-item').on('mouseleave', function () {
+  var idClass = this.querySelector('.catalog-item__swiper').className.split(/\s+/).find(function (item) {
     return item.match(/catalog-item__swiper-\d*$/);
   });
   var id = idClass.match(/\d*$/)[0];
