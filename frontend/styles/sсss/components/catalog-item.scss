@@ -274,6 +274,10 @@
     .catalog-item__code {
       flex-shrink: 0;
       margin: 0;
+
+      &:only-child {
+        margin-left: auto;
+      }
     }
 
     .price {
