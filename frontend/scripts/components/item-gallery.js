@@ -37,4 +37,10 @@ const itemGallerySwiperConfig = {
   },
 };
 
-generateSwipers('item-gallery__swiper', itemGallerySwiperConfig);
+let itemGallerySwiper = $('.item-gallery__swiper').length
+  ? new Swiper('.item-gallery__swiper', itemGallerySwiperConfig)
+  : false;
+
+$('.item-gallery__thumbs').on('mouseenter','.item-gallery__slide', function() {
+  itemGallerySwiper.slideTo($(this).index());
+});
