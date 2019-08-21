@@ -122,12 +122,12 @@ function generateCatalogItemSwipers() {
   };
   var catalogItemSwipers = generateSwipers('catalog-item__swiper', catalogItemSwiperConfig);
   $('.catalog-item').on('mouseenter', function () {
-    // const idClass = this.querySelector('.catalog-item__swiper').className.split(/\s+/).find(item => item.match(/catalog-item__swiper-\d*$/));
     var idClass = $.grep(this.querySelector('.catalog-item__swiper').className.split(/\s+/), function (item) {
       return item.match(/catalog-item__swiper-\d*$/);
     });
     var id = idClass[0].match(/\d*$/)[0];
     catalogItemSwipers[id].params.autoplay.delay = 1300;
+    catalogItemSwipers[id].params.autoplay.waitForTransition = false;
     catalogItemSwipers[id].autoplay.start();
   });
   $('.catalog-item').on('mouseleave', function () {
