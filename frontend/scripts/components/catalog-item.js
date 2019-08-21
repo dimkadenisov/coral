@@ -37,14 +37,6 @@ function generateCatalogItemSwipers() {
   });
 
   $('.catalog-item').on('mouseenter', function() {
-    // const idClass = $.grep(this.querySelector('.catalog-item__swiper').className.split(/\s+/), item => item.match(/catalog-item__swiper-\d*$/));
-
-    // const id = idClass[0].match(/\d*$/)[0];
-
-    // catalogItemSwipers[id].params.autoplay.delay = 1300;
-    // catalogItemSwipers[id].params.autoplay.waitForTransition = false;
-    // catalogItemSwipers[id].autoplay.start();
-
     const index = getSwiperIndex.call(this, 'catalog-item__swiper');
 
     catalogItemSwipers[index].params.autoplay.delay = 1300;

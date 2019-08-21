@@ -3,14 +3,20 @@ mixin item-gallery(props= 0)
   include ../templates/button
   include ../templates/sticker
 
-  - const {stickers= false} = props;
+  - const {stickers = false, swiperClass = false, thumbsClass = false} = props;
+
+  - let swiperClassList = 'item-gallery__swiper';
+  - let thumbsClassList = 'd-none d-md-block item-gallery__thumbs';
+
+  - swiperClassList += swiperClass ?  ` ${swiperClass}` : '';
+  - thumbsClassList += thumbsClass ? ` ${thumbsClass}` : '';
 
   .item-gallery
     if stickers
       .stickers
         +sticker({type: "hit"})
         +sticker({type: "new"})
-    .item-gallery__swiper
+    div(class= swiperClassList)
       .swiper-wrapper
         a(href="assets/img/sample-image-1-575.jpg" data-fancybox="item-gallery").item-gallery__slide
           .item-gallery__image-wrapper
@@ -25,7 +31,7 @@ mixin item-gallery(props= 0)
           .item-gallery__image-wrapper
             img(src="assets/img/sample-image-3-300.jpg", alt="" data-object-fit="cover").item-gallery__image
 
-    .d-none.d-md-block.item-gallery__thumbs
+    div(class= thumbsClassList)
       .swiper-wrapper
         .item-gallery__slide
           .item-gallery__image-wrapper

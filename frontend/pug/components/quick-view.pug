@@ -1,6 +1,7 @@
 include ../templates/price
-include ../templates/item-gallery
 include ../templates/rating
+include ../templates/button
+include ../templates/item-gallery
 
 .quick-view#quick-view(style="display: none;")
   .container
@@ -16,7 +17,8 @@ include ../templates/rating
           +button({type: 'circle', size: 'small', color: 'no-bg', iconId: '#heart', otherClasses: 'button_heart show-tooltip show-tooltip_top-right'})(data-description="Добавить товар в избранное")
       .col-7
       .col-5
-        +item-gallery()
+        +item-gallery({swiperClass: 'quick-view__swiper', thumbsClass: 'quick-view__thumbs'})
+
       .col-7
         .quick-view__checkout
           +price({sale: true})
