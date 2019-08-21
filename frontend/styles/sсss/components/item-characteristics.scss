@@ -1,7 +1,13 @@
 .item-characteristics {
   &__item {
     display: flex;
-    // margin-bottom: 5px;
+  }
+
+  &__heading {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: bold;
   }
 
   &__text {

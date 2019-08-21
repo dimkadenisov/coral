@@ -19,16 +19,16 @@ block content
         .col-12
           span.section__description Описание
           include ../components/product-description
-          hr.separator
+          hr.separator#characteristics
         .col-12
-          span.section__description#characteristics Подробные характеристики
-        .col-4
+          span.section__description Подробные характеристики
+        .col-12.col-md-6.col-lg-4
           span.item-characteristics__heading Блок характеристик
           include ../components/item-characteristics
-        .col-4
+        .col-12.col-md-6.col-lg-4
           span.item-characteristics__heading Блок характеристик
           include ../components/item-characteristics
-        .col-4
+        .col-12.col-md-6.col-lg-4
           span.item-characteristics__heading Блок характеристик
           include ../components/item-characteristics
         .col-12
@@ -45,10 +45,8 @@ block content
           +banner
         .col-12
           span.section__description Отзывы
-          .row
-            .col-12
-              include ../components/reviews-swiper
-
+          include ../components/reviews-swiper
+          hr.separator
         .col-12
           span.section__description Вы смотрели
           include ../components/items-swiper
