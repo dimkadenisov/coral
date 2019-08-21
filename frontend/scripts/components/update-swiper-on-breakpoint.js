@@ -8,7 +8,10 @@ function updateSwiperOnBreakpoint(swiperClass, swiperConfig, maxWidthsArray) {
     breakpoints.push(window.matchMedia( `(min-width: ${item + 1}px)` ))
   });
 
-  let swipers = generateSwipers(swiperClass, swiperConfig);
+  let swipers = generateSwipers({
+    swiperClass: swiperClass,
+    swiperConfig: swiperConfig
+  });
 
   const breakpointChecker = function() {
     breakpoints.forEach(breakpoint => {

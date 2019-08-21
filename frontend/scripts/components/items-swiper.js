@@ -50,5 +50,8 @@ function generateItemsSwipers() {
     },
   };
 
-  return generateSwipers('items-swiper', itemsSwiperConfig);
+  return generateSwipers({
+    swiperClass: 'items-swiper',
+    swiperConfig: itemsSwiperConfig
+  });
 };

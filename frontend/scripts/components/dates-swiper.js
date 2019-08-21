@@ -32,5 +32,8 @@ function generateNewArrivalsDates() {
     }
   };
 
-  return generateSwipers('dates-swiper', newArrivalsDatesConfig);
+  return generateSwipers({
+    swiperClass: 'dates-swiper',
+    swiperConfig: newArrivalsDatesConfig
+  });
 };

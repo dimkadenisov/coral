@@ -22,7 +22,10 @@ function generateNewArrrivalsSwiper(thumbs) {
     observeSlideChildren: true,
   };
 
-  return generateSwipers('new-arrivals__swiper', newArrivalsSwiperConfig);
+  return generateSwipers({
+    swiperClass: 'new-arrivals__swiper',
+    swiperConfig: newArrivalsSwiperConfig
+  });
 };
 
 function renderIndexSwipers() {

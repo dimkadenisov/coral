@@ -37,9 +37,9 @@ const itemGallerySwiperConfig = {
   },
 };
 
-let itemGallerySwiper = $('.item-gallery__swiper').length
-  ? new Swiper('.item-gallery__swiper', itemGallerySwiperConfig)
-  : false;
+let itemGallerySwiper = generateSwipers({
+  swiperClass: 'item-gallery__swiper',
+  swiperConfig: itemGallerySwiperConfig});
 
 $('.item-gallery__thumbs').on('mouseenter','.item-gallery__slide', function() {
   itemGallerySwiper.slideTo($(this).index(), 0, false);

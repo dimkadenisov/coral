@@ -46,4 +46,7 @@ const photoSwiperConfig = {
   },
 };
 
-let photoSwipers = generateSwipers('photo-swiper', photoSwiperConfig)
+let photoSwipers = generateSwipers({
+  swiperClass: 'photo-swiper',
+  swiperConfig: photoSwiperConfig
+});

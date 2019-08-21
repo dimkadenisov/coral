@@ -67,11 +67,17 @@
 
   const breakpointChecker = function() {
     breakpoints.forEach((breakpoint) => {
-      if (breakpoint.matches) return generateSwipers('seened-items__swiper', seenedItemsConfig);
+      if (breakpoint.matches) return generateSwipers({
+        swiperClass: 'seened-items__swiper',
+        swiperConfig: seenedItemsConfig
+      });
     })
   };
 
-  generateSwipers('seened-items__swiper', seenedItemsConfig);
+  generateSwipers({
+    swiperClass: 'seened-items__swiper',
+    swiperConfig: seenedItemsConfig
+  });
 
   for (let i = 0; i < breakpoints.length; i++) {
     const breakpoint = breakpoints[i];
