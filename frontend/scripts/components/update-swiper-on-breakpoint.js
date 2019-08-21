@@ -19,7 +19,7 @@ function updateSwiperOnBreakpoint(swiperClass, swiperConfig, maxWidthsArray) {
         swipers.forEach(item => {
           item.destroy();
         });
-        swipers = generateSwipers(swiperClass, reviewsSwiperConfig);
+        swipers = generateSwipers({swiperClass: swiperClass, swiperConfig: swiperConfig});
       }
     })
   };
