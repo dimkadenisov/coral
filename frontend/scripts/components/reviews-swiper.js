@@ -44,7 +44,6 @@ const reviewsSwiperConfig = {
   },
 };
 
-// const reviewsSwiperBreakpoints = [window.matchMedia( '(max-width: 991px)' ), window.matchMedia( '(min-width: 992px)' )];
 const reviewsSwiperBreakpoints = [991];
 
 let reviewsSwipers = updateSwiperOnBreakpoint('reviews-swiper', reviewsSwiperConfig, reviewsSwiperBreakpoints);
