@@ -5,6 +5,7 @@
   &__item {
     width: 75px;
     height: 75px;
+    object-fit: contain;
 
     &:not(:last-child) {
       margin-right: 5px;
