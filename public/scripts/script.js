@@ -631,83 +631,48 @@ var reviewsSwipers = updateSwiperOnBreakpoint('reviews-swiper', reviewsSwiperCon
 $('.header .search-form__button_open').click(function () {
   $(this).parent().toggleClass('search-form_opened');
 });
-
-(function () {
-  if ($('.seened-items__swiper').length === 0) return false;
-  var breakpoints = [window.matchMedia('(max-width: 767px)'), window.matchMedia('(min-width: 768px)')];
-  var seenedItemsConfig = {
-    slideClass: 'catalog-item',
-    slidesPerView: 4,
-    spaceBetween: 30,
-    allowTouchMove: false,
-    watchOverflow: true,
-    pagination: {},
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true
+var seenedItemsConfig = {
+  slideClass: 'catalog-item',
+  slidesPerView: 4,
+  spaceBetween: 30,
+  allowTouchMove: false,
+  watchOverflow: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true
+  },
+  navigation: {
+    prevEl: '.prev',
+    nextEl: '.next'
+  },
+  pagination: {
+    el: '.pagination',
+    bulletElement: 'div',
+    bulletClass: 'pagination__item',
+    bulletActiveClass: 'pagination__item_active'
+  },
+  observer: true,
+  observerParents: true,
+  observeSlideChildren: true,
+  breakpoints: {
+    1343: {
+      slidesPerView: 3
     },
-    navigation: {
-      prevEl: '.prev',
-      nextEl: '.next',
-      disabledClass: 'visually-hidden'
+    991: {
+      slidesPerView: 3
     },
-    observer: true,
-    observerParents: true,
-    observeSlideChildren: true,
-    breakpoints: {
-      1343: {
-        slidesPerView: 3,
-        pagination: {}
-      },
-      991: {
-        slidesPerView: 3,
-        pagination: {}
-      },
-      767: {
-        slidesPerView: 2,
-        allowTouchMove: true,
-        pagination: {
-          el: '.pagination',
-          bulletElement: 'div',
-          bulletClass: 'pagination__item',
-          bulletActiveClass: 'pagination__item_active'
-        }
-      },
-      575: {
-        slidesPerView: 1,
-        allowTouchMove: true,
-        pagination: {
-          el: '.pagination',
-          bulletElement: 'div',
-          bulletClass: 'pagination__item',
-          bulletActiveClass: 'pagination__item_active'
-        }
-      }
+    767: {
+      slidesPerView: 2,
+      allowTouchMove: true
+    },
+    575: {
+      slidesPerView: 1,
+      allowTouchMove: true
     }
-  };
-
-  var breakpointChecker = function breakpointChecker() {
-    breakpoints.forEach(function (breakpoint) {
-      if (breakpoint.matches) return generateSwipers({
-        swiperClass: 'seened-items__swiper',
-        swiperConfig: seenedItemsConfig
-      });
-    });
-  };
-
-  generateSwipers({
-    swiperClass: 'seened-items__swiper',
-    swiperConfig: seenedItemsConfig
-  });
-
-  for (var i = 0; i < breakpoints.length; i++) {
-    var breakpoint = breakpoints[i];
-    breakpoint.addListener(breakpointChecker);
   }
-
-  breakpointChecker();
-})();
-
+};
+var seenedItemsBreakpoints = [767];
+var seenedItemsSwiper = updateSwiperOnBreakpoint('seened-items__swiper', seenedItemsConfig, seenedItemsBreakpoints);
 $('.show-more-button').click(function () {
   if ($(this).closest('.tags').hasClass('tags_show-all')) {
     $(this).text('Показать еще');
