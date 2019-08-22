@@ -5,6 +5,13 @@
   .catalog-item {
     flex-grow: 1;
   }
+
+  &_full-width {
+    width: calc((100% - 30px * 5) / 5);
+    margin-right: 15px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+  }
 }
 
 @for $i from 1 through 8 {
@@ -35,12 +42,42 @@
   }
 }
 
+@media screen and (max-width: 1343px) {
+  .catalog-layout__item {
+    &_full-width {
+      width: calc((100% - 30px * 4) / 4);
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .catalog-layout__item {
+    &_full-width {
+      width: calc((100% - 30px * 3) / 3);
+    }
+  }
+}
+
 @media screen and (max-width: 767px) {
+  .catalog-layout__item {
+    &_full-width {
+      width: calc((100% - 30px * 2) / 2);
+    }
+  }
+
   .catalog-layout__banner[data-order='1'] {
     order: 2;
   }
 
   .catalog-layout__banner[data-order='2'] {
     order: 4;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .catalog-layout__item {
+    &_full-width {
+      width: calc(100% - 30px);
+    }
   }
 }

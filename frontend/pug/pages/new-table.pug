@@ -1,0 +1,25 @@
+extends ../templates/page
+include ../templates/catalog-layout
+include ../templates/sort-block
+
+block title
+  |Новинки Таблица
+
+block content
+  main.main.main_new
+    .container
+      .row
+        .col-12
+          include ../components/breadcrumbs
+          h1.section__heading Новинки
+          +sort-block()
+          hr.separator
+          +catalog-layout({type: 'table'})
+
+          include ../components/site-pagination
+          hr.separator
+          span.section__description Вы смотрели
+          include ../components/items-swiper
+          hr.separator
+          include ../components/seo-block
+          include ../components/quick-view

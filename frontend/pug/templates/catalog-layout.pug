@@ -3,29 +3,74 @@
 //- type: table'                                               /// может быть пустым
 //- itemsCount: default - '12'  /  number                      /// может быть пустым
 
+//- include ./catalog-item
+//- include ./banner
+
+//- mixin catalog-layout(props= 0)
+
+//-   - let { type=0, itemsCount= 12} = props
+
+//-   - const catalogItemType = type === 'table' ? 'table' : 0;
+//-   - const layoutClasses = type === 'table' ? 'catalog-layout catalog-layout_table' : 'catalog-layout';
+//-   - const itemWrapperClasses = type === 'table' ? 'col-12 catalog-layout__item' : 'col-12 col-sm-6 col-md-4 col-xxl-3 catalog-layout__item';
+
+//-   div(class= layoutClasses)
+//-     .row
+//-       div(class= itemWrapperClasses)
+//-         +catalog-item({type: `${catalogItemType === 'table' ? 'table_more' : 'more'}`, stickers: ['hit', 'new'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true, rating: {stars: 0, disabled: true}})
+//-       div(class= itemWrapperClasses)
+//-         +catalog-item({type: `${catalogItemType === 'table' ? 'table_more' : 'more'}`, stickers: ['hit', 'new'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true, rating: false})
+//-       while itemsCount > 2
+//-         div(class= itemWrapperClasses)
+//-           +catalog-item({type: catalogItemType, stickers: ['hit', 'new'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true, rating: {stars: 4, disabled: true}})
+//-           - itemsCount--
+
+//-       .col-12.catalog-layout__banner(data-order='1')
+//-         +banner({pattern: true})
+//-       .col-12.catalog-layout__banner(data-order='2')
+//-         +banner({pattern: false})
+
+
+
+
+
+
+
+
+
+
+
+
+
 include ./catalog-item
 include ./banner
 
 mixin catalog-layout(props= 0)
 
-  - let { type=0, itemsCount= 12} = props
+  - let { type = false, itemsCount = 12, fullWidth = false, banner = true} = props;
 
-  - const catalogItemType = type === 'table' ? 'table' : 0;
-  - const layoutClasses = type === 'table' ? 'catalog-layout catalog-layout_table' : 'catalog-layout';
-  - const itemWrapperClasses = type === 'table' ? 'col-12 catalog-layout__item' : 'col-12 col-sm-6 col-md-4 col-xxl-3 catalog-layout__item';
+  - let catalogItemType = type === 'table' ? 'table' : 0;
+  - let layoutClasses = type === 'table' ? 'catalog-layout catalog-layout_table' : 'catalog-layout';
+  - let itemWrapperClasses = type === 'table' ? 'col-12 catalog-layout__item' : 'col-12 col-sm-6 col-md-4 col-xxl-3 catalog-layout__item';
+
+  - if (fullWidth && !type) itemWrapperClasses = 'catalog-layout__item catalog-layout__item_full-width';
 
   div(class= layoutClasses)
     .row
+
       div(class= itemWrapperClasses)
         +catalog-item({type: `${catalogItemType === 'table' ? 'table_more' : 'more'}`, stickers: ['hit', 'new'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true, rating: {stars: 0, disabled: true}})
+
       div(class= itemWrapperClasses)
         +catalog-item({type: `${catalogItemType === 'table' ? 'table_more' : 'more'}`, stickers: ['hit', 'new'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true, rating: false})
+
+
       while itemsCount > 2
         div(class= itemWrapperClasses)
           +catalog-item({type: catalogItemType, stickers: ['hit', 'new'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true, rating: {stars: 4, disabled: true}})
           - itemsCount--
-
-      .col-12.catalog-layout__banner(data-order='1')
-        +banner({pattern: true})
-      .col-12.catalog-layout__banner(data-order='2')
-        +banner({pattern: false})
+      if banner
+        .col-12.catalog-layout__banner(data-order='1')
+          +banner({pattern: true})
+        .col-12.catalog-layout__banner(data-order='2')
+          +banner({pattern: false})
