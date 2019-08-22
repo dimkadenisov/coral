@@ -1,0 +1,52 @@
+extends ../templates/page
+include ../templates/sort-block
+include ../templates/catalog-layout
+include ../templates/series-swiper
+
+block title
+  |Серия
+
+block content
+  main.main.main_single-series
+    .container
+      .row
+        .col-12
+          include ../components/breadcrumbs
+
+          h1.section__heading Cнежная королева
+
+          picture
+            source(media="(min-width: 1344px)" srcset="assets/img/sigle-series-hero-image-1290.jpg")
+            source(media="(min-width: 768px)" srcset="assets/img/sigle-series-hero-image-930.jpg")
+            source(media="(min-width: 300px)" srcset="assets/img/sigle-series-hero-image-510.jpg")
+            img(src="assets/img/hero-swiper-slide-1343.jpg", alt="изображение слайда" data-object-fit="cover").full-width-image
+
+          include ../components/item-benefits
+
+          p.styled-paragraph.
+            Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один
+            и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого.
+
+          +series-swiper({text: false})
+
+          p.styled-paragraph.
+            Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один
+            и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого.
+
+          +sort-block()
+
+          hr.separator
+
+          +catalog-layout({fullWidth: true, banner: false})
+
+          include ../components/site-pagination
+
+          hr.separator
+
+          include ../components/reviews-swiper
+
+          hr.separator
+
+          span.section__description Похожие серии
+
+          +series-swiper()

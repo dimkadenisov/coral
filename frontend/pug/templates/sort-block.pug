@@ -25,9 +25,9 @@ mixin sort-block(props= 0)
 
     +button({tag: 'a', size: 'small', borderColor: 'red', otherClasses: 'sort-block__pricelist-button'})(href='#', target='blank')
       |Скачать прайс-лист
-    a(href="#" target="blank").sort-block__change-layout-button.sort-block__change-layout-button_active
+    a(href="#").sort-block__change-layout-button.sort-block__change-layout-button_active
       svg.sort-block__icon
         use(xlink:href="#window")
-    a(href="#" target="blank").sort-block__change-layout-button
+    a(href="#").sort-block__change-layout-button
       svg.sort-block__icon
         use(xlink:href="#list")

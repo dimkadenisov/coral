@@ -1,12 +1,12 @@
 extends ../templates/page
 include ../templates/tags
-
+include ../templates/series-item
 
 block title
   |Серии
 
 block content
-  main.main.main_new
+  main.main.main_series
     .container
       .row
         .col-12
@@ -15,21 +15,21 @@ block content
           +tags({amount: 14})
 
         .col-12.col-sm-6.col-md-4.col-xxl-3
-          include ../components/series-item
+          +series-item()
         .col-12.col-sm-6.col-md-4.col-xxl-3
-          include ../components/series-item
+          +series-item()
         .col-12.col-sm-6.col-md-4.col-xxl-3
-          include ../components/series-item
+          +series-item()
         .col-12.col-sm-6.col-md-4.col-xxl-3
-          include ../components/series-item
+          +series-item()
         .col-12.col-sm-6.col-md-4.col-xxl-3
-          include ../components/series-item
+          +series-item()
         .col-12.col-sm-6.col-md-4.col-xxl-3
-          include ../components/series-item
+          +series-item()
         .col-12.col-sm-6.col-md-4.col-xxl-3
-          include ../components/series-item
+          +series-item()
         .col-12.col-sm-6.col-md-4.col-xxl-3
-          include ../components/series-item
+          +series-item()
 
         .col-12
           include ../components/site-pagination

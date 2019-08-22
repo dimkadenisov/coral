@@ -1,0 +1,19 @@
+mixin series-swiper(props = 0)
+  include ../templates/series-item
+
+  - const { text } = props;
+
+  .series-swiper
+    .swiper-wrapper
+      +series-item({ text })
+      +series-item({ text })
+      +series-item({ text })
+      +series-item({ text })
+      +series-item({ text })
+      +series-item({ text })
+      +series-item({ text })
+      +series-item({ text })
+
+    .d-lg-none.pagination
+    +button({type: 'circle', half: 'half_left', color: 'brown', iconId: '#arrow-left', otherClasses: 'prev'})
+    +button({type: 'circle', half: 'half_right', color: 'brown', iconId: '#arrow-right', otherClasses: 'next'})

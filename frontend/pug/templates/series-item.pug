@@ -1,0 +1,9 @@
+mixin series-item(props = 0)
+
+  - const { text = true } = props;
+
+  a(href="#").series-item
+    .catalog-item__image-wrapper
+      img(src="assets/img/catalog-item-sample-itmage-1.jpg", alt="Изображение товара" data-object-fit="cover").catalog-item__image
+    if text
+      b.series-item__text Снежная королева

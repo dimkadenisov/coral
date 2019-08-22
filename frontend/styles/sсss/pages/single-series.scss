@@ -1,0 +1,23 @@
+.main_single-series {
+  .item-benefits {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+  }
+
+  .item-benefits__item {
+    margin-bottom: 10px;
+  }
+
+  .series-swiper {
+    margin-bottom: 50px;
+
+    &:last-of-type {
+      margin-bottom: 80px;
+    }
+  }
+
+  .sort-block {
+    margin-top: 40px;
+  }
+}

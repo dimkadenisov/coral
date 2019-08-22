@@ -1,6 +1,6 @@
 .series-item {
   display: block;
-  margin-bottom: 45px;
+  flex-shrink: 0;
   color: $gray-700;
   text-decoration: none;
 
@@ -11,6 +11,7 @@
 
   &__text {
     display: block;
+    margin-bottom: 20px;
     font-size: 17px;
     text-align: center;
   }
@@ -18,11 +19,5 @@
   &:hover,
   &:focus {
     text-decoration: underline;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .series-item {
-    margin-bottom: 25px;
   }
 }

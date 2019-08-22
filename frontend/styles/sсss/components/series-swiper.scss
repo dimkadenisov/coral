@@ -1,0 +1,60 @@
+.series-swiper {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+
+  .button {
+    position: absolute;
+    top: 100px;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 1343px) {
+  .series-swiper {
+    .button {
+      top: 117px;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .series-swiper {
+    .button {
+      top: 97px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .series-swiper {
+    .button {
+      top: 70px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .series-swiper {
+    .button {
+      top: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .series-swiper {
+    .button {
+      top: calc((100vw - 30px) / 2 * 0.6666);
+    }
+  }
+}
