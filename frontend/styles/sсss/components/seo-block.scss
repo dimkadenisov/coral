@@ -1,16 +1,23 @@
 .seo-block {
   margin-bottom: 90px;
 
-  &__text {
-    margin-bottom: 22px;
-    font-size: 15px;
-    line-height: 22px;
+  .section__description {
+    display: block;
+    margin-bottom: 35px;
   }
 }
 
 @media screen and (max-width: 991px) {
   .seo-block {
     margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .seo-block {
+    .section__description {
+      margin-bottom: 25px;
+    }
   }
 }
 
