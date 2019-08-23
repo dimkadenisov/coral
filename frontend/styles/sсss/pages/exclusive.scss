@@ -1,0 +1,13 @@
+.main_exclusive {
+  .series-item {
+    margin-bottom: 45px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main_exclusive {
+    .series-item {
+      margin-bottom: 25px;
+    }
+  }
+}

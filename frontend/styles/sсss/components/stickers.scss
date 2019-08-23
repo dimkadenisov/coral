@@ -1,0 +1,9 @@
+.stickers {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}

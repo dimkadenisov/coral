@@ -1,8 +1,12 @@
 mixin series-item(props = 0)
+  include sticker
 
-  - const { text = true } = props;
+  - const { text = true, sticker = false} = props;
 
   a(href="#").series-item
+    if sticker
+      .stickers
+        +sticker({type: `${sticker}`})
     .catalog-item__image-wrapper
       img(src="assets/img/catalog-item-sample-itmage-1.jpg", alt="Изображение товара" data-object-fit="cover").catalog-item__image
     if text

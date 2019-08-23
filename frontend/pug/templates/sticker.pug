@@ -11,6 +11,12 @@ mixin sticker(props)
     when 'sale'
       span.sticker.sticker_sale %
 
+    when 'out'
+      span.sticker.sticker_out Снято с производства
+
+    when 'complete'
+      span.sticker.sticker_complete Завершено
+
     when 'gift'
       span.sticker.sticker_gift
         svg.sticker__icon
