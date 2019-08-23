@@ -1,0 +1,13 @@
+mixin sidebar(props = 0)
+
+  - let {separateLink = false, itemsAmount = 5} = props;
+
+  sidebar.sidebar
+    if separateLink
+      a.sidebar__link.sidebar__link_separate(href="#") Товар недели
+    ul.sidebar__list
+      while itemsAmount > 0
+        li.sidebar__list-item
+          a.sidebar__link(href="#") Название пункта списка
+
+        - itemsAmount--

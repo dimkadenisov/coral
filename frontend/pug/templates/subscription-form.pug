@@ -1,0 +1,18 @@
+mixin subscription-form(props = 0)
+  include button
+  include input-field
+
+  - const {otherClasses = false} = props;
+
+  - const formClassList = otherClasses ? 'subscription-form ' + otherClasses : 'subscription-form'
+
+  form(class= formClassList)
+    fieldset.subscription-form__fieldset
+      .container
+        .row
+          .col-12.col-sm-8.col-md-6.col-lg-7.col-xl-6
+            span.subscription-form__legend Подпишись и&nbsp;получай информацию о&nbsp;всех новинках и&nbsp;акциях!
+          .col-12.col-md-6.col-lg-5.col-xl-6.col-xxl-5
+            .subscription-form__input-wrapper
+              +input-field({type: 'email', borderColor: 'transparent'})(inputmode='email' placeholder='Укажите Вашу почту', autocapitalize='off', autocorrect='off', autocomplete='email', required)
+              +button({type: 'circle', size: 'small', color: 'red', iconId: '#mail'})

@@ -1,4 +1,6 @@
 extends ../templates/page
+include ../templates/subscription-form.pug
+
 block title
   |Главная страница
 
@@ -8,7 +10,7 @@ block content
     include ../components/product-types.pug
     include ../components/new-arrivals.pug
     include ../components/news.pug
-    include ../components/subscription-form.pug
+    +subscription-form()
     include ../components/benefits.pug
     include ../components/personal-offer.pug
     include ../components/quick-view

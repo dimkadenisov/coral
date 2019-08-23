@@ -1,0 +1,24 @@
+mixin news-post(props= 0)
+  include sticker
+
+  - const { big = false, sticker = false } = props;
+
+  - const newsPostClassList = big ? 'news-post news-post_big' : 'news-post';
+
+  div(class= newsPostClassList)
+    if sticker
+      .stickers
+        +sticker({type: `${sticker}`})
+    .news-post__image-wrapper
+      if big
+        picture.hero-swiper__image.news-post__image
+          source(media="(min-width: 1200px)" srcset="assets/img/sample-image-1-630.jpg")
+          source(media="(min-width: 576px)" srcset="assets/img/sample-image-1-240.jpg")
+          source(media="(min-width: 300px)" srcset="assets/img/sample-image-1-630.jpg")
+          img(src="assets/img/sample-image-1-630.jpg", alt="изображениt новости" data-object-fit="cover")
+      else
+        img(src="assets/img/sample-image-2-300.jpg", alt="изображение новости" data-object-fit="cover").news-post__image
+    span.news-post__date 14 мая
+    span.news-post__name Очень, очень длинный заголовок новости
+    span.news-post__description.
+      Более 50-ти новых серий ежегодно. Лицензионные и авторские. Более 50-ти новых серий ежегодно. Лицензионные коллекции и авторские дизайны. Востребованный ассортимент посуды и товаров для дома от эконом до премиум класса

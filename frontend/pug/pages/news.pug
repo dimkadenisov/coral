@@ -1,0 +1,41 @@
+extends ../templates/page
+include ../templates/news-post
+include ../templates/button
+include ../templates/sidebar
+include ../templates/subscription-form
+
+block title
+  |Новости
+
+block content
+  main.main.main_news
+    .container
+      .row
+        .col-12
+          include ../components/breadcrumbs
+          h1.section__heading Новости
+        .col-12.col-lg-9
+          .row
+            .col-12.col-sm-6.col-md-4
+              +news-post({sticker: 'new'})
+            .col-xs-12.col-sm-6.col-md-4
+              +news-post({sticker: 'sale'})
+            .col-xs-12.col-sm-6.col-md-4
+              +news-post({sticker: 'complete'})
+            .col-xs-12.col-sm-6.col-md-4
+              +news-post({sticker: 'sale'})
+            .col-xs-12.col-sm-6.col-md-4
+              +news-post({sticker: 'new'})
+            .col-xs-12.col-sm-6.col-md-4
+              +news-post({sticker: 'sale'})
+
+            .col-12
+              include ../components/site-pagination
+
+
+        .d-none.d-lg-block.col-12.col-lg-3
+          +sidebar()
+          +button({tag: 'a', size: 'small', borderColor: 'red', color: 'no-bg', otherClasses: 'subscribe-button'})(href="#")
+            |Подписаться на&nbsp;новости
+
+    +subscription-form({otherClasses: 'd-lg-none'})
