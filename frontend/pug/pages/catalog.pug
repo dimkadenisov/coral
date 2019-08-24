@@ -8,13 +8,13 @@ block title
   |Каталог
 
 block content
-  main.main.main_catalog
-    .container
-      .row
-        .d-none.d-lg-block.col-3
-          +sidebar({separateLink: true, itemsAmount: 12})
-        .col-12.col-lg-9
-          include ../components/breadcrumbs
+  .container
+    .row
+      .d-none.d-lg-block.col-3
+        +sidebar({separateLink: true, itemsAmount: 12})
+      .col-12.col-lg-9
+        include ../components/breadcrumbs
+        main.main.main_catalog
           h1.section__heading Каталог
           +sort-block()
           hr.separator

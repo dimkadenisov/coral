@@ -6,32 +6,33 @@ block title
   |Серии
 
 block content
-  main.main.main_series
+  .page_series
     .container
       .row
         .col-12
           include ../components/breadcrumbs
-          h1.section__heading Серии
-          +tags({amount: 14})
+          main.main
+            h1.section__heading Серии
+            +tags({amount: 14})
+            .row
+              .col-12.col-sm-6.col-md-4.col-xxl-3
+                +series-item()
+              .col-12.col-sm-6.col-md-4.col-xxl-3
+                +series-item()
+              .col-12.col-sm-6.col-md-4.col-xxl-3
+                +series-item()
+              .col-12.col-sm-6.col-md-4.col-xxl-3
+                +series-item()
+              .col-12.col-sm-6.col-md-4.col-xxl-3
+                +series-item()
+              .col-12.col-sm-6.col-md-4.col-xxl-3
+                +series-item()
+              .col-12.col-sm-6.col-md-4.col-xxl-3
+                +series-item()
+              .col-12.col-sm-6.col-md-4.col-xxl-3
+                +series-item()
 
-        .col-12.col-sm-6.col-md-4.col-xxl-3
-          +series-item()
-        .col-12.col-sm-6.col-md-4.col-xxl-3
-          +series-item()
-        .col-12.col-sm-6.col-md-4.col-xxl-3
-          +series-item()
-        .col-12.col-sm-6.col-md-4.col-xxl-3
-          +series-item()
-        .col-12.col-sm-6.col-md-4.col-xxl-3
-          +series-item()
-        .col-12.col-sm-6.col-md-4.col-xxl-3
-          +series-item()
-        .col-12.col-sm-6.col-md-4.col-xxl-3
-          +series-item()
-        .col-12.col-sm-6.col-md-4.col-xxl-3
-          +series-item()
-
-        .col-12
-          include ../components/site-pagination
-          hr.separator
-          include ../components/seo-block
+              .col-12
+                include ../components/site-pagination
+                hr.separator
+                include ../components/seo-block

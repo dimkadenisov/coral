@@ -6,16 +6,15 @@ block title
   |Новинки
 
 block content
-  main.main.main_new
-    .container
-      .row
-        .col-12
-          include ../components/breadcrumbs
+  .container
+    .row
+      .col-12
+        include ../components/breadcrumbs
+        main.main.main_new
           h1.section__heading Новинки
           +sort-block()
           hr.separator
           +catalog-layout({fullWidth: true, banner: false})
-
           include ../components/site-pagination
           hr.separator
           span.section__description Вы смотрели
