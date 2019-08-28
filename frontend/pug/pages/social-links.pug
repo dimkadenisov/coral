@@ -1,0 +1,13 @@
+extends ../templates/page
+include ../templates/social-links
+
+block title
+  |Пример ссылок
+block content
+  .container
+    .row
+      .col-6
+        +social-links({button: {borderColor: 'gray', iconsNames: ['facebook', 'vk', 'ok', 'instagram', 'youtube-play', 'my-word', 'twitter']}})
+
+      .col-6
+        +social-links({button: {borderColor: 'gray', iconsNames: ['telegram', 'whatsapp', 'viber', 'skype', 'messenger']}})

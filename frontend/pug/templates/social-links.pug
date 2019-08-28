@@ -1,18 +1,13 @@
 mixin social-links(props = 0)
   include button
 
-  - const {otherClasses, button: {borderColor = ''} = {}} = props;
+  - const {otherClasses, button: {borderColor = '', iconsNames = [] } = {}} = props;
 
   - socialLinksClassList = otherClasses ? 'social-links ' + otherClasses : 'social-links'
 
   ul(class= socialLinksClassList)
-    li.social-links__item
-      +button({type: 'circle', tag: 'a', size: 'small', borderColor: `${borderColor}`, iconId: '#facebook'})(href='#', target='blank')
-    li.social-links__item
-      +button({type: 'circle', tag: 'a', size: 'small', borderColor: `${borderColor}`, iconId: '#vk'})(href='#', target='blank')
-    li.social-links__item
-      +button({type: 'circle', tag: 'a', size: 'small', borderColor: `${borderColor}`, iconId: '#ok'})(href='#', target='blank')
-    li.social-links__item
-      +button({type: 'circle', tag: 'a', size: 'small', borderColor: `${borderColor}`, iconId: '#instagram'})(href='#', target='blank')
-    li.social-links__item
-      +button({type: 'circle', tag: 'a', size: 'small', borderColor: `${borderColor}`, iconId: '#youtube-play'})(href='#', target='blank')
+
+    each val in iconsNames
+
+      li.social-links__item
+        +button({type: 'circle', tag: 'a', size: 'small', borderColor: `${borderColor}`, iconId: `#${val}`})(href='#', target='blank')
