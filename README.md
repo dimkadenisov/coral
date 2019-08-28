@@ -15,3 +15,6 @@
 * [Серии](https://dimkadenisov.github.io/coral/public/series.html)
 * [Серия](https://dimkadenisov.github.io/coral/public/single-series.html)
 * [Текстовая](https://dimkadenisov.github.io/coral/public/text-page.html)
+* [Скачать](https://dimkadenisov.github.io/coral/public/download.html)
+* [Контакты](https://dimkadenisov.github.io/coral/public/contacts.html)
+* [Кнопки всех соц сетей и мессенджеров](https://dimkadenisov.github.io/coral/public/social-links.html)
