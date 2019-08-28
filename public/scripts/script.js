@@ -1,5 +1,11 @@
 "use strict";
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 (function () {
   if ($('.benefits__items').length === 0) return;
   var breakpoints = [window.matchMedia('(min-width: 768px)')];
@@ -726,6 +732,86 @@ $('.show-more-button').click(function () {
 
   $(this).closest('.tags').toggleClass('tags_show-all');
 });
+
+var Timer =
+/*#__PURE__*/
+function () {
+  function Timer(selector) {
+    var _this = this;
+
+    _classCallCheck(this, Timer);
+
+    if ($(selector).length === 0) return false;
+    this.firstDaysNode = $(selector).find('.timer__field:nth-child(1) .timer__digit:nth-child(1)');
+    this.secondDaysNode = $(selector).find('.timer__field:nth-child(1) .timer__digit:nth-child(2)');
+    this.firstHoursNode = $(selector).find('.timer__field:nth-child(2) .timer__digit:nth-child(1)');
+    this.secondHoursNode = $(selector).find('.timer__field:nth-child(2) .timer__digit:nth-child(2)');
+    this.firstMinutesNode = $(selector).find('.timer__field:nth-child(3) .timer__digit:nth-child(1)');
+    this.secondMinutesNode = $(selector).find('.timer__field:nth-child(3) .timer__digit:nth-child(2)');
+    this.deadline = new Date($(selector).attr('data-deadline'));
+    this.timer = 0;
+    this.timeBetweenDates();
+    this.timer = setInterval(function () {
+      return _this.timeBetweenDates();
+    }, 1000);
+  }
+
+  _createClass(Timer, [{
+    key: "clear",
+    value: function clear() {
+      clearInterval(this.timer);
+      this.firstDaysNode.text('0');
+      this.secondDaysNode.text('0');
+      this.firstMinutesNode.text('0');
+      this.secondMinutesNode.text('0');
+      this.firstHoursNode.text('0');
+      this.secondHoursNode.text('0');
+    }
+  }, {
+    key: "timeBetweenDates",
+    value: function timeBetweenDates() {
+      var now = new Date();
+      var difference = this.deadline.getTime() - now.getTime();
+
+      if (difference <= 0) {
+        console.log(this.deadline);
+        this.clear();
+      } else {
+        var minutes = Math.floor(difference / 60 / 1000) % 60;
+        var hours = Math.floor(difference / 60 / 60 / 1000) % (60 * 60);
+        var days = Math.floor(difference / 24 / 60 / 60 / 1000) % (60 * 60 * 24);
+        minutes = minutes.toString().split('');
+        hours = hours.toString().split('');
+        days = days.toString().split('');
+
+        if (minutes.length === 1) {
+          this.secondMinutesNode.text(minutes[0]);
+        } else {
+          this.firstMinutesNode.text(minutes[0]);
+          this.secondMinutesNode.text(minutes[1]);
+        }
+
+        if (hours.length === 1) {
+          this.secondHoursNode.text(hours[0]);
+        } else {
+          this.firstHoursNode.text(hours[0]);
+          this.secondHoursNode.text(hours[1]);
+        }
+
+        if (days.length === 1) {
+          this.secondDaysNode.text(days[0]);
+        } else {
+          this.firstDaysNode.text(days[0]);
+          this.secondDaysNode.text(days[1]);
+        }
+      }
+    }
+  }]);
+
+  return Timer;
+}();
+
+var timer = new Timer('.timer');
 
 function updateSwiperOnBreakpoint(swiperClass, swiperConfig, maxWidthsArray) {
   if ($('.' + swiperClass).length === 0) return false;
