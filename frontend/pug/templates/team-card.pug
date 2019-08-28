@@ -1,0 +1,23 @@
+mixin team-card(props = 0)
+
+  - const {image, name, position = false, tels = false, hotline = false, email = false} = props;
+
+  .team-card
+    .team-card__image-wrapper
+      img(src= image, alt="Фотография работника").team-card__image
+
+    .team-card__name= name
+
+    if position
+      .team-card__position= position
+
+    if tels
+
+      each val, key in tels
+        a(href= `tel: ${val}`).team-card__tel= key
+
+    if hotline
+      a(href="tel:88005555555").team-card__tel 8 (800) 555-55-55
+
+    if email
+      a(href= `mailto:${email}`).team-card__email= email

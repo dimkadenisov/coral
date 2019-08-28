@@ -49,4 +49,3 @@ const seriesSwiperConfig = {
 };
 
 let seriesSwipers = generateSwipers({swiperClass: 'series-swiper', swiperConfig: seriesSwiperConfig});
-console.log(seriesSwipers);

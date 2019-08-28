@@ -1,0 +1,98 @@
+extends ../templates/page
+include ../templates/social-links
+include ../templates/team-card
+
+block title
+  |Контакты
+
+block content
+  .page_contacts
+    .container
+      .row
+        .col-12
+          include ../components/breadcrumbs
+    main.main
+      .container
+        h1.section__heading Контакты
+        .row
+          .col-12.col-sm-6.col-md-5.col-lg-4.col-xxl-3
+            span.section__description Наш офис
+            p.styled-paragraph 248033 г. Калуга, 2-й Академический проезд, д.13
+            span.section__category Часы работы
+            p.styled-paragraph
+              span.d-block пн-пт с 9:00 до 18:00
+              span.d-block сб-вс выходной
+            span.section__category GPS координаты:
+            p.styled-paragraph
+              span.d-block N 54°29.043‘
+              span.d-block E 36°13.152‘
+
+          .col-12.col-sm-6.col-md-5.col-lg-4.col-xxl-3.offset-md-1.offset-lg-0.offset-xxl-1
+            span.section__description Наш телефон и e-mail
+
+            a(href="tel:88002508373").phone-block__link
+              span.phone-block__phone-number
+                |8 (800)
+                |
+                span.phone-block__phone-number.phone-block__phone-number_red 250-83-73
+            span.d-block.phone-block__additional-text (бесплатный звонок)
+
+            div
+            a(href="tel:+7(4842)500520").phone-block__link
+              span.phone-block__phone-number.phone-block__phone-number_small
+                |+7 (4842) 500-520
+
+            div
+            a(href="tel:tel:+7(4842)500530").phone-block__link
+              span.phone-block__phone-number.phone-block__phone-number_small
+                |+7 (4842) 500-530
+
+            div
+            a(href="tel:tel:+7(4842)500521").d-inline-block.phone-block__link
+              span.phone-block__phone-number.phone-block__phone-number_small
+                |+7 (4842) 500-521
+            span.phone-block__additional-text (факс)
+
+            br
+
+            a(href="mailto:info@korall.ru").contacts-burger__email info@korall.ru
+
+          .col-12.col-lg-4.col-xxl-3.offset-xxl-1
+            .row
+              .col-12.col-sm-6.col-lg-12
+                span.section__description Мессенджеры
+                +social-links({button: {borderColor: 'gray'}})
+              .col-12.col-sm-6.col-lg-12
+                span.section__description Мы в соцсетях
+                +social-links({button: {borderColor: 'gray'}})
+
+      include ../components/map
+
+      .container
+        .row
+          .col-12
+            span.section__description Наша команда
+
+          .col-12.col-sm-6.col-lg-4.col-xl-3
+            +team-card({image: 'assets/img/sample-person.jpg', name: 'Аверин Юрий Викторович', position: 'Заместитель генерального директора по сбыту', tels: { '+7 (4841) 500-500': '+74841500500', '+7 (4841) 500-500': '+74841500500'}})
+
+          .col-12.col-sm-6.col-lg-4.col-xl-3
+            +team-card({image: 'assets/img/sample-person.jpg', name: 'Аверин Юрий Викторович', position: 'Заместитель генерального директора по сбыту', tels: {'+7 (4841) 500-500 доб. 1234': '+74841500500,1234'}, hotline: true, email: 'mail@mail.ru'})
+
+          .col-12.col-sm-6.col-lg-4.col-xl-3
+            +team-card({image: 'assets/img/sample-person.jpg', name: 'Аверин Юрий Викторович', position: 'Заместитель генерального директора по сбыту', tels: { '+7 (4841) 500-500': '+74841500500', '+7 (4841) 500-500': '+74841500500'}})
+
+          .col-12.col-sm-6.col-lg-4.col-xl-3
+            +team-card({image: 'assets/img/sample-person.jpg', name: 'Аверин Юрий Викторович', position: 'Заместитель генерального директора по сбыту', tels: {'+7 (4841) 500-500 доб. 1234': '+74841500500,1234'}, hotline: true, email: 'mail@mail.ru'})
+
+          .col-12.col-sm-6.col-lg-4.col-xl-3
+            +team-card({image: 'assets/img/sample-person.jpg', name: 'Аверин Юрий Викторович', position: 'Заместитель генерального директора по сбыту', tels: { '+7 (4841) 500-500': '+74841500500', '+7 (4841) 500-500': '+74841500500'}})
+
+          .col-12.col-sm-6.col-lg-4.col-xl-3
+            +team-card({image: 'assets/img/sample-person.jpg', name: 'Аверин Юрий Викторович', position: 'Заместитель генерального директора по сбыту', tels: {'+7 (4841) 500-500 доб. 1234': '+74841500500,1234'}, hotline: true, email: 'mail@mail.ru'})
+
+          .col-12.col-sm-6.col-lg-4.col-xl-3
+            +team-card({image: 'assets/img/sample-person.jpg', name: 'Аверин Юрий Викторович', position: 'Заместитель генерального директора по сбыту', tels: { '+7 (4841) 500-500': '+74841500500', '+7 (4841) 500-500': '+74841500500'}})
+
+          .col-12.col-sm-6.col-lg-4.col-xl-3
+            +team-card({image: 'assets/img/sample-person.jpg', name: 'Аверин Юрий Викторович', position: 'Заместитель генерального директора по сбыту', tels: {'+7 (4841) 500-500 доб. 1234': '+74841500500,1234'}, hotline: true, email: 'mail@mail.ru'})

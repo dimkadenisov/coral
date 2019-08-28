@@ -1,6 +1,9 @@
 .news-post {
+  display: block;
   position: relative;
   margin-bottom: 40px;
+  color: $gray-700;
+  text-decoration: none;
 
   &__image {
     position: absolute;
@@ -76,6 +79,13 @@
 
     .news-post__description {
       display: block;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .news-post__name {
+      text-decoration: underline;
     }
   }
 }

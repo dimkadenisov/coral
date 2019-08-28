@@ -1,4 +1,4 @@
-include ../templates/button
+include ../templates/social-links
 
 footer.footer
   .container
@@ -76,17 +76,7 @@ footer.footer
       .d-block.d-sm-none.d-md-block.col-12.col-md-6.col-xl-3
         .footer__column
           span.d-none.d-md-block.footer__column-heading Контакты
-          ul.d-none.d-md-flex.social-links
-            li.social-links__item
-              +button({type: 'circle', tag: 'a', size: 'small', iconId: '#facebook'})(href='#', target='blank')
-            li.social-links__item
-              +button({type: 'circle', tag: 'a', size: 'small', iconId: '#vk'})(href='#', target='blank')
-            li.social-links__item
-              +button({type: 'circle', tag: 'a', size: 'small', iconId: '#ok'})(href='#', target='blank')
-            li.social-links__item
-              +button({type: 'circle', tag: 'a', size: 'small', iconId: '#instagram'})(href='#', target='blank')
-            li.social-links__item
-              +button({type: 'circle', tag: 'a', size: 'small', iconId: '#youtube-play'})(href='#', target='blank')
+          +social-links('d-none d-md-flex')
           a(href="tel:88002508373").phone-block__phone-number 8 (800)
             |
             |

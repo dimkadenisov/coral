@@ -1,6 +1,6 @@
 .phone-block {
   &__link {
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
@@ -12,6 +12,7 @@
     align-items: center;
     width: 48px;
     height: 48px;
+    margin-right: 20px;
     border: 2px solid $gray-400;
     border-radius: 50%;
     color: $gray-700;
@@ -20,10 +21,6 @@
   &__icon {
     width: 24px;
     height: 24px;
-  }
-
-  &__text {
-    margin-left: 20px;
   }
 
   &__phone-number {
@@ -37,7 +34,6 @@
     }
 
     &_small {
-      font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
       font-size: 17px;
     }
   }
@@ -47,6 +43,12 @@
     margin-top: 5px;
     color: $gray-600;
     font-size: 13px;
+  }
+
+  &__additional-text {
+    color: $gray-600;
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+    font-size: 17px;
   }
 
   &__link:hover,
@@ -62,8 +64,10 @@
     margin-left: auto;
 
     &__button {
+      margin-right: 0;
       border-color: transparent;
     }
+
     &__text {
       display: none;
     }
