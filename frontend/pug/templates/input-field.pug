@@ -34,5 +34,13 @@ mixin input-field(props)
         svg.input-field__icon
           use(xlink:href="#arrow-down")
 
+    when 'file'
+      label(class= 'input-field__file ' + classList)
+        input(type= type, class="visually-hidden inputfile" multiple)&attributes(attributes)
+        span.input-field__text
+          |Прикрепить файл
+        svg.input-field__icon
+          use(xlink:href="#clip")
+
     default
       input(type= type, class= classList)&attributes(attributes)

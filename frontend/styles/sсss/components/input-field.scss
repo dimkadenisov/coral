@@ -1,4 +1,5 @@
 .input-field {
+  position: relative;
   max-width: 500px;
   width: 100%;
   height: 56px;
@@ -13,6 +14,10 @@
   color: $gray-650;
   font-family: "Raleway", "Helvetica", "Arial", sans-serif;
   font-size: 15px;
+
+  &::-moz-placeholder{
+    opacity: 1;
+  }
 
   &_small {
     height: 40px;
@@ -67,6 +72,21 @@
     width: 1.5em;
     height: 1.5em;
     transform: translateY(-50%);
+  }
+
+  &__file {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    .input-field__text {
+      display: inline-block;
+      margin-right: 1em;
+    }
+
+    .input-field__icon {
+      right: 1.5em;
+    }
   }
 
   &__select {

@@ -1,0 +1,38 @@
+include ../templates/checkbox
+include ../templates/input-field
+include ../templates/button
+
+form.registration-form#registration-form(style="display: none;")
+  .container
+    .row
+      .col-12
+        span.section__description Регистрация
+        +checkbox(checked=true)
+          |Резидент РФ
+
+      .col-12.col-md-6
+        span.section__category Информация о компании
+        +input-field({type: 'text'})(placeholder="Наименование организации" required)
+        +input-field({type: 'text'})(placeholder="ОГРН" required)
+        +input-field({type: 'text'})(placeholder="Ваш город" required)
+        +input-field({type: 'file'})(placeholder="Прикрепить файл")
+      .col-12.col-md-6
+        span.section__category Информация о компании
+        +input-field({type: 'text'})(placeholder="Имя" required)
+        +input-field({type: 'tel'})(placeholder="Телефон" inputmode='tel' autocorrect='off' autocomplete='tel' required)
+        +input-field({type: 'email'})(placeholder="E-mail" inputmode='email' autocapitalize='off' autocorrect='off' autocomplete='email' required)
+      .col-12
+        +checkbox(required="required")
+          |Нажимая кнопку «Подписаться», я даю свое согласие на обработку моих
+          |
+          |
+          a(href="#" target="blank") персональных данных
+        +checkbox
+          |Хочу получать e-mail с новинками и спецпредложениями
+
+        +button({tag: 'button', color: 'red'})
+          |Зарегистрироваться
+
+        .registration-form__link-wrapper
+          a(href="#").registration-form__link
+            |Авторизоваться

@@ -1,0 +1,40 @@
+.registration-form {
+  max-width: 850px;
+  width: 100%;
+
+  .checkbox__label {
+    margin-bottom: 10px;
+  }
+
+  .section__category {
+    margin-top: 20px;
+  }
+
+  .input-field {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+  }
+
+  .button_red {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    color: $gray-600;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
