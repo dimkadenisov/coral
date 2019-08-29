@@ -329,6 +329,15 @@ var heroSwiper = $('.hero-swiper').length ? new Swiper('.hero-swiper', {
   observerParents: true,
   observeSlideChildren: true
 }) : false;
+var inputs = document.querySelectorAll('.inputfile');
+inputs.forEach(function (input) {
+  var label = input.nextElementSibling;
+  var labelVal = label.innerHTML;
+  input.addEventListener('change', function (e) {
+    var fileName = this.files && this.files.length > 1 ? 'Выбрано ' + this.files.length + ' файлов' : e.target.value.split('\\').pop();
+    if (fileName) label.innerHTML = fileName;else label.innerHTML = labelVal;
+  });
+});
 $('.item-card .button_heart').click(function () {
   if ($(this).hasClass('button_heart_clicked')) {
     $(this).find('.button__text').text('В избранном');
@@ -594,6 +603,13 @@ $('.rating__star').click(function () {
   $(this).addClass('rating__star_active');
   $(this).closest('.rating').attr('data-value', $(this).attr('data-value'));
   $(this).closest('.rating').attr('data-disabled', 'data-disabled');
+});
+$('#registration-button').click(function () {
+  $.fancybox.open({
+    src: '#registration-form',
+    type: 'inline',
+    touch: false
+  });
 });
 var reviewsSwiperConfig = {
   slideClass: 'review',
