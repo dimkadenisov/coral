@@ -18,7 +18,7 @@
 
   &__input-wrapper {
     position: relative;
-    max-width: 500px;
+    max-width: 520px;
 
     .input-field {
       padding-right: 55px;
@@ -29,6 +29,10 @@
       top: 8px;
       right: 8px;
     }
+  }
+
+  .checkbox__label {
+    margin-top: 20px;
   }
 
   &_sidebar {
@@ -55,6 +59,15 @@
 
     .button {
       width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .subscription-form {
+    &_sidebar {
+      padding-right: 0;
+      padding-left: 0;
     }
   }
 }

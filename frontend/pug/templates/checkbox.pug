@@ -1,6 +1,10 @@
-mixin checkbox
+mixin checkbox(props = 0)
 
-  label.checkbox__label
+  - const { labelColor } = props;
+
+  - const labelClassList = labelColor ? 'checkbox__label checkbox__label_' + labelColor : 'checkbox__label';
+
+  label(class= labelClassList)
     input(type="checkbox").checkbox.visually-hidden&attributes(attributes)
     span.checkbox__checkbox
     block

@@ -21,6 +21,10 @@
     color: rgba($white, 0.5);
   }
 
+  &__label_dark {
+    color: rgba($gray-700, 0.5);
+  }
+
   &__checkbox {
     display: block;
     position: absolute;

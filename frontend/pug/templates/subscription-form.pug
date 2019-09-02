@@ -1,6 +1,7 @@
 mixin subscription-form(props = 0)
   include button
   include input-field
+  include checkbox
 
   - const {otherClasses = false, sidebar = false} = props;
 
@@ -26,6 +27,9 @@ mixin subscription-form(props = 0)
             .col-12.col-md-4.col-lg-12
               +button({color: 'red', size: 'small', color: 'no-bg', borderColor: 'red'})
                 |Подписаться
+            .col-12
+              +checkbox({labelColor: 'dark'})(checked=true require=true)
+                |Нажимая кнопку «Подписаться», я&nbsp;даю свое согласие на&nbsp;обработку моих&nbsp;персональных данных.
 
   else
     form(class= formClassList)
@@ -38,3 +42,5 @@ mixin subscription-form(props = 0)
               .subscription-form__input-wrapper
                 +input-field({type: 'email', borderColor: 'transparent'})(inputmode='email' placeholder='Укажите Вашу почту', autocapitalize='off', autocorrect='off', autocomplete='email', required)
                 +button({type: 'circle', size: 'small', color: 'red', iconId: '#mail'})
+              +checkbox({labelColor: 'dark'})(checked=true require=ture)
+                |Нажимая кнопку «Подписаться», я&nbsp;даю свое согласие на&nbsp;обработку моих&nbsp;персональных данных.

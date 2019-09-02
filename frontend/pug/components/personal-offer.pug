@@ -1,5 +1,6 @@
 include ../templates/button
 include ../templates/input-field
+include ../templates/checkbox
 
 form.personal-offer
   fieldset.personal-offer__fieldset
@@ -21,8 +22,7 @@ form.personal-offer
 
           +button({type: 'icon_left', iconId: '#writing'})
             |Оставить заявку
+
         .col-12
-          label.checkbox__label.checkbox__label_light
-            input(type="checkbox" required).checkbox.visually-hidden
-            span.checkbox__checkbox
+          +checkbox({labelColor: 'light'})(checked=true require=ture)
             |Нажимая кнопку «Оставить заявку», я&nbsp;даю свое согласие на&nbsp;обработку моих&nbsp;персональных данных.
