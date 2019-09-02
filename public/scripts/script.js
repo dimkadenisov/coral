@@ -330,14 +330,22 @@ var heroSwiper = $('.hero-swiper').length ? new Swiper('.hero-swiper', {
   observeSlideChildren: true
 }) : false;
 var inputs = document.querySelectorAll('.inputfile');
-inputs.forEach(function (input) {
+
+var _loop = function _loop(i) {
+  var input = inputs[i];
   var label = input.nextElementSibling;
   var labelVal = label.innerHTML;
   input.addEventListener('change', function (e) {
     var fileName = this.files && this.files.length > 1 ? 'Выбрано ' + this.files.length + ' файлов' : e.target.value.split('\\').pop();
     if (fileName) label.innerHTML = fileName;else label.innerHTML = labelVal;
   });
-});
+};
+
+for (var i = 0; i < inputs.length; i++) {
+  _loop(i);
+}
+
+;
 $('.item-card .button_heart').click(function () {
   if ($(this).hasClass('button_heart_clicked')) {
     $(this).find('.button__text').text('В избранном');
