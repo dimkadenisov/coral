@@ -1,6 +1,7 @@
 const inputs = document.querySelectorAll('.inputfile');
 
-inputs.forEach((input) => {
+for (let i = 0; i < inputs.length; i++) {
+  const input = inputs[i];
   const label	 = input.nextElementSibling;
   const labelVal = label.innerHTML;
 
@@ -12,4 +13,4 @@ inputs.forEach((input) => {
     if (fileName) label.innerHTML = fileName;
     else label.innerHTML = labelVal;
 	});
-});
+};

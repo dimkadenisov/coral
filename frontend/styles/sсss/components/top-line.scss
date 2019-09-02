@@ -170,28 +170,3 @@
     }
   }
 }
-
-// @media screen and (max-width: 575px) {
-//   .top-line {
-//     &__list_left {
-//       margin: 10px 0;
-//       border-bottom: none;
-
-//       .top-line__list-item {
-//         &:not(:first-child) {
-//           display: none;
-//         }
-//       }
-//     }
-
-//     &__list_right {
-//       display: none;
-//     }
-
-//     &_scrolled {
-//       .top-line__list_left{
-//         border-bottom: none;
-//       }
-//     }
-//   }
-// }

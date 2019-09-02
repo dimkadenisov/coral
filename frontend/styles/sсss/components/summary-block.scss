@@ -1,0 +1,23 @@
+.summary-block {
+  &__row {
+    margin-bottom: 10px;
+    text-align: right;
+  }
+
+  &__name {
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  &__amount {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 17px;
+  }
+
+  &__amount_red {
+    color: $red-200;
+    font-size: 24px;
+  }
+}

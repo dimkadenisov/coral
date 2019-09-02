@@ -1,6 +1,3 @@
-
-
-
 class Timer {
   constructor(selector) {
     if ($(selector).length === 0) return false;

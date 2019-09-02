@@ -18,6 +18,10 @@
   letter-spacing: 0.1em;
   cursor: pointer;
 
+  &[disabled] {
+    filter: grayscale(100%);
+  }
+
   &__icon {
     display: block;
     width: 20px;
@@ -33,6 +37,10 @@
   &_red {
     color: $white;
     background-color: $red-300;
+
+    &[disabled] {
+      filter: grayscale(100%) brightness(1.5);
+    }
 
     &:hover,
     &:focus {
@@ -176,17 +184,24 @@
   }
 
   &_icon_bg_lighter {
-    svg {
+    .button__icon {
       border-radius: 50%;
       background-color: rgba($white, 0.2);
     }
   }
 
   &_icon_bg_red {
-    svg {
+    .button__icon {
       border-radius: 50%;
       background-color: $red-200;
       color: $white;
+    }
+  }
+
+  &_icon_bg_white {
+    .button__icon {
+      border-radius: 50%;
+      background-color: $white;
     }
   }
 

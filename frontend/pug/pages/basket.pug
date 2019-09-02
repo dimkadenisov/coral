@@ -1,0 +1,63 @@
+extends ../templates/page
+include ../templates/subscription-form.pug
+include ../templates/input-field.pug
+include ../templates/button.pug
+
+block title
+  |Корзина
+
+block content
+  .page_basket
+    .container
+      .row
+        .col-12
+          include ../components/breadcrumbs
+          h1.section__heading Корзина
+
+        .col-12
+          .main
+            .row
+              .col-12
+                include ../components/steps-bar
+
+              .col-6.col-md-5.col-lg-4.col-xl-3
+                +input-field({type: 'text', otherClasses: 'page_basket__code-input-field'})(placeholder="Код товара")
+
+              .col-6
+                button.button.button_icon_left.button_gray.button_icon_bg_white.page_basket__add-item-button
+                  svg.button__icon
+                    use(xlink:href="#plus")
+                  span.button__text Добавить к&nbsp;заказу
+                  span.button__text Добавить
+
+              .col-12.d-md-none
+                hr.separator
+
+              .col-12
+                hr.separator
+
+              .col-12
+                .row
+                  .col-12.col-md-6.col-lg-7.col-xl-6.order-1.order-md-0
+                    .row
+                      .col-6
+                        +input-field({type: 'text', otherClasses: 'page_basket__code-input-field'})(placeholder="Промокод")
+
+                      .col-6
+                        +button({color: 'no-bg', borderColor: 'red', iconBg: 'white', otherClasses: 'page_basket__code-button'})
+                          |Применить
+
+                  .col-12.col-md-6.col-lg-5.col-xl-6
+                    include ../components/summary-block
+                  .col-12.d-md-none
+                    hr.separator
+
+                  .col-12.d-md-none.order-2
+                    hr.separator
+
+              .col-12.d-flex.flex-wrap
+                +button({type: 'icon_right', color: 'gray', iconId: '#close', iconBg: 'white', otherClasses: 'page_basket__clear'})
+                  |Очистить заказ
+
+                +button({type: 'icon_right', color: 'red', iconId: '#arrow-right', iconBg: 'lighter', otherClasses: 'page_basket__submit'})
+                  |Оформить заказ
