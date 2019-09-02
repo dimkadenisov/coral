@@ -1,6 +1,4 @@
 .social-share {
-  margin-bottom: 40px;
-
   &__text {
     display: block;
     margin-bottom: 10px;
@@ -8,6 +6,8 @@
   }
 
   ul {
+    margin-bottom: 0;
+
     li {
       padding: 0;
 

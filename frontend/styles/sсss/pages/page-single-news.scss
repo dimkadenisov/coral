@@ -11,3 +11,11 @@
     margin-bottom: 50px;
   }
 }
+
+@media screen and (max-width: 991px) {
+  .page_single-news {
+    .article-footer {
+      margin-bottom: 30px;
+    }
+  }
+}

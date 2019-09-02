@@ -1,6 +1,5 @@
 .article-footer {
   display: flex;
-  margin-bottom: 100px;
 
   .button {
     margin-right: 85px;
@@ -8,7 +7,6 @@
 
   &__rating {
     margin-right: 85px;
-    margin-bottom: 40px;
   }
 }
 
@@ -24,18 +22,17 @@
   }
 }
 
-@media screen and (max-width: 991px) {
-  .article-footer,
-  .article-footer__rating,
-  .social-share {
-    margin-bottom: 0;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .article-footer {
     flex-wrap: wrap;
-    margin-bottom: 55px;
+
+    .rating {
+      margin-bottom: 30px;
+    }
+
+    .social-share {
+      margin-bottom: 30px;
+    }
 
     .button {
       order: 1;

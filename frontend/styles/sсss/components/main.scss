@@ -1,0 +1,19 @@
+.main {
+  margin-bottom: 100px;
+
+  &_no-gap {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .main {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    margin-bottom: 55px;
+  }
+}
