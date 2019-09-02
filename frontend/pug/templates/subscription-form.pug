@@ -29,7 +29,10 @@ mixin subscription-form(props = 0)
                 |Подписаться
             .col-12
               +checkbox({labelColor: 'dark'})(checked=true require=true)
-                |Нажимая кнопку «Подписаться», я&nbsp;даю свое согласие на&nbsp;обработку моих&nbsp;персональных данных.
+                |Нажимая кнопку «Подписаться», я даю свое согласие на обработку моих
+                |
+                |
+                a(href="#" target="blank") персональных данных
 
   else
     form(class= formClassList)
@@ -43,4 +46,7 @@ mixin subscription-form(props = 0)
                 +input-field({type: 'email', borderColor: 'transparent'})(inputmode='email' placeholder='Укажите Вашу почту', autocapitalize='off', autocorrect='off', autocomplete='email', required)
                 +button({type: 'circle', size: 'small', color: 'red', iconId: '#mail'})
               +checkbox({labelColor: 'dark'})(checked=true require=ture)
-                |Нажимая кнопку «Подписаться», я&nbsp;даю свое согласие на&nbsp;обработку моих&nbsp;персональных данных.
+                |Нажимая кнопку «Подписаться», я даю свое согласие на обработку моих
+                |
+                |
+                a(href="#" target="blank") персональных данных
