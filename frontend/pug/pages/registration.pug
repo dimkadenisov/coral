@@ -1,0 +1,18 @@
+extends ../templates/page
+
+block title
+  |Регистрация
+
+block content
+  .container
+    .row
+      .col-12
+        include ../components/breadcrumbs
+      .col-12
+        main.main
+          .row
+            .col-12
+              span.section__heading Регистрация
+
+            .col-12.col-lg-8.col-xl-7.col-xxl-6
+              include ../components/registration-form
