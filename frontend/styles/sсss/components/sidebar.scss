@@ -30,6 +30,11 @@
       background-color: $gray-200;
     }
 
+    &_active {
+      background-color: $gray-400;
+      font-weight: bold;
+    }
+
     &:hover,
     &:focus {
       background-color: $gray-400;
