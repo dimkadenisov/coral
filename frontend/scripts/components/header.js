@@ -31,24 +31,32 @@ const toggleBurgerMenu = () => {
 const openSubMenu = function(event) {
   if ($('.site-sections').hasClass('site-sections_opened') || $('.site-sections').hasClass('site-sections_scrolled')) {
     event.preventDefault();
-    $(event.target).addClass('site-sections__link_opened');
-    $(event.target).closest('.site-sections__list').children('.site-sections__list-item').addClass('d-none');
-    $(event.target).next().addClass('d-block');
-    $(event.target).parent().removeClass('d-none');
+    $(event.currentTarget).addClass('site-sections__link_opened');
+    $(event.currentTarget).closest('.site-sections__list').children('.site-sections__list-item').addClass('d-none');
+    $(event.currentTarget).next().addClass('d-block');
+    $(event.currentTarget).parent().removeClass('d-none');
     $('.top-line').addClass('d-none');
+
+    if ($(event.currentTarget).closest('.site-sections__list').prev().hasClass('site-sections__link_opened')) {
+      $(event.currentTarget).closest('.site-sections__list').prev().addClass('d-none');
+    }
   }
 };
 
-const closeSubMenu = (event = false) => {
-  if(event) event.preventDefault();
-  $('.site-sections__link_opened').closest('.site-sections__list').children('.site-sections__list-item').removeClass('d-none');
-  $('.site-sections__link_opened').next().removeClass('d-block');
-  $('.site-sections__link_opened').removeClass('site-sections__link_opened');
+const closeSubMenu = (event) => {
+  event.preventDefault();
+  $(event.currentTarget).closest('.site-sections__list').children('.site-sections__list-item').removeClass('d-none');
+  $(event.currentTarget).next().removeClass('d-block');
+  $(event.currentTarget).removeClass('site-sections__link_opened');
   $('.top-line').removeClass('d-none');
+
+  if ($(event.currentTarget).closest('.site-sections__list').prev().hasClass('site-sections__link_opened')) {
+    $(event.currentTarget).closest('.site-sections__list').prev().removeClass('d-none');
+  }
 };
 
 const toggleSubMenuState = (event) => {
-  return $('.site-sections__link').hasClass('site-sections__link_opened') ? closeSubMenu(event) : openSubMenu(event);
+  return $(event.currentTarget).hasClass('site-sections__link_opened') ? closeSubMenu(event) : openSubMenu(event);
 }
 
 const addScrollHeader = () => {
