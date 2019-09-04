@@ -176,7 +176,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
-                                <div class="header-line__content"><img class="header-line__logo" src="assets/icons/logo.svg" alt="Логотип" /><img class="header-line__logo_scrolled d-none" src="assets/icons/logo.svg" alt="Логотип" />
+                                <div class="header-line__content"><a href="/index.html"><img class="header-line__logo" src="assets/icons/logo.svg" alt="Логотип" /><img class="header-line__logo_scrolled d-none" src="assets/icons/logo.svg" alt="Логотип" /></a>
                                     <form class="search-form"><button class="search-form__button search-form__button_open" type="button"><svg class="search-form__icon">
                                                 <use xlink:href="#search"></use>
                                             </svg></button><input class="input-field input-field_small" type="text" placeholder="Поиск по сайту..." /><button class="search-form__button search-form__button_search"><svg class="search-form__icon">
@@ -208,8 +208,18 @@
                                             <ul class="site-sections__list">
                                                 <li class="site-sections__list-item"><a class="site-sections__link" href="#">Коллекции посуды</a></li>
                                                 <li class="site-sections__list-item"><a class="site-sections__link" href="#">Лицензионные коллекции</a></li>
-                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Кружки</a></li>
-                                                <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда для чая и кофе</a></li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="https://learn.javascript.ru/call-apply-decorators">Кружки<span class="site-sections__link-back">Назад</span><svg class="site-sections__icon">
+                                                            <use xlink:href="#arrow-left"></use>
+                                                        </svg></a>
+                                                    <ul class="site-sections__list">
+                                                        <li class="site-sections__list-item"><a class="site-sections__link" href="https://learn.javascript.ru/call-apply-decorators">Тест</a></li>
+                                                        <li class="site-sections__list-item"><a class="site-sections__link" href="#">Списка третьего</a></li>
+                                                        <li class="site-sections__list-item"><a class="site-sections__link" href="#">Уровня</a></li>
+                                                        <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда для чая и кофе</a></li>
+                                                        <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда столовая</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="site-sections__list-item"><a class="site-sections__link" href="https://learn.javascript.ru/call-apply-decorators">Посуда для чая и кофе</a></li>
                                                 <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда столовая</a></li>
                                                 <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда для детей</a></li>
                                                 <li class="site-sections__list-item"><a class="site-sections__link" href="#">Посуда из доломита</a></li>
@@ -334,6 +344,42 @@
                                     </svg><span class="button__text">Добавить к&nbsp;заказу</span><span class="button__text">Добавить</span></button></div>
                             <div class="col-12 d-md-none">
                                 <hr class="separator" />
+                            </div>
+                            <div class="col-12">
+                                <table class="basket-table">
+                                    <tbody>
+                                        <tr class="d-none d-lg-table-row">
+                                            <th></th>
+                                            <th>Наименование товара</th>
+                                            <th>Код товара</th>
+                                            <th>Цена</th>
+                                            <th>Кол-во</th>
+                                            <th>Сумма</th>
+                                            <th></th>
+                                        </tr>
+                                        <tr class="basket-table-row">
+                                            <td><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
+                                                        <use xlink:href="#heart"></use>
+                                                    </svg></button></td>
+                                            <td>
+                                                <div><img src="assets/img/sample-image-1-210.jpg" alt="" width="90" /><span>Подставка для ножей 11х22см Оранжевый мрамор с цветной</span></div>
+                                            </td>
+                                            <td><span class="catalog-item__small-text">Код: 749180</span><span class="catalog-item__small-text">Артикул: CS228826-A</span></td>
+                                            <td><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span></td>
+                                            <td>
+                                                <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                    <div class="items-counter__pack"><svg class="items-counter__icon">
+                                                            <use xlink:href="#box-closed-filled"></use>
+                                                        </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
+                                                </div>
+                                            </td>
+                                            <td><span class="price"><span class="price__value">99 175 ₽/шт.</span></span></td>
+                                            <td><button class="button button_circle button_no-bg button_small" data-description="Удалить товар из корзины"><svg class="button__icon">
+                                                        <use xlink:href="#delete"></use>
+                                                    </svg></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                             <div class="col-12">
                                 <hr class="separator" />
