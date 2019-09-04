@@ -142,20 +142,20 @@
 }
 
 .responsive-table table,
-.text-page table {
+.page_text table {
   width: 100%;
   border-collapse: collapse;
 }
 
 .responsive-table table tr:nth-child(odd),
-.text-page table tr:nth-child(odd) {
+.page_text table tr:nth-child(odd) {
   background: $gray-100;
 }
 
 .responsive-table table tr th,
 .responsive-table table tr td,
-.text-page table tr th,
-.text-page table tr td {
+.page_text table tr th,
+.page_text table tr td {
   padding: 16px 12px;
   color: $gray-700;
   font-size: 15px;
@@ -165,7 +165,7 @@
 }
 
 @media screen and (min-width: 992px) {
-  .text-page {
+  .page_text {
     .image-right {
       display: block;
       float: right;
@@ -183,7 +183,7 @@
 }
 
 @media screen and (max-width: 991px) {
-  .text-page {
+  .page_text {
     h1 {
       font-size: 32px;
     }
@@ -195,7 +195,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .text-page {
+  .page_text {
     h1 {
       font-size: 24px;
     }
@@ -203,7 +203,7 @@
 }
 
 @media screen and (max-width: 575px) {
-  .text-page {
+  .page_text {
     h1 {
       font-size: 24px
     }
