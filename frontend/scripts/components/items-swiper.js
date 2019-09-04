@@ -1,6 +1,6 @@
 function generateItemsSwipers() {
   const itemsSwiperConfig = {
-    slideClass: 'catalog-item',
+    slideClass: 'items-swiper__item',
     slidesPerView: 5,
     spaceBetween: 30,
 

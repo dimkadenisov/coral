@@ -2,13 +2,20 @@ include ../templates/catalog-item.pug
 
 .items-swiper
   .swiper-wrapper
-    +catalog-item({rating: {disabled: true, stars: 1}})
-    +catalog-item({stickers: ['sale'], name: 'Тёрка', rating: {disabled: true, stars: 2}})
-    +catalog-item({type: 'more', rating: false})
-    +catalog-item({stickers: ['hit'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true, rating: false})
-    +catalog-item({stickers: ['gift', 'hit', 'sale', 'new'], rating: {disabled: true, stars: 4}})
-    +catalog-item({stickers: ['sale', 'hit'], rating: {disabled: true, stars: 5}})
-    +catalog-item({stickers: ['gift', 'hit'], rating: {disabled: true, stars: 1}})
+    .items-swiper__item
+      +catalog-item({rating: {disabled: true, stars: 1}})
+    .items-swiper__item
+      +catalog-item({stickers: ['sale'], name: 'Тёрка', rating: {disabled: true, stars: 2}})
+    .items-swiper__item
+      +catalog-item({type: 'more', rating: false})
+    .items-swiper__item
+      +catalog-item({stickers: ['hit'], name: 'Подставка для ножей 11х22 см Оранжевый мрамор с цветной', sale: true, rating: false})
+    .items-swiper__item
+      +catalog-item({stickers: ['gift', 'hit', 'sale', 'new'], rating: {disabled: true, stars: 4}})
+    .items-swiper__item
+      +catalog-item({stickers: ['sale', 'hit'], rating: {disabled: true, stars: 5}})
+    .items-swiper__item
+      +catalog-item({stickers: ['gift', 'hit'], rating: {disabled: true, stars: 1}})
 
   .d-lg-none.pagination
   +button({type: 'circle', half: 'half_left', color: 'brown', iconId: '#arrow-left', otherClasses: 'prev'})
