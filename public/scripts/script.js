@@ -268,10 +268,11 @@ var closeSubMenu = function closeSubMenu(event) {
   $(event.currentTarget).closest('.site-sections__list').children('.site-sections__list-item').removeClass('d-none');
   $(event.currentTarget).next().removeClass('d-block');
   $(event.currentTarget).removeClass('site-sections__link_opened');
-  $('.top-line').removeClass('d-none');
 
   if ($(event.currentTarget).closest('.site-sections__list').prev().hasClass('site-sections__link_opened')) {
     $(event.currentTarget).closest('.site-sections__list').prev().removeClass('d-none');
+  } else {
+    $('.top-line').removeClass('d-none');
   }
 };
 
@@ -669,7 +670,7 @@ $('.header .search-form__button_open').click(function () {
   $(this).parent().toggleClass('search-form_opened');
 });
 var seenedItemsConfig = {
-  slideClass: 'catalog-item',
+  slideClass: 'seened-items__item',
   slidesPerView: 4,
   spaceBetween: 30,
   allowTouchMove: false,
