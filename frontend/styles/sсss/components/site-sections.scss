@@ -181,6 +181,16 @@
       .site-sections__link-back {
         display: block;
       }
+
+      &+.site-sections__list {
+        .site-sections__link:not(:only-child) {
+          padding-left: 35px;
+        }
+
+        .site-sections__link_opened:not(:only-child) {
+          padding-left: 15px;
+        }
+      }
     }
 
     &-back {
