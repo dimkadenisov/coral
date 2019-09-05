@@ -52,6 +52,12 @@
     }
   }
 
+  &_top-left {
+    &::before {
+      left: 0;
+    }
+  }
+
   &:hover {
     &:before,
     &::after {
