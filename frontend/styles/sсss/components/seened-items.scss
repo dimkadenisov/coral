@@ -4,6 +4,15 @@
     overflow-x: hidden;
   }
 
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  .catalog-item {
+    height: 100%;
+    margin-bottom: 0;
+  }
+
   .prev {
     position: absolute;
     top: 50%;

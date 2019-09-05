@@ -96,6 +96,11 @@
     margin-bottom: 18px;
     margin-left: 20px;
     text-align: left;
+    text-transform: lowercase;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
   }
 
   &__code {

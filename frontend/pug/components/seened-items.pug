@@ -2,12 +2,19 @@
   span.section__description Вы смотрели
   .seened-items__swiper
     .swiper-wrapper
-      +catalog-item()
-      +catalog-item()
-      +catalog-item()
-      +catalog-item()
-      +catalog-item()
-      +catalog-item()
+      .seened-items__item
+        +catalog-item({type: 'more', rating: false})
+      .seened-items__item
+        +catalog-item()
+      .seened-items__item
+        +catalog-item()
+      .seened-items__item
+        +catalog-item()
+      .seened-items__item
+        +catalog-item()
+      .seened-items__item
+        +catalog-item()
+
     .d-lg-none.pagination
     +button({type: 'circle', half: 'half_left', color: 'brown', iconId: '#arrow-left', otherClasses: 'prev'})
     +button({type: 'circle', half: 'half_right', color: 'brown', iconId: '#arrow-right', otherClasses: 'next'})

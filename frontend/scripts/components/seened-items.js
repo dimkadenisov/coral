@@ -1,5 +1,5 @@
 const seenedItemsConfig = {
-  slideClass: 'catalog-item',
+  slideClass: 'seened-items__item',
   slidesPerView: 4,
   spaceBetween: 30,
   allowTouchMove: false,
