@@ -1,0 +1,42 @@
+include ../templates/button
+
+.warning-basket#warning-basket(style="display: none;")
+  span.section__description Внимание
+  p.styled-paragpaph
+    |Компания Коралл занимается
+    |
+    |
+    b ОПТОВЫМИ ПРОДАЖАМИ
+    |
+    |
+    |посуды, осуществляя сотрудничество ТОЛЬКО с юридическими лицами и индивидуальными предпринимателями.
+  p.styled-paragpaph
+    |Приобрести нашу продукцию в розницу можно в
+    |
+    |
+    a(href="http://www.korallshops.ru/" target="blank").warning-basket__link сети магазинов КОРАЛЛ
+    |
+    |
+    |или в магазинах
+    |
+    |
+    a(href="http://korall.ru/partners" target="blank").warning-basket__link наших партнеров
+    |.
+
+  p.styled-paragpaph
+    |Минимальная сумма онлайн заказа -
+    |
+    |
+    b 15 000 ₽
+    |.
+
+  p.styled-paragpaph
+    |Для того, чтобы оформить заказ на нашем сайте, Вам необходимо зарегистрироваться
+
+  .registration-form__link-wrapper
+    +button({tag: 'button', color: 'red'})
+      |Зарегистрироваться
+
+  .registration-form__link-wrapper
+    a(href="#").registration-form__link
+      |Авторизоваться

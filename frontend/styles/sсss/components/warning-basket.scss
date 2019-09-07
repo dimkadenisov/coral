@@ -1,0 +1,12 @@
+.warning-basket {
+  max-width: 800px;
+
+  &__link {
+    color: $red-300;
+  }
+
+  .button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
