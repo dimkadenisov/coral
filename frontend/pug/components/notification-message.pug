@@ -1,0 +1,11 @@
+.notification-message
+  .container
+    .row
+      .col-12
+        .notification-message__content
+          b.notification-message__text Старая версия сайта находится по адресу
+            |
+            |
+            a(href="https://old.korall.ru/" target="blank").notification-message__link old.korall.ru
+
+          +button({type: 'circle', size: 'small', color: 'no-bg', iconId: '#close', otherClasses: 'button_delete'})
