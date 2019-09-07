@@ -479,6 +479,7 @@ function generateNewArrrivalsSwiper(thumbs) {
     slidesPerView: 1,
     spaceBetween: 0,
     allowTouchMove: false,
+    autoHeight: true,
     watchOverflow: true,
     thumbs: {
       swiper: thumbs,
