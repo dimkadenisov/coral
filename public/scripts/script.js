@@ -182,6 +182,15 @@ function generateNewArrivalsDates() {
 
 ;
 
+(function () {
+  $('[data-fancybox]').parent().each(function (index) {
+    var items = $(this).find('[data-fancybox]');
+    items.each(function () {
+      $(this).attr('data-fancybox', $(this).attr('data-fancybox') + '-' + index);
+    });
+  });
+})();
+
 function generateSwipers(_ref) {
   var _ref$swiperClass = _ref.swiperClass,
       swiperClass = _ref$swiperClass === void 0 ? false : _ref$swiperClass,
@@ -510,10 +519,12 @@ function renderIndexSwipers() {
 
 ;
 renderIndexSwipers();
+truncateText(".news-post__description");
 var photoSwiperConfig = {
   slideClass: 'photo-swiper__item',
   slidesPerView: 3,
   spaceBetween: 30,
+  watchOverflow: true,
   allowTouchMove: false,
   navigation: {
     prevEl: '.prev',
@@ -845,6 +856,32 @@ function () {
 }();
 
 var timer = new Timer('.timer');
+
+function truncateText(selector) {
+  if ($(selector).length === 0) return;
+  var box = $(selector + ":first");
+  var text = box.text();
+  var clone = $(document.createElement("div"));
+  $(clone).css("fontSize", box.css("fontSize"));
+  clone.css({
+    fontSize: box.css("fontSize"),
+    position: "absolute",
+    width: box.width() + "px"
+  });
+  clone.text(text);
+  document.body.appendChild(clone[0]);
+  var length = text.length;
+
+  for (; length >= 0 && $(clone).height() > box.height(); --length) {
+    console.log(length);
+    console.log("clone", $(clone).height(), "box", box.height());
+    console.log(text);
+    $(clone).text(text.substring(0, length) + "...");
+  }
+
+  $(selector).text(clone.text());
+  clone.remove();
+}
 
 function updateSwiperOnBreakpoint(swiperClass, swiperConfig, maxWidthsArray) {
   if ($('.' + swiperClass).length === 0) return false;

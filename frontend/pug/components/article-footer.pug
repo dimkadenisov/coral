@@ -2,7 +2,7 @@ include ../templates/button
 include ../templates/rating
 
 .article-footer
-  +button({type: 'icon_left', color: 'red', iconId: '#arrow-left', iconBg: 'lighter'})
+  +button({tag: 'a', type: 'icon_left', color: 'red', iconId: '#arrow-left', iconBg: 'lighter'})(href="https://zen.yandex.ru/")
     |Возврат к списку
   .article-footer__rating
     span.social-share__text Оцените материал:

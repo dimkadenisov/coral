@@ -2,6 +2,10 @@
   position: relative;
   overflow-x: hidden;
 
+  .swiper-wrapper {
+    align-items: stretch;
+  }
+
   &__item {
     margin-bottom: 20px;
   }
@@ -19,6 +23,8 @@
     position: absolute;
     top: 50%;
     left: 0;
+    margin: 0;
+    background-image: none;
     transform: translateY(-50%);
     z-index: 2;
   }
@@ -27,8 +33,14 @@
     position: absolute;
     top: 50%;
     right: 0;
+    margin: 0;
+    background-image: none;
     transform: translateY(-50%);
     z-index: 2;
+  }
+
+  .swiper-button-lock {
+    display: none;
   }
 }
 

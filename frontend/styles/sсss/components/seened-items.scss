@@ -17,7 +17,9 @@
     position: absolute;
     top: 50%;
     left: 0;
+    margin: 0;
     transform: translateY(-50%);
+    background-image: none;
     z-index: 2;
   }
 
@@ -25,7 +27,13 @@
     position: absolute;
     top: 50%;
     right: 0;
+    margin: 0;
     transform: translateY(-50%);
+    background-image: none;
     z-index: 2;
+  }
+
+  .swiper-button-lock {
+    display: none;
   }
 }

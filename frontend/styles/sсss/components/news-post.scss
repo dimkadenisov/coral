@@ -42,31 +42,11 @@
   &__description {
     display: none;
     position: relative;
-    max-height: calc(15px * 1.6 * 3);
+    height: 72px;
     padding-right: 0.65em;
     font-size: 15px;
     line-height: 1.6;
-    text-align: justify;
     overflow: hidden;
-
-    &::before {
-      content: '...';
-      display: inline-block;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-    }
-
-    &::after {
-      content: '';
-      display: inline-block;
-      position: absolute;
-      right: 0;
-      width: 1em;
-      height: 1em;
-      margin-top: 0.2em;
-      background: $white;
-    }
   }
 
   &_big {

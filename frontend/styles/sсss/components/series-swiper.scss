@@ -12,10 +12,18 @@
 
   .prev {
     left: 0;
+    margin: 0;
+    background-image: none;
   }
 
   .next {
     right: 0;
+    margin: 0;
+    background-image: none;
+  }
+
+  .swiper-button-lock {
+    display: none;
   }
 }
 

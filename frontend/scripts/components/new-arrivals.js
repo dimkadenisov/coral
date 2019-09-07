@@ -5,6 +5,8 @@ function generateNewArrrivalsSwiper(thumbs) {
     spaceBetween: 0,
     allowTouchMove: false,
 
+    autoHeight: true,
+
     watchOverflow: true,
 
     thumbs: {

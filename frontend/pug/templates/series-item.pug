@@ -3,11 +3,11 @@ mixin series-item(props = 0)
 
   - const { text = true, sticker = false} = props;
 
-  a(href="#").series-item
+  a(href="assets/img/sample-image-1-630.jpg" data-fancybox="fancybox").series-item
     if sticker
       .stickers
         +sticker({type: `${sticker}`})
     .catalog-item__image-wrapper
-      img(src="assets/img/catalog-item-sample-itmage-1.jpg", alt="Изображение товара" data-object-fit="cover").catalog-item__image
+      img(src="assets/img/sample-image-1-288.jpg", alt="Изображение товара" data-object-fit="cover").catalog-item__image
     if text
       b.series-item__text Снежная королева

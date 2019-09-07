@@ -2,7 +2,7 @@ const photoSwiperConfig = {
   slideClass: 'photo-swiper__item',
   slidesPerView: 3,
   spaceBetween: 30,
-
+  watchOverflow: true,
   allowTouchMove: false,
 
   navigation: {

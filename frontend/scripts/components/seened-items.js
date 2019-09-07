@@ -3,7 +3,6 @@ const seenedItemsConfig = {
   slidesPerView: 4,
   spaceBetween: 30,
   allowTouchMove: false,
-
   watchOverflow: true,
 
   keyboard: {

@@ -15,5 +15,5 @@ mixin series-swiper(props = 0)
       +series-item({ text })
 
     .d-lg-none.pagination
-    +button({type: 'circle', half: 'half_left', color: 'brown', iconId: '#arrow-left', otherClasses: 'prev'})
-    +button({type: 'circle', half: 'half_right', color: 'brown', iconId: '#arrow-right', otherClasses: 'next'})
+    +button({type: 'circle', half: 'half_left', color: 'brown', iconId: '#arrow-left', otherClasses: 'prev swiper-button-prev'})(type='button')
+    +button({type: 'circle', half: 'half_right', color: 'brown', iconId: '#arrow-right', otherClasses: 'next swiper-button-next'})(type='button')

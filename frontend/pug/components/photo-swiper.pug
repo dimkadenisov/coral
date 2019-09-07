@@ -2,7 +2,7 @@ include ../templates/button
 
 .photo-swiper
   .swiper-wrapper
-    a(href="assets/img/photo-swiper-image-545.jpg" data-fancybox="").photo-swiper__item
+    a(href="assets/img/photo-swiper-image-545.jpg" data-fancybox="photo-swiper-fancybox").photo-swiper__item
       .photo-swiper__image-wrapper
         picture.photo-swiper__image
           source(media="(min-width: 1344px)" srcset="assets/img/photo-swiper-image-300.jpg")
@@ -10,7 +10,7 @@ include ../templates/button
           source(media="(min-width: 576px)" srcset="assets/img/photo-swiper-image-240.jpg")
           source(media="(min-width: 300px)" srcset="assets/img/photo-swiper-image-545.jpg")
           img(src="assets/img/photo-swiper-image-545.jpg", alt="Изображение" data-object-fit="cover").photo-swiper__image
-    a(href="assets/img/photo-swiper-image-545.jpg" data-fancybox="").photo-swiper__item
+    a(href="assets/img/photo-swiper-image-545.jpg" data-fancybox="photo-swiper-fancybox").photo-swiper__item
       .photo-swiper__image-wrapper
         picture.photo-swiper__image
           source(media="(min-width: 1344px)" srcset="assets/img/photo-swiper-image-300.jpg")
@@ -18,7 +18,7 @@ include ../templates/button
           source(media="(min-width: 576px)" srcset="assets/img/photo-swiper-image-240.jpg")
           source(media="(min-width: 300px)" srcset="assets/img/photo-swiper-image-545.jpg")
           img(src="assets/img/photo-swiper-image-545.jpg", alt="Изображение" data-object-fit="cover").photo-swiper__image
-    a(href="assets/img/photo-swiper-image-545.jpg" data-fancybox="").photo-swiper__item
+    a(href="assets/img/photo-swiper-image-545.jpg" data-fancybox="photo-swiper-fancybox").photo-swiper__item
       .photo-swiper__image-wrapper
         picture.photo-swiper__image
           source(media="(min-width: 1344px)" srcset="assets/img/photo-swiper-image-300.jpg")
@@ -26,7 +26,7 @@ include ../templates/button
           source(media="(min-width: 576px)" srcset="assets/img/photo-swiper-image-240.jpg")
           source(media="(min-width: 300px)" srcset="assets/img/photo-swiper-image-545.jpg")
           img(src="assets/img/photo-swiper-image-545.jpg", alt="Изображение" data-object-fit="cover").photo-swiper__image
-    a(href="assets/img/photo-swiper-image-545.jpg" data-fancybox="").photo-swiper__item
+    a(href="assets/img/photo-swiper-image-545.jpg" data-fancybox="photo-swiper-fancybox").photo-swiper__item
       .photo-swiper__image-wrapper
         picture.photo-swiper__image
           source(media="(min-width: 1344px)" srcset="assets/img/photo-swiper-image-300.jpg")
@@ -35,5 +35,5 @@ include ../templates/button
           source(media="(min-width: 300px)" srcset="assets/img/photo-swiper-image-545.jpg")
           img(src="assets/img/photo-swiper-image-545.jpg", alt="Изображение" data-object-fit="cover").photo-swiper__image
   .pagination
-  +button({type: 'circle', half: 'half_left', color: 'brown', iconId: '#arrow-left', otherClasses: 'prev'})
-  +button({type: 'circle', half: 'half_right', color: 'brown', iconId: '#arrow-right', otherClasses: 'next'})
+  +button({type: 'circle', half: 'half_left', color: 'brown', iconId: '#arrow-left', otherClasses: 'prev swiper-button-prev'})(type='button')
+  +button({type: 'circle', half: 'half_right', color: 'brown', iconId: '#arrow-right', otherClasses: 'next swiper-button-next'})(type='button')
