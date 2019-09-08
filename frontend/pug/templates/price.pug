@@ -1,8 +1,11 @@
 mixin price(props= 0)
 
-  - const { sale= false } = props;
+  - const { sale = false, value = false} = props;
 
     span.price
       if sale
         span.price__old-value 99 999
-      span.price__value 99 175 ₽/шт.
+      if value
+        span.price__value= value
+      else
+        span.price__value 99 175 ₽/шт.

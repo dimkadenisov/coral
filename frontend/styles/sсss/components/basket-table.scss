@@ -1,0 +1,28 @@
+.basket-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  tr:nth-child(even) {
+    background-color: $gray-100;
+  }
+
+  &__thead {
+    background-color: $gray-100;
+  }
+
+  &__th {
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    font-size: 15px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .basket-table {
+    &__thead {
+      display: none;
+    }
+  }
+}

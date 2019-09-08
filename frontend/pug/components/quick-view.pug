@@ -2,6 +2,7 @@ include ../templates/price
 include ../templates/rating
 include ../templates/button
 include ../templates/item-gallery
+include ../templates/items-counter
 
 .quick-view#quick-view(style="display: none;")
   .container
@@ -22,7 +23,7 @@ include ../templates/item-gallery
       .col-7
         .quick-view__checkout
           +price({sale: true})
-          include ./items-counter
+          +items-counter()
           +button({type: 'circle', size: 'small', color: 'red', iconId: '#shopping-basket', otherClasses: 'buy-button'})
         include ./item-characteristics
       .col-12

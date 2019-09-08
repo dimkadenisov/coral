@@ -1,0 +1,15 @@
+mixin items-counter(props = 0)
+  include ../templates/button.pug
+
+  - const {initialValue = 0} = props;
+
+  .items-counter
+    +button({type: 'underlined'})
+      | -
+    input(type="number" inputmode="numeric" placeholder=initialValue min="0" max="100" step="1" value=initialValue).input-field.input-field_underlined
+    +button({type: 'underlined'})
+      | +
+    .items-counter__pack
+      svg.items-counter__icon
+        use(xlink:href="#box-closed-filled")
+      span.catalog-item__small-text.items-counter__amount 6/72

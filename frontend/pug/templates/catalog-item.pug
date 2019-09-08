@@ -9,6 +9,7 @@ include ./button.pug
 include ./sticker.pug
 include ./price.pug
 include ./rating.pug
+include ./items-counter.pug
 
 mixin catalog-item(props= 0)
 
@@ -40,7 +41,7 @@ mixin catalog-item(props= 0)
           +rating(rating)
         +price({sale})
         .catalog-item__checkout
-          include ../components/items-counter.pug
+          +items-counter()
           +button({type: 'circle', size: 'small', color: 'red', iconId: '#shopping-basket', otherClasses: 'catalog-item__buy buy-button'})
         +button({type: 'icon_left', size: 'extra-small', opacity: '09', iconId: '#eye', otherClasses: 'catalog-item__quick-view'})
           |Быстрый просмотр
@@ -95,7 +96,7 @@ mixin catalog-item(props= 0)
           span.catalog-item__small-text.catalog-item__code Код 799180
         +price({sale})
         .catalog-item__checkout
-          include ../components/items-counter.pug
+          +items-counter()
           +button({type: 'circle', size: 'small', color: 'red', iconId: '#shopping-basket', otherClasses: 'catalog-item__buy buy-button'})
         +button({type: 'icon_left', size: 'extra-small', opacity: '09', iconId: '#eye', otherClasses: 'catalog-item__quick-view'})
           |Быстрый просмотр
