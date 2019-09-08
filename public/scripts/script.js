@@ -6,6 +6,14 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+$(".basket-table-product .button_delete").click(function () {
+  var _this = this;
+
+  $.when($(this).closest(".basket-table-product").fadeOut()).done(function () {
+    $(_this).closest(".basket-table-product").remove();
+  });
+});
+
 (function () {
   if ($('.benefits__items').length === 0) return;
   var breakpoints = [window.matchMedia('(min-width: 768px)')];
@@ -520,6 +528,9 @@ function renderIndexSwipers() {
 ;
 renderIndexSwipers();
 truncateText(".news-post__description");
+$('.notification-message .button_delete').click(function () {
+  $(this).closest('.notification-message').remove();
+});
 var photoSwiperConfig = {
   slideClass: 'photo-swiper__item',
   slidesPerView: 3,
@@ -781,7 +792,7 @@ var Timer =
 /*#__PURE__*/
 function () {
   function Timer(selector) {
-    var _this = this;
+    var _this2 = this;
 
     _classCallCheck(this, Timer);
 
@@ -796,7 +807,7 @@ function () {
     this.timer = 0;
     this.timeBetweenDates();
     this.timer = setInterval(function () {
-      return _this.timeBetweenDates();
+      return _this2.timeBetweenDates();
     }, 1000);
   }
 
@@ -873,9 +884,6 @@ function truncateText(selector) {
   var length = text.length;
 
   for (; length >= 0 && $(clone).height() > box.height(); --length) {
-    console.log(length);
-    console.log("clone", $(clone).height(), "box", box.height());
-    console.log(text);
     $(clone).text(text.substring(0, length) + "...");
   }
 
@@ -917,3 +925,10 @@ function updateSwiperOnBreakpoint(swiperClass, swiperConfig, maxWidthsArray) {
 }
 
 ;
+$('#warning-basket-button').click(function () {
+  $.fancybox.open({
+    src: '#warning-basket',
+    type: 'inline',
+    touch: false
+  });
+});

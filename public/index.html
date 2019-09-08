@@ -187,10 +187,31 @@
                                                 </svg></span><span class="phone-block__text">
                                                 <span class="phone-block__phone-number">8 (800)
                                                     <span class="phone-block__phone-number phone-block__phone-number_red">250-83-73</span></span><span class="phone-block__description">Звонок по России бесплатный</span></span></a></div>
-                                    <div class="basket"><a class="basket__link" href="#"><span class="basket__button"><svg class="basket__icon">
+                                    <div class="basket"><a class="basket__link" href="#" id="warning-basket-button"><span class="basket__button"><svg class="basket__icon">
                                                     <use xlink:href="#shopping-basket"></use>
                                                 </svg></span><span class="basket__items-counter">15</span><span class="basket__text">
-                                                <span class="basket__amount">12 800 500 ₽.</span><span class="basket__description">Минимальный заказ: 30 000 р.</span></span></a></div><button class="burger-menu" type="button"><span class="burger-menu__icon"></span></button>
+                                                <span class="basket__amount">12 800 500 ₽.</span><span class="basket__description">Минимальный заказ: 30 000 р.</span></span></a>
+                                        <div class="warning-basket" id="warning-basket" style="display: none;"><span class="section__description">Внимание</span>
+                                            <p class="styled-paragpaph">Компания Коралл занимается
+
+                                                <b>ОПТОВЫМИ ПРОДАЖАМИ</b>
+
+                                                посуды, осуществляя сотрудничество ТОЛЬКО с юридическими лицами и индивидуальными предпринимателями.</p>
+                                            <p class="styled-paragpaph">Приобрести нашу продукцию в розницу можно в
+
+                                                <a class="warning-basket__link" href="http://www.korallshops.ru/" target="blank">сети магазинов КОРАЛЛ</a>
+
+                                                или в магазинах
+
+                                                <a class="warning-basket__link" href="http://korall.ru/partners" target="blank">наших партнеров</a>.</p>
+                                            <p class="styled-paragpaph">Минимальная сумма онлайн заказа -
+
+                                                <b>15&nbsp;000&nbsp;₽</b>.</p>
+                                            <p class="styled-paragpaph">Для того, чтобы оформить заказ на нашем сайте, Вам необходимо зарегистрироваться</p>
+                                            <div class="registration-form__link-wrapper"><button class="button button_red"><span class="button__text">Зарегистрироваться</span></button></div>
+                                            <div class="registration-form__link-wrapper"><a class="registration-form__link" href="#">Авторизоваться</a></div>
+                                        </div>
+                                    </div><button class="burger-menu" type="button"><span class="burger-menu__icon"></span></button>
                                 </div>
                             </div>
                         </div>
@@ -422,7 +443,7 @@
                                                     <div class="catalog-item__stickers"></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -452,7 +473,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star rating__star_active" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -501,7 +522,7 @@
                                                     </a>
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -533,7 +554,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_sale">%</span><span class="sticker sticker_new">New</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -563,7 +584,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star rating__star_active" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -595,7 +616,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -635,7 +656,7 @@
                                                     <div class="catalog-item__stickers"></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -665,7 +686,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star rating__star_active" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -714,7 +735,7 @@
                                                     </a>
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -746,7 +767,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_sale">%</span><span class="sticker sticker_new">New</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -776,7 +797,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star rating__star_active" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -808,7 +829,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -849,7 +870,7 @@
                                                     <div class="catalog-item__stickers"></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -879,7 +900,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star rating__star_active" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -928,7 +949,7 @@
                                                     </a>
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -960,7 +981,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_sale">%</span><span class="sticker sticker_new">New</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -990,7 +1011,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star rating__star_active" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1022,7 +1043,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1062,7 +1083,7 @@
                                                     <div class="catalog-item__stickers"></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1092,7 +1113,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star rating__star_active" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1141,7 +1162,7 @@
                                                     </a>
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1173,7 +1194,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_sale">%</span><span class="sticker sticker_new">New</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1203,7 +1224,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star rating__star_active" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1235,7 +1256,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1276,7 +1297,7 @@
                                                     <div class="catalog-item__stickers"></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1306,7 +1327,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star rating__star_active" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1355,7 +1376,7 @@
                                                     </a>
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1387,7 +1408,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_sale">%</span><span class="sticker sticker_new">New</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1417,7 +1438,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star rating__star_active" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1449,7 +1470,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1489,7 +1510,7 @@
                                                     <div class="catalog-item__stickers"></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1519,7 +1540,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star rating__star_active" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1568,7 +1589,7 @@
                                                     </a>
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1600,7 +1621,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_sale">%</span><span class="sticker sticker_new">New</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1630,7 +1651,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star rating__star_active" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1662,7 +1683,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1703,7 +1724,7 @@
                                                     <div class="catalog-item__stickers"></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1733,7 +1754,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star rating__star_active" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1782,7 +1803,7 @@
                                                     </a>
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1814,7 +1835,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_sale">%</span><span class="sticker sticker_new">New</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1844,7 +1865,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star rating__star_active" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1876,7 +1897,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1916,7 +1937,7 @@
                                                     <div class="catalog-item__stickers"></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1946,7 +1967,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star rating__star_active" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -1995,7 +2016,7 @@
                                                     </a>
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2027,7 +2048,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_sale">%</span><span class="sticker sticker_new">New</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2057,7 +2078,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star rating__star_active" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2089,7 +2110,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2130,7 +2151,7 @@
                                                     <div class="catalog-item__stickers"></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2160,7 +2181,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star rating__star_active" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2209,7 +2230,7 @@
                                                     </a>
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2241,7 +2262,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_sale">%</span><span class="sticker sticker_new">New</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2271,7 +2292,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star rating__star_active" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2303,7 +2324,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2343,7 +2364,7 @@
                                                     <div class="catalog-item__stickers"></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2373,7 +2394,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star rating__star_active" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2422,7 +2443,7 @@
                                                     </a>
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2454,7 +2475,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_sale">%</span><span class="sticker sticker_new">New</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2484,7 +2505,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star rating__star_active" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2516,7 +2537,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2557,7 +2578,7 @@
                                                     <div class="catalog-item__stickers"></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2587,7 +2608,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star rating__star_active" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2636,7 +2657,7 @@
                                                     </a>
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2668,7 +2689,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_sale">%</span><span class="sticker sticker_new">New</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2698,7 +2719,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star rating__star_active" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2730,7 +2751,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2770,7 +2791,7 @@
                                                     <div class="catalog-item__stickers"></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2800,7 +2821,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star rating__star_active" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2849,7 +2870,7 @@
                                                     </a>
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2881,7 +2902,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_sale">%</span><span class="sticker sticker_new">New</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2911,7 +2932,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star rating__star_active" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2943,7 +2964,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -2984,7 +3005,7 @@
                                                     <div class="catalog-item__stickers"></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -3014,7 +3035,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star rating__star_active" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -3063,7 +3084,7 @@
                                                     </a>
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -3095,7 +3116,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_sale">%</span><span class="sticker sticker_new">New</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -3125,7 +3146,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star rating__star_active" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -3157,7 +3178,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -3197,7 +3218,7 @@
                                                     <div class="catalog-item__stickers"></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -3227,7 +3248,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star rating__star_active" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -3276,7 +3297,7 @@
                                                     </a>
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -3308,7 +3329,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_sale">%</span><span class="sticker sticker_new">New</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -3338,7 +3359,7 @@
                                                     <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star rating__star_active" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -3370,7 +3391,7 @@
                                                             </svg></span><span class="sticker sticker_hit">Хит</span></div>
                                                     <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
                                                     <div class="catalog-item__checkout">
-                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                                             <div class="items-counter__pack"><svg class="items-counter__icon">
                                                                     <use xlink:href="#box-closed-filled"></use>
                                                                 </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -3585,7 +3606,7 @@
                     </div>
                     <div class="col-7">
                         <div class="quick-view__checkout"><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
-                            <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                            <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                 <div class="items-counter__pack"><svg class="items-counter__icon">
                                         <use xlink:href="#box-closed-filled"></use>
                                     </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
@@ -3729,6 +3750,18 @@
             </div>
         </div>
     </footer>
+    <div class="notification-message">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="notification-message__content"><b class="notification-message__text">Старая версия сайта находится по адресу
+                            <a class="notification-message__link" href="https://old.korall.ru/" target="blank">old.korall.ru</a></b><button class="button button_circle button_no-bg button_small button_delete"><svg class="button__icon">
+                                <use xlink:href="#close"></use>
+                            </svg></button></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="scripts/libraries/jquery.min.js"></script>
     <script src="scripts/libraries/swiper.min.js"></script>
     <script src="scripts/libraries/jquery.fancybox.min.js"></script>
