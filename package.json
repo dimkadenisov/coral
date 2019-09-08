@@ -33,6 +33,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-svg-sprite": "^1.5.0",
+    "prettier-airbnb-config": "^1.0.0",
     "stream-combiner2": "^1.1.1",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended-scss": "^3.3.0",
