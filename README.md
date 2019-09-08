@@ -18,3 +18,5 @@
 * [Скачать](https://dimkadenisov.github.io/coral/public/download.html)
 * [Контакты](https://dimkadenisov.github.io/coral/public/contacts.html)
 * [Кнопки всех соц сетей и мессенджеров](https://dimkadenisov.github.io/coral/public/social-links.html)
+* [Корзина](https://dimkadenisov.github.io/coral/public/basket.html)
+* [Оформление заказа](https://dimkadenisov.github.io/coral/public/checkout.html)
