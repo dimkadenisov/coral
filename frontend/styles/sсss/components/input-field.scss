@@ -99,6 +99,15 @@
     }
   }
 
+  &__textarea {
+    height: auto;
+    padding-top: 14px;
+    padding-bottom: 18px;
+    border-radius: 0;
+    line-height: 1.4;
+    resize: none;
+  }
+
   &__wrapper {
     display: inline-block;
     position: relative;

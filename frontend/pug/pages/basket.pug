@@ -2,6 +2,7 @@ extends ../templates/page
 include ../templates/subscription-form.pug
 include ../templates/input-field.pug
 include ../templates/button.pug
+include ../templates/steps-bar
 
 block title
   |Корзина
@@ -18,7 +19,7 @@ block content
           .main
             .row
               .col-12
-                include ../components/steps-bar
+                +steps-bar({activeItemNumber: 1})
 
               .col-6.col-md-5.col-lg-4.col-xl-3
                 +input-field({type: 'text', otherClasses: 'page_basket__code-input-field'})(placeholder="Код товара")

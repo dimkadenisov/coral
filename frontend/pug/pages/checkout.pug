@@ -1,0 +1,47 @@
+extends ../templates/page
+include ../templates/steps-bar
+include ../templates/input-field.pug
+
+block title
+  |Оформить заказ
+
+block content
+  .page_checkout
+    .container
+      .row
+        .col-12
+          include ../components/breadcrumbs
+
+        .col-12
+          .main
+            .row
+              .col-12
+                +steps-bar({activeItemNumber: 2})
+
+              .col-12.col-md-6.col-lg-4
+                +input-field({type: 'select'})(required=true)
+                  option(selected= true disabled= true) Выберите профиль доставки
+                  option Стандартная
+                  option Экспресс
+
+              .col-12
+                hr.separator
+
+              .col-12
+                include ../components/shipping-form
+
+              .col-12
+                hr.separator
+
+              .col-12
+                .row
+                  .col-12.col-md-6.col-lg-7.col-xl-4
+                    .d-flex
+                      +input-field({type: 'text', otherClasses: 'page_basket__code-input-field'})(placeholder="Промокод")
+
+                      +button({color: 'no-bg', borderColor: 'red', iconBg: 'white', otherClasses: 'page_basket__code-button'})
+                        |Применить
+
+                  .col-md-6.col-lg-5.col-xl-4.col-xxl-3.offset-xl-4.offset-xxl-5
+                    +button({type: 'icon_right', color: 'red', iconId: '#arrow-right', iconBg: 'lighter', otherClasses: 'page_basket__submit'})
+                      |Подтвердить заказ

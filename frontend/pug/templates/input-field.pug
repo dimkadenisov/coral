@@ -42,5 +42,8 @@ mixin input-field(props)
         svg.input-field__icon
           use(xlink:href="#clip")
 
+    when 'textarea'
+      textarea(class= 'input-field__textarea ' + classList)&attributes(attributes)
+
     default
       input(type= type, class= classList)&attributes(attributes)

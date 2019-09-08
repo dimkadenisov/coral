@@ -1,0 +1,66 @@
+.page_checkout {
+  .input-field__wrapper,
+  .input-field__select {
+    max-width: none;
+    width: 100%;
+  }
+
+  .page_basket__code-input-field {
+    margin-right: 15px;
+  }
+
+  .page_basket__submit {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1343px) {
+  .page_checkout {
+    .page_basket__code-input-field {
+      max-width: 169px;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .page_checkout {
+    .page_basket__code-input-field {
+      max-width: none;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .page_checkout {
+    .page_basket__code-input-field {
+      max-width: 149px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page_checkout {
+    .page_basket__code-input-field {
+      max-width: calc(50% - 8px);
+    }
+
+    .page_basket__submit {
+      margin-left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .page_checkout {
+    .page_basket__code-input-field {
+      margin-bottom: 20px;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .page_basket__code-button {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+}

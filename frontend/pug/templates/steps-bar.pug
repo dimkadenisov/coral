@@ -1,0 +1,46 @@
+mixin steps-bar(props = 0)
+
+  - const {activeItemNumber} = props;
+
+  .steps-bar
+    if activeItemNumber === 1
+      .steps-bar__item.steps-bar__item_active
+        svg.steps-bar__icon
+          use(xlink:href="#shopping-basket")
+        span.steps-bar__text Корзина
+      .steps-bar__item
+        svg.steps-bar__icon
+          use(xlink:href="#user")
+        span.steps-bar__text Контактные данные
+      .steps-bar__item
+        svg.steps-bar__icon
+          use(xlink:href="#shopping-list")
+        span.steps-bar__text Заказ оформлен!
+
+    if activeItemNumber === 2
+      .steps-bar__item
+        svg.steps-bar__icon
+          use(xlink:href="#shopping-basket")
+        span.steps-bar__text Корзина
+      .steps-bar__item.steps-bar__item_active
+        svg.steps-bar__icon
+          use(xlink:href="#user")
+        span.steps-bar__text Контактные данные
+      .steps-bar__item
+        svg.steps-bar__icon
+          use(xlink:href="#shopping-list")
+        span.steps-bar__text Заказ оформлен!
+
+    if activeItemNumber === 3
+      .steps-bar__item
+        svg.steps-bar__icon
+          use(xlink:href="#shopping-basket")
+        span.steps-bar__text Корзина
+      .steps-bar__item
+        svg.steps-bar__icon
+          use(xlink:href="#user")
+        span.steps-bar__text Контактные данные
+      .steps-bar__item.steps-bar__item_active
+        svg.steps-bar__icon
+          use(xlink:href="#shopping-list")
+        span.steps-bar__text Заказ оформлен!

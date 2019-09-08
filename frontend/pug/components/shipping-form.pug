@@ -1,0 +1,16 @@
+.shipping-form
+  .row
+    .col-md-6.col-lg-4
+      span.section__category Контактное лицо
+      +input-field({type: 'text'})(placeholder="Имя" required)
+      +input-field({type: 'tel'})(placeholder="Телефон" inputmode='tel' autocorrect='off' autocomplete='tel' required)
+      +input-field({type: 'email'})(placeholder="E-mail" inputmode='email' autocapitalize='off' autocorrect='off' autocomplete='email' required)
+
+    .col-md-6.col-lg-4
+      span.section__category Информация о компании
+      +input-field({type: 'text'})(placeholder="Наименование организации" required)
+      +input-field({type: 'text'})(placeholder="Адрес доставки" required)
+
+    .col-12.col-lg-4
+      span.section__category Примечание
+      +input-field({type: 'textarea'})(placeholder="Текст" rows="7")
