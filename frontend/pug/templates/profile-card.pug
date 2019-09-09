@@ -1,0 +1,23 @@
+mixin profile-card(props = 0)
+  include button
+
+  - const {cardColor = false, text = true, buttonMore = true, buttonDelete = true, manager = false, cardHeading = 'Персональное предложение в две строчки или больше'} = props;
+
+  - const cardClassList = cardColor ? `profile-card profile-card_${cardColor}` : 'profile-card'
+
+  div(class= cardClassList)
+    span.profile-card__heading= cardHeading
+
+    if manager
+      include ../components/manager-card
+
+    if text
+      p.styled-paragraph.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+    if buttonMore
+      +button({type: 'underlined'})
+        |Подробнее
+
+    if buttonDelete
+      +button({type: 'circle', size: 'small', color: 'no-bg', iconId: '#close', otherClasses: 'button_delete'})

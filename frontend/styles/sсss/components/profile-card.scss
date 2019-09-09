@@ -1,0 +1,64 @@
+.profile-card {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 30px 25px 25px;
+  background-image: url('../assets/img/flower-pattern.png');
+  border-bottom: 35px solid $white;
+  overflow: hidden;
+
+  &__heading {
+    display: block;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .button_underlined {
+    background-color: transparent;
+    border-bottom-color: $gray-500;
+
+    &:hover,
+    &:focus {
+      border-bottom-color: $gray-600;
+    }
+  }
+
+  .button_delete {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    .button__icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &_cyan {
+    background-color: $cyan-200;
+  }
+
+  &_gray {
+    background-color: $gray-200;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .profile-card {
+    padding-top: 40px;
+
+    &__heading {
+      margin-right: 0;
+      font-size: 17px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .profile-card {
+    border-bottom: 15px solid $white;
+  }
+}

@@ -1,0 +1,25 @@
+extends ../templates/page
+include ../templates/sidebar
+include ../templates/profile-card
+
+block title
+  |Личный кабинет
+block content
+  .container
+    .row
+      .d-none.d-lg-block.col-3
+        +sidebar({separateLink: false, itemsAmount: 10})
+      .col-12.col-lg-9
+        include ../components/breadcrumbs
+        main.main
+          h1.section__heading Личный кабинет
+          .row
+            .col-12.col-md-6
+              +profile-card({cardColor: 'cyan'})
+            .col-12.col-md-6
+              +profile-card({cardColor: 'gray', text: false, buttonMore: false, buttonDelete: false, manager: true, cardHeading: 'Ваш персональный менеджер'})
+            .col-12
+              hr.separator
+              include ../components/seened-items
+              hr.separator
+              include ../components/seened-items
