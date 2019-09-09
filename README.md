@@ -20,3 +20,4 @@
 * [Кнопки всех соц сетей и мессенджеров](https://dimkadenisov.github.io/coral/public/social-links.html)
 * [Корзина](https://dimkadenisov.github.io/coral/public/basket.html)
 * [Оформление заказа](https://dimkadenisov.github.io/coral/public/checkout.html)
+* [Личный кабинет](https://dimkadenisov.github.io/coral/public/profile.html)
