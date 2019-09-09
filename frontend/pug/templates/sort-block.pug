@@ -1,9 +1,9 @@
 include ../templates/button
 include ../templates/input-field
 
-mixin sort-block(props= 0)
+mixin sort-block(props = 0)
 
-  -const {filter= false} = props
+  -const {filter = false, downloadButton = true, changeLayoutButtons = true} = props
 
   .sort-block
     if filter
@@ -23,11 +23,14 @@ mixin sort-block(props= 0)
         option 24
         option 48
 
-    +button({tag: 'a', size: 'small', borderColor: 'red', otherClasses: 'sort-block__pricelist-button'})(href='#', target='blank')
+    if downloadButton
+      +button({tag: 'a', size: 'small', borderColor: 'red', otherClasses: 'sort-block__pricelist-button'})(href='#', target='blank')
       |Скачать прайс-лист
-    a(href="#").sort-block__change-layout-button.sort-block__change-layout-button_active
-      svg.sort-block__icon
-        use(xlink:href="#window")
-    a(href="#").sort-block__change-layout-button
-      svg.sort-block__icon
-        use(xlink:href="#list")
+
+    if changeLayoutButtons
+      a(href="#").sort-block__change-layout-button.sort-block__change-layout-button_active
+        svg.sort-block__icon
+          use(xlink:href="#window")
+      a(href="#").sort-block__change-layout-button
+        svg.sort-block__icon
+          use(xlink:href="#list")

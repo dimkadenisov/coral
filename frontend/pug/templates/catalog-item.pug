@@ -13,7 +13,7 @@ include ./items-counter.pug
 
 mixin catalog-item(props= 0)
 
-  - let {type='', stickers='', name='Замечательный товар, который нужен всем людям в мире', sale= false, rating= {}} = props;
+  - let {type='', stickers='', name='Замечательный товар, который нужен всем людям в мире', sale= false, rating= {}, deleteButton = false} = props;
 
   case type
 
@@ -45,7 +45,12 @@ mixin catalog-item(props= 0)
           +button({type: 'circle', size: 'small', color: 'red', iconId: '#shopping-basket', otherClasses: 'catalog-item__buy buy-button'})
         +button({type: 'icon_left', size: 'extra-small', opacity: '09', iconId: '#eye', otherClasses: 'catalog-item__quick-view'})
           |Быстрый просмотр
-        +button({type: 'circle', size: 'small', color: 'no-bg', iconId: '#heart', otherClasses: 'button_heart show-tooltip show-tooltip_top-right'})(data-description="Добавить товар в избранное")
+
+        if deleteButton
+          +button({type: 'circle', size: 'small', color: 'no-bg', iconId: '#close', otherClasses: 'button_delete'})
+
+        else
+          +button({type: 'circle', size: 'small', color: 'no-bg', iconId: '#heart', otherClasses: 'button_heart show-tooltip show-tooltip_top-right'})(data-description="Добавить товар в избранное")
 
     when 'more'
 
@@ -69,7 +74,12 @@ mixin catalog-item(props= 0)
           |Подробнее
         +button({type: 'icon_left', size: 'extra-small', opacity: '09', iconId: '#eye', otherClasses: 'catalog-item__quick-view'})
           |Быстрый просмотр
-        +button({type: 'circle', size: 'small', color: 'no-bg', iconId: '#heart', otherClasses: 'button_heart show-tooltip show-tooltip_top-right'})(data-description="Добавить товар в избранное")
+
+        if deleteButton
+          +button({type: 'circle', size: 'small', color: 'no-bg', iconId: '#close', otherClasses: 'button_delete'})
+
+        else
+          +button({type: 'circle', size: 'small', color: 'no-bg', iconId: '#heart', otherClasses: 'button_heart show-tooltip show-tooltip_top-right'})(data-description="Добавить товар в избранное")
 
     when 'table'
 
