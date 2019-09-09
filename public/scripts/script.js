@@ -579,6 +579,13 @@ $('.product-types .button').click(function () {
   $(this).closest('.product-types').find('.product-types__list').addClass('product-types__list_opened');
   $(this).addClass('d-none');
 });
+$(".profile-card .button_delete").click(function () {
+  var _this2 = this;
+
+  $.when($(this).closest(".profile-card").fadeOut()).done(function () {
+    $(_this2).closest(".profile-card").remove();
+  });
+});
 $('.catalog-item__quick-view').click(function () {
   $.fancybox.open({
     src: '#quick-view',
@@ -792,7 +799,7 @@ var Timer =
 /*#__PURE__*/
 function () {
   function Timer(selector) {
-    var _this2 = this;
+    var _this3 = this;
 
     _classCallCheck(this, Timer);
 
@@ -807,7 +814,7 @@ function () {
     this.timer = 0;
     this.timeBetweenDates();
     this.timer = setInterval(function () {
-      return _this2.timeBetweenDates();
+      return _this3.timeBetweenDates();
     }, 1000);
   }
 
