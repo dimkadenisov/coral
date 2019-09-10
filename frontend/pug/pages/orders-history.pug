@@ -1,10 +1,8 @@
 extends ../templates/page
 include ../templates/sidebar
-include ../templates/sort-block
-include ../templates/catalog-layout
 
 block title
-  |Избранные товары
+  |История заказов
 block content
   .container
     .row
@@ -13,8 +11,8 @@ block content
       .col-12.col-lg-9
         include ../components/breadcrumbs
         main.main
-          h1.section__heading Избранные товары
+          h1.section__heading История заказов
           .row
             .col-12
-              +catalog-layout({banner: false, deleteButton: true})
+              include ../components/orders-list
               include ../components/site-pagination

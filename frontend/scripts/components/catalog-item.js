@@ -9,11 +9,11 @@ $('.button_heart').click(function() {
   }
 });
 
-$('.buy-button').click(function() {
-  $(this).toggleClass('button_red');
-  $(this).toggleClass('button_gray');
-  $(this).toggleClass('buy-button_clicked');
-});
+// $('.buy-button').click(function() {
+//   $(this).toggleClass('button_red');
+//   $(this).toggleClass('button_gray');
+//   $(this).toggleClass('buy-button_clicked');
+// });
 
 function generateCatalogItemSwipers() {
   const catalogItemSwiperConfig = {

@@ -14,6 +14,7 @@
   color: $gray-650;
   font-family: "Raleway", "Helvetica", "Arial", sans-serif;
   font-size: 15px;
+  font-variant-numeric: lining-nums;
 
   &::-moz-placeholder{
     opacity: 1;
@@ -112,6 +113,10 @@
     display: inline-block;
     position: relative;
     color: $gray-650;
+  }
+
+  option {
+    font-variant-numeric: normal;
   }
 
   &:focus,

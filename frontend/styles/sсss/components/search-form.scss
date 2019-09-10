@@ -163,6 +163,7 @@
 
 @media screen and (max-width: 575px) {
   .search-form {
+    width: 40px;
     height: 48px;
     transition: none;
 
@@ -170,10 +171,16 @@
       transition: none;
     }
 
-    &__button_search {
-      top: 6px;
-      right: 17px;
-      transition: none;
+    &__button {
+      &_search {
+        top: 6px;
+        right: 17px;
+        transition: none;
+      }
+
+      &_open {
+        width: 40px;
+      }
     }
 
     &_opened {
@@ -195,8 +202,7 @@
         &_open {
           position: absolute;
           top: -52px;
-          right: 165px;
-          width: 48px;
+          right: 157px;
           height: 48px;
         }
       }

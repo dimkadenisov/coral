@@ -25,7 +25,7 @@ mixin sort-block(props = 0)
 
     if downloadButton
       +button({tag: 'a', size: 'small', borderColor: 'red', otherClasses: 'sort-block__pricelist-button'})(href='#', target='blank')
-      |Скачать прайс-лист
+        |Скачать прайс-лист
 
     if changeLayoutButtons
       a(href="#").sort-block__change-layout-button.sort-block__change-layout-button_active

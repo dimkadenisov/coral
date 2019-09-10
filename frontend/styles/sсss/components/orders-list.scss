@@ -1,0 +1,9 @@
+.orders-list {
+  margin-bottom: 45px;
+}
+
+@media screen and (max-width: 767px) {
+  .orders-list {
+    margin-bottom: 0;
+  }
+}

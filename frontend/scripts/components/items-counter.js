@@ -28,4 +28,4 @@ const incrementDecrementValue = function() {
   }
 };
 
-$('.items-counter .button').click(incrementDecrementValue);
+// $('.items-counter .button').click(incrementDecrementValue);
