@@ -34,6 +34,7 @@ const reviewsSwiperConfig = {
       observeSlideChildren: true,
 
       pagination: {
+        dynamicBullets: true,
         el: '.pagination',
         bulletElement: 'div',
         bulletClass: 'pagination__item',

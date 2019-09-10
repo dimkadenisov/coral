@@ -25,6 +25,7 @@ const photoSwiperConfig = {
       allowTouchMove: true,
 
       pagination: {
+        dynamicBullets: true,
         el: '.pagination',
         bulletElement: 'div',
         bulletClass: 'pagination__item',
@@ -37,6 +38,7 @@ const photoSwiperConfig = {
       allowTouchMove: true,
 
       pagination: {
+        dynamicBullets: true,
         el: '.pagination',
         bulletElement: 'div',
         bulletClass: 'pagination__item',

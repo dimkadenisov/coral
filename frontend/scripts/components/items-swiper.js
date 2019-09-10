@@ -9,6 +9,7 @@ function generateItemsSwipers() {
     allowTouchMove: false,
 
     pagination: {
+      dynamicBullets: true,
       el: '.pagination',
       bulletElement: 'div',
       bulletClass: 'pagination__item',

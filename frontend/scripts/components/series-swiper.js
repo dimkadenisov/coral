@@ -17,6 +17,7 @@ const seriesSwiperConfig = {
   },
 
   pagination: {
+    dynamicBullets: true,
     el: '.pagination',
     bulletElement: 'div',
     bulletClass: 'pagination__item',

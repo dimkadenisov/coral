@@ -5,6 +5,7 @@
   z-index: 1;
 
   &__item {
+    flex-shrink: 0;
     width: 9px;
     height: 9px;
     margin: 5px 10px;
