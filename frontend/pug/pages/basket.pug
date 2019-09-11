@@ -3,6 +3,7 @@ include ../templates/subscription-form.pug
 include ../templates/input-field.pug
 include ../templates/button.pug
 include ../templates/steps-bar
+include ../templates/basket-table
 
 block title
   |Корзина
@@ -35,7 +36,7 @@ block content
                 hr.separator
 
               .col-12
-                include ../components/basket-table
+                +basket-table({basket: true})
 
               .col-12
                 hr.separator

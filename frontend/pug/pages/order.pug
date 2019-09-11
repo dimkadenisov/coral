@@ -1,0 +1,23 @@
+extends ../templates/page
+include ../templates/sidebar
+include ../templates/order-item
+include ../templates/basket-table
+
+block title
+  |Заказ №661 от 6 Мая 2019, 6 товара на сумму 1 116 ₽
+block content
+  .container
+    .row
+      .d-none.d-lg-block.col-3
+        +sidebar({separateLink: false, itemsAmount: 10})
+      .col-12.col-lg-9
+        include ../components/breadcrumbs
+        main.main
+          h1.section__heading Заказ №661 от 6 Мая 2019, 6 товара на сумму 1 116 ₽
+          .row
+            .col-12
+              +order-item({name: 'Состав заказа', price: true, yellowBg: true})
+              //- include ../components/orders-table
+              +basket-table({basket: false})
+              +button({type: 'icon_left', color: 'red', iconId: '#arrow-left', iconBg: 'lighter'})
+                  |Возврат к списку

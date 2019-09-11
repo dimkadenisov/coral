@@ -16,6 +16,29 @@
     padding-bottom: 20px;
     font-size: 15px;
     text-align: left;
+    white-space: nowrap;
+  }
+
+  &_order {
+    margin-top: 15px;
+    margin-bottom: 30px;
+
+    .basket-table__th,
+    .basket-table-product__td {
+      &:first-child {
+        padding-left: 15px;
+      }
+    }
+
+    .basket-table__th {
+      &:not(:nth-child(2)) {
+        text-align: center;
+      }
+    }
+
+    .catalog-item__small-text {
+      text-align: center;
+    }
   }
 }
 
@@ -23,6 +46,17 @@
   .basket-table {
     &__thead {
       display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .basket-table {
+    &_order {
+      & + .button {
+        max-width: none;
+        width: 100%;
+      }
     }
   }
 }

@@ -1,0 +1,13 @@
+mixin order-item(props)
+  - const {name, price, yellowBg = false} = props;
+  - const itemClassList = yellowBg ? 'order-item order-item_yellow' : 'order-item'
+  div(class= itemClassList)
+    span.order-item__name= name
+    if price
+      .order-item__price
+        span.order-item__name Сумма:
+        |
+        |
+        span.price 99 175 ₽
+    a(href="#").order-item__link Повторить
+    a(href="#").order-item__link Отменить

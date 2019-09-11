@@ -1,0 +1,22 @@
+mixin basket-table(props = 0)
+  include ../templates/basket-table-product
+
+  - const {basket = false, counter = false, sale = false} = props;
+  - const  basketClassList = basket ? 'basket-table' : 'basket-table basket-table_order'
+
+  table(class= basketClassList)
+    thead.basket-table__thead
+      tr.basket-table__tr
+        th.basket-table__th
+          if !basket
+            |№
+        th.basket-table__th Наименование товара
+        th.basket-table__th.d-none.d-lg-table-cell Код товара
+        th.basket-table__th Цена
+        th.basket-table__th Кол-во
+        th.basket-table__th Сумма
+        if basket
+          th.basket-table__th
+    tbody.basket-table__tbody
+      +basket-table-product({basket: basket})
+      +basket-table-product({basket: basket})

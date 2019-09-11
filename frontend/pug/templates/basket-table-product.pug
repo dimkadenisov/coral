@@ -1,0 +1,51 @@
+mixin basket-table-product(props = 0)
+  include ../templates/button
+  include ../templates/price
+  include ../templates/items-counter
+
+  - const {basket = false} = props;
+
+  tr.basket-table-product
+    td.basket-table-product__td
+      if basket
+        +button({type: 'circle', size: 'small', color: 'no-bg', iconId: '#heart', otherClasses: 'button_heart show-tooltip show-tooltip_top-right'})(data-description="Добавить товар в избранное")
+      else
+        span.d-none.d-md-inline 21
+
+    td.basket-table-product__td
+      .basket-table-product__info
+        img(src="assets/img/sample-image-1-210.jpg", alt="" width="90").basket-table-product__img
+        a(href="#").basket-table-product__description Подставка для ножей 11х22см Оранжевый мрамор с цветной
+        .basket-table-product__numbers.d-lg-none
+          span.catalog-item__small-text Код: 749180
+          if basket
+            span.catalog-item__small-text Артикул: CS228826-A
+
+    td.basket-table-product__td.d-none.d-lg-table-cell
+      if basket
+        span.catalog-item__small-text Код: 749180
+        span.catalog-item__small-text Артикул: CS228826-A
+      else
+        span.catalog-item__small-text 749180
+
+    td.basket-table-product__td
+      +price({sale: basket})
+
+    td.basket-table-product__td
+      if basket
+        +items-counter({initialValue: '1'})
+      else
+        span.basket-table-product__amount
+          |24
+          |
+          |
+          span.d-md-none шт.
+
+    td.basket-table-product__td
+      .basket-table-product__summary-price
+        span.basket-table-product__summary-price-text.d-md-none Сумма:
+        +price({value: '99 175 ₽'})
+
+    if basket
+      td.basket-table-product__td
+        +button({type: 'circle', size: 'small', color: 'no-bg', iconId: '#delete', otherClasses: 'button_delete show-tooltip show-tooltip_top-left'})(data-description="Удалить товар из\u00a0корзины")

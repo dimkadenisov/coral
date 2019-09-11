@@ -6,10 +6,23 @@
     background-color: $gray-100;
   }
 
+  &_yellow {
+    background-color: $gray-200;
+
+    &:nth-child(n) {
+      background-color: $gray-200;
+    }
+  }
+
   &__name {
     margin-right: auto;
     font-size: 17px;
     font-weight: bold;
+  }
+
+  &__price {
+    flex-shrink: 0;
+    margin-right: 55px;
   }
 
   &__link {
@@ -47,5 +60,20 @@
     margin-left: -15px;
     padding-right: 15px;
     padding-left: 15px;
+
+    &_yellow {
+      .order-item__name {
+        display: none;
+      }
+
+      .order-item__price {
+        width: 100%;
+        margin-bottom: 10px;
+
+        .order-item__name {
+          display: inline;
+        }
+      }
+    }
   }
 }
