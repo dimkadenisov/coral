@@ -115,8 +115,9 @@
     color: $gray-650;
   }
 
-  option {
-    font-variant-numeric: normal;
+  option,
+  option * {
+    font-variant-numeric: lining-nums;
   }
 
   &:focus,

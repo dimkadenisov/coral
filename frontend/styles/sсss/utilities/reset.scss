@@ -20,6 +20,7 @@ body {
 *::before,
 *::after {
   box-sizing: border-box;
+  font-variant-numeric: lining-nums;
 }
 
 fieldset {

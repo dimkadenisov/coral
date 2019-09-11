@@ -447,6 +447,7 @@ function generateItemsSwipers() {
     watchOverflow: true,
     allowTouchMove: false,
     pagination: {
+      dynamicBullets: true,
       el: '.pagination',
       bulletElement: 'div',
       bulletClass: 'pagination__item',
@@ -551,6 +552,7 @@ var photoSwiperConfig = {
       slidesPerView: 2,
       allowTouchMove: true,
       pagination: {
+        dynamicBullets: true,
         el: '.pagination',
         bulletElement: 'div',
         bulletClass: 'pagination__item',
@@ -561,6 +563,7 @@ var photoSwiperConfig = {
       slidesPerView: 1,
       allowTouchMove: true,
       pagination: {
+        dynamicBullets: true,
         el: '.pagination',
         bulletElement: 'div',
         bulletClass: 'pagination__item',
@@ -683,6 +686,7 @@ var reviewsSwiperConfig = {
       observerParents: true,
       observeSlideChildren: true,
       pagination: {
+        dynamicBullets: true,
         el: '.pagination',
         bulletElement: 'div',
         bulletClass: 'pagination__item',
@@ -754,6 +758,7 @@ var seriesSwiperConfig = {
     nextEl: '.next'
   },
   pagination: {
+    dynamicBullets: true,
     el: '.pagination',
     bulletElement: 'div',
     bulletClass: 'pagination__item',

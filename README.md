@@ -22,3 +22,4 @@
 * [Оформление заказа](https://dimkadenisov.github.io/coral/public/checkout.html)
 * [Личный кабинет](https://dimkadenisov.github.io/coral/public/profile.html)
 * [Избранные товары](https://dimkadenisov.github.io/coral/public/favorites.html)
+* [История заказов](https://dimkadenisov.github.io/coral/public/orders-history.html)
