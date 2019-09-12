@@ -13,6 +13,10 @@
   .input-field {
     margin-bottom: 8px;
 
+    &__wrapper {
+      width: 100%;
+    }
+
     &:last-child {
       margin-bottom: 30px;
     }
@@ -36,5 +40,26 @@
       display: flex;
       justify-content: center;
     }
+  }
+
+  &_my-data {
+    max-width: none;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .registration-form {
+    .input-field {
+      padding-left: 15px;
+
+      &__select {
+        padding-right: 2.5em;
+      }
+    }
+  }
+
+  #registration-form.fancybox-content {
+    padding: 15px;
   }
 }

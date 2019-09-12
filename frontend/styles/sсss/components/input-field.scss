@@ -91,12 +91,21 @@
   }
 
   &__select {
-    padding-right: 2em;
+    padding-right: 3rem;
     background-color: transparent;
     cursor: pointer;
 
     & + .input-field__icon {
+      right: 1.5em;
+      margin-top: -3px;
       z-index: -1;
+    }
+
+    &.input-field_small {
+      & + .input-field__icon {
+        right: 0.75em;
+        margin-top: 0;
+      }
     }
   }
 

@@ -1,0 +1,64 @@
+form.registration-form.registration-form_my-data
+  .row
+    .col-12.col-md-6
+      span.section__category Информация о компании
+
+      +input-field({type: 'text'})(placeholder="ОГРН" required)
+
+      +input-field({type: 'select'})(required)
+        option(selected=true disabled=true) Выберите тип организации
+        option ООО
+        option ПАО
+        option АО
+
+      +input-field({type: 'text'})(placeholder="Наименование организации" required)
+
+      +input-field({type: 'select'})(required)
+        option(selected=true disabled=true) Выберите тип специализации
+        option Посуда
+        option Или
+        option Не
+        option Посуда
+
+      +input-field({type: 'select'})(required)
+        option(selected=true disabled=true) Выберите формат организации
+        option Посуда
+        option Или
+        option Не
+        option Посуда
+
+      +input-field({type: 'select'})(required)
+        option(selected=true disabled=true) Выберите решион
+        option Чечня
+        option Евреская автономная область
+        option Дагестан
+        option Удмуртия
+
+      +input-field({type: 'text'})(placeholder="Ваш город" required)
+
+      +input-field({type: 'text'})(placeholder="Адрес" required)
+
+      +input-field({type: 'tel'})(placeholder="Телефон" inputmode='tel' autocorrect='off' autocomplete='tel' required)
+
+      +input-field({type: 'tel'})(placeholder="Факс" inputmode='tel' autocorrect='off' autocomplete='tel')
+
+      +input-field({type: 'email'})(placeholder="E-mail" inputmode='email' autocapitalize='off' autocorrect='off' autocomplete='email' required)
+
+    .col-12.col-md-6
+      span.section__category Контактное лицо
+
+      +input-field({type: 'text'})(placeholder="Фамилия" required)
+
+      +input-field({type: 'text'})(placeholder="Имя" required)
+
+      +input-field({type: 'text'})(placeholder="Отчество")
+
+      +input-field({type: 'tel'})(placeholder="Телефон" inputmode='tel' autocorrect='off' autocomplete='tel' required)
+
+      +input-field({type: 'email'})(placeholder="E-mail" inputmode='email' autocapitalize='off' autocorrect='off' autocomplete='email' required)
+
+      +input-field({type: 'text'})(placeholder="Должность" required)
+
+    .col-12
+      +button({tag: 'button', color: 'red'})
+        |Сохранить изменения
