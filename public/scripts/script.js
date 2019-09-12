@@ -376,10 +376,12 @@ $('.item-card .button_heart').click(function () {
   } else {
     $(this).find('.button__text').text('В избранное');
   }
-});
-$('.item-card .buy-button').click(function () {
-  $(this).hasClass('buy-button_clicked') ? $(this).find('.button__text').text("\u0423\u0434\u0430\u043B\u0438\u0442\u044C \u0438\u0437\xA0\u043A\u043E\u0440\u0437\u0438\u043D\u044B") : $(this).find('.button__text').text('В корзину');
-});
+}); // $('.item-card .buy-button').click(function() {
+//   ($(this).hasClass('buy-button_clicked'))
+//     ? $(this).find('.button__text').text('Удалить из\u00A0корзины')
+//     : $(this).find('.button__text').text('В корзину')
+// });
+
 var productSwiperConfig = {
   slideClass: 'item-gallery__slide',
   slidesPerView: 1,
@@ -587,6 +589,9 @@ $(".profile-card .button_delete").click(function () {
     $(_this2).closest(".profile-card").remove();
   });
 });
+$('.question__button').click(function () {
+  $(this).parent().toggleClass('question_opened');
+});
 $('.catalog-item__quick-view').click(function () {
   $.fancybox.open({
     src: '#quick-view',
@@ -640,17 +645,17 @@ $('.catalog-item__quick-view').click(function () {
       if ($(window).width() < 992) $.fancybox.close(true);
     }, 100);
   };
-})();
+})(); // $('.rating__star').click(function() {
+//   if ($(this).closest('.rating').attr('data-disabled')) return;
+//   $(this).closest('.rating').find('.rating__star').each(function() {
+//     $(this).removeClass('rating__star_active');
+//   });
+//   $(this).addClass('rating__star_active');
+//   $(this).closest('.rating').attr('data-value', $(this).attr('data-value'));
+//   $(this).closest('.rating').attr('data-disabled', 'data-disabled');
+// });
 
-$('.rating__star').click(function () {
-  if ($(this).closest('.rating').attr('data-disabled')) return;
-  $(this).closest('.rating').find('.rating__star').each(function () {
-    $(this).removeClass('rating__star_active');
-  });
-  $(this).addClass('rating__star_active');
-  $(this).closest('.rating').attr('data-value', $(this).attr('data-value'));
-  $(this).closest('.rating').attr('data-disabled', 'data-disabled');
-});
+
 $('#registration-button').click(function () {
   $.fancybox.open({
     src: '#registration-form',
