@@ -6,11 +6,11 @@ $('.item-card .button_heart').click(function() {
   }
 });
 
-$('.item-card .buy-button').click(function() {
-  ($(this).hasClass('buy-button_clicked'))
-    ? $(this).find('.button__text').text('Удалить из\u00A0корзины')
-    : $(this).find('.button__text').text('В корзину')
-});
+// $('.item-card .buy-button').click(function() {
+//   ($(this).hasClass('buy-button_clicked'))
+//     ? $(this).find('.button__text').text('Удалить из\u00A0корзины')
+//     : $(this).find('.button__text').text('В корзину')
+// });
 
 const productSwiperConfig = {
   slideClass: 'item-gallery__slide',
