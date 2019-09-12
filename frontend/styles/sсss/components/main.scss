@@ -9,11 +9,19 @@
 @media screen and (max-width: 991px) {
   .main {
     margin-bottom: 30px;
+
+    &_no-gap {
+      margin-bottom: 0;
+    }
   }
 }
 
 @media screen and (max-width: 767px) {
   .main {
     margin-bottom: 55px;
+
+    &_no-gap {
+      margin-bottom: 0;
+    }
   }
 }

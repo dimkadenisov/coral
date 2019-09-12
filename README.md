@@ -24,3 +24,5 @@
 * [Избранные товары](https://dimkadenisov.github.io/coral/public/favorites.html)
 * [История заказов](https://dimkadenisov.github.io/coral/public/orders-history.html)
 * [Заказ](https://dimkadenisov.github.io/coral/public/order.html)
+* [Статьи](https://dimkadenisov.github.io/coral/public/articles.html)
+* [Вопрос-ответ](https://dimkadenisov.github.io/coral/public/faq.html)

@@ -1,0 +1,22 @@
+.faq-list {
+  width: 100%;
+  margin-bottom: 100px;
+  list-style: none;
+
+  &__item {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .faq-list {
+    margin-bottom: 65px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .faq-list {
+    margin-bottom: 50px;
+  }
+}

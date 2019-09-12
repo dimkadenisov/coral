@@ -1,0 +1,16 @@
+extends ../templates/page
+include ../templates/news-post
+
+block title
+  |Вопрос-ответ
+
+block content
+  .page_news
+    .container
+      .row
+        .col-12
+          include ../components/breadcrumbs
+          main.main.main_no-gap
+            h1.section__heading Вопрос-ответ
+            .row
+              include ../components/faq-list
