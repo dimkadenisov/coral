@@ -1,0 +1,36 @@
+extends ../templates/page
+include ../templates/news-post
+include ../templates/button
+include ../templates/sidebar
+include ../templates/subscription-form
+
+block title
+  |Статьи
+
+block content
+  .page_news
+    .container
+      .row
+        .col-12
+          include ../components/breadcrumbs
+          main.main
+            h1.section__heading Статьи
+            .row
+              .col-12.col-sm-6.col-md-4.col-lg-3
+                +news-post({article: true})
+              .col-xs-12.col-sm-6.col-md-4.col-lg-3
+                +news-post({article: true})
+              .col-xs-12.col-sm-6.col-md-4.col-lg-3
+                +news-post({article: true})
+              .col-xs-12.col-sm-6.col-md-4.col-lg-3
+                +news-post({article: true})
+              .col-xs-12.col-sm-6.col-md-4.col-lg-3
+                +news-post({article: true})
+              .col-xs-12.col-sm-6.col-md-4.col-lg-3
+                +news-post({article: true})
+              .col-xs-12.col-sm-6.col-md-4.col-lg-3
+                +news-post({article: true})
+              .col-xs-12.col-sm-6.col-md-4.col-lg-3
+                +news-post({article: true})
+              .col-12
+                include ../components/site-pagination
