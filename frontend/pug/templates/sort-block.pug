@@ -13,14 +13,12 @@ mixin sort-block(props = 0)
     .sort-block__group
       span.sort-block__sort-type Сортировать:
       +input-field({type: 'select', size: 'small'})
-        optgroup
           option По популярности
           option По новизне
 
     .sort-block__group
       span.sort-block__sort-type Показывать по:
       +input-field({type: 'select', size: 'small'})
-        optgroup
           option 12
           option 24
           option 48
