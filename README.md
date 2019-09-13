@@ -28,3 +28,4 @@
 * [Вопрос-ответ](https://dimkadenisov.github.io/coral/public/faq.html)
 * [Регистрация](https://dimkadenisov.github.io/coral/public/registration.html)
 * [Мои данные](https://dimkadenisov.github.io/coral/public/my-data.html)
+* [Полезные документы](https://dimkadenisov.github.io/coral/public/documents.html)
