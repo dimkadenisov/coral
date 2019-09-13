@@ -1,0 +1,37 @@
+.ask-banner {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: url("../assets/img/personal-offer-pattern.png") $red-300;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .personal-offer__heading {
+    margin-right: 60px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .ask-banner {
+    .personal-offer__heading {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ask-banner {
+    &__content {
+      flex-direction: column;
+    }
+
+    .personal-offer__heading {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+}

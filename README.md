@@ -26,3 +26,5 @@
 * [Заказ](https://dimkadenisov.github.io/coral/public/order.html)
 * [Статьи](https://dimkadenisov.github.io/coral/public/articles.html)
 * [Вопрос-ответ](https://dimkadenisov.github.io/coral/public/faq.html)
+* [Регистрация](https://dimkadenisov.github.io/coral/public/registration.html)
+* [Мои данные](https://dimkadenisov.github.io/coral/public/my-data.html)
