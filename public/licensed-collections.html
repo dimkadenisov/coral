@@ -9,7 +9,7 @@
     <link href="styles/libraries/swiper.min.css" rel="stylesheet" type="text/css" />
     <link href="styles/libraries/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
     <link href="styles/main.css" rel="stylesheet" type="text/css" />
-    <title>Новинки Таблица</title>
+    <title>Лицензионные коллекции</title>
 </head>
 
 <body><object data="assets/img/icons/sprite.svg" type="image/svg+xml" style="width: 0; height: 0; display: none;">
@@ -338,11 +338,125 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="d-none d-lg-block col-3">
+                <sidebar class="sidebar"><a class="sidebar__link sidebar__link_separate" href="#">Товар недели</a>
+                    <ul class="sidebar__list">
+                        <li class="sidebar__list-item"><a class="sidebar__link" href="#">Название пункта списка</a></li>
+                        <li class="sidebar__list-item"><a class="sidebar__link" href="#">Название пункта списка</a></li>
+                        <li class="sidebar__list-item"><a class="sidebar__link" href="#">Название пункта списка</a></li>
+                        <li class="sidebar__list-item"><a class="sidebar__link" href="#">Название пункта списка</a></li>
+                        <li class="sidebar__list-item"><a class="sidebar__link" href="#">Название пункта списка</a></li>
+                        <li class="sidebar__list-item"><a class="sidebar__link" href="#">Название пункта списка</a></li>
+                        <li class="sidebar__list-item"><a class="sidebar__link" href="#">Название пункта списка</a></li>
+                        <li class="sidebar__list-item"><a class="sidebar__link" href="#">Название пункта списка</a></li>
+                        <li class="sidebar__list-item"><a class="sidebar__link" href="#">Название пункта списка</a></li>
+                        <li class="sidebar__list-item"><a class="sidebar__link" href="#">Название пункта списка</a></li>
+                        <li class="sidebar__list-item"><a class="sidebar__link" href="#">Название пункта списка</a></li>
+                        <li class="sidebar__list-item"><a class="sidebar__link" href="#">Название пункта списка</a></li>
+                    </ul>
+                </sidebar>
+                <div class="catalog-filter" id="catalog-filter">
+                    <div class="catalog-smart-filter bx-filter">
+                        <div class="filter-heading">Подбор по параметрам</div>
+                        <form class="smartfilter">
+                            <div class="filter-row bx-filter-parameters-box">
+                                <div class="filter-row-caption"><a class="filter-row-trigger" href="#"><span>Цена (₽)</span></a></div>
+                                <div class="filter-row-fields bx-filter-block"><span class="bx-filter-container-modef"></span>
+                                    <div class="row bx-filter-parameters-box-container">
+                                        <div class="col-6 bx-filter-parameters-box-container-block bx-left"><span class="bx-ft-sub">От</span>
+                                            <div class="bx-filter-input-container"><input class="input-field input-field_extra-small input-field_border-transparent" type="text" name="arrFilter_P3_MIN" id="arrFilter_P3_MIN" value="" size="5" onkeyup="smartFilter.keyup(this)" placeholder="100" /></div>
+                                            <div class="catalog-filter__separator"></div>
+                                        </div>
+                                        <div class="col-6 bx-filter-parameters-box-container-block bx-right"><span class="bx-ft-sub">До</span>
+                                            <div class="bx-filter-input-container"><input class="input-field input-field_extra-small input-field_border-transparent" type="text" name="arrFilter_P3_MAX" id="arrFilter_P3_MAX" value="" size="5" onkeyup="smartFilter.keyup(this)" placeholder="9999" /></div>
+                                        </div>
+                                        <div class="col-12 bx-ui-slider-track-container">
+                                            <div class="bx-ui-slider-track">
+                                                <div class="bx-ui-slider-range"><a class="bx-ui-slider-handle left" href="javascript:void(0)"></a><a class="bx-ui-slider-handle right" href="javascript:void(0)"></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-row bx-filter-parameters-box">
+                                <div class="filter-row-caption"><a class="filter-row-trigger" href="#"><span>Форма</span></a></div>
+                                <div class="filter-row-fields bx-filter-block" data-role="bx_filter_block"><span class="bx-filter-container-modef"></span>
+                                    <div class="row bx-filter-parameters-box-container">
+                                        <div class="col-12 multiple-columns">
+                                            <div class="checkbox"><label class="bx-filter-param-label"><span class="bx-filter-input-checkbox"><input class="visually-hidden" type="checkbox" onclick="smartFilter.click(this)" /><span class="bx-filter-param-text field-text" title="Круг">Круг</span></span></label></div>
+                                            <div class="checkbox"><label class="bx-filter-param-label"><span class="bx-filter-input-checkbox"><input class="visually-hidden" type="checkbox" onclick="smartFilter.click(this)" /><span class="bx-filter-param-text field-text" title="Квадрат">Квадрат</span></span></label></div>
+                                            <div class="checkbox"><label class="bx-filter-param-label"><span class="bx-filter-input-checkbox"><input class="visually-hidden" type="checkbox" onclick="smartFilter.click(this)" /><span class="bx-filter-param-text field-text" title="Овал">Овал</span></span></label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="submit-row">
+                                <div class="bx-filter-parameters-box-container"><input class="button button_small button_gray set-filter-button" id="set_filter" type="button" name="set_filter" value="Показать" /><input class="button button_small button_no-bg button_border-gray reset-filter-button" id="del_filter" type="button" name="del_filter" value="Сбросить" />
+                                    <div class="bx-filter-popup-result left" id="modef">Выбрано:
+
+                                        <span id="modef_num">0</span><span class="arrow"></span><br /><a href="/catalog/bolty_3/filter/clear/?catalog_sort=&amp;amp;catalog_items=" target="">Показать</a></div>
+                                </div>
+                            </div>
+                            <div class="clb"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-9">
                 <div class="breadcrumbs"><span class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></span><span class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Под главной</a></span><span class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Под предыдущей</a></span><span class="breadcrumbs__item">Каталог</span></div>
                 <main class="main">
-                    <h1 class="section__heading">Новинки</h1>
-                    <div class="sort-block">
+                    <h1 class="section__heading">Лицензионные коллекции</h1>
+                    <div class="licensed-collections">
+                        <div class="licensed-item">
+                            <div class="licensed-item__image-wrapper"><img class="licensed-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Сердитые птички" data-object-fit="cover" /></div><span class="licensed-item__text">ANGRY BIRDS MOVIE (Сердитые птички)</span>
+                        </div>
+                        <div class="licensed-item">
+                            <div class="licensed-item__image-wrapper"><img class="licensed-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Сердитые птички" data-object-fit="cover" /></div><span class="licensed-item__text">ANGRY BIRDS MOVIE (Сердитые птички)</span>
+                        </div>
+                        <div class="licensed-item">
+                            <div class="licensed-item__image-wrapper"><img class="licensed-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Сердитые птички" data-object-fit="cover" /></div><span class="licensed-item__text">ANGRY BIRDS MOVIE (Сердитые птички)</span>
+                        </div>
+                        <div class="licensed-item">
+                            <div class="licensed-item__image-wrapper"><img class="licensed-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Сердитые птички" data-object-fit="cover" /></div><span class="licensed-item__text">ANGRY BIRDS MOVIE (Сердитые птички)</span>
+                        </div>
+                        <div class="licensed-item">
+                            <div class="licensed-item__image-wrapper"><img class="licensed-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Сердитые птички" data-object-fit="cover" /></div><span class="licensed-item__text">ANGRY BIRDS MOVIE (Сердитые птички)</span>
+                        </div>
+                        <div class="licensed-item">
+                            <div class="licensed-item__image-wrapper"><img class="licensed-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Сердитые птички" data-object-fit="cover" /></div><span class="licensed-item__text">ANGRY BIRDS MOVIE (Сердитые птички)</span>
+                        </div>
+                        <div class="licensed-item">
+                            <div class="licensed-item__image-wrapper"><img class="licensed-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Сердитые птички" data-object-fit="cover" /></div><span class="licensed-item__text">ANGRY BIRDS MOVIE (Сердитые птички)</span>
+                        </div>
+                        <div class="licensed-item">
+                            <div class="licensed-item__image-wrapper"><img class="licensed-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Сердитые птички" data-object-fit="cover" /></div><span class="licensed-item__text">ANGRY BIRDS MOVIE (Сердитые птички)</span>
+                        </div>
+                        <div class="licensed-item">
+                            <div class="licensed-item__image-wrapper"><img class="licensed-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Сердитые птички" data-object-fit="cover" /></div><span class="licensed-item__text">ANGRY BIRDS MOVIE (Сердитые птички)</span>
+                        </div>
+                        <div class="licensed-item">
+                            <div class="licensed-item__image-wrapper"><img class="licensed-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Сердитые птички" data-object-fit="cover" /></div><span class="licensed-item__text">ANGRY BIRDS MOVIE (Сердитые птички)</span>
+                        </div>
+                        <div class="licensed-item">
+                            <div class="licensed-item__image-wrapper"><img class="licensed-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Сердитые птички" data-object-fit="cover" /></div><span class="licensed-item__text">ANGRY BIRDS MOVIE (Сердитые птички)</span>
+                        </div>
+                        <div class="licensed-item">
+                            <div class="licensed-item__image-wrapper"><img class="licensed-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Сердитые птички" data-object-fit="cover" /></div><span class="licensed-item__text">ANGRY BIRDS MOVIE (Сердитые птички)</span>
+                        </div>
+                        <div class="licensed-item">
+                            <div class="licensed-item__image-wrapper"><img class="licensed-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Сердитые птички" data-object-fit="cover" /></div><span class="licensed-item__text">ANGRY BIRDS MOVIE (Сердитые птички)</span>
+                        </div>
+                        <div class="licensed-item">
+                            <div class="licensed-item__image-wrapper"><img class="licensed-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Сердитые птички" data-object-fit="cover" /></div><span class="licensed-item__text">ANGRY BIRDS MOVIE (Сердитые птички)</span>
+                        </div>
+                        <div class="licensed-item">
+                            <div class="licensed-item__image-wrapper"><img class="licensed-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Сердитые птички" data-object-fit="cover" /></div><span class="licensed-item__text">ANGRY BIRDS MOVIE (Сердитые птички)</span>
+                        </div>
+                        <div class="licensed-collections__button-wrapper"><button class="button button_icon_right button_gray"><span class="button__text">Смотреть еще</span><svg class="button__icon">
+                                    <use xlink:href="#arrow-down"></use>
+                                </svg></button></div>
+                    </div>
+                    <div class="sort-block"><a class="button button_red button_small sort-block__filter-button" data-fancybox="data-fancybox" data-src="#catalog-filter" href="javascript:;"><span class="button__text">Фильтр</span></a>
                         <div class="sort-block__group"><span class="sort-block__sort-type">Сортировать:</span>
                             <div class="input-field__wrapper"><select class="input-field__select input-field input-field_small">
                                     <option>По популярности</option>
@@ -366,699 +480,9 @@
                             </svg></a>
                     </div>
                     <hr class="separator" />
-                    <div class="catalog-layout catalog-layout_table">
+                    <div class="catalog-layout">
                         <div class="row">
-                            <div class="col-12 catalog-layout__item">
-                                <div class="catalog-item catalog-item_table"><a class="catalog-item__link" href="#">
-                                        <div class="catalog-item__swiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a><a class="catalog-item__name" href="#">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</a>
-                                    <div class="item-characteristics">
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
-                                    <div class="catalog-item__group">
-                                        <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
-                                    </div><button class="button button_gray button_small catalog-item__more"><span class="button__text">Подробнее</span></button><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
-                                            <use xlink:href="#eye"></use>
-                                        </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
-                                            <use xlink:href="#heart"></use>
-                                        </svg></button>
-                                </div>
-                            </div>
-                            <div class="col-12 catalog-layout__item">
-                                <div class="catalog-item catalog-item_table"><a class="catalog-item__link" href="#">
-                                        <div class="catalog-item__swiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a><a class="catalog-item__name" href="#">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</a>
-                                    <div class="item-characteristics">
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
-                                    <div class="catalog-item__group"><span class="catalog-item__small-text catalog-item__code">Код 799180</span></div><button class="button button_gray button_small catalog-item__more"><span class="button__text">Подробнее</span></button><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
-                                            <use xlink:href="#eye"></use>
-                                        </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
-                                            <use xlink:href="#heart"></use>
-                                        </svg></button>
-                                </div>
-                            </div>
-                            <div class="col-12 catalog-layout__item">
-                                <div class="catalog-item catalog-item_table"><a class="catalog-item__link" href="#">
-                                        <div class="catalog-item__swiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a><a class="catalog-item__name" href="#">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</a>
-                                    <div class="item-characteristics">
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
-                                    <div class="catalog-item__group">
-                                        <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
-                                    </div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
-                                    <div class="catalog-item__checkout">
-                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
-                                            <div class="items-counter__pack"><svg class="items-counter__icon">
-                                                    <use xlink:href="#box-closed-filled"></use>
-                                                </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
-                                        </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
-                                                <use xlink:href="#shopping-basket"></use>
-                                            </svg></button>
-                                    </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
-                                            <use xlink:href="#eye"></use>
-                                        </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
-                                            <use xlink:href="#heart"></use>
-                                        </svg></button>
-                                </div>
-                            </div>
-                            <div class="col-12 catalog-layout__item">
-                                <div class="catalog-item catalog-item_table"><a class="catalog-item__link" href="#">
-                                        <div class="catalog-item__swiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a><a class="catalog-item__name" href="#">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</a>
-                                    <div class="item-characteristics">
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
-                                    <div class="catalog-item__group">
-                                        <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
-                                    </div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
-                                    <div class="catalog-item__checkout">
-                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
-                                            <div class="items-counter__pack"><svg class="items-counter__icon">
-                                                    <use xlink:href="#box-closed-filled"></use>
-                                                </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
-                                        </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
-                                                <use xlink:href="#shopping-basket"></use>
-                                            </svg></button>
-                                    </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
-                                            <use xlink:href="#eye"></use>
-                                        </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
-                                            <use xlink:href="#heart"></use>
-                                        </svg></button>
-                                </div>
-                            </div>
-                            <div class="col-12 catalog-layout__item">
-                                <div class="catalog-item catalog-item_table"><a class="catalog-item__link" href="#">
-                                        <div class="catalog-item__swiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a><a class="catalog-item__name" href="#">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</a>
-                                    <div class="item-characteristics">
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
-                                    <div class="catalog-item__group">
-                                        <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
-                                    </div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
-                                    <div class="catalog-item__checkout">
-                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
-                                            <div class="items-counter__pack"><svg class="items-counter__icon">
-                                                    <use xlink:href="#box-closed-filled"></use>
-                                                </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
-                                        </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
-                                                <use xlink:href="#shopping-basket"></use>
-                                            </svg></button>
-                                    </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
-                                            <use xlink:href="#eye"></use>
-                                        </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
-                                            <use xlink:href="#heart"></use>
-                                        </svg></button>
-                                </div>
-                            </div>
-                            <div class="col-12 catalog-layout__item">
-                                <div class="catalog-item catalog-item_table"><a class="catalog-item__link" href="#">
-                                        <div class="catalog-item__swiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a><a class="catalog-item__name" href="#">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</a>
-                                    <div class="item-characteristics">
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
-                                    <div class="catalog-item__group">
-                                        <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
-                                    </div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
-                                    <div class="catalog-item__checkout">
-                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
-                                            <div class="items-counter__pack"><svg class="items-counter__icon">
-                                                    <use xlink:href="#box-closed-filled"></use>
-                                                </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
-                                        </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
-                                                <use xlink:href="#shopping-basket"></use>
-                                            </svg></button>
-                                    </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
-                                            <use xlink:href="#eye"></use>
-                                        </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
-                                            <use xlink:href="#heart"></use>
-                                        </svg></button>
-                                </div>
-                            </div>
-                            <div class="col-12 catalog-layout__item">
-                                <div class="catalog-item catalog-item_table"><a class="catalog-item__link" href="#">
-                                        <div class="catalog-item__swiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a><a class="catalog-item__name" href="#">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</a>
-                                    <div class="item-characteristics">
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
-                                    <div class="catalog-item__group">
-                                        <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
-                                    </div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
-                                    <div class="catalog-item__checkout">
-                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
-                                            <div class="items-counter__pack"><svg class="items-counter__icon">
-                                                    <use xlink:href="#box-closed-filled"></use>
-                                                </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
-                                        </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
-                                                <use xlink:href="#shopping-basket"></use>
-                                            </svg></button>
-                                    </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
-                                            <use xlink:href="#eye"></use>
-                                        </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
-                                            <use xlink:href="#heart"></use>
-                                        </svg></button>
-                                </div>
-                            </div>
-                            <div class="col-12 catalog-layout__item">
-                                <div class="catalog-item catalog-item_table"><a class="catalog-item__link" href="#">
-                                        <div class="catalog-item__swiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a><a class="catalog-item__name" href="#">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</a>
-                                    <div class="item-characteristics">
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
-                                    <div class="catalog-item__group">
-                                        <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
-                                    </div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
-                                    <div class="catalog-item__checkout">
-                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
-                                            <div class="items-counter__pack"><svg class="items-counter__icon">
-                                                    <use xlink:href="#box-closed-filled"></use>
-                                                </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
-                                        </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
-                                                <use xlink:href="#shopping-basket"></use>
-                                            </svg></button>
-                                    </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
-                                            <use xlink:href="#eye"></use>
-                                        </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
-                                            <use xlink:href="#heart"></use>
-                                        </svg></button>
-                                </div>
-                            </div>
-                            <div class="col-12 catalog-layout__item">
-                                <div class="catalog-item catalog-item_table"><a class="catalog-item__link" href="#">
-                                        <div class="catalog-item__swiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a><a class="catalog-item__name" href="#">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</a>
-                                    <div class="item-characteristics">
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
-                                    <div class="catalog-item__group">
-                                        <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
-                                    </div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
-                                    <div class="catalog-item__checkout">
-                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
-                                            <div class="items-counter__pack"><svg class="items-counter__icon">
-                                                    <use xlink:href="#box-closed-filled"></use>
-                                                </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
-                                        </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
-                                                <use xlink:href="#shopping-basket"></use>
-                                            </svg></button>
-                                    </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
-                                            <use xlink:href="#eye"></use>
-                                        </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
-                                            <use xlink:href="#heart"></use>
-                                        </svg></button>
-                                </div>
-                            </div>
-                            <div class="col-12 catalog-layout__item">
-                                <div class="catalog-item catalog-item_table"><a class="catalog-item__link" href="#">
-                                        <div class="catalog-item__swiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a><a class="catalog-item__name" href="#">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</a>
-                                    <div class="item-characteristics">
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
-                                    <div class="catalog-item__group">
-                                        <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
-                                    </div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
-                                    <div class="catalog-item__checkout">
-                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
-                                            <div class="items-counter__pack"><svg class="items-counter__icon">
-                                                    <use xlink:href="#box-closed-filled"></use>
-                                                </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
-                                        </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
-                                                <use xlink:href="#shopping-basket"></use>
-                                            </svg></button>
-                                    </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
-                                            <use xlink:href="#eye"></use>
-                                        </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
-                                            <use xlink:href="#heart"></use>
-                                        </svg></button>
-                                </div>
-                            </div>
-                            <div class="col-12 catalog-layout__item">
-                                <div class="catalog-item catalog-item_table"><a class="catalog-item__link" href="#">
-                                        <div class="catalog-item__swiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a><a class="catalog-item__name" href="#">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</a>
-                                    <div class="item-characteristics">
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
-                                    <div class="catalog-item__group">
-                                        <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
-                                    </div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
-                                    <div class="catalog-item__checkout">
-                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
-                                            <div class="items-counter__pack"><svg class="items-counter__icon">
-                                                    <use xlink:href="#box-closed-filled"></use>
-                                                </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
-                                        </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
-                                                <use xlink:href="#shopping-basket"></use>
-                                            </svg></button>
-                                    </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
-                                            <use xlink:href="#eye"></use>
-                                        </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
-                                            <use xlink:href="#heart"></use>
-                                        </svg></button>
-                                </div>
-                            </div>
-                            <div class="col-12 catalog-layout__item">
-                                <div class="catalog-item catalog-item_table"><a class="catalog-item__link" href="#">
-                                        <div class="catalog-item__swiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a><a class="catalog-item__name" href="#">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</a>
-                                    <div class="item-characteristics">
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                    </div>
-                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
-                                    <div class="catalog-item__group">
-                                        <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
-                                    </div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
-                                    <div class="catalog-item__checkout">
-                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
-                                            <div class="items-counter__pack"><svg class="items-counter__icon">
-                                                    <use xlink:href="#box-closed-filled"></use>
-                                                </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
-                                        </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
-                                                <use xlink:href="#shopping-basket"></use>
-                                            </svg></button>
-                                    </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
-                                            <use xlink:href="#eye"></use>
-                                        </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
-                                            <use xlink:href="#heart"></use>
-                                        </svg></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="site-pagination">
-                        <li class="site-pagination__item"><a class="site-pagination__link site-pagination__link_prev" href="#"></a></li>
-                        <li class="site-pagination__item"><a class="site-pagination__link site-pagination__link_active" href="#">1</a></li>
-                        <li class="site-pagination__item"><a class="site-pagination__link" href="#">2</a></li>
-                        <li class="site-pagination__item"><a class="site-pagination__link" href="#">3</a></li>
-                        <li class="site-pagination__item"><a class="site-pagination__link" href="#">4</a></li>
-                        <li class="site-pagination__item"><a class="site-pagination__link" href="#">5</a></li>
-                        <li class="site-pagination__item"><a class="site-pagination__link site-pagination__link_next" href="#"></a></li>
-                    </ul>
-                    <hr class="separator" /><span class="section__description">Вы смотрели</span>
-                    <div class="items-swiper">
-                        <div class="swiper-wrapper">
-                            <div class="items-swiper__item">
+                            <div class="col-12 col-sm-6 col-md-4 col-xxl-3 catalog-layout__item">
                                 <div class="catalog-item"><a class="catalog-item__link" href="#">
                                         <div class="catalog-item__swiper">
                                             <div class="swiper-wrapper">
@@ -1069,56 +493,17 @@
                                                     <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
                                                 </div>
                                             </div>
-                                        </div><span class="catalog-item__name">Замечательный товар, который нужен всем людям в мире</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
+                                        </div><span class="catalog-item__name">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
                                     </a>
                                     <div class="catalog-item__stickers"></div>
-                                    <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
-                                    <div class="catalog-item__checkout">
-                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
-                                            <div class="items-counter__pack"><svg class="items-counter__icon">
-                                                    <use xlink:href="#box-closed-filled"></use>
-                                                </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
-                                        </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
-                                                <use xlink:href="#shopping-basket"></use>
-                                            </svg></button>
-                                    </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
+                                    <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><button class="button button_gray button_small catalog-item__more"><span class="button__text">Подробнее</span></button><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
                                             <use xlink:href="#eye"></use>
                                         </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
                                             <use xlink:href="#heart"></use>
                                         </svg></button>
                                 </div>
                             </div>
-                            <div class="items-swiper__item">
-                                <div class="catalog-item"><a class="catalog-item__link" href="#">
-                                        <div class="catalog-item__swiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                                <div class="catalog-item__slide">
-                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
-                                                </div>
-                                            </div>
-                                        </div><span class="catalog-item__name">Тёрка</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
-                                    </a>
-                                    <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span></div>
-                                    <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star rating__star_active" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
-                                    <div class="catalog-item__checkout">
-                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
-                                            <div class="items-counter__pack"><svg class="items-counter__icon">
-                                                    <use xlink:href="#box-closed-filled"></use>
-                                                </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
-                                        </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
-                                                <use xlink:href="#shopping-basket"></use>
-                                            </svg></button>
-                                    </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
-                                            <use xlink:href="#eye"></use>
-                                        </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
-                                            <use xlink:href="#heart"></use>
-                                        </svg></button>
-                                </div>
-                            </div>
-                            <div class="items-swiper__item">
+                            <div class="col-12 col-sm-6 col-md-4 col-xxl-3 catalog-layout__item">
                                 <div class="catalog-item"><a class="catalog-item__link" href="#">
                                         <div class="catalog-item__swiper">
                                             <div class="swiper-wrapper">
@@ -1138,7 +523,7 @@
                                         </svg></button>
                                 </div>
                             </div>
-                            <div class="items-swiper__item">
+                            <div class="col-12 col-sm-6 col-md-4 col-xxl-3 catalog-layout__item">
                                 <div class="catalog-item"><a class="catalog-item__link" href="#">
                                         <div class="catalog-item__swiper">
                                             <div class="swiper-wrapper">
@@ -1151,7 +536,8 @@
                                             </div>
                                         </div><span class="catalog-item__name">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
                                     </a>
-                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
+                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
+                                    <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
                                     <div class="catalog-item__checkout">
                                         <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                             <div class="items-counter__pack"><svg class="items-counter__icon">
@@ -1167,7 +553,7 @@
                                         </svg></button>
                                 </div>
                             </div>
-                            <div class="items-swiper__item">
+                            <div class="col-12 col-sm-6 col-md-4 col-xxl-3 catalog-layout__item">
                                 <div class="catalog-item"><a class="catalog-item__link" href="#">
                                         <div class="catalog-item__swiper">
                                             <div class="swiper-wrapper">
@@ -1178,12 +564,10 @@
                                                     <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
                                                 </div>
                                             </div>
-                                        </div><span class="catalog-item__name">Замечательный товар, который нужен всем людям в мире</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
+                                        </div><span class="catalog-item__name">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
                                     </a>
-                                    <div class="catalog-item__stickers"><span class="sticker sticker_gift"><svg class="sticker__icon">
-                                                <use xlink:href="#gift"></use>
-                                            </svg></span><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_sale">%</span><span class="sticker sticker_new">New</span></div>
-                                    <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
+                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
+                                    <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
                                     <div class="catalog-item__checkout">
                                         <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                             <div class="items-counter__pack"><svg class="items-counter__icon">
@@ -1199,7 +583,7 @@
                                         </svg></button>
                                 </div>
                             </div>
-                            <div class="items-swiper__item">
+                            <div class="col-12 col-sm-6 col-md-4 col-xxl-3 catalog-layout__item">
                                 <div class="catalog-item"><a class="catalog-item__link" href="#">
                                         <div class="catalog-item__swiper">
                                             <div class="swiper-wrapper">
@@ -1210,10 +594,10 @@
                                                     <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
                                                 </div>
                                             </div>
-                                        </div><span class="catalog-item__name">Замечательный товар, который нужен всем людям в мире</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
+                                        </div><span class="catalog-item__name">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
                                     </a>
-                                    <div class="catalog-item__stickers"><span class="sticker sticker_sale">%</span><span class="sticker sticker_hit">Хит</span></div>
-                                    <div class="rating" data-disabled="data-disabled"><span class="rating__star rating__star_active" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
+                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
+                                    <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
                                     <div class="catalog-item__checkout">
                                         <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                             <div class="items-counter__pack"><svg class="items-counter__icon">
@@ -1229,7 +613,7 @@
                                         </svg></button>
                                 </div>
                             </div>
-                            <div class="items-swiper__item">
+                            <div class="col-12 col-sm-6 col-md-4 col-xxl-3 catalog-layout__item">
                                 <div class="catalog-item"><a class="catalog-item__link" href="#">
                                         <div class="catalog-item__swiper">
                                             <div class="swiper-wrapper">
@@ -1240,12 +624,10 @@
                                                     <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
                                                 </div>
                                             </div>
-                                        </div><span class="catalog-item__name">Замечательный товар, который нужен всем людям в мире</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
+                                        </div><span class="catalog-item__name">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
                                     </a>
-                                    <div class="catalog-item__stickers"><span class="sticker sticker_gift"><svg class="sticker__icon">
-                                                <use xlink:href="#gift"></use>
-                                            </svg></span><span class="sticker sticker_hit">Хит</span></div>
-                                    <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star rating__star_active" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
+                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
+                                    <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
                                     <div class="catalog-item__checkout">
                                         <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
                                             <div class="items-counter__pack"><svg class="items-counter__icon">
@@ -1260,107 +642,399 @@
                                             <use xlink:href="#heart"></use>
                                         </svg></button>
                                 </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-xxl-3 catalog-layout__item">
+                                <div class="catalog-item"><a class="catalog-item__link" href="#">
+                                        <div class="catalog-item__swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="catalog-item__slide">
+                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                </div>
+                                                <div class="catalog-item__slide">
+                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                </div>
+                                            </div>
+                                        </div><span class="catalog-item__name">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
+                                    </a>
+                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
+                                    <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
+                                    <div class="catalog-item__checkout">
+                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                            <div class="items-counter__pack"><svg class="items-counter__icon">
+                                                    <use xlink:href="#box-closed-filled"></use>
+                                                </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
+                                        </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
+                                                <use xlink:href="#shopping-basket"></use>
+                                            </svg></button>
+                                    </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
+                                            <use xlink:href="#eye"></use>
+                                        </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
+                                            <use xlink:href="#heart"></use>
+                                        </svg></button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-xxl-3 catalog-layout__item">
+                                <div class="catalog-item"><a class="catalog-item__link" href="#">
+                                        <div class="catalog-item__swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="catalog-item__slide">
+                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                </div>
+                                                <div class="catalog-item__slide">
+                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                </div>
+                                            </div>
+                                        </div><span class="catalog-item__name">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
+                                    </a>
+                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
+                                    <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
+                                    <div class="catalog-item__checkout">
+                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                            <div class="items-counter__pack"><svg class="items-counter__icon">
+                                                    <use xlink:href="#box-closed-filled"></use>
+                                                </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
+                                        </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
+                                                <use xlink:href="#shopping-basket"></use>
+                                            </svg></button>
+                                    </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
+                                            <use xlink:href="#eye"></use>
+                                        </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
+                                            <use xlink:href="#heart"></use>
+                                        </svg></button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-xxl-3 catalog-layout__item">
+                                <div class="catalog-item"><a class="catalog-item__link" href="#">
+                                        <div class="catalog-item__swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="catalog-item__slide">
+                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                </div>
+                                                <div class="catalog-item__slide">
+                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                </div>
+                                            </div>
+                                        </div><span class="catalog-item__name">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
+                                    </a>
+                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
+                                    <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
+                                    <div class="catalog-item__checkout">
+                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                            <div class="items-counter__pack"><svg class="items-counter__icon">
+                                                    <use xlink:href="#box-closed-filled"></use>
+                                                </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
+                                        </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
+                                                <use xlink:href="#shopping-basket"></use>
+                                            </svg></button>
+                                    </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
+                                            <use xlink:href="#eye"></use>
+                                        </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
+                                            <use xlink:href="#heart"></use>
+                                        </svg></button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-xxl-3 catalog-layout__item">
+                                <div class="catalog-item"><a class="catalog-item__link" href="#">
+                                        <div class="catalog-item__swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="catalog-item__slide">
+                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                </div>
+                                                <div class="catalog-item__slide">
+                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                </div>
+                                            </div>
+                                        </div><span class="catalog-item__name">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
+                                    </a>
+                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
+                                    <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
+                                    <div class="catalog-item__checkout">
+                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                            <div class="items-counter__pack"><svg class="items-counter__icon">
+                                                    <use xlink:href="#box-closed-filled"></use>
+                                                </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
+                                        </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
+                                                <use xlink:href="#shopping-basket"></use>
+                                            </svg></button>
+                                    </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
+                                            <use xlink:href="#eye"></use>
+                                        </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
+                                            <use xlink:href="#heart"></use>
+                                        </svg></button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-xxl-3 catalog-layout__item">
+                                <div class="catalog-item"><a class="catalog-item__link" href="#">
+                                        <div class="catalog-item__swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="catalog-item__slide">
+                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                </div>
+                                                <div class="catalog-item__slide">
+                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                </div>
+                                            </div>
+                                        </div><span class="catalog-item__name">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
+                                    </a>
+                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
+                                    <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
+                                    <div class="catalog-item__checkout">
+                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                            <div class="items-counter__pack"><svg class="items-counter__icon">
+                                                    <use xlink:href="#box-closed-filled"></use>
+                                                </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
+                                        </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
+                                                <use xlink:href="#shopping-basket"></use>
+                                            </svg></button>
+                                    </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
+                                            <use xlink:href="#eye"></use>
+                                        </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
+                                            <use xlink:href="#heart"></use>
+                                        </svg></button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-xxl-3 catalog-layout__item">
+                                <div class="catalog-item"><a class="catalog-item__link" href="#">
+                                        <div class="catalog-item__swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="catalog-item__slide">
+                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                </div>
+                                                <div class="catalog-item__slide">
+                                                    <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                </div>
+                                            </div>
+                                        </div><span class="catalog-item__name">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
+                                    </a>
+                                    <div class="catalog-item__stickers"><span class="sticker sticker_hit">Хит</span><span class="sticker sticker_new">New</span></div>
+                                    <div class="rating" data-disabled="data-disabled"><span class="rating__star" data-value="5">☆</span><span class="rating__star rating__star_active" data-value="4">☆</span><span class="rating__star" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
+                                    <div class="catalog-item__checkout">
+                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                            <div class="items-counter__pack"><svg class="items-counter__icon">
+                                                    <use xlink:href="#box-closed-filled"></use>
+                                                </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
+                                        </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
+                                                <use xlink:href="#shopping-basket"></use>
+                                            </svg></button>
+                                    </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
+                                            <use xlink:href="#eye"></use>
+                                        </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
+                                            <use xlink:href="#heart"></use>
+                                        </svg></button>
+                                </div>
+                            </div>
+                            <div class="col-12 catalog-layout__banner" data-order="1">
+                                <div class="banner banner_bg_pattern">
+                                    <div class="banner__offer"><span class="banner__text">Хотите узнать цену? Зарегистрируйтесь!</span><a class="button" href="#"><span class="button__text">Регистрация</span></a></div>
+                                </div>
+                            </div>
+                            <div class="col-12 catalog-layout__banner" data-order="2">
+                                <div class="banner"><a class="banner__link" href="#">
+                                        <picture class="banner__image">
+                                            <source media="(min-width: 1200px)" srcset="assets/img/banner-image-960.jpg" />
+                                            <source media="(min-width: 768px)" srcset="assets/img/banner-image-690.jpg" />
+                                            <source media="(min-width: 320px)" srcset="assets/img/banner-image-545.jpg" /><img class="banner__image" src="assets/img/banner-image-960.jpg" alt="Коллекция посуды Home Collection" /></picture>
+                                    </a></div>
                             </div>
                         </div>
-                        <div class="d-lg-none pagination"></div><button class="button button_circle button_brown button_half button_half_left prev swiper-button-prev" type="button"><svg class="button__icon">
-                                <use xlink:href="#arrow-left"></use>
-                            </svg></button><button class="button button_circle button_brown button_half button_half_right next swiper-button-next" type="button"><svg class="button__icon">
-                                <use xlink:href="#arrow-right"></use>
-                            </svg></button>
                     </div>
-                    <hr class="separator" /><span class="section__description">Seo-текст</span>
-                    <div class="page_text">
-                        <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого.</p>
-                        <p>Ни одного штриха не мог бы я сделать, а никогда не был таким большим художником, как в эти минуты. Когда от милой моей долины поднимается пар и полдневное солнце стоит над непроницаемой чащей темного леса и лишь редкий луч проскальзывает в его святая святых, а я лежу в высокой траве у быстрого ручья и, прильнув к земле.</p>
-                    </div>
-                    <div class="quick-view" id="quick-view" style="display: none;">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12"><span class="section__description">Подставка для ножей 11х22см Оранжевый мрамор с цветной вставкой</span></div>
-                                <div class="col-5">
-                                    <div class="quick-view__header">
-                                        <div class="quick-view__stickers"><span class="sticker sticker_new">New</span><span class="sticker sticker_hit">Хит</span></div>
-                                        <div class="rating"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star rating__star_active" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
-                                                <use xlink:href="#heart"></use>
-                                            </svg></button>
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="site-pagination">
+                                <li class="site-pagination__item"><a class="site-pagination__link site-pagination__link_prev" href="#"></a></li>
+                                <li class="site-pagination__item"><a class="site-pagination__link site-pagination__link_active" href="#">1</a></li>
+                                <li class="site-pagination__item"><a class="site-pagination__link" href="#">2</a></li>
+                                <li class="site-pagination__item"><a class="site-pagination__link" href="#">3</a></li>
+                                <li class="site-pagination__item"><a class="site-pagination__link" href="#">4</a></li>
+                                <li class="site-pagination__item"><a class="site-pagination__link" href="#">5</a></li>
+                                <li class="site-pagination__item"><a class="site-pagination__link site-pagination__link_next" href="#"></a></li>
+                            </ul>
+                            <hr class="separator" />
+                            <div class="seened-items"><span class="section__description">Вы смотрели</span>
+                                <div class="seened-items__swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="seened-items__item">
+                                            <div class="catalog-item"><a class="catalog-item__link" href="#">
+                                                    <div class="catalog-item__swiper">
+                                                        <div class="swiper-wrapper">
+                                                            <div class="catalog-item__slide">
+                                                                <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                            </div>
+                                                            <div class="catalog-item__slide">
+                                                                <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                            </div>
+                                                        </div>
+                                                    </div><span class="catalog-item__name">Подставка для ножей 11х22 см Оранжевый мрамор с цветной</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
+                                                </a>
+                                                <div class="catalog-item__stickers"></div><button class="button button_gray button_small catalog-item__more"><span class="button__text">Подробнее</span></button><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
+                                                        <use xlink:href="#eye"></use>
+                                                    </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
+                                                        <use xlink:href="#heart"></use>
+                                                    </svg></button>
+                                            </div>
+                                        </div>
+                                        <div class="seened-items__item">
+                                            <div class="catalog-item"><a class="catalog-item__link" href="#">
+                                                    <div class="catalog-item__swiper">
+                                                        <div class="swiper-wrapper">
+                                                            <div class="catalog-item__slide">
+                                                                <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                            </div>
+                                                            <div class="catalog-item__slide">
+                                                                <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                            </div>
+                                                        </div>
+                                                    </div><span class="catalog-item__name">Замечательный товар, который нужен всем людям в мире</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
+                                                </a>
+                                                <div class="catalog-item__stickers"></div>
+                                                <div class="rating"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star rating__star_active" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
+                                                <div class="catalog-item__checkout">
+                                                    <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter__pack"><svg class="items-counter__icon">
+                                                                <use xlink:href="#box-closed-filled"></use>
+                                                            </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
+                                                    </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
+                                                            <use xlink:href="#shopping-basket"></use>
+                                                        </svg></button>
+                                                </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
+                                                        <use xlink:href="#eye"></use>
+                                                    </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
+                                                        <use xlink:href="#heart"></use>
+                                                    </svg></button>
+                                            </div>
+                                        </div>
+                                        <div class="seened-items__item">
+                                            <div class="catalog-item"><a class="catalog-item__link" href="#">
+                                                    <div class="catalog-item__swiper">
+                                                        <div class="swiper-wrapper">
+                                                            <div class="catalog-item__slide">
+                                                                <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                            </div>
+                                                            <div class="catalog-item__slide">
+                                                                <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                            </div>
+                                                        </div>
+                                                    </div><span class="catalog-item__name">Замечательный товар, который нужен всем людям в мире</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
+                                                </a>
+                                                <div class="catalog-item__stickers"></div>
+                                                <div class="rating"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star rating__star_active" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
+                                                <div class="catalog-item__checkout">
+                                                    <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter__pack"><svg class="items-counter__icon">
+                                                                <use xlink:href="#box-closed-filled"></use>
+                                                            </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
+                                                    </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
+                                                            <use xlink:href="#shopping-basket"></use>
+                                                        </svg></button>
+                                                </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
+                                                        <use xlink:href="#eye"></use>
+                                                    </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
+                                                        <use xlink:href="#heart"></use>
+                                                    </svg></button>
+                                            </div>
+                                        </div>
+                                        <div class="seened-items__item">
+                                            <div class="catalog-item"><a class="catalog-item__link" href="#">
+                                                    <div class="catalog-item__swiper">
+                                                        <div class="swiper-wrapper">
+                                                            <div class="catalog-item__slide">
+                                                                <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                            </div>
+                                                            <div class="catalog-item__slide">
+                                                                <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                            </div>
+                                                        </div>
+                                                    </div><span class="catalog-item__name">Замечательный товар, который нужен всем людям в мире</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
+                                                </a>
+                                                <div class="catalog-item__stickers"></div>
+                                                <div class="rating"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star rating__star_active" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
+                                                <div class="catalog-item__checkout">
+                                                    <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter__pack"><svg class="items-counter__icon">
+                                                                <use xlink:href="#box-closed-filled"></use>
+                                                            </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
+                                                    </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
+                                                            <use xlink:href="#shopping-basket"></use>
+                                                        </svg></button>
+                                                </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
+                                                        <use xlink:href="#eye"></use>
+                                                    </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
+                                                        <use xlink:href="#heart"></use>
+                                                    </svg></button>
+                                            </div>
+                                        </div>
+                                        <div class="seened-items__item">
+                                            <div class="catalog-item"><a class="catalog-item__link" href="#">
+                                                    <div class="catalog-item__swiper">
+                                                        <div class="swiper-wrapper">
+                                                            <div class="catalog-item__slide">
+                                                                <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                            </div>
+                                                            <div class="catalog-item__slide">
+                                                                <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                            </div>
+                                                        </div>
+                                                    </div><span class="catalog-item__name">Замечательный товар, который нужен всем людям в мире</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
+                                                </a>
+                                                <div class="catalog-item__stickers"></div>
+                                                <div class="rating"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star rating__star_active" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
+                                                <div class="catalog-item__checkout">
+                                                    <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter__pack"><svg class="items-counter__icon">
+                                                                <use xlink:href="#box-closed-filled"></use>
+                                                            </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
+                                                    </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
+                                                            <use xlink:href="#shopping-basket"></use>
+                                                        </svg></button>
+                                                </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
+                                                        <use xlink:href="#eye"></use>
+                                                    </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
+                                                        <use xlink:href="#heart"></use>
+                                                    </svg></button>
+                                            </div>
+                                        </div>
+                                        <div class="seened-items__item">
+                                            <div class="catalog-item"><a class="catalog-item__link" href="#">
+                                                    <div class="catalog-item__swiper">
+                                                        <div class="swiper-wrapper">
+                                                            <div class="catalog-item__slide">
+                                                                <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                            </div>
+                                                            <div class="catalog-item__slide">
+                                                                <div class="catalog-item__image-wrapper"><img class="catalog-item__image" src="assets/img/photo-swiper-image-300.jpg" alt="Изображение товара" data-object-fit="cover" /></div>
+                                                            </div>
+                                                        </div>
+                                                    </div><span class="catalog-item__name">Замечательный товар, который нужен всем людям в мире</span><span class="catalog-item__small-text catalog-item__type">Керамика</span><span class="catalog-item__small-text catalog-item__code">Код 799180</span>
+                                                </a>
+                                                <div class="catalog-item__stickers"></div>
+                                                <div class="rating"><span class="rating__star" data-value="5">☆</span><span class="rating__star" data-value="4">☆</span><span class="rating__star rating__star_active" data-value="3">☆</span><span class="rating__star" data-value="2">☆</span><span class="rating__star" data-value="1">☆</span></div><span class="price"><span class="price__value">99 175 ₽/шт.</span></span>
+                                                <div class="catalog-item__checkout">
+                                                    <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
+                                                        <div class="items-counter__pack"><svg class="items-counter__icon">
+                                                                <use xlink:href="#box-closed-filled"></use>
+                                                            </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
+                                                    </div><button class="button button_circle button_red button_small catalog-item__buy buy-button"><svg class="button__icon">
+                                                            <use xlink:href="#shopping-basket"></use>
+                                                        </svg></button>
+                                                </div><button class="button button_icon_left button_extra-small button_opacity_09 catalog-item__quick-view"><svg class="button__icon">
+                                                        <use xlink:href="#eye"></use>
+                                                    </svg><span class="button__text">Быстрый просмотр</span></button><button class="button button_circle button_no-bg button_small button_heart show-tooltip show-tooltip_top-right" data-description="Добавить товар в избранное"><svg class="button__icon">
+                                                        <use xlink:href="#heart"></use>
+                                                    </svg></button>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div class="d-lg-none pagination"></div><button class="button button_circle button_brown button_half button_half_left prev swiper-button-prev" type="button"><svg class="button__icon">
+                                            <use xlink:href="#arrow-left"></use>
+                                        </svg></button><button class="button button_circle button_brown button_half button_half_right next swiper-button-next" type="button"><svg class="button__icon">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg></button>
                                 </div>
-                                <div class="col-7"></div>
-                                <div class="col-5">
-                                    <div class="item-gallery">
-                                        <div class="item-gallery__swiper quick-view__swiper">
-                                            <div class="swiper-wrapper"><a class="item-gallery__slide" href="assets/img/sample-image-1-575.jpg" data-fancybox="item-gallery">
-                                                    <div class="item-gallery__image-wrapper"><img class="item-gallery__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="" data-object-fit="cover" /></div>
-                                                </a><a class="item-gallery__slide" href="assets/img/sample-image-1-575.jpg" data-fancybox="item-gallery">
-                                                    <div class="item-gallery__image-wrapper"><img class="item-gallery__image" src="assets/img/sample-image-1-575.jpg" alt="" data-object-fit="cover" /></div>
-                                                </a><a class="item-gallery__slide" href="assets/img/sample-image-2-300.jpg" data-fancybox="item-gallery">
-                                                    <div class="item-gallery__image-wrapper"><img class="item-gallery__image" src="assets/img/sample-image-2-300.jpg" alt="" data-object-fit="cover" /></div>
-                                                </a><a class="item-gallery__slide" href="assets/img/sample-image-3-300.jpg" data-fancybox="item-gallery">
-                                                    <div class="item-gallery__image-wrapper"><img class="item-gallery__image" src="assets/img/sample-image-3-300.jpg" alt="" data-object-fit="cover" /></div>
-                                                </a></div>
-                                        </div>
-                                        <div class="d-none d-md-block item-gallery__thumbs quick-view__thumbs">
-                                            <div class="swiper-wrapper">
-                                                <div class="item-gallery__slide">
-                                                    <div class="item-gallery__image-wrapper"><img class="item-gallery__image" src="assets/img/catalog-item-sample-itmage-1.jpg" alt="" data-object-fit="cover" /></div>
-                                                </div>
-                                                <div class="item-gallery__slide">
-                                                    <div class="item-gallery__image-wrapper"><img class="item-gallery__image" src="assets/img/sample-image-1-575.jpg" alt="" data-object-fit="cover" /></div>
-                                                </div>
-                                                <div class="item-gallery__slide">
-                                                    <div class="item-gallery__image-wrapper"><img class="item-gallery__image" src="assets/img/sample-image-2-300.jpg" alt="" data-object-fit="cover" /></div>
-                                                </div>
-                                                <div class="item-gallery__slide">
-                                                    <div class="item-gallery__image-wrapper"><img class="item-gallery__image" src="assets/img/sample-image-3-300.jpg" alt="" data-object-fit="cover" /></div>
-                                                </div>
-                                            </div><button class="button button_circle button_brown button_small button_half button_half_left prev"><svg class="button__icon">
-                                                    <use xlink:href="#arrow-left"></use>
-                                                </svg></button><button class="button button_circle button_brown button_small button_half button_half_right next"><svg class="button__icon">
-                                                    <use xlink:href="#arrow-right"></use>
-                                                </svg></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-7">
-                                    <div class="quick-view__checkout"><span class="price"><span class="price__old-value">99 999</span><span class="price__value">99 175 ₽/шт.</span></span>
-                                        <div class="items-counter"><button class="button button_underlined"><span class="button__text">-</span></button><input class="input-field input-field_underlined" type="number" inputmode="numeric" placeholder="0" min="0" max="100" step="1" value="0" /><button class="button button_underlined"><span class="button__text">+</span></button>
-                                            <div class="items-counter__pack"><svg class="items-counter__icon">
-                                                    <use xlink:href="#box-closed-filled"></use>
-                                                </svg><span class="catalog-item__small-text items-counter__amount">6/72</span></div>
-                                        </div><button class="button button_circle button_red button_small buy-button"><svg class="button__icon">
-                                                <use xlink:href="#shopping-basket"></use>
-                                            </svg></button>
-                                    </div>
-                                    <div class="item-characteristics">
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Дизайн/ серия</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">Снежная королева</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Объем/ размер</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">340 мл</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Форма</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">квадрат</span>
-                                        </div>
-                                        <div class="item-characteristics__item"><span class="item-characteristics__text">Материал</span>
-                                            <div class="item-characteristics__separator"></div><span class="item-characteristics__text">керамика</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="item-benefits"><img class="item-benefits__item" src="assets/icons/benefit-patent.svg" alt="Продукт запатентован" title="Продукт запатентован" data-object-fit="contain" /><img class="item-benefits__item" src="assets/icons/benefit-series.svg" alt="Чайно-столовая серия" title="Чайно-столовая серия" data-object-fit="contain" /><img class="item-benefits__item" src="assets/icons/benefit-light.svg" alt="Облегченный вес" title="Облегченный вес" data-object-fit="contain" /><img class="item-benefits__item" src="assets/icons/benefit-white.svg" alt="Повышенная белизна" title="Повышенная белизна" data-object-fit="contain" /><img class="item-benefits__item" src="assets/icons/benefit-gift.svg" alt="Изысканный подарок" title="Изысканный подарок" data-object-fit="contain" /><img class="item-benefits__item" src="assets/icons/benefit-health.svg" alt="Безопасно для здоровья" title="Безопасно для здоровья" data-object-fit="contain" /><img class="item-benefits__item" src="assets/icons/benefit-micro.svg" alt="Можно греть в СВЧ-печи" title="Можно греть в СВЧ-печи" data-object-fit="contain" /><img class="item-benefits__item" src="assets/icons/benefit-washmashine.svg" alt="Можно мыть в посудомоечной машине" title="Можно мыть в посудомоечной машине" data-object-fit="contain" /></div><a class="button quick-view__show-more-button" type="button"><span class="button__text">Больше информации о товаре</span></a>
-                                </div>
+                            </div>
+                            <hr class="separator" /><span class="section__description">Seo-текст</span>
+                            <div class="page_text">
+                                <p>Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого.</p>
+                                <p>Ни одного штриха не мог бы я сделать, а никогда не был таким большим художником, как в эти минуты. Когда от милой моей долины поднимается пар и полдневное солнце стоит над непроницаемой чащей темного леса и лишь редкий луч проскальзывает в его святая святых, а я лежу в высокой траве у быстрого ручья и, прильнув к земле.</p>
                             </div>
                         </div>
                     </div>
