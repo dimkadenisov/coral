@@ -65,3 +65,7 @@
     }
   }
 }
+
+.swiper-wrapper > * {
+  flex-shrink: 0;
+}

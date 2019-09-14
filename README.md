@@ -31,3 +31,6 @@
 * [Полезные документы](https://dimkadenisov.github.io/coral/public/documents.html)
 * [Лицензионные коллекции](https://dimkadenisov.github.io/coral/public/licensed-collections.html)
 * [Распродажа](https://dimkadenisov.github.io/coral/public/sale.html)
+* [Персональные предложения](https://dimkadenisov.github.io/coral/public/personal-offers.html)
+* [Просмотренные товары](https://dimkadenisov.github.io/coral/public/seened-items.html)
+* [Лист ожидания](https://dimkadenisov.github.io/coral/public/waiting-list.html)
