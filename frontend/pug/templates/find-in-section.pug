@@ -1,0 +1,23 @@
+mixin find-in-section(props = 0)
+  - const {otherClasses = false} = props;
+  - const rootClassList = otherClasses ? 'find-in-section ' + otherClasses : 'find-in-section';
+
+  div(class= rootClassList)
+    span.filter-heading Найдено в разделах:
+    .find-in-section__result
+      .item-characteristics__item
+        span.item-characteristics__text Тарелки
+        .item-characteristics__separator
+        span.item-characteristics__text 1
+      .item-characteristics__item
+        span.item-characteristics__text Кружки
+        .item-characteristics__separator
+        span.item-characteristics__text 2
+      .item-characteristics__item
+        span.item-characteristics__text Наборы
+        .item-characteristics__separator
+        span.item-characteristics__text 2
+      .item-characteristics__item
+        span.item-characteristics__text Кастрюли
+        .item-characteristics__separator
+        span.item-characteristics__text 2

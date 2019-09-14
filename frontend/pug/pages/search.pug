@@ -1,0 +1,36 @@
+extends ../templates/page
+include ../templates/sidebar
+include ../templates/button
+include ../templates/catalog-layout
+include ../templates/tags
+include ../templates/sort-block
+include ../templates/find-in-section
+
+block title
+  |Поиск по каталогу
+block content
+  .container
+    .row
+      .d-none.d-lg-block.col-3
+        +find-in-section
+        include ../components/catalog-filter
+      .col-12.col-lg-9
+        include ../components/breadcrumbs
+        main.main
+          h1.section__heading Поиск по&nbsp;каталогу
+
+          form.search-page-search
+            +input-field({type: 'text'})(placeholder='Поиск по каталогу...')
+            button.search-page-search__button.search-page-search__button_search
+              svg.search-page-search__icon
+                use(xlink:href='#search')
+
+          +find-in-section({otherClasses: 'd-lg-none'})
+          +sort-block({filter: true})
+          hr.separator
+          +catalog-layout({banner: false})
+          .row
+            .col-12
+              include ../components/site-pagination
+              hr.separator
+              +tags({amount: 4, showMoreButton: false})

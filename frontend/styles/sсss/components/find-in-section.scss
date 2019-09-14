@@ -1,0 +1,37 @@
+.find-in-section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 30px;
+  background-color: $gray-300;
+
+  .filter-heading {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .find-in-section {
+    margin-bottom: 55px;
+
+    &__result {
+      columns: 2;
+      column-gap: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .find-in-section {
+    margin-right: -15px;
+    margin-bottom: 40px;
+    margin-left: -15px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    &__result {
+      columns: 1;
+      column-gap: 0;
+    }
+  }
+}
