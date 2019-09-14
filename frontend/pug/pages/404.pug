@@ -1,0 +1,16 @@
+extends ../templates/page
+include ../templates/sidebar
+include ../templates/button
+include ../templates/catalog-layout
+include ../templates/sort-block
+
+block title
+  |Страница не найдена
+
+block content
+  .container
+    .row
+      .col-12
+        main.main
+          //- h1.section__heading Страница не найдена
+          include ../components/404

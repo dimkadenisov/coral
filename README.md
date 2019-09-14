@@ -34,3 +34,4 @@
 * [Персональные предложения](https://dimkadenisov.github.io/coral/public/personal-offers.html)
 * [Просмотренные товары](https://dimkadenisov.github.io/coral/public/seened-items.html)
 * [Лист ожидания](https://dimkadenisov.github.io/coral/public/waiting-list.html)
+* [404](https://dimkadenisov.github.io/coral/public/404.html)

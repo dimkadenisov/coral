@@ -1,0 +1,59 @@
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__code {
+    color: rgba(desaturate($red-300, 50%), 0.2);
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+    font-size: 250px;
+  }
+
+  &__img {
+    width: 230px;
+  }
+
+  &__heading {
+    width: 100%;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: 1rem;
+  }
+
+  &__description {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .button {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .not-found {
+    &__code {
+      font-size: 140px
+    }
+
+    &__img {
+      width: 110px;
+    }
+
+    &__heading {
+      letter-spacing: 0.5rem;
+    }
+  }
+}
