@@ -797,6 +797,7 @@ var seriesSwipers = generateSwipers({
   swiperClass: 'series-swiper',
   swiperConfig: seriesSwiperConfig
 });
+SrcsetPolyfill();
 $('.show-more-button').click(function () {
   if ($(this).closest('.tags').hasClass('tags_show-all')) {
     $(this).text('Показать еще');
