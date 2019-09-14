@@ -4,6 +4,7 @@ include ../templates/button
 include ../templates/sidebar
 include ../templates/subscription-form
 include ../templates/catalog-layout
+include ../templates/single-news-header
 
 block title
   |Новость
@@ -19,7 +20,7 @@ block content
             h1.section__heading Лето — пора пикников и активного отдыха
             .row
               .col-12
-                include ../components/single-news-header
+                +single-news-header
 
                 .page_text
                   p.

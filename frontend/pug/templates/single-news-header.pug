@@ -1,0 +1,12 @@
+mixin single-news-header(props = 0)
+  include ../templates/sticker
+
+  - const {date = true, sticker = 'sale'} =props;
+
+  .single-news-header
+    if date
+      span.news-post__date 15 мая 2019
+    if sticker
+      +sticker({type: sticker})
+    span.single-news-header__text До завершения акции:
+    include ../components/timer

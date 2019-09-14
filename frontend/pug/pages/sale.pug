@@ -1,0 +1,31 @@
+extends ../templates/page
+include ../templates/sidebar
+include ../templates/button
+include ../templates/catalog-layout
+include ../templates/sort-block
+include ../templates/single-news-header
+
+block title
+  |Тотальная ликвидация
+
+block content
+  .container
+    .row
+      .d-none.d-lg-block.col-3
+        +sidebar({separateLink: false, itemsAmount: 4})
+      .col-12.col-lg-9
+        include ../components/breadcrumbs
+        main.main
+          h1.section__heading Тотальная ликвидация
+          +single-news-header({sticker: false, date: false})
+          +sort-block()
+          hr.separator
+          +catalog-layout()
+          .row
+            .col-12
+              include ../components/site-pagination
+              hr.separator
+              include ../components/seened-items
+              hr.separator
+              include ../components/seo-block
+          include ../components/quick-view
