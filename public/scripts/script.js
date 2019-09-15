@@ -41,10 +41,7 @@ $(".basket-table-product .button_delete").click(function () {
           slidesPerView: 2,
           spaceBetween: 30,
           pagination: {
-            el: '.pagination',
-            bulletElement: 'div',
-            bulletClass: 'pagination__item',
-            bulletActiveClass: 'pagination__item_active'
+            el: '.swiper-pagination'
           },
           keyboard: {
             enabled: true,
@@ -59,10 +56,7 @@ $(".basket-table-product .button_delete").click(function () {
           slidesPerView: 1,
           spaceBetween: 0,
           pagination: {
-            el: '.pagination',
-            bulletElement: 'div',
-            bulletClass: 'pagination__item',
-            bulletActiveClass: 'pagination__item_active'
+            el: '.swiper-pagination'
           },
           keyboard: {
             enabled: true,
@@ -86,7 +80,7 @@ $(".basket-table-product .button_delete").click(function () {
 
 $('.filter-row-trigger').click(function (e) {
   e.preventDefault();
-  if ($(window).width() > 991) $(this).closest('.filter-row').toggleClass('active');
+  $(this).closest('.filter-row').toggleClass('active');
 });
 
 (function () {
@@ -340,10 +334,7 @@ var heroSwiper = $('.hero-swiper').length ? new Swiper('.hero-swiper', {
     nextEl: '.next'
   },
   pagination: {
-    el: '.pagination',
-    bulletElement: 'div',
-    bulletClass: 'pagination__item',
-    bulletActiveClass: 'pagination__item_active'
+    el: '.swiper-pagination'
   },
   keyboard: {
     enabled: true,
@@ -450,10 +441,7 @@ function generateItemsSwipers() {
     allowTouchMove: false,
     pagination: {
       dynamicBullets: true,
-      el: '.pagination',
-      bulletElement: 'div',
-      bulletClass: 'pagination__item',
-      bulletActiveClass: 'pagination__item_active'
+      el: '.swiper-pagination'
     },
     navigation: {
       prevEl: '.prev',
@@ -559,10 +547,7 @@ var photoSwiperConfig = {
       allowTouchMove: true,
       pagination: {
         dynamicBullets: true,
-        el: '.pagination',
-        bulletElement: 'div',
-        bulletClass: 'pagination__item',
-        bulletActiveClass: 'pagination__item_active'
+        el: '.swiper-pagination'
       }
     },
     575: {
@@ -570,10 +555,7 @@ var photoSwiperConfig = {
       allowTouchMove: true,
       pagination: {
         dynamicBullets: true,
-        el: '.pagination',
-        bulletElement: 'div',
-        bulletClass: 'pagination__item',
-        bulletActiveClass: 'pagination__item_active'
+        el: '.swiper-pagination'
       }
     }
   }
@@ -696,11 +678,7 @@ var reviewsSwiperConfig = {
       observeSlideChildren: true,
       pagination: {
         dynamicBullets: true,
-        el: '.pagination',
-        bulletElement: 'div',
-        bulletClass: 'pagination__item',
-        bulletActiveClass: 'pagination__item_active',
-        clickable: true
+        el: '.swiper-pagination'
       }
     }
   }
@@ -725,10 +703,8 @@ var seenedItemsConfig = {
     nextEl: '.next'
   },
   pagination: {
-    el: '.pagination',
-    bulletElement: 'div',
-    bulletClass: 'pagination__item',
-    bulletActiveClass: 'pagination__item_active'
+    dynamicBullets: true,
+    el: '.swiper-pagination'
   },
   observer: true,
   observerParents: true,
@@ -768,10 +744,7 @@ var seriesSwiperConfig = {
   },
   pagination: {
     dynamicBullets: true,
-    el: '.pagination',
-    bulletElement: 'div',
-    bulletClass: 'pagination__item',
-    bulletActiveClass: 'pagination__item_active'
+    el: '.swiper-pagination'
   },
   observer: true,
   observerParents: true,
