@@ -27,10 +27,7 @@
           spaceBetween: 30,
 
           pagination: {
-            el: '.pagination',
-            bulletElement: 'div',
-            bulletClass: 'pagination__item',
-            bulletActiveClass: 'pagination__item_active',
+            el: '.swiper-pagination',
           },
 
           keyboard: {
@@ -49,10 +46,7 @@
           spaceBetween: 0,
 
           pagination: {
-            el: '.pagination',
-            bulletElement: 'div',
-            bulletClass: 'pagination__item',
-            bulletActiveClass: 'pagination__item_active',
+            el: '.swiper-pagination',
           },
 
           keyboard: {

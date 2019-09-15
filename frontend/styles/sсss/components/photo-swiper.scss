@@ -25,7 +25,7 @@
     object-fit: cover;
   }
 
-  .pagination {
+  .swiper-pagination {
     display: none;
   }
 
@@ -56,7 +56,7 @@
 
 @media screen and (max-width: 767px) {
   .photo-swiper {
-    .pagination {
+    .swiper-pagination {
       display: flex;
       margin-top: 20px;
     }

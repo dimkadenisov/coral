@@ -9,10 +9,7 @@ let heroSwiper = $('.hero-swiper').length ? new Swiper('.hero-swiper', {
   },
 
   pagination: {
-    el: '.pagination',
-    bulletElement: 'div',
-    bulletClass: 'pagination__item',
-    bulletActiveClass: 'pagination__item_active',
+    el: '.swiper-pagination',
   },
 
   keyboard: {

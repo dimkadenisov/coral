@@ -35,11 +35,7 @@ const reviewsSwiperConfig = {
 
       pagination: {
         dynamicBullets: true,
-        el: '.pagination',
-        bulletElement: 'div',
-        bulletClass: 'pagination__item',
-        bulletActiveClass: 'pagination__item_active',
-        clickable: true,
+        el: '.swiper-pagination',
       },
     },
   },

@@ -224,37 +224,22 @@
   }
 }
 
+@media screen and (min-width: 992px) {
+  .catalog-filter {
+    display: block !important;
+  }
+}
+
 @media screen and (max-width: 991px) {
-  .filter-row {
-    display: inline-block;
-    max-width: 50%;
-    max-height: none;
-    vertical-align: top;
-
-    &-trigger {
-      cursor: default;
-
-      &:hover,
-      &:focus {
-        background-color: $gray-100;
-      }
-
-      &::after {
-        display: none;
-      }
-    }
+  .multiple-columns {
+    columns: 2;
+    column-gap: 30px;
   }
 }
 
 @media screen and (max-width: 575px) {
-  .catalog-filter {
-    padding-right: 0;
-    padding-left: 0;
+  .multiple-columns {
+    columns: 1;
+    column-gap: 0;
   }
-
-  .filter-row {
-    display: block;
-    max-width: none;
-  }
-
 }

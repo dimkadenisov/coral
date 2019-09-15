@@ -16,10 +16,8 @@ const seenedItemsConfig = {
   },
 
   pagination: {
-    el: '.pagination',
-    bulletElement: 'div',
-    bulletClass: 'pagination__item',
-    bulletActiveClass: 'pagination__item_active',
+    dynamicBullets: true,
+    el: '.swiper-pagination',
   },
 
   observer: true,

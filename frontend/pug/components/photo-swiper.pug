@@ -34,6 +34,6 @@ include ../templates/button
           source(media="(min-width: 576px)" srcset="assets/img/photo-swiper-image-240.jpg")
           source(media="(min-width: 300px)" srcset="assets/img/photo-swiper-image-545.jpg")
           img(src="assets/img/photo-swiper-image-545.jpg", alt="Изображение" data-object-fit="cover").photo-swiper__image
-  .pagination
+  .swiper-pagination
   +button({type: 'circle', half: 'half_left', color: 'brown', iconId: '#arrow-left', otherClasses: 'prev swiper-button-prev'})(type='button')
   +button({type: 'circle', half: 'half_right', color: 'brown', iconId: '#arrow-right', otherClasses: 'next swiper-button-next'})(type='button')

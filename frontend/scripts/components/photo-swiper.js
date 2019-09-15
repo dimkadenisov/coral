@@ -26,10 +26,7 @@ const photoSwiperConfig = {
 
       pagination: {
         dynamicBullets: true,
-        el: '.pagination',
-        bulletElement: 'div',
-        bulletClass: 'pagination__item',
-        bulletActiveClass: 'pagination__item_active',
+        el: '.swiper-pagination',
       },
     },
 
@@ -39,10 +36,7 @@ const photoSwiperConfig = {
 
       pagination: {
         dynamicBullets: true,
-        el: '.pagination',
-        bulletElement: 'div',
-        bulletClass: 'pagination__item',
-        bulletActiveClass: 'pagination__item_active',
+        el: '.swiper-pagination',
       },
     },
   },
