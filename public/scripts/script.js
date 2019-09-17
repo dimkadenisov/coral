@@ -133,6 +133,7 @@ function generateCatalogItemSwipers() {
   });
   $('.catalog-item').on('mouseenter', function () {
     var index = getSwiperIndex.call(this, 'catalog-item__swiper');
+    catalogItemSwipers[index].slideNext();
     catalogItemSwipers[index].params.autoplay.delay = 1300;
     catalogItemSwipers[index].params.autoplay.waitForTransition = false;
     catalogItemSwipers[index].autoplay.start();
