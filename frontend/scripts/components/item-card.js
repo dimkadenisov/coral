@@ -1,8 +1,12 @@
 $('.item-card .button_heart').click(function() {
-  if($(this).hasClass('button_heart_clicked')) {
-    $(this).find('.button__text').text('В избранном');
+  if ($(this).hasClass('button_heart_clicked')) {
+    $(this)
+      .find('.button__text')
+      .text('В избранном');
   } else {
-    $(this).find('.button__text').text('В избранное');
+    $(this)
+      .find('.button__text')
+      .text('В избранное');
   }
 });
 
@@ -19,14 +23,14 @@ const productSwiperConfig = {
 
   keyboard: {
     enabled: true,
-    onlyInViewport: true,
+    onlyInViewport: true
   },
 
   pagination: {
     el: '.pagination',
     bulletElement: 'div',
     bulletClass: 'pagination__item',
-    bulletActiveClass: 'pagination__item_active',
+    bulletActiveClass: 'pagination__item_active'
   },
 
   thumbs: {
@@ -40,21 +44,27 @@ const productSwiperConfig = {
 
       navigation: {
         prevEl: '.prev',
-        nextEl: '.next',
+        nextEl: '.next'
       },
 
       keyboard: {
         enabled: true,
-        onlyInViewport: true,
-      },
+        onlyInViewport: true
+      }
     }
-  },
+  }
 };
 
-let productSwiper = $('.product__swiper').length ?
-  new Swiper('.product__swiper', productSwiperConfig)
+let productSwiper = $('.product__swiper').length
+  ? new Swiper('.product__swiper', productSwiperConfig)
   : false;
 
-$('.product__thumbs').on('mouseenter','.item-gallery__slide', function() {
+$('.product__thumbs').on('mouseenter', '.item-gallery__slide', function() {
   productSwiper.slideTo($(this).index(), 0, false);
+});
+
+$('[data-fancybox^="item-gallery"]').fancybox({
+  thumbs: {
+    autoStart: true
+  }
 });
