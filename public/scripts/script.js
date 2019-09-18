@@ -410,6 +410,11 @@ var productSwiper = $('.product__swiper').length ? new Swiper('.product__swiper'
 $('.product__thumbs').on('mouseenter', '.item-gallery__slide', function () {
   productSwiper.slideTo($(this).index(), 0, false);
 });
+$('[data-fancybox^="item-gallery"]').fancybox({
+  thumbs: {
+    autoStart: true
+  }
+});
 
 var incrementDecrementValue = function incrementDecrementValue() {
   var input = $(this).next().hasClass('input-field_underlined') ? $(this).next() : $(this).prev();
