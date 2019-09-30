@@ -49,7 +49,7 @@ function generateCatalogItemSwipers() {
     const idClass = $.grep(this.querySelector('.catalog-item__swiper').className.split(/\s+/), item => item.match(/catalog-item__swiper-\d*$/));
 
     const id = idClass[0].match(/\d*$/)[0];
-
+    catalogItemSwipers[id].slideTo(0);
     catalogItemSwipers[id].autoplay.stop();
   });
 
