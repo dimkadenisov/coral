@@ -143,6 +143,7 @@ function generateCatalogItemSwipers() {
       return item.match(/catalog-item__swiper-\d*$/);
     });
     var id = idClass[0].match(/\d*$/)[0];
+    catalogItemSwipers[id].slideTo(0);
     catalogItemSwipers[id].autoplay.stop();
   });
   return catalogItemSwipers;
