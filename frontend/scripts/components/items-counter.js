@@ -27,5 +27,3 @@ const incrementDecrementValue = function() {
       break;
   }
 };
-
-// $('.items-counter .button').click(incrementDecrementValue);
