@@ -97,24 +97,6 @@ $('.filter-row-trigger').click(function (e) {
   };
 })();
 
-$('.button_heart').click(function () {
-  $(this).toggleClass('button_heart_clicked');
-
-  if ($(this).hasClass('button_heart_clicked')) {
-    $(this).attr('data-description', 'Удалить товар из избранного');
-    $(this).css({
-      'display': 'flex'
-    });
-  } else {
-    $(this).attr('data-description', 'Добавить товар в избранное');
-    $(this).removeAttr('style');
-  }
-}); // $('.buy-button').click(function() {
-//   $(this).toggleClass('button_red');
-//   $(this).toggleClass('button_gray');
-//   $(this).toggleClass('buy-button_clicked');
-// });
-
 function generateCatalogItemSwipers() {
   var catalogItemSwiperConfig = {
     slideClass: 'catalog-item__slide',
@@ -363,18 +345,6 @@ for (var i = 0; i < inputs.length; i++) {
 }
 
 ;
-$('.item-card .button_heart').click(function () {
-  if ($(this).hasClass('button_heart_clicked')) {
-    $(this).find('.button__text').text('В избранном');
-  } else {
-    $(this).find('.button__text').text('В избранное');
-  }
-}); // $('.item-card .buy-button').click(function() {
-//   ($(this).hasClass('buy-button_clicked'))
-//     ? $(this).find('.button__text').text('Удалить из\u00A0корзины')
-//     : $(this).find('.button__text').text('В корзину')
-// });
-
 var productSwiperConfig = {
   slideClass: 'item-gallery__slide',
   slidesPerView: 1,
@@ -436,8 +406,7 @@ var incrementDecrementValue = function incrementDecrementValue() {
       input.val(value);
       break;
   }
-}; // $('.items-counter .button').click(incrementDecrementValue);
-
+};
 
 function generateItemsSwipers() {
   var itemsSwiperConfig = {
@@ -638,16 +607,7 @@ $('.catalog-item__quick-view').click(function () {
       if ($(window).width() < 992) $.fancybox.close(true);
     }, 100);
   };
-})(); // $('.rating__star').click(function() {
-//   if ($(this).closest('.rating').attr('data-disabled')) return;
-//   $(this).closest('.rating').find('.rating__star').each(function() {
-//     $(this).removeClass('rating__star_active');
-//   });
-//   $(this).addClass('rating__star_active');
-//   $(this).closest('.rating').attr('data-value', $(this).attr('data-value'));
-//   $(this).closest('.rating').attr('data-disabled', 'data-disabled');
-// });
-
+})();
 
 $('#registration-button').click(function () {
   $.fancybox.open({
